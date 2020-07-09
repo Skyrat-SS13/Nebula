@@ -97,8 +97,13 @@
 	var/set_luminosity = max > 1e-6
 	#endif
 
+<<<<<<< HEAD
 	// If all channels are full lum, there's no point showing the overlay.
 	if(rr + rg + rb + gr + gg + gb + br + bg + bb + ar + ag + ab >= 12)
+=======
+	if((!rr && !gr && !br && !ar) && (rg + gg + bg + ag + rb + gb + bb + ab == 0))
+	//anything that passes the first case is very likely to pass the second, and addition is a little faster in this case
+>>>>>>> b477429f80... Merge pull request #622 from Andrew-Fall/LightingFix
 		icon_state = "transparent"
 		color = null
 	else if(!set_luminosity)
