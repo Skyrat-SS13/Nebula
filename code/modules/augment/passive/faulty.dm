@@ -1,7 +1,11 @@
 /obj/item/organ/internal/augment/faulty
 	name = "malfunctioning implant"
 	desc = "An augment that was badly installed. This one is malfunctioning."
+<<<<<<< HEAD
 	material = /decl/material/solid/metal/steel
+=======
+	material = MAT_STEEL
+>>>>>>> 70eb14729e... Merge pull request #626 from biscuitWizard/faulty_augments
 	var/timer_id
 	var/min_time = 1 MINUTES
 	var/max_time = 10 MINUTES
