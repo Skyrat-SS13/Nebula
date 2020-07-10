@@ -87,7 +87,11 @@
 	slot = ACCESSORY_SLOT_ARMOR_A
 
 /obj/item/clothing/accessory/armguards/craftable
+<<<<<<< HEAD
 	material = /decl/material/solid/metal/steel
+=======
+	material = MAT_STEEL
+>>>>>>> 0a2f9e50c7... Merge pull request #645 from comma/crafter
 	material_armor_multiplier = 1
 	applies_material_colour = TRUE
 	applies_material_name = TRUE
@@ -113,7 +117,11 @@
 	slot = ACCESSORY_SLOT_ARMOR_L
 
 /obj/item/clothing/accessory/legguards/craftable
+<<<<<<< HEAD
 	material = /decl/material/solid/metal/steel
+=======
+	material = MAT_STEEL
+>>>>>>> 0a2f9e50c7... Merge pull request #645 from comma/crafter
 	material_armor_multiplier = 1
 	applies_material_colour = TRUE
 	applies_material_name =  TRUE

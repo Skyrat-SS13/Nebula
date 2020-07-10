@@ -60,7 +60,11 @@
 	desc = "Made to be thrown at scoundrels. Pretty heavy."
 	icon = 'icons/clothing/hands/gauntlets.dmi'
 	on_mob_icon = 'icons/clothing/hands/gauntlets.dmi'
+<<<<<<< HEAD
 	material = /decl/material/solid/metal/steel
+=======
+	material = MAT_STEEL
+>>>>>>> 0a2f9e50c7... Merge pull request #645 from comma/crafter
 	material_armor_multiplier = 1
 	applies_material_colour = TRUE
 	applies_material_name = TRUE
