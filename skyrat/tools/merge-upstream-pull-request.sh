@@ -52,15 +52,15 @@ fi
 #-d "{\"content\":\"Mirroring [$1] from /tg/ to Hippie\"}" \
 #https://discordapp.com/api/channels/$CHANNELID/messages
 
-# We need to make sure we are always on a clean master when creating the new branch.
-# So we forcefully reset, clean and then checkout the master branch
+# We need to make sure we are always on a clean dev when creating the new branch.
+# So we forcefully reset, clean and then checkout the dev branch
 git fetch --all
-git checkout master
-git reset --hard origin/master
+git checkout dev
+git reset --hard origin/dev
 git clean -f
 
 # Remove the other branches
-git branch | grep -v "master" | xargs git branch -D
+git branch | grep -v "dev" | xargs git branch -D
 
 # Create a new branch
 git checkout -b "$BASE_BRANCH_NAME$1"
