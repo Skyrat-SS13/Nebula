@@ -6,17 +6,26 @@
 		slot_r_hand_str = "centhat",
 		)
 	desc = "It's good to be emperor."
+<<<<<<< HEAD
+=======
+	icon = 'icons/clothing/head/centcom.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hairflower
 	name = "hair flower pin"
+<<<<<<< HEAD
 	icon_state = "hairflower"
+=======
+	icon = 'icons/clothing/head/hairflower/red.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	desc = "Smells nice."
 	slot_flags = SLOT_HEAD | SLOT_EARS
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hairflower/blue
+<<<<<<< HEAD
 	icon_state = "hairflower_blue"
 
 /obj/item/clothing/head/hairflower/pink
@@ -25,6 +34,13 @@
 /obj/item/clothing/head/hairflower/yellow
 	icon_state = "hairflower_yellow"
 
+=======
+	icon = 'icons/clothing/head/hairflower/pink.dmi'
+/obj/item/clothing/head/hairflower/pink
+	icon = 'icons/clothing/head/hairflower/pink.dmi'
+/obj/item/clothing/head/hairflower/yellow
+	icon = 'icons/clothing/head/hairflower/yellow.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/head/hairflower/bow
 	name = "hair bow"
 	desc = "A ribbon tied into a bow with a clip on the back to attach to hair."
@@ -35,9 +51,13 @@
 /obj/item/clothing/head/powdered_wig
 	name = "powdered wig"
 	desc = "A powdered wig."
+<<<<<<< HEAD
 	icon_state = "pwig"
 	item_state = "pwig"
 
+=======
+	icon = 'icons/clothing/head/powderd_wig.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/head/that
 	name = "top-hat"
 	desc = "It's an amish looking hat."
@@ -49,7 +69,11 @@
 
 /obj/item/clothing/head/redcoat
 	name = "redcoat's hat"
+<<<<<<< HEAD
 	icon_state = "redcoat"
+=======
+	icon = 'icons/clothing/head/redcoat.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	desc = "<i>'I guess it's a redhead.'</i>"
 	body_parts_covered = 0
 
@@ -62,7 +86,11 @@
 /obj/item/clothing/head/plaguedoctorhat
 	name = "plague doctor's hat"
 	desc = "These were once used by Plague doctors. They're pretty much useless."
+<<<<<<< HEAD
 	icon_state = "plaguedoctor"
+=======
+	icon = 'icons/clothing/head/plague.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
@@ -70,7 +98,11 @@
 /obj/item/clothing/head/hasturhood
 	name = "hastur's hood"
 	desc = "It's unspeakably stylish."
+<<<<<<< HEAD
 	icon_state = "hasturhood"
+=======
+	icon = 'icons/clothing/head/hastur.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 
@@ -123,24 +155,37 @@
 /obj/item/clothing/head/pirate
 	name = "pirate hat"
 	desc = "Yarr."
+<<<<<<< HEAD
 	icon_state = "pirate"
+=======
+	icon = 'icons/clothing/head/pirate.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hgpiratecap
 	name = "pirate hat"
 	desc = "Yarr."
+<<<<<<< HEAD
 	icon_state = "hgpiratecap"
+=======
+	icon = 'icons/clothing/head/pirate_cap.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 
 /obj/item/clothing/head/bandana
 	name = "pirate bandana"
 	desc = "Yarr."
+<<<<<<< HEAD
 	icon_state = "bandana"
+=======
+	icon = 'icons/clothing/head/bandana/pirate.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 
 /obj/item/clothing/head/bandana/green
 	name = "green bandana"
 	desc = "It's a green bandana with some fine nanotech lining."
+<<<<<<< HEAD
 	icon_state = "greenbandana"
 	item_state = "greenbandana"
 
@@ -149,6 +194,13 @@
 	desc = "An orange piece of cloth, worn on the head."
 	icon_state = "orange_bandana"
 
+=======
+	icon = 'icons/clothing/head/bandana/green.dmi'
+/obj/item/clothing/head/bandana/orange //themij: Taryn Kifer
+	name = "orange bandana"
+	desc = "An orange piece of cloth, worn on the head."
+	icon = 'icons/clothing/head/bandana/orange.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/head/bowler
 	name = "bowler-hat"
 	desc = "Gentleman, elite aboard!"
@@ -209,11 +261,15 @@
 /obj/item/clothing/head/chicken
 	name = "chicken suit head"
 	desc = "Bkaw!"
+<<<<<<< HEAD
 	icon_state = "chickenhead"
 	item_state_slots = list(
 		slot_l_hand_str = "chickensuit",
 		slot_r_hand_str = "chickensuit",
 		)
+=======
+	icon = 'icons/clothing/head/chicken.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 0.7
 	body_parts_covered = HEAD|FACE|EYES
@@ -221,7 +277,11 @@
 /obj/item/clothing/head/bearpelt
 	name = "bear pelt hat"
 	desc = "Fuzzy."
+<<<<<<< HEAD
 	icon_state = "bearpelt"
+=======
+	icon = 'icons/clothing/head/bearpelt.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 0.7
 
@@ -233,6 +293,10 @@
 		slot_r_hand_str = "xenos_helm",
 		)
 	desc = "A helmet made out of chitinous alien hide."
+<<<<<<< HEAD
+=======
+	icon = 'icons/clothing/head/xeno.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	w_class = ITEM_SIZE_NORMAL
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	siemens_coefficient = 2.0
@@ -241,11 +305,15 @@
 /obj/item/clothing/head/philosopher_wig
 	name = "natural philosopher's wig"
 	desc = "A stylish monstrosity unearthed from Earth's Renaissance period. With this most distinguish'd wig, you'll be ready for your next soiree!"
+<<<<<<< HEAD
 	icon_state = "philosopher_wig"
 	item_state_slots = list(
 		slot_l_hand_str = "pwig",
 		slot_r_hand_str = "pwig",
 		)
+=======
+	icon = 'icons/clothing/head/huge_wig.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = 0
 

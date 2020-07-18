@@ -43,6 +43,11 @@
 	name = "cult hood"
 	icon_state = "culthood"
 	desc = "A hood worn by the followers of Nar-Sie."
+<<<<<<< HEAD
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/cult.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEFACE
 	body_parts_covered = HEAD
 	armor = list(
@@ -57,6 +62,11 @@
 	name = "magus helm"
 	icon_state = "magus"
 	desc = "A helm worn by the followers of Nar-Sie."
+<<<<<<< HEAD
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/wizard/magus.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEFACE | BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	armor = list(
@@ -67,8 +77,12 @@
 	)
 
 /obj/item/clothing/head/culthood/alt
+<<<<<<< HEAD
 	icon_state = "cult_hoodalt"
 
+=======
+	icon = 'icons/clothing/head/cult_alt.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/suit/cultrobes
 	name = "cult robes"
 	desc = "A set of durable robes worn by the followers of Nar-Sie."

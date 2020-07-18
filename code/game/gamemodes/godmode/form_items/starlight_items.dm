@@ -58,7 +58,12 @@
 /obj/item/clothing/head/helmet/sunhelm
 	name = "knight's helm"
 	desc = "It's a shiny metal helmet. It looks ripped straight out of the Dark Ages, actually."
+<<<<<<< HEAD
 	icon_state = "star_champion"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/star_champion.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEEARS | BLOCKHAIR
 
 /obj/item/clothing/suit/armor/sunrobe
@@ -88,7 +93,12 @@
 /obj/item/clothing/head/helmet/space/shadowhood
 	name = "traitor's hood"
 	desc = "No light can pierce this hood. It's unsettling."
+<<<<<<< HEAD
 	icon_state = "star_traitor"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/star_traitor.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEEARS | BLOCKHAIR
 
 /obj/item/knife/ritual/shadow

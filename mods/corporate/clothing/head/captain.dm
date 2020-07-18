@@ -1,7 +1,11 @@
 /obj/item/clothing/head/helmet/space/capspace
 	name = "space helmet"
+<<<<<<< HEAD
 	icon_state = "capspace"
 	item_state = "capspace"
+=======
+	icon = 'mods/corporate/icons/clothing/head/capspace.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	desc = "A special helmet designed for work in a hazardous, low-pressure environment. Only for the most fashionable of military figureheads."
 	item_flags = 0
 	max_pressure_protection = VOIDSUIT_MAX_PRESSURE

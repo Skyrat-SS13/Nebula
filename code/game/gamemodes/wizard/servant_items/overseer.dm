@@ -8,7 +8,12 @@
 		energy = ARMOR_ENERGY_SHIELDED, 
 		bomb = ARMOR_BOMB_SHIELDED
 		)
+<<<<<<< HEAD
 	icon_state = "necromancer"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/necromancer.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	item_flags = ITEM_FLAG_AIRTIGHT
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE
 	min_pressure_protection = 0

@@ -10,7 +10,12 @@
 //Captain
 /obj/item/clothing/head/caphat
 	name = "captain's hat"
+<<<<<<< HEAD
 	icon_state = "captain"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/captain.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	desc = "It's good being the king."
 	item_state_slots = list(
 		slot_l_hand_str = "caphat",
@@ -21,24 +26,44 @@
 /obj/item/clothing/head/caphat/cap
 	name = "captain's cap"
 	desc = "You fear to wear it for the negligence it brings."
+<<<<<<< HEAD
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/captain_cap.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	icon_state = "capcap"
 
 /obj/item/clothing/head/caphat/formal
 	name = "parade hat"
 	desc = "No one in a commanding position should be without a perfect, white hat of ultimate authority."
+<<<<<<< HEAD
 	icon_state = "officercap"
 
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/officer_cap.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 //HOP
 /obj/item/clothing/head/caphat/hop
 	name = "crew resource's hat"
 	desc = "A stylish hat that both protects you from enraged former-crewmembers and gives you a false sense of authority."
+<<<<<<< HEAD
 	icon_state = "hopcap"
 
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/hop.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 //Chaplain
 /obj/item/clothing/head/chaplain_hood
 	name = "chaplain's hood"
 	desc = "It's hood that covers the head. It keeps you warm during the space winters."
+<<<<<<< HEAD
 	icon_state = "chaplain_hood"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/chaplain.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD
 
@@ -46,7 +71,12 @@
 /obj/item/clothing/head/nun_hood
 	name = "nun hood"
 	desc = "Maximum piety in this star system."
+<<<<<<< HEAD
 	icon_state = "nun_hood"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/nun.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD
 

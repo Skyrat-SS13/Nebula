@@ -41,8 +41,13 @@
 /obj/item/clothing/head/infilhat/fem
 	name = "maid's headband"
 	desc = "This dainty, frilled thing is apparently meant to go on your head."
+<<<<<<< HEAD
 	icon_state = "infhatfem"
 
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/inf_hat.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/suit/infilsuit/fem
 	name = "maid's uniform"
 	desc = "The uniform of someone you'd expect to see dusting off the Antique Gun's display case."

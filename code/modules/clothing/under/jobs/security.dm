@@ -22,7 +22,12 @@
 /obj/item/clothing/head/warden
 	name = "warden's hat"
 	desc = "It's a special helmet issued to the Warden of a securiy force."
+<<<<<<< HEAD
 	icon_state = "policehelm"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/warden.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 
 /obj/item/clothing/under/rank/security
@@ -149,7 +154,12 @@
 /obj/item/clothing/head/HoS
 	name = "Head of Security Hat"
 	desc = "The hat of the Head of Security. For showing the officers who's in charge."
+<<<<<<< HEAD
 	icon_state = "hoscap"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/hos.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 	siemens_coefficient = 0.8
 

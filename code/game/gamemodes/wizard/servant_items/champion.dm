@@ -1,7 +1,12 @@
 /obj/item/clothing/head/champhelm
 	name = "champion's crown"
 	desc = "A spiky, golden crown. It's probably worth more than your bank account."
+<<<<<<< HEAD
 	icon_state = "champhelm"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/champion.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	armor = list(
 		melee = ARMOR_MELEE_VERY_HIGH,
 		bullet = ARMOR_BALLISTIC_AP,

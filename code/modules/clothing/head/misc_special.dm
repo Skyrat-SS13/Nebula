@@ -146,8 +146,13 @@
 /obj/item/clothing/head/ushanka
 	name = "ushanka"
 	desc = "Perfect for winter in Siberia, da?"
+<<<<<<< HEAD
 	icon_state = "ushankadown"
 	var/icon_state_up = "ushankaup"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/ushanka.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
@@ -172,7 +177,12 @@
 /obj/item/clothing/head/pumpkinhead
 	name = "carved pumpkin"
 	desc = "A jack o' lantern! Believed to ward off evil spirits."
+<<<<<<< HEAD
 	icon_state = "hardhat0_pumpkin"//Could stand to be renamed
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/pumpkin.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	brightness_on = 0.2
@@ -185,6 +195,11 @@
 /obj/item/clothing/head/kitty
 	name = "kitty ears"
 	desc = "A pair of kitty ears. Meow!"
+<<<<<<< HEAD
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/cat.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	icon_state = "kitty"
 	body_parts_covered = 0
 	siemens_coefficient = 1.5
@@ -201,6 +216,11 @@
 /obj/item/clothing/head/richard
 	name = "chicken mask"
 	desc = "You can hear the distant sounds of rhythmic electronica."
+<<<<<<< HEAD
 	icon_state = "richard"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/richard.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = HEAD|FACE
 	flags_inv = BLOCKHAIR

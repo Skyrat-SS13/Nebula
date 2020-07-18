@@ -23,7 +23,12 @@
 /obj/item/clothing/head/xeno/scarf
 	name = "headscarf"
 	desc = "A scarf of coarse fabric. Seems to have ear-holes."
+<<<<<<< HEAD
 	icon_state = "zhan_scarf"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/headscarf.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = HEAD|FACE
 
 /obj/item/clothing/accessory/shouldercape

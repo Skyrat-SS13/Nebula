@@ -1,7 +1,12 @@
 /obj/item/clothing/head/fiendhood
 	name = "fiend's hood"
 	desc = "A dark hood with blood-red trim. Something about the fabric blocks more light than it should."
+<<<<<<< HEAD
 	icon_state = "fiendhood"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/fiend_hood.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	armor = list(
 		melee = ARMOR_MELEE_KNIVES, 
 		bullet = ARMOR_BALLISTIC_MINOR, 
@@ -40,7 +45,12 @@
 /obj/item/clothing/head/fiendhood/fem
 	name = "fiend's visage"
 	desc = "To gaze upon this is to gaze into an inferno. Look away, before it looks back of its own accord."
+<<<<<<< HEAD
 	icon_state = "fiendvisage"
+=======
+	icon_state = ICON_STATE_WORLD
+	icon = 'icons/clothing/head/fiend_visage.dmi'
+>>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEEARS | BLOCKHAIR
 
 /obj/item/clothing/suit/fiendcowl/fem
