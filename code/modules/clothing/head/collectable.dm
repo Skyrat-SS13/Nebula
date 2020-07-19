@@ -9,24 +9,7 @@
 /obj/item/clothing/head/collectable/petehat
 	name = "ultra rare hat"
 	desc = "an ultra rare hat. It commands a certain respect."
-	icon_state = "petehat"
-
-/obj/item/clothing/head/collectable/slime
-	name = "collectable slime cap!"
-	desc = "It just latches right in place!"
-	icon_state = "slime"
-	body_parts_covered = 0
 	icon = 'icons/clothing/head/pete.dmi'
-
-/obj/item/clothing/head/collectable/xenom
-	name = "collectable alien monster helmet!"
-	desc = "Hiss hiss hiss!"
-	icon_state = "xenom"
-	item_state_slots = list(
-		slot_l_hand_str = "xenos_helm",
-		slot_r_hand_str = "xenos_helm",
-		)
-
 /obj/item/clothing/head/collectable/xenom
 	name = "collectable alien monster helmet!"
 	desc = "Hiss hiss hiss!"
@@ -41,8 +24,6 @@
 /obj/item/clothing/head/collectable/paper
 	name = "collectable paper hat"
 	desc = "What looks like an ordinary paper hat, is actually a rare and valuable collector's edition paper hat. Keep away from water, fire and Librarians."
-	icon_state = "paper"
-	item_state = "paper"
 	icon = 'icons/clothing/head/paper.dmi'
 	body_parts_covered = 0
 
@@ -55,18 +36,12 @@
 /obj/item/clothing/head/collectable/captain
 	name = "collectable captain's hat"
 	desc = "A Collectable Hat that'll make you look just like a real comdom!"
-	icon_state = "captain"
-	item_state_slots = list(
-		slot_l_hand_str = "caphat",
-		slot_r_hand_str = "caphat",
-		)
 	icon = 'icons/clothing/head/captain.dmi'
 	body_parts_covered = 0
 
 /obj/item/clothing/head/collectable/police
 	name = "collectable police officer's hat"
 	desc = "A Collectable Police Officer's Hat. This hat emphasizes that you are THE LAW."
-	icon_state = "policehelm"
 	icon = 'icons/clothing/head/warden.dmi'
 	body_parts_covered = 0
 
@@ -87,14 +62,7 @@
 /obj/item/clothing/head/collectable/slime
 	name = "collectable slime hat"
 	desc = "Just like a real Brain Slug!"
-	icon_state = "headslime"
 	icon = 'icons/clothing/head/brainslime.dmi'
-
-/obj/item/clothing/head/collectable/pirate
-	name = "collectable pirate hat"
-	desc = "You'd make a great Dread Syndie Roberts!"
-	icon_state = "pirate"
-
 /obj/item/clothing/head/collectable/pirate
 	name = "collectable pirate hat"
 	desc = "You'd make a great Dread Syndie Roberts!"
@@ -104,7 +72,6 @@
 /obj/item/clothing/head/collectable/kitty
 	name = "collectable kitty ears"
 	desc = "The fur feels.....a bit too realistic."
-	icon_state = "kitty"
 	icon = 'icons/clothing/head/cat.dmi'
 	body_parts_covered = 0
 
@@ -129,7 +96,6 @@
 /obj/item/clothing/head/collectable/HoS
 	name = "collectable HoS hat"
 	desc = "Now you can beat prisoners, set silly sentences and arrest for no reason too!"
-	icon_state = "hoscap"
 	icon = 'icons/clothing/head/hos.dmi'
 	body_parts_covered = 0
 
