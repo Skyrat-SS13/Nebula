@@ -22,12 +22,8 @@
 /obj/item/clothing/head/warden
 	name = "warden's hat"
 	desc = "It's a special helmet issued to the Warden of a securiy force."
-<<<<<<< HEAD
-	icon_state = "policehelm"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/warden.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 
 /obj/item/clothing/under/rank/security
@@ -110,7 +106,6 @@
 	desc = "A brown fedora - either the cornerstone of a detective's style or a poor attempt at looking cool, depending on the person wearing it."
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/detective.dmi'
-	on_mob_icon = 'icons/clothing/head/detective.dmi'
 	color = "#725443"
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT, 
@@ -154,27 +149,10 @@
 /obj/item/clothing/head/HoS
 	name = "Head of Security Hat"
 	desc = "The hat of the Head of Security. For showing the officers who's in charge."
-<<<<<<< HEAD
-	icon_state = "hoscap"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/hos.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = 0
 	siemens_coefficient = 0.8
-
-/obj/item/clothing/head/HoS/dermal
-	name = "Dermal Armour Patch"
-	desc = "You're not quite sure how you manage to take it on and off, but it implants nicely in your head."
-	icon_state = "dermal"
-	armor = list(
-		melee = ARMOR_MELEE_MAJOR, 
-		bullet = ARMOR_BALLISTIC_PISTOL, 
-		laser = ARMOR_LASER_HANDGUNS,
-		energy = ARMOR_ENERGY_SMALL, 
-		bomb = ARMOR_BOMB_PADDED
-		)
-	siemens_coefficient = 0.6
 
 /obj/item/clothing/suit/armor/hos
 	name = "armored coat"

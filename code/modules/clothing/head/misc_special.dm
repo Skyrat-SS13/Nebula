@@ -16,7 +16,6 @@
 	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/welding/default.dmi'
-	on_mob_icon = 'icons/clothing/head/welding/default.dmi'
 	material = /decl/material/solid/metal/steel
 	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
 	armor = list(
@@ -77,68 +76,27 @@
 /obj/item/clothing/head/welding/demon
 	name = "demonic welding helmet"
 	desc = "A painted welding helmet, this one has a demonic face on it."
-	on_mob_icon = 'icons/clothing/head/welding/demon.dmi'
+	icon = 'icons/clothing/head/welding/demon.dmi'
 
 /obj/item/clothing/head/welding/knight
 	name = "knightly welding helmet"
 	desc = "A painted welding helmet, this one looks like a knights helmet."
-	on_mob_icon = 'icons/clothing/head/welding/knight.dmi'
+	icon = 'icons/clothing/head/welding/knight.dmi'
 
 /obj/item/clothing/head/welding/fancy
 	name = "fancy welding helmet"
 	desc = "A painted welding helmet, the black and gold make this one look very fancy."
-	on_mob_icon = 'icons/clothing/head/welding/fancy.dmi'
+	icon = 'icons/clothing/head/welding/fancy.dmi'
 
 /obj/item/clothing/head/welding/engie
 	name = "engineering welding helmet"
 	desc = "A painted welding helmet, this one has been painted the engineering colours."
-	on_mob_icon = 'icons/clothing/head/welding/engie.dmi'
+	icon = 'icons/clothing/head/welding/engie.dmi'
 
 /obj/item/clothing/head/welding/carp
 	name = "carp welding helmet"
 	desc = "A painted welding helmet, this one has a carp face on it."
-	on_mob_icon = 'icons/clothing/head/welding/carp.dmi'
-
-/*
- * Cakehat
- */
-/obj/item/clothing/head/cakehat
-	name = "cake-hat"
-	desc = "It's tasty looking!"
-	icon_state = "cake0"
-	item_state = "cake0"
-	var/onfire = 0
-	body_parts_covered = HEAD
-
-/obj/item/clothing/head/cakehat/Process()
-	if(!onfire)
-		STOP_PROCESSING(SSobj, src)
-		return
-
-	var/turf/location = src.loc
-	if(istype(location, /mob/))
-		var/mob/living/carbon/human/M = location
-		if(M.l_hand == src || M.r_hand == src || M.head == src)
-			location = M.loc
-
-	if (istype(location, /turf))
-		location.hotspot_expose(700, 1)
-
-/obj/item/clothing/head/cakehat/attack_self(mob/user)
-	src.onfire = !( src.onfire )
-	if (src.onfire)
-		src.force = 3
-		src.damtype = "fire"
-		src.icon_state = "cake1"
-		src.item_state = "cake1"
-		START_PROCESSING(SSobj, src)
-	else
-		src.force = null
-		src.damtype = "brute"
-		src.icon_state = "cake0"
-		src.item_state = "cake0"
-	return
-
+	icon = 'icons/clothing/head/welding/carp.dmi'
 
 /*
  * Ushanka
@@ -146,30 +104,31 @@
 /obj/item/clothing/head/ushanka
 	name = "ushanka"
 	desc = "Perfect for winter in Siberia, da?"
-<<<<<<< HEAD
-	icon_state = "ushankadown"
-	var/icon_state_up = "ushankaup"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/ushanka.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
+	var/up = FALSE
 
 /obj/item/clothing/head/ushanka/attack_self(mob/user)
-	if(icon_state == initial(icon_state))
-		icon_state = icon_state_up
-		to_chat(user, "You raise the ear flaps on the ushanka.")
-	else
-		icon_state = initial(icon_state)
-		to_chat(user, "You lower the ear flaps on the ushanka.")
+	..()
+	up = !up
+	to_chat(user, "You [up ? "raise" : "lower"] the ear flaps on the ushanka.")
+	update_icon()
 
-/obj/item/clothing/head/ushanka/gcc
-	name = "GCC ushanka"
-	desc = "Perfect for keeping ears warm during your court-martial."
-	icon_state = "tccushankadown"
-	icon_state_up = "tccushankaup"
+/obj/item/clothing/head/ushanka/on_update_icon()
+	..()
+	icon_state = get_world_inventory_state()
+	if(up && check_state_in_icon("[icon_state]_up", icon))
+		icon_state = "[icon_state]_up"
+	update_clothing_icon()
+
+/obj/item/clothing/head/ushanka/experimental_mob_overlay()
+	var/image/ret = ..()
+	if(up && check_state_in_icon("[ret.icon_state]_up", icon))
+		ret.icon_state = "[ret.icon_state]_up"
+	return ret
 
 /*
  * Pumpkin head
@@ -177,12 +136,8 @@
 /obj/item/clothing/head/pumpkinhead
 	name = "carved pumpkin"
 	desc = "A jack o' lantern! Believed to ward off evil spirits."
-<<<<<<< HEAD
-	icon_state = "hardhat0_pumpkin"//Could stand to be renamed
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/pumpkin.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	brightness_on = 0.2
@@ -195,32 +150,16 @@
 /obj/item/clothing/head/kitty
 	name = "kitty ears"
 	desc = "A pair of kitty ears. Meow!"
-<<<<<<< HEAD
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/cat.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	icon_state = "kitty"
 	body_parts_covered = 0
 	siemens_coefficient = 1.5
-	item_icons = list()
-
-/obj/item/clothing/head/kitty/on_update_icon(var/mob/living/carbon/human/user)
-	if(!istype(user)) return
-	var/icon/ears = new/icon("icon" = 'icons/mob/onmob/onmob_head.dmi', "icon_state" = "kitty")
-	ears.Blend(user.hair_colour, ICON_ADD)
-
-	var/icon/earbit = new/icon("icon" = 'icons/mob/onmob/onmob_head.dmi', "icon_state" = "kittyinner")
-	ears.Blend(earbit, ICON_OVERLAY)
 
 /obj/item/clothing/head/richard
 	name = "chicken mask"
 	desc = "You can hear the distant sounds of rhythmic electronica."
-<<<<<<< HEAD
-	icon_state = "richard"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/richard.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = HEAD|FACE
 	flags_inv = BLOCKHAIR

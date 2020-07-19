@@ -198,7 +198,6 @@
 	name = "longcoat"
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/suit/leathercoat.dmi'
-	on_mob_icon = 'icons/clothing/suit/leathercoat.dmi'
 	material = /decl/material/solid/leather
 	applies_material_colour = TRUE
 	applies_material_name = TRUE
@@ -454,13 +453,8 @@
 /obj/item/clothing/head/santahat
 	name = "Santa's hat"
 	desc = "Ho ho ho. Merrry X-mas!"
-<<<<<<< HEAD
-	icon_state = "santahat"
-	item_state = "santahat"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/santa.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE

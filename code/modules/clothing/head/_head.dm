@@ -1,15 +1,7 @@
 /obj/item/clothing/head
 	name = "head"
-<<<<<<< HEAD
-	icon = 'icons/obj/clothing/obj_head.dmi'
-	item_icons = list(
-		slot_l_hand_str = 'icons/mob/onmob/items/lefthand_hats.dmi',
-		slot_r_hand_str = 'icons/mob/onmob/items/righthand_hats.dmi',
-		)
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/softcap.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	body_parts_covered = HEAD
 	slot_flags = SLOT_HEAD
 	w_class = ITEM_SIZE_SMALL
@@ -104,7 +96,7 @@
 		H.update_inv_head()
 
 /obj/item/clothing/head/proc/add_light_overlay()
-	if(on_mob_icon)
+	if(use_single_icon)
 		var/cache_key = "[icon]-[get_world_inventory_state()]_icon"
 		if(!light_overlay_cache[cache_key])
 			light_overlay_cache[cache_key] = image(icon, "[get_world_inventory_state()]_light")

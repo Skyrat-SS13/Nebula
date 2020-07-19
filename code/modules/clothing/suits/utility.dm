@@ -50,12 +50,8 @@
 /obj/item/clothing/head/bomb_hood
 	name = "bomb hood"
 	desc = "Use in case of bomb."
-<<<<<<< HEAD
-	icon_state = "bombsuit"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/bombsuit.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	armor = list(
 		melee = ARMOR_MELEE_VERY_HIGH, 
 		bullet = ARMOR_BALLISTIC_MINOR, 
@@ -93,11 +89,7 @@
 /obj/item/clothing/head/bomb_hood/security
 	icon_state = "bombsuitsec"
 	body_parts_covered = HEAD
-<<<<<<< HEAD
-
-=======
 	icon = 'icons/clothing/head/bombsuit_olive.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 /obj/item/clothing/suit/bomb_suit/security
 	icon_state = "bombsuitsec"
 	allowed = list(/obj/item/gun/energy,/obj/item/baton,/obj/item/handcuffs)
@@ -108,13 +100,9 @@
  */
 /obj/item/clothing/head/radiation
 	name = "Radiation Hood"
-	icon_state = "rad"
 	desc = "A hood with radiation protective properties. Label: Made with lead, do not eat insulation."
-<<<<<<< HEAD
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/radsuit.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	armor = list(
@@ -151,13 +139,9 @@
 
 /obj/item/clothing/head/chem_hood
 	name = "chemical hood"
-	icon_state = "chem_hood"
 	desc = "A hood that protects the head from chemical comtaminants."
-<<<<<<< HEAD
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/chem_hood.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	permeability_coefficient = 0
 	armor = list(
 		bio = ARMOR_BIO_RESISTANT, 

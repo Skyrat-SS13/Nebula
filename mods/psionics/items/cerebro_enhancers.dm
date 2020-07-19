@@ -3,13 +3,8 @@
 	name = "cerebro-energetic enhancer"
 	desc = "A matte-black, eyeless cerebro-energetic enhancement helmet. It uses highly sophisticated, and illegal, techniques to drill into your brain and install psi-infected AIs into the fluid cavities between your lobes."
 	action_button_name = "Install Boosters"
-<<<<<<< HEAD
-	icon_state = "cerebro"
-
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/cerebro.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	item_state_slots = list(
 		slot_l_hand_str = "helmet",
 		slot_r_hand_str = "helmet"
@@ -25,12 +20,8 @@
 /obj/item/clothing/head/helmet/space/psi_amp/lesser
 	name = "psionic amplifier"
 	desc = "A crown-of-thorns cerebro-energetic enhancer that interfaces directly with the brain, isolating and strengthening psionic signals. It kind of looks like a tiara having sex with an industrial robot."
-<<<<<<< HEAD
-	icon_state = "amp"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/amp.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	flags_inv = 0
 	body_parts_covered = 0
 

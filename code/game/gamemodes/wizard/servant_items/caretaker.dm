@@ -1,12 +1,8 @@
 /obj/item/clothing/head/caretakerhood
 	name = "holy hood"
 	desc = "The hood of a shining white robe, with blue trim. Who would possess this robe and still want to hide themself away?"
-<<<<<<< HEAD
-	icon_state = "caretakerhood"
-=======
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/caretaker.dmi'
->>>>>>> 08661574e3... Merge pull request #698 from comma/devfix
 	armor = list(
 		melee = ARMOR_MELEE_KNIVES, 
 		bullet = ARMOR_BALLISTIC_MINOR, 
