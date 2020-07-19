@@ -3,7 +3,6 @@
 	desc = "It's a simple headband made of leather."
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/familiar.dmi'
-	on_mob_icon = 'icons/clothing/head/familiar.dmi'
 
 /obj/item/clothing/under/familiargarb
 	name = "familiar's garb"
