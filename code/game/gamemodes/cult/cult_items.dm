@@ -44,7 +44,6 @@
 	desc = "A hood worn by the followers of Nar-Sie."
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/cult.dmi'
-	on_mob_icon = 'icons/clothing/head/cult.dmi'
 	flags_inv = HIDEFACE
 	body_parts_covered = HEAD
 	armor = list(
@@ -60,7 +59,6 @@
 	desc = "A helm worn by the followers of Nar-Sie."
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/wizard/magus.dmi'
-	on_mob_icon = 'icons/clothing/head/wizard/magus.dmi'
 	flags_inv = HIDEFACE | BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 	armor = list(
@@ -71,8 +69,8 @@
 	)
 
 /obj/item/clothing/head/culthood/alt
+	icon_state = "cult_hoodalt"
 	icon = 'icons/clothing/head/cult_alt.dmi'
-	on_mob_icon = 'icons/clothing/head/cult_alt.dmi'
 
 /obj/item/clothing/suit/cultrobes
 	name = "cult robes"
