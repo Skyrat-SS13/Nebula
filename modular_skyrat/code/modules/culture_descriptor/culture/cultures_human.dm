@@ -6,16 +6,16 @@
 	name = CULTURE_HUMAN
 	description = "You are from one of various planetary cultures of humankind."
 	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_HUMAN_CHINESE,
-		LANGUAGE_HUMAN_ARABIC,
-		LANGUAGE_HUMAN_INDIAN,
-		LANGUAGE_HUMAN_IBERIAN,
-		LANGUAGE_HUMAN_RUSSIAN,
-		LANGUAGE_SPACER,
-		LANGUAGE_GUTTER,
-		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_GAIAN
+		/decl/language/human/euro,
+		/decl/language/human/chinese,
+		/decl/language/human/arabic,
+		/decl/language/human/indian,
+		/decl/language/human/iberian,
+		/decl/language/human/russian,
+		/decl/language/spacer,
+		/decl/language/gutter,
+		/decl/language/sign,
+		/decl/language/human/gaian
 	)
 
 /decl/cultural_info/culture/human/martian_surfacer
@@ -42,7 +42,7 @@
 	of one of the various corporations, persons hired in service roles in one of the many prefectures or a resident of New Vegas. The 'poor' of Luna typically resent the rich because of their \
 	financial, cultural and political power and influence over their lives."
 	economic_power = 1
-	language = LANGUAGE_HUMAN_SELENIAN
+	language = /decl/language/human/selenian
 
 /decl/cultural_info/culture/human/luna_rich
 	name = CULTURE_HUMAN_LUNARICH
@@ -52,7 +52,7 @@
 	Much of the elite of Luna is embroiled in 'The Game' a state of political manoeuvring and intrigue among various factions and persons of influence and power \
 	with implications far beyond the squabbles of the prefectures."
 	economic_power = 1.3
-	language = LANGUAGE_HUMAN_SELENIAN
+	language = /decl/language/human/selenian
 
 /decl/cultural_info/culture/human/venusian_upper
 	name = CULTURE_HUMAN_VENUSIAN
@@ -111,7 +111,7 @@
 	places, meeting a myriad of people and experiencing many of the cultures and worlds close to humanity's home. As such, Spacers of the core systems tend to be busy, sociable and \
 	mobile, rarely satisfied with settled life. They almost universally know how to live and work in the void and take to such jobs more readily than their planet-bound counterparts."
 	economic_power = 1
-	language = LANGUAGE_SPACER
+	language = /decl/language/spacer
 
 /decl/cultural_info/culture/human/spacer_frontier
 	name = CULTURE_HUMAN_SPAFRO
@@ -120,7 +120,7 @@
 	vital goods, a lonely outpost on the edge of a dreary backwater, such people are raised in small, confined environments with few others, and tend to be most familiar with older, reliable but outdated \
 	technology. An independent sort, people on the frontier are more likely to be isolationist and self-driven."
 	economic_power = 0.9
-	language = LANGUAGE_SPACER
+	language = /decl/language/spacer
 
 /decl/cultural_info/culture/human/confederate
 	name = CULTURE_HUMAN_CONFED
@@ -128,7 +128,7 @@
 	Unfortunately, the years since the war have not been easy on Komirov and the long period of economic recovery has not made life easy. The people of Komirov are typically employed \
 	in the military, industrial, government or service sectors, with an emphasis being placed on military service. Komirovians today are generally poor, bitter and a somewhat broken people angry and \
 	resentful about their loss in the Aigaion Conflict. An upbringing on Komirov emphasises an odd mix of service to the state, liberalism and militarism."
-	language = LANGUAGE_HUMAN_RUSSIAN
+	language = /decl/language/human/russian
 	economic_power = 0.9
 
 /decl/cultural_info/culture/human/other

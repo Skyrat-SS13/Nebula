@@ -1,5 +1,5 @@
 /decl/language/nabber
-	name = LANGUAGE_NABBER
+	name = "Serpentid"
 	desc = "A strange language that can be understood both by the sounds made and by the movement needed to create those sounds."
 	signlang_verb = list("chitters", "grinds its mouthparts", "chitters and grinds its mouthparts")
 	key = "n"

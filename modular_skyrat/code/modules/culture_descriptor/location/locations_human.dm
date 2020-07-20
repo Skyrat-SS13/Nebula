@@ -43,7 +43,7 @@
 	the poverty line, often holding feelings of resentment against the other people of Luna."
 	capital = "Selene"
 	economic_power = 1.3
-	secondary_langs = list(LANGUAGE_HUMAN_SELENIAN)
+	secondary_langs = list(/decl/language/human/selenian)
 
 /decl/cultural_info/location/human/venus
 	name = HOME_SYSTEM_VENUS
@@ -129,7 +129,7 @@
 	distance = "22.5 light years."
 	economic_power = 0.9
 	ruling_body = "Gilgamesh Colonial Confederation"
-	language = LANGUAGE_HUMAN_RUSSIAN
+	language = /decl/language/human/russian
 
 /decl/cultural_info/location/human/tersten
 	name = HOME_SYSTEM_TERSTEN
@@ -231,7 +231,7 @@
 	once again.  They suffered hard twenty years prior, and fear they may suffer again."
 	capital = "New Venice"
 	economic_power = 1.0
-	language = LANGUAGE_HUMAN_GAIAN
+	language = /decl/language/human/gaian
 
 /decl/cultural_info/location/human/magnitka
 	name = HOME_SYSTEM_MAGNITKA
@@ -243,5 +243,5 @@
 	Though historically relatively isolationist, today Magnitka finds itself more and more closely associated with the Gilgamesh Colonial Confederation, in an effort to offset its economic decline."
 	capital = "Labortown"
 	economic_power = 0.8
-	secondary_langs = list(LANGUAGE_HUMAN_GAIAN)
+	secondary_langs = list(/decl/language/human/gaian)
 	ruling_body = "Magnitka"

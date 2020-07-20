@@ -1,20 +1,20 @@
 /decl/language/gutter
-	name = LANGUAGE_GUTTER
+	name = "Gutter"
 	desc = "This crude pidgin tongue developed on Pluto during its busier days. Nowadays it serves as a trade language for criminal elements and those who wish they were ones."
 	speech_verb = "growls"
 	colour = "rough"
 	key = "t"
 	space_chance = 70
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 10,
-		LANGUAGE_HUMAN_CHINESE = 20,
-		LANGUAGE_HUMAN_ARABIC = 10,
-		LANGUAGE_HUMAN_INDIAN = 10,
-		LANGUAGE_HUMAN_IBERIAN = 30,
-		LANGUAGE_HUMAN_RUSSIAN = 30,
-		LANGUAGE_HUMAN_SELENIAN = 15,
-		LANGUAGE_SPACER = 50,
-		LANGUAGE_LEGALESE = 25
+		/decl/language/human/euro = 10,
+		/decl/language/human/chinese = 20,
+		/decl/language/human/arabic = 10,
+		/decl/language/human/indian = 10,
+		/decl/language/human/iberian = 30,
+		/decl/language/human/russian = 30,
+		/decl/language/human/selenian = 15,
+		/decl/language/spacer = 50,
+		/decl/language/legal = 25
 	)
 	syllables = list (
 		"yayo", "aiya", "chiksa", "tikat", "bazar","oi", "yo", "meit", "grok", "ken", "berk", "cohon", "pendeo"

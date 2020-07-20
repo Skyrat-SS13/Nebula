@@ -1,6 +1,6 @@
 /decl/cultural_info/location/kharmaani
 	name = HOME_SYSTEM_KHARMAANI
-	language =    LANGUAGE_MANTID_NONVOCAL
+	language =    /decl/language/mantid/nonvocal
 	description = "The Kharmaani are not terribly imaginative when it comes to naming their worlds. Core, \
 	their birth star, supports the humid greenhouse-gas-choked giant called Home, which the majority of the \
 	populace call their motherland. While the planet's orbit is thickly populated with habitats, factories \

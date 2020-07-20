@@ -1,21 +1,21 @@
 /decl/language/human/selenian
-	name = LANGUAGE_HUMAN_SELENIAN
+	name = "Selenian"
 	desc = "An informal dialect of Zurich Common that arose from the close confines, mixed population, and technical focus of the moon's first city."
 	colour = "selenian"
 	key = "7"
 	shorthand = "Sel"
 	space_chance = 100
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 85,
-		LANGUAGE_HUMAN_CHINESE = 15,
-		LANGUAGE_HUMAN_ARABIC = 5,
-		LANGUAGE_HUMAN_INDIAN = 25,
-		LANGUAGE_HUMAN_IBERIAN = 15,
-		LANGUAGE_HUMAN_RUSSIAN = 5,
-		LANGUAGE_HUMAN_GAIAN = 50,
-		LANGUAGE_LEGALESE = 20,
-		LANGUAGE_SPACER = 20,
-		LANGUAGE_GUTTER = 5
+		/decl/language/human/euro = 85,
+		/decl/language/human/chinese = 15,
+		/decl/language/human/arabic = 5,
+		/decl/language/human/indian = 25,
+		/decl/language/human/iberian = 15,
+		/decl/language/human/russian = 5,
+		/decl/language/human/gaian = 50,
+		/decl/language/legal = 20,
+		/decl/language/spacer = 20,
+		/decl/language/gutter = 5
 	)
 	syllables = list(
 		"al", "an", "ar", "as", "at", "ed", "er", "ha", "he", "hi", "is", "le", "me", "on", "se", "ti",

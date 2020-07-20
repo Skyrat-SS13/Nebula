@@ -14,7 +14,7 @@
 	siemens_coefficient = 0.3
 	show_ssd = "completely quiescent"
 	strength = STR_VHIGH
-	assisted_langs = list(LANGUAGE_NABBER)
+	assisted_langs = list(/decl/language/nabber)
 	spawns_with_stack = 0
 	health_hud_intensity = 2
 	hunger_factor = 3

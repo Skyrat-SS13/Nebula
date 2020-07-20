@@ -1,5 +1,5 @@
 /decl/language/skrell
-	name = LANGUAGE_SKRELLIAN
+	name = "Skrellian"
 	desc = "A melodic and complex language spoken by the Skrell of Qerrbalak. Some of the notes are inaudible to humans."
 	speech_verb = "warbles"
 	ask_verb = "trills"
@@ -10,6 +10,6 @@
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 	shorthand = "SK"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 2,
-		LANGUAGE_SPACER = 2
+		/decl/language/human/euro = 2,
+		/decl/language/spacer = 2
 	)

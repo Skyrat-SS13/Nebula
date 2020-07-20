@@ -6,7 +6,7 @@
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /decl/language/human/euro
-	name = LANGUAGE_HUMAN_EURO
+	name = "Zurich Accord Common"
 	desc = "A constructed language established by a conference of European and African research universities convening in Zurich, Switzerland starting in 2119, \
 			later adopted with little controversy as the lingua franca of the entirety of Sol space following the establishment of the SCG."
 	speech_verb = "says"
@@ -16,15 +16,15 @@
 	flags = WHITELISTED
 	shorthand = "ZAC"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_CHINESE = 10,
-		LANGUAGE_HUMAN_ARABIC = 10,
-		LANGUAGE_HUMAN_INDIAN = 10,
-		LANGUAGE_HUMAN_IBERIAN = 35,
-		LANGUAGE_HUMAN_RUSSIAN = 10,
-		LANGUAGE_HUMAN_SELENIAN = 75,
-		LANGUAGE_HUMAN_GAIAN = 60,
-		LANGUAGE_SPACER = 20,
-		LANGUAGE_GUTTER = 15
+		/decl/language/human/chinese = 10,
+		/decl/language/human/arabic = 10,
+		/decl/language/human/indian = 10,
+		/decl/language/human/iberian = 35,
+		/decl/language/human/russian = 10,
+		/decl/language/human/selenian = 75,
+		/decl/language/human/gaian = 60,
+		/decl/language/spacer = 20,
+		/decl/language/gutter = 15
 	)
 	syllables = list(
 		"al", "an", "ar", "as", "at", "ea", "ed", "en", "er", "es", "ha", "he", "hi", "in", "is", "it",

@@ -1,5 +1,5 @@
 /decl/language/unathi
-	name = LANGUAGE_UNATHI_SINTA
+	name =  "Sinta'unathi"
 	desc = "The common language of Moghes, composed of sibilant hisses and rattles. Spoken natively by Unathi."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -19,13 +19,13 @@
 	)
 	shorthand = "UT"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 2,
-		LANGUAGE_SPACER = 2,
-		LANGUAGE_UNATHI_YEOSA = 50
+		/decl/language/human/euro = 2,
+		/decl/language/spacer = 2,
+		/decl/language/yeosa = 50
 	)
 
 /decl/language/yeosa
-	name = LANGUAGE_UNATHI_YEOSA
+	name = "Yeosa'unathi"
 	desc = "A language of Moghes consisting of a combination of spoken word and gesticulation. While it is uncommonly spoken in the drier regions, it enjoys popular usage as the official tongue of the Yeosa clans."
 	speech_verb = "hisses"
 	ask_verb = "rattles"
@@ -46,7 +46,7 @@
 	)
 	shorthand = "YU"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 2,
-		LANGUAGE_SPACER = 2,
-		LANGUAGE_UNATHI_SINTA = 50
+		/decl/language/human/euro = 2,
+		/decl/language/spacer = 2,
+		/decl/language/unathi = 50
 	)

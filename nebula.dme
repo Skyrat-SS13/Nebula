@@ -3272,6 +3272,7 @@
 #include "modular_skyrat\code\modules\culture_descriptor\religion\religions_vox.dm"
 #include "modular_skyrat\code\modules\mob\animations.dm"
 #include "modular_skyrat\code\modules\mob\inventory.dm"
+#include "modular_skyrat\code\modules\mob\language\generic.dm"
 #include "modular_skyrat\code\modules\mob\language\alien\adherent.dm"
 #include "modular_skyrat\code\modules\mob\language\alien\antag.dm"
 #include "modular_skyrat\code\modules\mob\language\alien\diona.dm"

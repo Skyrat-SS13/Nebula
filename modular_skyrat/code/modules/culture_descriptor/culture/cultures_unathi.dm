@@ -8,10 +8,10 @@
 	their ancestors. The clan is what keeps the Unathi together, and what pushes them to build and grow, but the question remains of how \
 	they continue to do that while holding on to their traditions."
 	economic_power = 0.8
-	name_language = LANGUAGE_UNATHI_SINTA
+	name_language = /decl/language/unathi
 	secondary_langs = list(
-		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_GUTTER,
-		LANGUAGE_SPACER
+		/decl/language/sign,
+		/decl/language/human/euro,
+		/decl/language/gutter,
+		/decl/language/spacer
 	)

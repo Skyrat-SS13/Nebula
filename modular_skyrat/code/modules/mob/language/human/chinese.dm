@@ -4,21 +4,21 @@
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /decl/language/human/chinese
-	name = LANGUAGE_HUMAN_CHINESE
+	name = "Yangyu"
 	desc = "A simplified version of Mandarin written in the Latin script, Yangyu steadily rose to prominence as a trade language in the continent, Japan, Korea, as well as parts of Africa."
 	colour = "chinese"
 	key = "2"
 	shorthand = "YngYu"
 	space_chance = 30
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 10,
-		LANGUAGE_HUMAN_ARABIC = 5,
-		LANGUAGE_HUMAN_INDIAN = 5,
-		LANGUAGE_HUMAN_IBERIAN = 5, 
-		LANGUAGE_HUMAN_SELENIAN = 10,
-		LANGUAGE_HUMAN_GAIAN = 5,
-		LANGUAGE_SPACER = 20,
-		LANGUAGE_GUTTER = 15
+		/decl/language/human/euro = 10,
+		/decl/language/human/arabic = 5,
+		/decl/language/human/indian = 5,
+		/decl/language/human/iberian = 5, 
+		/decl/language/human/selenian = 10,
+		/decl/language/human/gaian = 5,
+		/decl/language/spacer = 20,
+		/decl/language/gutter = 15
 	)
 	syllables = list(
 		"a", "ai", "an", "ang", "ao", "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao",

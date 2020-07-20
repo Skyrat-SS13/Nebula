@@ -136,8 +136,8 @@
 			"x" = list("ks", "kss", "ksss")
 		)
 	autohiss_exempt = list(
-					LANGUAGE_UNATHI_SINTA,
-					LANGUAGE_UNATHI_YEOSA
+					/decl/language/unathi,
+					/decl/language/yeosa
 	)
 
 /datum/species/humanathi/get_bodytype(var/mob/living/carbon/human/H)

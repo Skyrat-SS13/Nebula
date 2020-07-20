@@ -1,5 +1,5 @@
 /decl/language/adherent
-	name = LANGUAGE_ADHERENT
+	name = "Protocol"
 	desc = "The mellifluous wind chime tones of the Vigil's formal shared language."
 	speech_verb = "chimes"
 	ask_verb = "rings"

@@ -1,6 +1,6 @@
 /decl/cultural_info/faction/ascent_serpentid
 	name =        FACTION_ASCENT_SERPENTID
-	language =    LANGUAGE_MANTID_NONVOCAL
+	language =    /decl/language/mantid/nonvocal
 	description = "Members of the Ascent tend to be organized along the natural lines of their respective species. \
 	For Kharmaani, this is oriented around individual gynes and their power structures. Monarch Serpentids have a slightly less \
 	manipulative approach, as well as more numerous and less self-absorbed queens. They tend to cluster in broad social groups, \
@@ -10,7 +10,7 @@
 
 /decl/cultural_info/faction/ascent_alate
 	name =        FACTION_ASCENT_ALATE
-	language =    LANGUAGE_MANTID_NONVOCAL
+	language =    /decl/language/mantid/nonvocal
 	description = "The life of an alate is a difficult and frequently short one. Those who survive \
 	to maturity have had the violent and uncompromising culture of the Ascent beaten into them with \
 	bladed forelimbs for their entire lives. There is no formal schooling within the Kharmaani \
@@ -24,7 +24,7 @@
 
 /decl/cultural_info/faction/ascent_gyne
 	name =        FACTION_ASCENT_GYNE
-	language =    LANGUAGE_MANTID_NONVOCAL
+	language =    /decl/language/mantid/nonvocal
 	description = "By the time a gyne has survived her 'childhood' and shed the exoskeleton of an \
 	alate during a breeding frenzy, she has obtained a master class education in murdering and eating \
 	her rivals at the first opportunity, as well as a sideline in a technical or practical field. The \

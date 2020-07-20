@@ -4,7 +4,7 @@
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /decl/language/human/indian
-	name = LANGUAGE_HUMAN_INDIAN
+	name = "New Dehlavi"
 	desc = "Billed as a reunification of the Hindustani languages of Hindi and Urdu in the Latin script, New Dehlavi enjoyed very rapid adoption rates among the common populace, \
 			compared to the other great Earth commons."
 	colour = "indian"
@@ -12,15 +12,15 @@
 	shorthand = "Dehv"
 	space_chance = 30
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 10,
-		LANGUAGE_HUMAN_CHINESE = 5,
-		LANGUAGE_HUMAN_ARABIC = 10,
-		LANGUAGE_HUMAN_IBERIAN = 5,
-		LANGUAGE_HUMAN_RUSSIAN = 5,
-		LANGUAGE_HUMAN_SELENIAN = 5,
-		LANGUAGE_HUMAN_GAIAN = 5,
-		LANGUAGE_SPACER = 20,
-		LANGUAGE_GUTTER = 15
+		/decl/language/human/euro = 10,
+		/decl/language/human/chinese = 5,
+		/decl/language/human/arabic = 10,
+		/decl/language/human/iberian = 5,
+		/decl/language/human/russian = 5,
+		/decl/language/human/selenian = 5,
+		/decl/language/human/gaian = 5,
+		/decl/language/spacer = 20,
+		/decl/language/gutter = 15
 	)
 	syllables = list(
 		"ek", "aur", "ki", "ki", "ke", "de", "thaa", "ne", "me", "yaa", "se", "haa",

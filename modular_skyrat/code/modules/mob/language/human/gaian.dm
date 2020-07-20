@@ -6,22 +6,22 @@
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /decl/language/human/gaian
-	name = LANGUAGE_HUMAN_GAIAN
+	name = "Neo-Cossack"
 	desc = "A bastardized hybrid of standard ZAC and Pan-Slavic, Neo-Cossack takes its name from the Slavic Cossacks of old Earth, although slight variations on this pidgin\
 			tongue have long since spread all across the border between SolGov and United Colonies space, where it sees extensive use as a vernacular in the independent worlds."
 	colour = "gaian"
 	key = "c"
 	shorthand = "NCos"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 60,
-		LANGUAGE_HUMAN_RUSSIAN = 60,
-		LANGUAGE_HUMAN_CHINESE = 10,
-		LANGUAGE_HUMAN_ARABIC = 10,
-		LANGUAGE_HUMAN_INDIAN = 10,
-		LANGUAGE_HUMAN_IBERIAN = 25,
-		LANGUAGE_HUMAN_SELENIAN = 25,
-		LANGUAGE_SPACER = 30,
-		LANGUAGE_GUTTER = 20
+		/decl/language/human/euro = 60,
+		/decl/language/human/russian = 60,
+		/decl/language/human/chinese = 10,
+		/decl/language/human/arabic = 10,
+		/decl/language/human/indian = 10,
+		/decl/language/human/iberian = 25,
+		/decl/language/human/selenian = 25,
+		/decl/language/spacer = 30,
+		/decl/language/gutter = 20
 	)
 	syllables = list(
 		"is", "ait", "wa", "abe", "al", "ich", "que", "at", "te", "be", "to", "st", "or", "ans", "de",

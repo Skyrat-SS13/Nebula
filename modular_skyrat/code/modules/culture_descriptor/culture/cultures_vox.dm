@@ -5,12 +5,12 @@
 	and although the glamour and allure of the raider life appeals to many, staying home is seen as a more responsible and mature \
 	pursuit than haring off across the stars to attack the meat and steal their goods."
 	hidden_from_codex = TRUE
-	language = LANGUAGE_VOX
+	language = /decl/language/vox
 	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_SPACER,
-		LANGUAGE_GUTTER,
-		LANGUAGE_SIGN
+		/decl/language/human/euro,
+		/decl/language/spacer,
+		/decl/language/gutter,
+		/decl/language/sign
 	)
 
 /decl/cultural_info/culture/vox/salvager

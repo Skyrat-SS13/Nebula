@@ -1,5 +1,5 @@
 /decl/language/diona
-	name = LANGUAGE_ROOTLOCAL
+	name = "Local Rootspeak"
 	desc = "A complex language known instinctively by Dionaea, 'spoken' by emitting modulated radio waves. This version uses high frequency waves for quick communication at short ranges."
 	speech_verb = "creaks and rustles"
 	ask_verb = "creaks"
@@ -17,7 +17,7 @@
 	return new_name
 
 /decl/language/diona/global
-	name = LANGUAGE_ROOTGLOBAL
+	name = "Global Rootspeak"
 	desc = "A complex language known instinctively by Dionaea, 'spoken' by emitting modulated radio waves. This version uses low frequency waves for slow communication at long ranges."
 	key = "w"
 	flags = RESTRICTED | HIVEMIND

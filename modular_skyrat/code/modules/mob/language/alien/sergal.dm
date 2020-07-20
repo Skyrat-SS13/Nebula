@@ -1,5 +1,5 @@
 /decl/language/sergal
-	name = LANGUAGE_SERGAL
+	name = "Sagaru"
 	desc = "The dominant language of the Sergal homeworld, Tal. It consists of aggressive low-pitched hissing and throaty growling."
 	speech_verb = "snarls"
 	ask_verb = "snarls"
@@ -11,6 +11,6 @@
 	syllables = list("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 	shorthand = "SG"
 	partial_understanding = list(
-		LANGUAGE_HUMAN_EURO = 2,
-		LANGUAGE_SPACER = 2
+		/decl/language/human/euro = 2,
+		/decl/language/spacer = 2
 	)

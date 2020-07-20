@@ -1,5 +1,5 @@
 /decl/language/ling
-	name = LANGUAGE_CHANGELING_GLOBAL
+	name = "Changeling"
 	desc = "Although they are normally wary and suspicious of each other, changelings can commune over a distance."
 	speech_verb = "says"
 	colour = "changeling"
@@ -16,7 +16,7 @@
 		..(speaker,message)
 
 /decl/language/vox
-	name = LANGUAGE_VOX
+	name = "Vox-pidgin"
 	desc = "The common tongue of the various Vox ships making up the Shoal. It sounds like chaotic shrieking to everyone else."
 	speech_verb = "shrieks"
 	ask_verb = "creels"
@@ -43,7 +43,7 @@
 	return ..(FEMALE,1,6)
 
 /decl/language/cultcommon
-	name = LANGUAGE_CULT
+	name = "Cult"
 	desc = "The chants of the occult, the incomprehensible."
 	speech_verb = "intones"
 	ask_verb = "intones"
@@ -64,7 +64,7 @@
 	hidden_from_codex = TRUE
 
 /decl/language/cult
-	name = LANGUAGE_CULT_GLOBAL
+	name = "Occult"
 	desc = "The initiated can share their thoughts by means defying all reason."
 	speech_verb = "intones"
 	ask_verb = "intones"
@@ -76,7 +76,7 @@
 	hidden_from_codex = TRUE
 
 /decl/language/alium
-	name = LANGUAGE_ALIUM
+	name = "Alium"
 	colour = "cult"
 	speech_verb = "hisses"
 	key = "a"

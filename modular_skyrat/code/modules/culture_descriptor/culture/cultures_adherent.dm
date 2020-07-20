@@ -6,11 +6,11 @@
 	and disoriented for hundreds of years following. Now in contact with humanity, the Vigil is tentatively making inroads on \
 	a place in the wider galactic culture."
 	hidden_from_codex = TRUE
-	language = LANGUAGE_ADHERENT
+	language = /decl/language/adherent
 	secondary_langs = list(
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_GUTTER,
-		LANGUAGE_SPACER
+		/decl/language/human/euro,
+		/decl/language/gutter,
+		/decl/language/spacer
 	)
 
 /decl/cultural_info/culture/adherent/get_random_name(var/gender)

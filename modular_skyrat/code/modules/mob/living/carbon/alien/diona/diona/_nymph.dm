@@ -15,8 +15,8 @@
 	available_maneuvers = list(/decl/maneuver/leap)
 	status_flags = NO_ANTAG
 
-	language = LANGUAGE_ROOTLOCAL
-	species_language = LANGUAGE_ROOTLOCAL
+	language = /decl/language/diona
+	species_language = /decl/language/diona
 	only_species_language = 1
 	voice_name = "diona nymph"
 	speak_emote = list("chirrups")
@@ -65,8 +65,8 @@
 /mob/living/carbon/alien/diona/Initialize(var/mapload, var/flower_chance = 15)
 
 	species = all_species[SPECIES_DIONA]
-	add_language(LANGUAGE_ROOTGLOBAL)
-	add_language(LANGUAGE_HUMAN_EURO, 0)
+	add_language(/decl/language/diona/global)
+	add_language(/decl/language/human/euro, 0)
 
 	eyes = image(icon = icon, icon_state = "eyes_[icon_state]")
 	eyes.layer = EYE_GLOW_LAYER

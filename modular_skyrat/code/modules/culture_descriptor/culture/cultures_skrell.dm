@@ -10,14 +10,14 @@
 		small, being generally limited to one, sometimes two bondings. They often dress in clothing made from softer, shinier materials \
 		that are long and flowing and have often been compared to the clothing of ancient Chinese nobles by human scholars. Their skin is generally bright green."
 	economic_power = 1.4
-	language = LANGUAGE_SKRELLIAN
+	language = /decl/language/skrell
 	secondary_langs = list(
-		LANGUAGE_SIGN,
-		LANGUAGE_HUMAN_EURO,
-		LANGUAGE_GUTTER,
-		LANGUAGE_SPACER,
-		LANGUAGE_MANTID_VOCAL,
-		LANGUAGE_MANTID_NONVOCAL
+		/decl/language/sign,
+		/decl/language/human/euro,
+		/decl/language/gutter,
+		/decl/language/spacer,
+		/decl/language/mantid,
+		/decl/language/mantid/nonvocal
 	)
 
 /decl/cultural_info/culture/skrell/caste_malish
