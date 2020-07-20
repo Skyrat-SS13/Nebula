@@ -151,9 +151,9 @@
 	var/datum/species/real = all_species[base_species]
 	return real.get_icobase(H, get_deform)
 
-/datum/species/custom/get_race_key(var/mob/living/carbon/human/H)
+/datum/species/custom/get_icon_cache_uid(var/mob/living/carbon/human/H)
 	var/datum/species/real = all_species[base_species]
-	return real.race_key
+	return real.get_icon_cache_uid()
 
 /datum/species/custom/post_organ_rejuvenate(var/obj/item/organ/org, var/mob/living/carbon/human/H)	//This is required so custom species do not revert to humans on rejuvenate.
 	var/obj/item/organ/external/E = org

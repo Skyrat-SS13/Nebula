@@ -88,8 +88,10 @@
 
 		// Handle some post-metabolism reagent processing for generally inedible foods.
 		if(ingested.total_volume > 0)
-			for(var/datum/reagent/R in ingested.reagent_list)
-				var/inedible_nutriment_amount = gains_nutriment_from_inedible_reagents[R.type]
+			var/datum/reagents/ingested = owner.get_ingested_reagents()
+			for(var/rtype in ingested.reagent_volumes)
+				var/decl/material/liquid/R = decls_repository.get_decl(rtype)
+				var/inedible_nutriment_amount = gains_nutriment_from_inedible_reagents[R]
 				if(inedible_nutriment_amount > 0)
 					owner.adjust_nutrition(inedible_nutriment_amount)
 
@@ -120,12 +122,12 @@
 
 		// Convert stored matter into sheets.
 		for(var/mat in check_materials)
-			var/material/M = SSmaterials.get_material_by_name(mat)
-			if(M && M.stack_type && stored_matter[mat] >= M.units_per_sheet)
+			var/decl/material/M = decls_repository.get_decl(mat)
+			if(M && M.stack_type && stored_matter[mat] >= SHEET_MATERIAL_AMOUNT)
 
 				// Remove as many sheets as possible from the gizzard.
-				var/sheets = Floor(stored_matter[mat]/M.units_per_sheet)
-				stored_matter[mat] -= M.units_per_sheet * sheets
+				var/sheets = Floor(stored_matter[mat]/SHEET_MATERIAL_AMOUNT)
+				stored_matter[mat] -= SHEET_MATERIAL_AMOUNT * sheets
 				if(stored_matter[mat] <= 0)
 					stored_matter -= mat
 
@@ -133,7 +135,7 @@
 				for(var/obj/item/stack/material/mat_stack in contents)
 					if(mat_stack.material == M && mat_stack.amount < mat_stack.max_amount)
 						var/taking_sheets = min(sheets, mat_stack.max_amount - mat_stack.amount)
-						mat_stack.set_amount(mat_stack.amount + taking_sheets)
+						mat_stack.amount = mat_stack.amount + taking_sheets
 						sheets -= taking_sheets
 						updated_stacks = TRUE
 
@@ -141,7 +143,7 @@
 				while(sheets > 0)
 					var/obj/item/stack/material/mat_stack = new M.stack_type(src)
 					var/taking_sheets = min(sheets, mat_stack.max_amount)
-					mat_stack.set_amount(mat_stack.amount + taking_sheets)
+					mat_stack.amount = mat_stack.amount + taking_sheets
 					sheets -= taking_sheets
 					updated_stacks = TRUE
 

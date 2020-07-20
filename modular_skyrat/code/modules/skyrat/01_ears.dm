@@ -1,8 +1,8 @@
 // Global stuff that will put us on the map
-/datum/category_group/player_setup_category/Mithra
+/datum/category_group/player_setup_category/skyrat
 	name = "Genemods"
 	sort_order = 9
-	category_item_type = /datum/category_item/player_setup_item/vore
+	category_item_type = /datum/category_item/player_setup_item/skyrat
 
 // Define a place to save appearance in character setup
 /datum/preferences
@@ -36,11 +36,11 @@
 	var/dress_mob = TRUE
 
 // Definition of the stuff for Ears
-/datum/category_item/player_setup_item/vore/ears
+/datum/category_item/player_setup_item/skyrat/ears
 	name = "Appearance"
 	sort_order = 1
 
-/datum/category_item/player_setup_item/vore/ears/load_character(var/savefile/S)
+/datum/category_item/player_setup_item/skyrat/ears/load_character(var/savefile/S)
 	from_file(S["ear_style"], pref.ear_style)
 	from_file(S["r_ears"], pref.r_ears)
 	from_file(S["g_ears"], pref.g_ears)
@@ -69,7 +69,7 @@
 	from_file(S["g_wing3"], pref.g_wing3)
 	from_file(S["b_wing3"], pref.b_wing3)
 
-/datum/category_item/player_setup_item/vore/ears/save_character(var/savefile/S)
+/datum/category_item/player_setup_item/skyrat/ears/save_character(var/savefile/S)
 	to_file(S["ear_style"], pref.ear_style)
 	to_file(S["r_ears"], pref.r_ears)
 	to_file(S["g_ears"], pref.g_ears)
@@ -98,7 +98,7 @@
 	to_file(S["g_wing3"], pref.g_wing3)
 	to_file(S["b_wing3"], pref.b_wing3)
 
-/datum/category_item/player_setup_item/vore/ears/sanitize_character()
+/datum/category_item/player_setup_item/skyrat/ears/sanitize_character()
 	pref.r_ears		= sanitize_integer(pref.r_ears, 0, 255, initial(pref.r_ears))
 	pref.g_ears		= sanitize_integer(pref.g_ears, 0, 255, initial(pref.g_ears))
 	pref.b_ears		= sanitize_integer(pref.b_ears, 0, 255, initial(pref.b_ears))
@@ -164,7 +164,7 @@
 
 
 
-/datum/category_item/player_setup_item/vore/ears/content(var/mob/user)
+/datum/category_item/player_setup_item/skyrat/ears/content(var/mob/user)
 	. += "<h2>Genemod Selection</h2>"
 
 	if(!pref.preview_icon)
@@ -227,7 +227,7 @@
 		if (T.extra_overlay2)
 			. += "<a href='?src=\ref[src];wing_color3=1'>Change tertiary Color</a> <font face='fixedsys' size='3' color='#[num2hex(pref.r_wing3, 2)][num2hex(pref.g_wing3, 2)][num2hex(pref.b_wing3, 2)]'><table style='display:inline;' bgcolor='#[num2hex(pref.r_wing3, 2)][num2hex(pref.g_wing3, 2)][num2hex(pref.b_wing3, 2)]'><tr><td>__</td></tr></table> </font><br>"
 
-/datum/category_item/player_setup_item/vore/ears/OnTopic(var/href,var/list/href_list, var/mob/user)
+/datum/category_item/player_setup_item/skyrat/ears/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
 		return TOPIC_NOACTION
 
