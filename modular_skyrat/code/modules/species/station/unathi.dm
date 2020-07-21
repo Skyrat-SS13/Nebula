@@ -12,6 +12,7 @@
 	limb_blend = ICON_MULTIPLY
 	tail_blend = ICON_MULTIPLY
 	hidden_from_codex = FALSE
+	bodytype =              BODYTYPE_HUMANOID
 	//skin_material =   MAT_SKIN_LIZARD
 
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/tail, /decl/natural_attack/claws, /decl/natural_attack/punch, /decl/natural_attack/bite/sharp)
@@ -138,5 +139,5 @@
 	if(effective_dose > 20 && prob(10))
 		M.SelfMove(pick(GLOB.cardinal))*/
 
-/datum/species/unathi/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/unathi/get_root_species_name(var/mob/living/carbon/human/H)
 	return SPECIES_UNATHI

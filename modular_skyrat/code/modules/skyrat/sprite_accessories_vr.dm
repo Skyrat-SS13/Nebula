@@ -25,7 +25,7 @@
 	name = "You should not see this..."
 	icon = 'modular_skyrat/icons/mob/ears.dmi'
 	do_colouration = 0 // Set to 1 to blend (ICON_ADD) hair color
-
+	species_allowed = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_VOX, SPECIES_AKULA, SPECIES_VULP, SPECIES_VASS, SPECIES_TAJ, SPECIES_IPC, SPECIES_CUSTOM, SPECIES_OLDUNATHI, SPECIES_HUMAN2)
 	var/color_blend_mode = ICON_ADD // Only appliciable if do_coloration = 1
 	var/extra_overlay // Icon state of an additional overlay to blend in.
 	var/desc = "You should not see this..."

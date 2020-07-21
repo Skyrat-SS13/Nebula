@@ -10,6 +10,7 @@
 	species_flags = SPECIES_FLAG_NO_PAIN | SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_POISON
 	spawn_flags = SPECIES_IS_RESTRICTED
 	siemens_coefficient = 0
+	bodytype =              BODYTYPE_HUMANOID
 
 	meat_type = null
 	bone_material = null

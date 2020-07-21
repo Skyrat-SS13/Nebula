@@ -10,6 +10,7 @@
 	limb_blend = ICON_MULTIPLY
 	tail_blend = ICON_MULTIPLY
 	hidden_from_codex = FALSE
+	bodytype =              BODYTYPE_HUMANOID
 
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/kick, /decl/natural_attack/punch, /decl/natural_attack/bite/sharp, /decl/natural_attack/claws)
 

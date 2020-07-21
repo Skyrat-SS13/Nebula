@@ -56,7 +56,7 @@
 #define DNA_UI_LENGTH      35 // Updated for all those custom species
 //SKYRAT CHANGES END
 
-#define DNA_SE_LENGTH 27
+#define DNA_SE_LENGTH 46 //SKYRAT EDIT
 // For later:
 //#define DNA_SE_LENGTH 50 // Was STRUCDNASIZE, size 27. 15 new blocks added = 42, plus room to grow.
 

@@ -17,6 +17,7 @@
 	base_species = SPECIES_HUMAN
 	limb_blend = ICON_MULTIPLY
 	tail_blend = ICON_MULTIPLY
+	bodytype =              BODYTYPE_HUMANOID
 
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/kick, /decl/natural_attack/punch, /decl/natural_attack/bite)
 
@@ -241,5 +242,5 @@
 	*/
 	return ..()
 
-/datum/species/custom/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/custom/get_root_species_name(var/mob/living/carbon/human/H)
 	return SPECIES_HUMAN

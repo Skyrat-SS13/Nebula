@@ -18,6 +18,7 @@
 	//bone_material = MATERIAL_BONE_CARTILAGE
 	genders = list(PLURAL)
 	hidden_from_codex = FALSE
+	bodytype =              BODYTYPE_HUMANOID
 	min_age = 19
 	max_age = 90
 

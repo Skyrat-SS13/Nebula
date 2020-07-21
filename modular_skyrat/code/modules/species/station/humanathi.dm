@@ -13,6 +13,7 @@
 	limb_blend = ICON_MULTIPLY
 	tail_blend = ICON_MULTIPLY
 	hidden_from_codex = FALSE
+	bodytype =              BODYTYPE_HUMANOID
 	//skin_material =   MAT_SKIN_LIZARD
 
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/kick,/decl/natural_attack/tail, /decl/natural_attack/punch, /decl/natural_attack/bite/sharp)
@@ -140,5 +141,5 @@
 					/decl/language/yeosa
 	)
 
-/datum/species/humanathi/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/humanathi/get_root_species_name(var/mob/living/carbon/human/H)
 	return SPECIES_OLDUNATHI

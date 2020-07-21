@@ -3359,6 +3359,7 @@
 #include "modular_skyrat\code\modules\species\station\vasilissan.dm"
 #include "modular_skyrat\code\modules\species\station\vulpkanin.dm"
 #include "modular_skyrat\code\modules\sprite_accessories\_accessory_hair.dm"
+#include "modular_skyrat\code\modules\sprite_accessories\_accessory_markings.dm"
 #include "modular_skyrat\code\modules\sprite_accessories\accessory_tajara.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

@@ -6,7 +6,7 @@
 	var/pass = TRUE
 
 	//Custom species checks
-	if (client && client.prefs && client.prefs.species == "Custom Species")
+	if (client && client.prefs && client.prefs.species == SPECIES_CUSTOM)
 
 		//Didn't name it
 		if(!client.prefs.custom_species)
@@ -138,9 +138,9 @@
 	if(character.cannot_stand())
 		equip_wheelchair(character)
 
-	qdel(src)
+	qdel(src)*/
 
-/mob/new_player/proc/AttemptLateSpawn(var/datum/job/job, var/spawning_at)
+/mob/new_player/AttemptLateSpawn(var/datum/job/job, var/spawning_at)
 
 	if(src != usr)
 		return 0
@@ -155,7 +155,9 @@
 		alert("[job.title] is not available. Please try another.")
 		return 0
 	if(job.is_restricted(client.prefs, src))
-		return
+		return 0
+	if(!attempt_vr(src,"spawn_checks",list())) //Really the only thing changed here
+		return 0									// Ditto
 
 	var/datum/spawnpoint/spawnpoint = job.get_spawnpoint(client)
 	var/turf/spawn_turf = pick(spawnpoint.turfs)
@@ -213,4 +215,4 @@
 		matchmaker.do_matchmaking()
 	log_and_message_admins("has joined the round as [character.mind.assigned_role].", character)
 
-	qdel(src)*/
+	qdel(src)

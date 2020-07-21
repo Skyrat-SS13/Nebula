@@ -48,5 +48,5 @@
 		)
 	)
 
-/datum/species/customhuman/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/customhuman/get_root_species_name(var/mob/living/carbon/human/H)
 	return SPECIES_HUMAN

@@ -146,6 +146,7 @@
 	burn_mod = 0.5
 	strength = STR_HIGH
 	mob_size = MOB_SIZE_LARGE
+	bodytype =              BODYTYPE_HUMANOID
 
 	speech_sounds = list('sound/voice/shriek1.ogg')
 	speech_chance = 25
