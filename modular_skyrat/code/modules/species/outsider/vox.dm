@@ -9,6 +9,7 @@
 	blood_mask =      'modular_skyrat/icons/mob/human_races/species/vox/blood_mask.dmi'
 
 	limb_blend = ICON_MULTIPLY
+	bodytype =              BODYTYPE_HUMANOID
 
 	unarmed_attacks = list(
 		/decl/natural_attack/stomp,
@@ -146,7 +147,7 @@
 	burn_mod = 0.5
 	strength = STR_HIGH
 	mob_size = MOB_SIZE_LARGE
-	bodytype =              BODYTYPE_HUMANOID
+	bodytype =              BODYTYPE_OTHER
 
 	speech_sounds = list('sound/voice/shriek1.ogg')
 	speech_chance = 25
