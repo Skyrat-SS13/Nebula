@@ -448,12 +448,15 @@ client/verb/character_setup()
 /proc/handle_resize(client/C)
 	if (!C)
 		return
-	var/divisor = text2num(winget(C, "mapwindow.map", "icon-size")) || world.icon_size
+	//SKYRAT CHANGES: oh god this view hurts my eyes but this is just a bandaid
+	/*var/divisor = text2num(winget(C, "mapwindow.map", "icon-size")) || world.icon_size
 	var/winsize_string = winget(C, "mapwindow.map", "size")
 	C.last_view_x_dim = Clamp(ceil(text2num(winsize_string) / divisor), 15, 41)
 	C.last_view_y_dim = Clamp(ceil(text2num(copytext(winsize_string,findtext(winsize_string,"x")+1,0)) / divisor), 15, 41)
 	if(C.last_view_x_dim % 2 == 0) C.last_view_x_dim++
-	if(C.last_view_y_dim % 2 == 0) C.last_view_y_dim++
+	if(C.last_view_y_dim % 2 == 0) C.last_view_y_dim++*/
+	C.last_view_x_dim = 21
+	C.last_view_x_dim = 15
 	C.view = "[C.last_view_x_dim]x[C.last_view_y_dim]"
 
 	// Reset eye/perspective
