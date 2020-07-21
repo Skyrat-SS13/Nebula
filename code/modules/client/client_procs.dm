@@ -456,7 +456,7 @@ client/verb/character_setup()
 	if(C.last_view_x_dim % 2 == 0) C.last_view_x_dim++
 	if(C.last_view_y_dim % 2 == 0) C.last_view_y_dim++*/
 	C.last_view_x_dim = 21
-	C.last_view_x_dim = 15
+	C.last_view_y_dim = 15
 	C.view = "[C.last_view_x_dim]x[C.last_view_y_dim]"
 
 	// Reset eye/perspective
