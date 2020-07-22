@@ -194,3 +194,130 @@
 					break
 		if(is_in_water)
 			H.adjust_hydration(100)
+
+/proc/split_into_nymphs(var/mob/living/carbon/human/donor)
+
+	if(!donor || donor.species.name != SPECIES_DIONA)
+		return
+
+	// Run through our nymphs and spit them out
+	var/list/available_nymphs = list()
+	for(var/mob/living/carbon/alien/diona/nymph in donor.contents)
+		nymph.dropInto(donor.loc)
+		transfer_languages(donor, nymph, (WHITELISTED|RESTRICTED))
+		nymph.set_dir(pick(NORTH, SOUTH, EAST, WEST))
+		// Collect any available nymphs
+		if(!nymph.client && nymph.stat != DEAD)
+			available_nymphs += nymph
+
+	// Make sure there's a home for the player
+	if(!available_nymphs.len)
+		available_nymphs += new /mob/living/carbon/alien/diona/sterile(donor.loc)
+
+	// Link availalbe nymphs together
+	var/mob/living/carbon/alien/diona/first_nymph
+	var/mob/living/carbon/alien/diona/last_nymph
+	for(var/mob/living/carbon/alien/diona/nymph in available_nymphs)
+		if(!first_nymph)
+			first_nymph = nymph
+		else
+			nymph.set_previous_nymph(last_nymph)
+			last_nymph.set_next_nymph(nymph)
+		last_nymph = nymph
+	if(available_nymphs.len > 1)
+		first_nymph.set_previous_nymph(last_nymph)
+		last_nymph.set_next_nymph(first_nymph)
+
+	// Transfer player over
+	first_nymph.set_dir(donor.dir)
+	transfer_languages(donor, first_nymph)
+	if(donor.mind)
+		donor.mind.transfer_to(first_nymph)
+	else
+		first_nymph.key = donor.key
+
+	log_and_message_admins("has split into nymphs; player now controls [key_name_admin(first_nymph)]", donor)
+
+	for(var/obj/item/W in donor)
+		donor.drop_from_inventory(W)
+
+	donor.visible_message("<span class='warning'>\The [donor] quivers slightly, then splits apart with a wet slithering noise.</span>")
+	qdel(donor)
+
+//This essentially makes dionaea spawned by splitting into a doubly linked
+//list that, when the nymph dies, transfers the controler's mind
+//to the next nymph in the list.
+
+/mob/living/carbon/alien/diona/proc/set_next_nymph(var/mob/living/carbon/alien/diona/D)
+	next_nymph = D
+
+/mob/living/carbon/alien/diona/proc/set_previous_nymph(var/mob/living/carbon/alien/diona/D)
+	previous_nymph = D
+// When there are only two nymphs left in a list and one is to be removed,
+// call this to null it out.
+/mob/living/carbon/alien/diona/proc/null_nymphs()
+	next_nymph = null
+	previous_nymph = null
+
+/mob/living/carbon/alien/diona/proc/remove_from_list()
+	// Closes over the gap that's going to be made and removes references to
+	// the nymph this is called for.
+	var/need_links_null = 0
+
+	if (previous_nymph)
+		previous_nymph.set_next_nymph(next_nymph)
+		if (previous_nymph.next_nymph == previous_nymph)
+			need_links_null = 1
+	if (next_nymph)
+		next_nymph.set_previous_nymph(previous_nymph)
+		if (next_nymph.previous_nymph == next_nymph)
+			need_links_null = 1
+	// This bit checks if a nymphs is the only nymph in the list
+	// by seeing if it points to itself. If it is, it nulls it
+	// to stop list behaviour.
+	if (need_links_null)
+		if (previous_nymph)
+			previous_nymph.null_nymphs()
+		if (next_nymph)
+			next_nymph.null_nymphs()
+	// Finally, remove the current nymph's references to other nymphs.
+	null_nymphs()
+
+/mob/living/carbon/alien/diona/death(gibbed)
+
+	var/obj/structure/diona_gestalt/gestalt = loc
+	if(istype(gestalt))
+		gestalt.shed_atom(src, TRUE, FALSE)
+
+	if(holding_item)
+		unEquip(holding_item)
+	if(hat)
+		unEquip(hat)
+
+	jump_to_next_nymph()
+
+	remove_from_list()
+
+	return ..(gibbed,death_msg)
+
+/mob/living/carbon/alien/diona/Destroy()
+	if (previous_nymph || next_nymph)
+		remove_from_list()
+	return ..()
+
+/mob/living/carbon/alien/diona/verb/jump_to_next_nymph()
+	set name = "Jump to next nymph"
+	set desc = "Switch control to another nymph from your last gestalt."
+	set category = "Abilities"
+
+	if (next_nymph && next_nymph.stat != DEAD && !next_nymph.client)
+
+		var/mob/living/carbon/alien/diona/S = next_nymph
+		transfer_languages(src, S)
+
+		if(mind)
+			to_chat(src, "<span class='info'>You're now in control of [S].</span>")
+			mind.transfer_to(S)
+			log_and_message_admins("has transfered to another nymph; player now controls [key_name_admin(S)]", src)
+	else
+		to_chat(src, "<span class='info'>There are no appropriate nymphs for you to jump into.</span>")
