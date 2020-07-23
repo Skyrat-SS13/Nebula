@@ -4,7 +4,7 @@
 /datum/computer_file/report/recipient/exp/fauna
 	form_name = "SCG-EXP-19f"
 	title = "Alien Fauna Report"
-	available_on_ntnet = 1
+	//available_on_ntnet = 1
 
 /datum/computer_file/report/recipient/exp/fauna/generate_fields()
 	..()

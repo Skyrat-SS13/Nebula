@@ -2,11 +2,11 @@
 #define ASSIGNMENT_SUPPLY "Supply"
 #define ASSIGNMENT_SECURITY "Security"
 
-/datum/map/torch/setup_events()
+/*/datum/map/torch/setup_events()
 	map_event_container = list(
 				num2text(EVENT_LEVEL_MODERATE)	= new/datum/event_container/moderate/torch,
 				num2text(EVENT_LEVEL_MAJOR) 	= new/datum/event_container/major/torch
-			)
+			)*/ //TODO: EVENTS
 
 /datum/event/prison_break/xenobiology
 	eventDept = "Science"
@@ -41,7 +41,7 @@
 	available_events = list(
 		new/datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",					/datum/event/prison_break/xenobiology,	0,		list(ASSIGNMENT_SCIENCE = 100)),
 		new/datum/event_meta(EVENT_LEVEL_MODERATE, "Warehouse Breach",						/datum/event/prison_break/warehouse,	0,		list(ASSIGNMENT_SUPPLY = 100)),
-		new/datum/event_meta(EVENT_LEVEL_MODERATE, "Hard Storage Breach",					/datum/event/prison_break/hardstorage,	0,		list(ASSIGNMENT_ENGINEER = 100)),		
+		new/datum/event_meta(EVENT_LEVEL_MODERATE, "Hard Storage Breach",					/datum/event/prison_break/hardstorage,	0,		list(ASSIGNMENT_ENGINEER = 100)),
 		new/datum/event_meta(EVENT_LEVEL_MODERATE, "Armory Breach",						/datum/event/prison_break/armory,		0,		list(ASSIGNMENT_SECURITY = 100))
 		)
 

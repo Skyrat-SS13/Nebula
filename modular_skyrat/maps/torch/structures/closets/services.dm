@@ -33,10 +33,10 @@
 		/obj/item/clothing/head/soft/green,
 		/obj/item/storage/plants,
 		/obj/item/scanner/plant,
-		/obj/item/material/minihoe,
-		/obj/item/material/hatchet,
+		/obj/item/minihoe,
+		/obj/item/hatchet,
 		/obj/item/wirecutters/clippers,
-		/obj/item/reagent_containers/spray/plantbgone,
+		/obj/item/chems/spray/plantbgone,
 		new /datum/atom_creator/weighted(list(/obj/item/clothing/suit/apron, /obj/item/clothing/suit/apron/overalls)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/hydroponics, /obj/item/storage/backpack/satchel/hyd)),
 		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger/hyd, 50)
@@ -72,7 +72,7 @@
 	return list(
 		/obj/item/clothing/head/soft/black,
 		/obj/item/radio/headset/headset_service,
-		/obj/item/reagent_containers/food/drinks/shaker,
+		/obj/item/chems/food/drinks/shaker,
 		/obj/item/glass_jar,
 		/obj/item/book/manual/barman_recipes,
 		/obj/item/clothing/under/rank/bartender,

@@ -6193,7 +6193,7 @@
 /area/miningstation/kitchen)
 "oi" = (
 /obj/structure/table/marble,
-/obj/item/material/knife/kitchen,
+/obj/item/knife/kitchen,
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
@@ -6629,7 +6629,7 @@
 /area/miningstation/kitchen)
 "pg" = (
 /obj/structure/table/marble,
-/obj/item/material/knife/kitchen/cleaver/bronze,
+/obj/item/knife/kitchen/cleaver/bronze,
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},

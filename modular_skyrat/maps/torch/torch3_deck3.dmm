@@ -3676,7 +3676,7 @@
 /area/chapel/office)
 "hr" = (
 /obj/structure/table/marble,
-/obj/item/material/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -10953,7 +10953,7 @@
 /area/hydroponics)
 "xo" = (
 /obj/structure/table/standard,
-/obj/item/material/bell,
+/obj/item/bell,
 /turf/simulated/floor/lino,
 /area/crew_quarters/office)
 "xp" = (
@@ -12029,7 +12029,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/material/bell,
+/obj/item/bell,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/galley)
 "At" = (
@@ -13376,7 +13376,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
 /obj/structure/table/marble,
-/obj/item/material/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = -21
@@ -19648,8 +19648,8 @@
 /area/hallway/primary/thirddeck/fore)
 "Vm" = (
 /obj/structure/table/standard,
-/obj/item/material/minihoe,
-/obj/item/material/hatchet,
+/obj/item/minihoe,
+/obj/item/hatchet,
 /obj/effect/floor_decal/corner/green/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics)

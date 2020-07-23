@@ -1,7 +1,7 @@
 /decl/hierarchy/mil_uniform/ec/com //Can only be officers
 	name = "EC command"
 	min_rank = 11
-	departments = COM
+	departments = list(DEPT_COMMAND)
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/command,
@@ -25,7 +25,7 @@
 	min_rank = 15
 
 	service_hat = /obj/item/clothing/head/solgov/service/expedition/senior_command
-	
+
 	dress_over = /obj/item/clothing/suit/storage/solgov/dress/expedition/command/cdr
 	dress_hat = /obj/item/clothing/head/solgov/service/expedition/senior_command
 
@@ -49,7 +49,7 @@
 
 /decl/hierarchy/mil_uniform/ec/eng
 	name = "EC engineering"
-	departments = ENG
+	departments = list(DEPT_ENGINEERING)
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/engineering
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/engineering,
@@ -101,11 +101,11 @@
 
 /decl/hierarchy/mil_uniform/ec/eng/officer/com //Can only be officers
 	name = "EC engineering command"
-	departments = ENG|COM
+	departments = list(DEPT_ENGINEERING, DEPT_COMMAND)
 
 /decl/hierarchy/mil_uniform/ec/sec
 	name = "EC security"
-	departments = SEC
+	departments = list(DEPT_SECURITY)
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/security
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/security,
@@ -155,11 +155,11 @@
 
 /decl/hierarchy/mil_uniform/ec/sec/officer/com //Can only be officers
 	name = "EC security command"
-	departments = SEC|COM
+	departments = list(DEPT_SECURITY, DEPT_COMMAND)
 
 /decl/hierarchy/mil_uniform/ec/med
 	name = "EC medical"
-	departments = MED
+	departments = list(DEPT_MEDICAL)
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/medical
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/medical,
@@ -209,11 +209,11 @@
 
 /decl/hierarchy/mil_uniform/ec/med/officer/com //Can only be officers
 	name = "EC medical command"
-	departments = MED|COM
+	departments = list(DEPT_MEDICAL, DEPT_COMMAND)
 
 /decl/hierarchy/mil_uniform/ec/sup
 	name = "EC supply"
-	departments = SUP
+	departments = list(DEPT_SUPPORT)
 
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/supply,
 						 /obj/item/clothing/head/ushanka/solgov,
@@ -262,7 +262,7 @@
 
 /decl/hierarchy/mil_uniform/ec/srv
 	name = "EC service"
-	departments = SRV
+	departments = list(DEPT_SERVICE)
 
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/service,
 						 /obj/item/clothing/head/ushanka/solgov,
@@ -312,7 +312,7 @@
 
 /decl/hierarchy/mil_uniform/ec/exp
 	name = "EC exploration"
-	departments = EXP
+	departments = list(DEPT_EXPLORATION)
 
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/exploration,
 						 /obj/item/clothing/head/ushanka/solgov,
@@ -362,7 +362,7 @@
 
 /decl/hierarchy/mil_uniform/ec/spt
 	name = "EC command support"
-	departments = SPT
+	departments = list(DEPT_SUPPORT)
 
 	utility_under= /obj/item/clothing/under/solgov/utility/expeditionary/command
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/command,
@@ -407,7 +407,7 @@
 
 /decl/hierarchy/mil_uniform/ec/sci
 	name = "EC science"
-	departments = SCI
+	departments = list(DEPT_SCIENCE)
 
 	utility_under = /obj/item/clothing/under/solgov/utility/expeditionary/research
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov,
@@ -455,7 +455,7 @@
 
 /decl/hierarchy/mil_uniform/ec/sci/officer/com //Can only be officers
 	name = "EC science command"
-	departments = SCI|COM
+	departments = list(DEPT_SCIENCE, DEPT_COMMAND)
 
 	utility_extra = list(/obj/item/clothing/head/beret/solgov/expedition/command,
 						 /obj/item/clothing/head/ushanka/solgov,

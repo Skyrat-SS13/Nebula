@@ -53,7 +53,7 @@
 	dress_over = /obj/item/clothing/suit/storage/solgov/dress/expedition
 	dress_shoes = /obj/item/clothing/shoes/dress
 	dress_hat = /obj/item/clothing/head/solgov/service/expedition
-	dress_gloves = /obj/item/clothing/gloves/white
+	dress_gloves = /obj/item/clothing/gloves/color/white
 
 	dress_extra = list(/obj/item/clothing/accessory/solgov/ec_scarf)
 
@@ -81,7 +81,7 @@
 	dress_over = /obj/item/clothing/suit/dress/solgov/fleet/sailor
 	dress_shoes = /obj/item/clothing/shoes/dress
 	dress_hat = /obj/item/clothing/head/solgov/dress/fleet
-	dress_gloves = /obj/item/clothing/gloves/white
+	dress_gloves = /obj/item/clothing/gloves/color/white
 
 	dress_extra = list(/obj/item/clothing/head/beret/solgov/fleet/dress)
 

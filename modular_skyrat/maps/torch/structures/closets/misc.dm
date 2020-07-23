@@ -32,7 +32,7 @@
 /obj/structure/closet/secure_closet/liaison/WillContain()
 	return list(
 		/obj/item/flash,
-		/obj/item/material/clipboard,
+		/obj/item/clipboard,
 		/obj/item/folder,
 		/obj/item/tape/random = 3,
 		/obj/item/storage/secure/briefcase,
@@ -92,7 +92,7 @@
 	return list(
 		/obj/item/flash,
 		/obj/item/camera_film = 2,
-		/obj/item/material/clipboard,
+		/obj/item/clipboard,
 		/obj/item/folder,
 		/obj/item/tape/random = 3,
 		/obj/item/storage/secure/briefcase,

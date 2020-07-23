@@ -697,7 +697,7 @@
 	pixel_x = 3;
 	pixel_y = 0
 	},
-/obj/item/material/clipboard,
+/obj/item/clipboard,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -797,7 +797,7 @@
 "bz" = (
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/material/ashtray/plastic,
+/obj/item/ashtray/plastic,
 /obj/random/smokes,
 /obj/item/flame/lighter/random,
 /turf/simulated/floor/carpet,
@@ -2609,7 +2609,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/effect/floor_decal/corner/blue/mono,
 /obj/machinery/door/firedoor,
-/obj/item/material/bell,
+/obj/item/bell,
 /obj/machinery/door/window/brigdoor/eastright{
 	dir = 8;
 	name = "Executive Officer's Desk"
@@ -9896,7 +9896,7 @@
 /obj/item/folder/white,
 /obj/effect/floor_decal/corner/blue/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/material/clipboard,
+/obj/item/clipboard,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
 "vn" = (
@@ -12332,7 +12332,7 @@
 	pixel_x = 0;
 	pixel_y = -32
 	},
-/obj/item/material/ashtray/bronze,
+/obj/item/ashtray/bronze,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
 "CX" = (
@@ -14345,7 +14345,7 @@
 /area/maintenance/bridge/aftport)
 "LN" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/material/ashtray/glass,
+/obj/item/ashtray/glass,
 /turf/simulated/floor/carpet/blue2,
 /area/bridge/meeting_room)
 "LP" = (
@@ -15916,7 +15916,7 @@
 /area/bridge)
 "SL" = (
 /obj/structure/table/woodentable_reinforced/walnut,
-/obj/item/material/ashtray/bronze,
+/obj/item/ashtray/bronze,
 /obj/item/flame/lighter/zippo/random,
 /obj/random/smokes,
 /obj/structure/sign/warning/smoking{
@@ -16039,7 +16039,7 @@
 	pixel_x = -23;
 	pixel_y = 0
 	},
-/obj/item/material/ashtray/glass,
+/obj/item/ashtray/glass,
 /obj/item/flame/lighter/zippo/random,
 /obj/random/smokes,
 /obj/structure/sign/warning/smoking{

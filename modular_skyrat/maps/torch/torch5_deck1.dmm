@@ -1348,7 +1348,7 @@
 	opacity = 0
 	},
 /obj/structure/table/reinforced,
-/obj/item/material/bell,
+/obj/item/bell,
 /obj/machinery/door/window/southright{
 	dir = 2;
 	name = "Fabricator Lab Desk"
@@ -1626,7 +1626,7 @@
 	name = "Chemistry Counter Shutters";
 	opacity = 0
 	},
-/obj/item/material/bell,
+/obj/item/bell,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -26842,7 +26842,7 @@
 	dir = 8;
 	name = "Brig Chief Desk"
 	},
-/obj/item/material/bell,
+/obj/item/bell,
 /obj/machinery/door/blast/shutters/open{
 	dir = 2;
 	id_tag = "bo_pshutters";
@@ -30753,7 +30753,7 @@
 /obj/item/flame/candle/scented/incense{
 	desc = "An incense cone. It produces fragrant smoke when burned. This one is branded 'IQ-incense, for the smart and sensual.' "
 	},
-/obj/item/material/ashtray/plastic{
+/obj/item/ashtray/plastic{
 	pixel_x = 5;
 	pixel_y = 5
 	},

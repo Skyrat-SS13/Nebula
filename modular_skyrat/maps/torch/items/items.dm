@@ -46,8 +46,10 @@ Torch specific items
 *******************/
 
 /obj/item/modular_computer/pda/explorer
-	icon_state = "pda-exp"
-	icon_state_unpowered = "pda-exp"
+	color = COLOR_PURPLE
+	decals = list(
+		"stripe" = COLOR_SKY_BLUE
+	)
 
 /obj/item/modular_computer/pda/heads/hop
 	stored_pen = /obj/item/pen/multi/cmd/xo

@@ -5511,8 +5511,8 @@
 /area/ship/skrellscoutshuttle)
 "SS" = (
 /obj/structure/table/glass,
-/obj/item/material/hatchet,
-/obj/item/material/minihoe,
+/obj/item/hatchet,
+/obj/item/minihoe,
 /obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light/skrell{
 	dir = 1;

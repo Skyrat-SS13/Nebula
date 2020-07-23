@@ -2595,7 +2595,7 @@
 "gf" = (
 /obj/structure/closet/crate,
 /obj/item/folder/white,
-/obj/item/material/knife/folding,
+/obj/item/knife/folding,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
 "gg" = (
@@ -3104,7 +3104,7 @@
 /area/lar_maria/vir_access)
 "hA" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/material/ashtray/plastic,
+/obj/item/ashtray/plastic,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
 "hB" = (
@@ -3614,7 +3614,7 @@
 /area/lar_maria/cells)
 "iA" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/material/ashtray/plastic,
+/obj/item/ashtray/plastic,
 /turf/simulated/floor/plating,
 /area/lar_maria/cells)
 "iB" = (

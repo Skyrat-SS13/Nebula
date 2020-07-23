@@ -2,7 +2,7 @@
 	name = "master solgov uniform"
 	desc = "You shouldn't be seeing this."
 	icon = 'maps/torch/icons/obj/obj_under_solgov.dmi'
-	item_icons = list(slot_w_uniform_str = 'maps/torch/icons/mob/onmob_under_solgov.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/maps/torch/icons/mob/onmob_under_solgov.dmi')
 	siemens_coefficient = 0.8
 	gender_icons = 1
 

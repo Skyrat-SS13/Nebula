@@ -49,7 +49,7 @@
 		/obj/item/radio/headset/pathfinder/alt,
 		/obj/item/storage/box/encryptionkey/exploration,
 		/obj/item/binoculars,
-		/obj/item/material/knife/folding/swiss/explorer,
+		/obj/item/knife/folding/swiss/explorer,
 		/obj/item/clothing/accessory/buddytag,
 		/obj/item/storage/firstaid/light,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
@@ -76,7 +76,7 @@
 		/obj/item/binoculars,
 		/obj/item/clothing/accessory/buddytag,
 		/obj/item/storage/firstaid/light,
-		/obj/item/material/knife/folding/swiss/explorer,
+		/obj/item/knife/folding/swiss/explorer,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/flashlight, /obj/item/flashlight/flare, /obj/item/flashlight/flare/glowstick/random))
@@ -104,7 +104,7 @@
 		/obj/item/clothing/head/helmet/solgov/pilot/fleet,
 		/obj/item/clothing/head/helmet/nt/pilot,
 		/obj/item/storage/firstaid/light,
-		/obj/item/material/knife/folding/swiss/explorer,
+		/obj/item/knife/folding/swiss/explorer,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/flashlight, /obj/item/flashlight/flare, /obj/item/flashlight/flare/glowstick/random))

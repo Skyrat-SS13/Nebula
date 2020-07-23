@@ -1,3 +1,3 @@
 /obj/machinery/computer/rdconsole/petrov
 	name = "petrov fabricator console"
-	id = 3
+	//id = 3 //TODO

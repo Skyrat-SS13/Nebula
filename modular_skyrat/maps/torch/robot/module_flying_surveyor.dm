@@ -44,7 +44,7 @@
 		/obj/item/inflatable_dispenser/robot
 	)
 
-	emag = /obj/item/melee/energy/machete
+	emag = /obj/item/energy_blade/machete
 
 /obj/item/robot_module/flying/surveyor/finalize_synths()
 	. = ..()

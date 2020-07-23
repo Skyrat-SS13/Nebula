@@ -59,11 +59,11 @@
 		/obj/item/clothing/glasses/welding/superior,
 		/obj/item/clothing/suit/armor/pcarrier/medium/command,
 		/obj/item/clothing/head/helmet/solgov/command,
-		/obj/item/material/clipboard,
+		/obj/item/clipboard,
 		/obj/item/holowarrant,
 		/obj/item/storage/box/armband/engine,
 		/obj/item/storage/box/secret_project_disks,
-		/obj/item/material/knife/folding/swiss/officer,
+		/obj/item/knife/folding/swiss/officer,
 		/obj/item/clothing/head/hardhat/damage_control/White,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/industrial, /obj/item/storage/backpack/satchel/eng)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/eng, /obj/item/storage/backpack/messenger/engi))
@@ -89,7 +89,7 @@
 		/obj/item/taperoll/atmos,
 		/obj/item/clothing/gloves/insulated,
 		/obj/item/clothing/gloves/thick/duty/solgov/eng,
-		/obj/item/material/knife/folding/swiss/engineer,
+		/obj/item/knife/folding/swiss/engineer,
 		/obj/item/clothing/head/hardhat/damage_control,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/industrial, /obj/item/storage/backpack/satchel/eng)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/eng, /obj/item/storage/backpack/messenger/engi))
@@ -118,7 +118,7 @@
 		/obj/item/megaphone,
 		/obj/item/clothing/gloves/insulated,
 		/obj/item/clothing/gloves/thick/duty/solgov/eng,
-		/obj/item/material/knife/folding/swiss/engineer,
+		/obj/item/knife/folding/swiss/engineer,
 		/obj/item/clothing/head/hardhat/damage_control/Yellow,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/industrial, /obj/item/storage/backpack/satchel/eng)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/eng, /obj/item/storage/backpack/messenger/engi))

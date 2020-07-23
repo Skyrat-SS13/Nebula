@@ -56,7 +56,7 @@
 		/obj/item/holowarrant,
 		/obj/item/flashlight/maglight,
 		/obj/item/storage/belt/security,
-		/obj/item/material/knife/folding/swiss/sec,
+		/obj/item/knife/folding/swiss/sec,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec))
 	)
@@ -86,7 +86,7 @@
 		/obj/item/chems/spray/pepper,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/hailer,
-		/obj/item/material/clipboard,
+		/obj/item/clipboard,
 		/obj/item/folder/red,
 		/obj/item/holowarrant,
 		/obj/item/clothing/gloves/thick,
@@ -94,7 +94,7 @@
 		/obj/item/flashlight/maglight,
 		/obj/item/taperecorder,
 		/obj/item/hand_labeler,
-		/obj/item/material/knife/folding/swiss/officer,
+		/obj/item/knife/folding/swiss/officer,
 		/obj/item/personal_shield,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec))
@@ -127,7 +127,7 @@
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/gloves/thick/duty/solgov/sec,
 		/obj/item/flashlight/maglight,
-		/obj/item/material/knife/folding/swiss/sec,
+		/obj/item/knife/folding/swiss/sec,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec))
 	)
@@ -158,7 +158,7 @@
 		/obj/item/storage/belt/holster/security,
 		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/gloves/thick/duty/solgov/sec,
-		/obj/item/material/knife/folding/swiss/sec,
+		/obj/item/knife/folding/swiss/sec,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec))
 	)

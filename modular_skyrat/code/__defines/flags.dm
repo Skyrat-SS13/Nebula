@@ -1,0 +1,1 @@
+#define ITEM_FLAG_PREMODIFIED                 0x8000 // When set on gloves, will act like pulling punches in unarmed combat.

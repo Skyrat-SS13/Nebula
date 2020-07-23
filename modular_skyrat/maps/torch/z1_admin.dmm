@@ -2906,7 +2906,7 @@
 /area/shuttle/administration/centcom)
 "avg" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/chems/food/drinks/shaker,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "white"
@@ -3046,7 +3046,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/material/kitchen/rollingpin,
+/obj/item/kitchen/rollingpin,
 /turf/unsimulated/floor{
 	dir = 2;
 	icon_state = "white"
@@ -5103,8 +5103,8 @@
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/spray/plantbgone,
-/obj/item/reagent_containers/spray/plantbgone,
+/obj/item/chems/spray/plantbgone,
+/obj/item/chems/spray/plantbgone,
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
 /obj/item/grenade/chem_grenade/cleaner,
@@ -6152,7 +6152,7 @@
 	},
 /obj/item/flame/lighter/zippo/random,
 /obj/item/storage/fancy/cigarettes,
-/obj/item/material/ashtray/bronze{
+/obj/item/ashtray/bronze{
 	pixel_x = -1;
 	pixel_y = 1
 	},
@@ -6170,7 +6170,7 @@
 	},
 /obj/item/flame/lighter/zippo/random,
 /obj/item/storage/fancy/cigarettes,
-/obj/item/material/ashtray/bronze{
+/obj/item/ashtray/bronze{
 	pixel_x = -1;
 	pixel_y = 1
 	},
@@ -9238,7 +9238,7 @@
 /area/merchant_station)
 "aQb" = (
 /obj/structure/table/woodentable,
-/obj/item/material/ashtray/bronze,
+/obj/item/ashtray/bronze,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
