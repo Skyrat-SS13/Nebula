@@ -3,3 +3,4 @@
 #include "corporate/_corporate.dme"
 #include "dionaea/_dionaea.dme"
 #include "psionics/_psionics.dme"
+#include "government/_government.dme"

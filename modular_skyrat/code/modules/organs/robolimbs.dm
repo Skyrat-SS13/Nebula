@@ -9,7 +9,7 @@
 	desc = "This metallic limb is sleek and featuresless apart from some exposed motors"
 	icon = 'modular_skyrat/icons/mob/human_races/cyberlimbs/talon/talon_main.dmi' //Sprited by: Viveret
 /*
-/obj/item/weapon/disk/limb/talon
+/obj/item/disk/limb/talon
 	company = "Talon LLC"
 */
 /datum/robolimb/zenghu_taj
@@ -28,7 +28,7 @@
 	includes_tail = 1
 	unavailable_at_chargen = 1
 /*
-/obj/item/weapon/disk/limb/eggnerdltdred
+/obj/item/disk/limb/eggnerdltdred
 	company = "Eggnerd Prototyping Ltd. (Red)"
 	icon = 'icons/obj/items_vr.dmi'
 	icon_state = "verkdisk"
@@ -47,7 +47,7 @@
 	skintone = 1
 	//suggested_species = "Tajara"
 /*
-/obj/item/weapon/disk/limb/dsi_tajaran
+/obj/item/disk/limb/dsi_tajaran
 	company = "DSI - Tajaran"
 */
 /datum/robolimb/dsi_lizard
@@ -61,7 +61,7 @@
 	skintone = 1
 	//suggested_species = "Unathi"
 /*
-/obj/item/weapon/disk/limb/dsi_lizard
+/obj/item/disk/limb/dsi_lizard
 	company = "DSI - Lizard"
 /datum/robolimb/dsi_sergal
 	company = "DSI - Sergal"
@@ -73,7 +73,7 @@
 	includes_tail = 1
 	skintone = 1
 	//suggested_species = "Sergal"
-/obj/item/weapon/disk/limb/dsi_sergal
+/obj/item/disk/limb/dsi_sergal
 	company = "DSI - Sergal"
 /datum/robolimb/dsi_nevrean
 	company = "DSI - Nevrean"
@@ -85,7 +85,7 @@
 	includes_tail = 1
 	skintone = 1
 	//suggested_species = "Nevrean"
-/obj/item/weapon/disk/limb/dsi_nevrean
+/obj/item/disk/limb/dsi_nevrean
 	company = "DSI - Nevrean"
 */
 /datum/robolimb/dsi_vulpkanin
@@ -99,7 +99,7 @@
 	skintone = 1
 	//suggested_species = "Vulpkanin"
 /*
-/obj/item/weapon/disk/limb/dsi_vulpkanin
+/obj/item/disk/limb/dsi_vulpkanin
 	company = "DSI - Vulpkanin"
 */
 /datum/robolimb/dsi_akula
@@ -113,7 +113,7 @@
 	skintone = 1
 	//suggested_species = "Akula"
 /*
-/obj/item/weapon/disk/limb/dsi_akula
+/obj/item/disk/limb/dsi_akula
 	company = "DSI - Akula"
 */
 /datum/robolimb/dsi_spider
@@ -127,7 +127,7 @@
 	skintone = 1
 	//suggested_species = "Vasilissan"
 /*
-/obj/item/weapon/disk/limb/dsi_spider
+/obj/item/disk/limb/dsi_spider
 	company = "DSI - Vasilissan"
 /datum/robolimb/dsi_teshari
 	company = "DSI - Teshari"
@@ -140,6 +140,6 @@
 	species_cannot_use = all_species.Copy()
 	species_cannot_use -= SPECIES_TESHARI
 	..()
-/obj/item/weapon/disk/limb/dsi_teshari
+/obj/item/disk/limb/dsi_teshari
 	company = "DSI - Teshari"
 */

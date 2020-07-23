@@ -12,7 +12,7 @@ var/global/list/traits_costs = list()		// Just path = cost list, saves time in c
 var/global/list/all_traits = list() // All of 'em at once (same instances)
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
-/hook/startup/proc/init_skyrat_datum_ref_lists() 
+/hook/startup/proc/init_skyrat_datum_ref_lists()
 	var/paths
 
 	// Custom Ears
@@ -52,7 +52,7 @@ var/global/list/custom_species_bases = list() // Species that can be used for a 
 
 	build_species_lists() //Wow this is pretty bad
 	// Custom species icon bases
-	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN,SPECIES_HUMAN) //Just ones that won't work well, and Humans, as Custom Humans will be used instead.
+	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_HUMAN) //Just ones that won't work well, and Humans, as Custom Humans will be used instead.
 	for(var/species_name in all_species)
 		if(species_name in blacklisted_icons)
 			continue

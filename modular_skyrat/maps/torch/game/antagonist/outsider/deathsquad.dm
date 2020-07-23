@@ -1,0 +1,1 @@
+/datum/antagonist/deathsquad/required_language = /decl/language/human/euro

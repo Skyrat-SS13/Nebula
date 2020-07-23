@@ -1,0 +1,1 @@
+/datum/antagonist/mercenary/required_language = /decl/language/spacer

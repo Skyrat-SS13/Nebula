@@ -9,8 +9,8 @@
 
 	var/turf/old_turf = get_turf(old_loc)
 	var/image/I = image(icon = src, loc = old_turf)
-	/*I.plane = DEFAULT_PLANE ////might cause issues later on.
-	I.layer = ABOVE_HUMAN_LAYER*/
+	I.plane = DEFAULT_PLANE ////might cause issues later on.
+	I.layer = ABOVE_HUMAN_LAYER
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	if (istype(target,/mob))
 		I.dir = target.dir
@@ -53,8 +53,8 @@
 		if (QDELETED(old_turf))
 			return
 		var/image/I = image(icon = src, loc = old_turf, layer = layer + 0.1)
-		/*I.plane = DEFAULT_PLANE //might cause issues later on.
-		I.layer = ABOVE_HUMAN_LAYER*/
+		I.plane = DEFAULT_PLANE //might cause issues later on.
+		I.layer = ABOVE_HUMAN_LAYER
 		I.transform = matrix() * 0
 		I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 		I.pixel_x = 0

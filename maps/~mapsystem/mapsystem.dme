@@ -1,0 +1,20 @@
+#ifndef MAPLOAD_DONE
+#define MAPLOAD_DONE
+// BEGIN_INCLUDE
+#include "map_preferences.dm"
+#include "map_ranks.dm"
+#include "maps.dm"
+#include "maps_announcements.dm"
+#include "maps_antagonism.dm"
+#include "maps_areas.dm"
+#include "maps_currency.dm"
+#include "maps_jobs.dm"
+// END_INCLUDE
+#endif
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
