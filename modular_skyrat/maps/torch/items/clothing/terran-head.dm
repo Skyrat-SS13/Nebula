@@ -1,6 +1,6 @@
 /obj/item/clothing/head/terran
 	name = "master ICCGN hat"
-	icon = 'maps/torch/icons/obj/obj_head_terran.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_head_terran.dmi'
 	item_icons = list(slot_head_str = 'modular_skyrat/maps/torch/icons/mob/onmob_head_terran.dmi')
 	siemens_coefficient = 0.9
 

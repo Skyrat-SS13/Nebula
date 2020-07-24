@@ -3,7 +3,7 @@
 ////////////////////////
 /* Disabled pending porting all the species
 /datum/sprite_accessory/hair
-	//var/icon_add = 'icons/mob/human_face.dmi' //Already defined in sprite_accessories.dm line 49.
+	//var/icon_add = 'modular_skyrat/icons/mob/human_face.dmi' //Already defined in sprite_accessories.dm line 49.
 	var/color_blend_mode = ICON_MULTIPLY
 	species_allowed = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ,SPECIES_TESHARI,SPECIES_NEVREAN,SPECIES_AKULA,SPECIES_SERGAL,SPECIES_ZORREN_FLAT,SPECIES_ZORREN_HIGH,SPECIES_VULPKANIN,SPECIES_XENOCHIMERA,SPECIES_XENOHYBRID,SPECIES_VASILISSAN,SPECIES_RAPALA,SPECIES_PROTEAN,SPECIES_ALRAUNE) //This lets all races use the default hairstyles.
 	awoohair
@@ -319,7 +319,7 @@
 		species_allowed = list(SPECIES_XENOHYBRID)
 		gender = NEUTER
 /datum/sprite_accessory/facial_hair
-	icon = 'icons/mob/human_face_or_vr.dmi'
+	icon = 'modular_skyrat/icons/mob/human_face_or_vr.dmi'
 	var/color_blend_mode = ICON_MULTIPLY
 	species_allowed = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_OLDUNATHI,SPECIES_TAJ,SPECIES_TESHARI,SPECIES_NEVREAN,SPECIES_AKULA,SPECIES_SERGAL,SPECIES_ZORREN_FLAT,SPECIES_ZORREN_HIGH,SPECIES_VULPKANIN,SPECIES_XENOCHIMERA,SPECIES_XENOHYBRID,SPECIES_VASILISSAN,SPECIES_RAPALA,SPECIES_PROTEAN,SPECIES_ALRAUNE) //This lets all races use the facial hair styles.
 	shaved

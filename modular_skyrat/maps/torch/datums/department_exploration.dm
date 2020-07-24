@@ -21,7 +21,7 @@
 	var/total_seeds = 0
 	var/area/map = locate(/area/overmap)
 	for(var/obj/effect/overmap/visitable/sector/exoplanet/P in map)
-		total_seeds += P.seeds.len
+		total_seeds += P.small_flora_types.len
 	if(total_seeds)
 		seeds = max(1, round(0.5 * total_seeds))
 	..()

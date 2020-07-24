@@ -6,7 +6,7 @@
 	deform = 		'modular_skyrat/icons/mob/human_races/species/unathi/deformed_body.dmi'
 	husk_icon = 	'modular_skyrat/icons/mob/human_races/species/unathi/husk.dmi'
 	preview_icon = 	'modular_skyrat/icons/mob/human_races/species/unathi/preview.dmi'
-	bandages_icon = 'icons/mob/bandage.dmi'
+	bandages_icon = 'modular_skyrat/icons/mob/bandage.dmi'
 	tail = "sogtail"
 	tail_animation = 'modular_skyrat/icons/mob/species/unathi/unathi_tail.dmi'
 	limb_blend = ICON_MULTIPLY

@@ -164,19 +164,19 @@
 	icon_state = "medsci_cypherkey"
 	channels = list("Recon" = 1)
 
-/obj/item/reagent_containers/food/condiment/psilocybin
+/obj/item/chems/food/condiment/psilocybin
 	label_text = "Psilocybin"
-	starting_reagents = list(/datum/reagent/psilocybin = 50)
+	starting_reagents = list(/decl/material/liquid/psilocybin = 50)
 
 
-/obj/item/reagent_containers/food/condiment/mindbreaker
+/obj/item/chems/food/condiment/mindbreaker
 	label_text = "Mindbreaker"
-	starting_reagents = list(/datum/reagent/mindbreaker = 50)
+	starting_reagents = list(/decl/material/liquid/mindbreaker = 50)
 
 
-/obj/item/reagent_containers/food/condiment/space_drugs
+/obj/item/chems/food/condiment/space_drugs
 	label_text = "Ambrosia"
-	starting_reagents = list(/datum/reagent/space_drugs = 50)
+	starting_reagents = list(/decl/material/liquid/space_drugs = 50)
 
 
 /datum/mil_branch/skrell_fleet
@@ -308,7 +308,7 @@
 /obj/item/tape_roll/skrell
 	name = "modular adhesive dispenser"
 	desc = "A roll of sticky tape. Possibly for taping ducks... or was that ducts?"
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'modular_skyrat/icons/obj/bureaucracy.dmi'
 	icon_state = "taperoll"
 	color = "#40e0d0"
 	w_class = ITEM_SIZE_SMALL

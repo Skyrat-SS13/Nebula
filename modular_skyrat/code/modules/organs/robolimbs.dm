@@ -30,7 +30,7 @@
 /*
 /obj/item/disk/limb/eggnerdltdred
 	company = "Eggnerd Prototyping Ltd. (Red)"
-	icon = 'icons/obj/items_vr.dmi'
+	icon = 'modular_skyrat/icons/obj/items_vr.dmi'
 	icon_state = "verkdisk"
 */
 

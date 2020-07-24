@@ -3,7 +3,7 @@
 /obj/item/clothing/under/terran
 	name = "master ICCGN uniform"
 	desc = "You shouldn't be seeing this."
-	icon = 'maps/torch/icons/obj/obj_under_terran.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_under_terran.dmi'
 	item_icons = list(slot_w_uniform_str = 'modular_skyrat/maps/torch/icons/mob/onmob_under_terran.dmi')
 
 /obj/item/clothing/under/terran/navy/utility

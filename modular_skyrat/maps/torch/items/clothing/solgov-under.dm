@@ -1,7 +1,7 @@
 /obj/item/clothing/under/solgov
 	name = "master solgov uniform"
 	desc = "You shouldn't be seeing this."
-	icon = 'maps/torch/icons/obj/obj_under_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_under_solgov.dmi'
 	item_icons = list(slot_w_uniform_str = 'modular_skyrat/maps/torch/icons/mob/onmob_under_solgov.dmi')
 	siemens_coefficient = 0.8
 	gender_icons = 1
@@ -20,7 +20,7 @@
 	icon_state = "expeditionpt"
 	worn_state = "expeditionpt"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)*/ //TODO: BODYTYPES
 
 /obj/item/clothing/under/solgov/pt/fleet
@@ -45,7 +45,7 @@
 	item_state = "bl_suit"
 	worn_state = "blackutility"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)*/ //TODO: BODYTYPES
 	armor = list(
 		melee = ARMOR_MELEE_MINOR,
@@ -58,7 +58,7 @@
 	icon_state = "blackutility_crew"
 	worn_state = "blackutility_crew"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)*/ //TODO: BODYTYPES
 
 /obj/item/clothing/under/solgov/utility/expeditionary_skirt
@@ -67,7 +67,7 @@
 	icon_state = "blackservicefem"
 	worn_state = "blackservicefem"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)*/ //TODO: BODYTYPES
 
 /obj/item/clothing/under/solgov/utility/expeditionary_skirt/officer
@@ -288,7 +288,7 @@
 	icon_state = "greydress"
 	worn_state = "greydress"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_head_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_head_unathi.dmi'
 		)*/ //TODO: BODYTYPES
 
 /obj/item/clothing/under/solgov/service/expeditionary/command
@@ -489,5 +489,5 @@
 	name = "adjusted expeditionary uniform"
 	desc = "The utility uniform of the SCG Expeditionary Corps, made from biohazard resistant material. This one has silver trim. It was also mangled to fit a monkey. This better be worth the NJP you'll get for making it."
 	//species_restricted = list("Monkey") //TODO
-	sprite_sheets = list("Monkey" = 'icons/mob/species/monkey/onmob_under_monkey.dmi')
+	sprite_sheets = list("Monkey" = 'modular_skyrat/icons/mob/species/monkey/onmob_under_monkey.dmi')
 	starting_accessories = list(/obj/item/clothing/accessory/solgov/rank/fleet/officer/wo1_monkey)

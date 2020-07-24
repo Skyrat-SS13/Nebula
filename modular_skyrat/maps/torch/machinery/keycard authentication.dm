@@ -77,7 +77,7 @@
 			if(!SSevac)
 				to_chat(usr, "<span class='danger'>Unable to initiate evacuation!</span>")
 				return
-			for (var/datum/evacuation_option/EO in SSevac.available_evac_options())
+			for (var/datum/evacuation_option/EO in SSevac.evacuation_controller.available_evac_options())
 				if(EO.abandon_ship)
-					SSevac.handle_evac_option(EO.option_target, usr)
+					SSevac.evacuation_controller.handle_evac_option(EO.option_target, usr)
 					return

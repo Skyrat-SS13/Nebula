@@ -1999,7 +1999,7 @@
 "dO" = (
 /obj/structure/table/rack{
 	desc = "A simple wooden altar covered in cloth.";
-	icon = 'icons/obj/cult.dmi';
+	icon = 'modular_skyrat/icons/obj/cult.dmi';
 	icon_state = "churchaltar";
 	name = "wooden altar"
 	},
@@ -6227,7 +6227,7 @@
 "no" = (
 /obj/structure/showcase{
 	desc = "A bewilderingly complex prototype designed to split the fabric of spacetime and allow access to Bluespace.";
-	icon = 'icons/obj/power.dmi';
+	icon = 'modular_skyrat/icons/obj/power.dmi';
 	icon_state = "tracker";
 	name = "Bluespace Drive"
 	},

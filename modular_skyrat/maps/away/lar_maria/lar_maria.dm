@@ -118,10 +118,10 @@
 
 /obj/item/clothing/head/soft/lar_maria/zhp_cap
 	name = "Zeng-Hu Pharmaceuticals cap"
-	icon = 'maps/away/lar_maria/lar_maria_sprites.dmi'
+	icon = 'modular_skyrat/maps/away/lar_maria/lar_maria_sprites.dmi'
 	desc = "A green cap with Zeng-Hu Pharmaceuticals symbol on it."
 	icon_state = "zhp_cap"
-	item_icons = list(slot_head_str = 'maps/away/lar_maria/lar_maria_clothing_sprites.dmi')
+	item_icons = list(slot_head_str = 'modular_skyrat/maps/away/lar_maria/lar_maria_clothing_sprites.dmi')
 
 /mob/living/simple_animal/hostile/lar_maria/virologist
 	name = "\improper virologist"

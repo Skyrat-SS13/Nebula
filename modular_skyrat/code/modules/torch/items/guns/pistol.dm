@@ -3,7 +3,7 @@
 	desc = "The Hephaestus Industries P20 - a mass produced kinetic sidearm in widespread service with the SCGDF."
 	magazine_type = /obj/item/ammo_magazine/pistol/double
 	allowed_magazines = /obj/item/ammo_magazine/pistol/double
-	icon = 'icons/obj/guns/military_pistol.dmi'
+	icon = 'modular_skyrat/icons/obj/guns/military_pistol.dmi'
 	icon_state = "military"
 	item_state = "secgundark"
 	safety_icon = "safety"
@@ -13,7 +13,7 @@
 
 /obj/item/gun/projectile/pistol/military/alt
 	desc = "The HelTek Optimus, best known as the standard-issue sidearm for the ICCG Navy."
-	icon = 'icons/obj/guns/military_pistol2.dmi'
+	icon = 'modular_skyrat/icons/obj/guns/military_pistol2.dmi'
 	icon_state = "military-alt"
 	safety_icon = "safety"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
@@ -22,7 +22,7 @@
 
 /obj/item/gun/energy/xray/pistol
 	name = "x-ray laser gun"
-	icon = 'icons/obj/guns/xray_pistol.dmi'
+	icon = 'modular_skyrat/icons/obj/guns/xray_pistol.dmi'
 	icon_state = "oldxray"
 	item_state = "oldxray"
 	slot_flags = SLOT_BELT|SLOT_HOLSTER

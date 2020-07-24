@@ -6,7 +6,7 @@
 	deform = 'modular_skyrat/icons/mob/human_races/species/humanathi/deformed_body.dmi'
 	husk_icon = 'modular_skyrat/icons/mob/human_races/species/humanathi/husk.dmi'
 	preview_icon = 'modular_skyrat/icons/mob/human_races/species/humanathi/preview.dmi'
-	bandages_icon = 'icons/mob/bandage.dmi'
+	bandages_icon = 'modular_skyrat/icons/mob/bandage.dmi'
 	tail = "sogtail"
 	modular_tail = 'modular_skyrat/icons/mob/human_races/species/humanathi/tail.dmi'
 	tail_animation = null //TODO: Add animated tails.

@@ -81,7 +81,7 @@ medals
 	on_rolled = list("down" = "none")
 	slot = ACCESSORY_SLOT_INSIGNIA
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)*/
 
 /*****
@@ -140,8 +140,8 @@ scarves
 /obj/item/clothing/accessory/solgov/ec_scarf
 	name = "expeditionary scarf"
 	desc = "An SCG blue silk scarf, meant to be worn with Expeditionary Corps uniforms."
-	icon = 'icons/obj/clothing/obj_accessories.dmi'
-	accessory_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'icons/mob/onmob/onmob_accessories.dmi')
+	icon = 'modular_skyrat/icons/obj/clothing/obj_accessories.dmi'
+	accessory_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_accessories.dmi', slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_accessories.dmi')
 	icon_state = "whitescarf"
 	on_rolled = list("down" = "none")
 	color = "#68a0ce"
@@ -302,7 +302,7 @@ armbands
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	accessory_icons = list(slot_w_uniform_str = 'modular_skyrat/maps/torch/icons/mob/onmob_accessories_solgov.dmi', slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_accessories_solgov.dmi')
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)*/
 
 /obj/item/clothing/accessory/armband/solgov/mp
@@ -376,7 +376,7 @@ department tags
 	slot = ACCESSORY_SLOT_DEPT
 	removable = FALSE
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)*/
 
 /obj/item/clothing/accessory/solgov/department/command
@@ -557,7 +557,7 @@ ranks - ec
 	gender = PLURAL
 	high_visibility = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)*/
 
 /obj/item/clothing/accessory/solgov/rank/get_fibers()

@@ -23,7 +23,7 @@ Random item spawning
 /obj/random/maintenance/solgov
 	name = "random maintenance item"
 	desc = "This is a random maintenance item."
-	icon = 'icons/obj/items.dmi'
+	icon = 'modular_skyrat/icons/obj/items.dmi'
 	icon_state = "gift1"
 
 /obj/random/maintenance/solgov/spawn_choices()
@@ -34,7 +34,7 @@ Random item spawning
 /obj/random/maintenance/solgov/clean
 	name = "random maintenance item"
 	desc = "This is a random maintenance item."
-	icon = 'icons/obj/items.dmi'
+	icon = 'modular_skyrat/icons/obj/items.dmi'
 	icon_state = "gift2"
 
 /obj/random/maintenance/solgov/clean/spawn_choices()
@@ -78,13 +78,13 @@ Unique items
 
 /obj/item/pen/multi/cmd/xo
 	name = "executive officer's pen"
-	icon = 'maps/torch/icons/obj/uniques.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 	icon_state = "pen_xo"
 	desc = "A slightly bulky pen with a silvery case. Twisting the top allows you to switch the nib for different colors."
 
 /obj/item/pen/multi/cmd/co
 	name = "commanding officer's pen"
-	icon = 'maps/torch/icons/obj/uniques.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 	icon_state = "pen_co"
 	desc = "A slightly bulky pen with a golden case. Twisting the top allows you to switch the nib for different colors."
 
@@ -97,7 +97,7 @@ Unique items
 /obj/item/storage/fakebook
 	name = "Workplace Crisis Management"
 	desc = "Also known as 'I fucked up, what do?'. A very popular book amongst corporate management."
-	icon = 'icons/obj/library.dmi'
+	icon = 'modular_skyrat/icons/obj/library.dmi'
 	icon_state = "booknanoregs"
 	attack_verb = list("bashed", "whacked", "educated")
 	throw_speed = 1

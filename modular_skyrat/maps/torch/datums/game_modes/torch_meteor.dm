@@ -60,4 +60,4 @@
 /datum/evacuation_option/meteor_bluespace_jump/execute(mob/user)
 	if (!SSevac)
 		return
-	SSevac.call_evacuation(user, 0, forced = TRUE)
+	SSevac.evacuation_controller.call_evacuation(user, 0, forced = TRUE)

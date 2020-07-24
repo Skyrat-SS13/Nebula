@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/storage/solgov/
 	name = "master solgov jacket"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 
 //Service
@@ -20,7 +20,7 @@
 	desc = "A uniform service jacket belonging to the SCG Expeditionary Corps."
 	icon_state = "ecservice_crew"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_suit_unathi.dmi'
 		)*/ //TODO: bodytypes
 
 /obj/item/clothing/suit/storage/solgov/service/expeditionary/medical
@@ -172,7 +172,7 @@
 	desc = "A silver and black dress peacoat belonging to the SCG Expeditionary Corps. Fashionable, for the 25th century at least."
 	icon_state = "ecdress_xpl"
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_suit_unathi.dmi'
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/onmob_suit_unathi.dmi'
 		)*/ //TODO: bodytypes
 
 /obj/item/clothing/suit/storage/solgov/dress/expedition/senior
@@ -230,7 +230,7 @@
 	name = "dress jacket"
 	desc = "A uniform dress jacket, fancy."
 	icon_state = "blackdress"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	body_parts_covered = UPPER_TORSO|ARMS
 	siemens_coefficient = 0.9
@@ -257,7 +257,7 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov
 	name = "expeditionary winter coat"
 	icon_state = "coatec"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	armor = list(
 		melee = ARMOR_MELEE_SMALL,
@@ -294,7 +294,7 @@
 	name = "fleet engineering jacket"
 	desc = "A jacket commonly issued by the fleet to its engineers. It sports some yellow reflective stripes, and has elbow pads."
 	icon_state = "navyengjacket"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	armor = list(
 		melee = ARMOR_MELEE_SMALL,
@@ -347,15 +347,15 @@
 //SolGov Hardsuits
 
 /obj/item/clothing/suit/space/void/engineering/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
+		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
 		)
 
 /obj/item/clothing/suit/space/void/engineering/alt/sol/prepared
@@ -363,15 +363,15 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/atmos/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
+		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
 		)
 
 /obj/item/clothing/suit/space/void/atmos/alt/sol/prepared
@@ -379,15 +379,15 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/pilot/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
+		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
 		)
 
 /obj/item/clothing/suit/space/void/pilot/sol/prepared
@@ -395,15 +395,15 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/suit/space/void/medical/alt/sol
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/mob/unathi/onmob_suit_solgov_unathi.dmi',
 		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/mob/skrell/onmob_suit_solgov_skrell.dmi',
 		)
 	sprite_sheets_obj = list(
-		SPECIES_UNATHI = 'maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
-		SPECIES_SKRELL = 'maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/maps/torch/icons/obj/unathi/obj_suit_solgov_unathi.dmi',
+		SPECIES_SKRELL = 'modular_skyrat/maps/torch/icons/obj/skrell/obj_suit_solgov_skrell.dmi',
 		)
 
 /obj/item/clothing/suit/space/void/medical/alt/sol/prepared
@@ -411,7 +411,7 @@
 	boots = /obj/item/clothing/shoes/magboots
 
 /obj/item/clothing/head/helmet/space/void/command
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'modular_skyrat/maps/torch/icons/mob/onmob_head_solgov.dmi')
 	name = "command voidsuit helmet"
 	desc = "A light, radiation resistant voidsuit helmet commonly used among SCG uniformed services."
@@ -420,7 +420,7 @@
 	light_overlay = "helmet_light_dual_green"
 
 /obj/item/clothing/suit/space/void/command
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	icon_state = "void_command"
 	name = "command voidsuit"
@@ -439,7 +439,7 @@
 /obj/item/clothing/head/helmet/space/void/exploration
 	name = "exploration voidsuit helmet"
 	desc = "A helmet of Exoplanet Exploration Unit, standard issue for Expeditionary Corps away missions. It has an armored glass dome for superiour visibility and extra anti-radiation lining."
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'modular_skyrat/maps/torch/icons/mob/onmob_head_solgov.dmi')
 	icon_state = "helm_explorer"
 	sprite_sheets = list(
@@ -460,7 +460,7 @@
 
 /obj/item/clothing/suit/space/void/exploration
 	name = "exploration voidsuit"
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	desc = "The bulky Exoplanet Exploration Unit is a standard voidsuit for Expeditionary Corps field operations. It features extra padding and respectable radiation-resistant lining."
 	icon_state = "void_explorer"

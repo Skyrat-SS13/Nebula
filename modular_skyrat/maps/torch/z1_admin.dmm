@@ -2277,7 +2277,7 @@
 "asQ" = (
 /turf/unsimulated/wall{
 	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
+	icon = 'modular_skyrat/icons/obj/doors/rapid_pdoor.dmi';
 	icon_state = "pdoor1";
 	name = "Shuttle Bay Blast Door"
 	},
@@ -2571,7 +2571,7 @@
 "atS" = (
 /turf/unsimulated/wall{
 	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
+	icon = 'modular_skyrat/icons/obj/doors/rapid_pdoor.dmi';
 	icon_state = "pdoor1";
 	name = "Shuttle Bay Blast Door"
 	},
@@ -12146,7 +12146,7 @@
 "oMZ" = (
 /turf/unsimulated/wall{
 	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
+	icon = 'modular_skyrat/icons/obj/doors/rapid_pdoor.dmi';
 	icon_state = "pdoor1";
 	name = "Shuttle Bay Blast Door"
 	},

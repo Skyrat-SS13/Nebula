@@ -1,0 +1,1 @@
+#define	COMMS_COLOR_SKRELL     "#7331c4"

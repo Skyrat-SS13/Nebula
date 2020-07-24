@@ -11,10 +11,10 @@
 		melee = ARMOR_MELEE_SMALL
 		)
 	siemens_coefficient = 0.9
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 /obj/item/clothing/under/rank/scientist
@@ -27,10 +27,10 @@
 	armor = list(
 		bio = ARMOR_BIO_MINOR
 		)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 	starting_accessories = list(/obj/item/clothing/accessory/tunic)
 
@@ -51,10 +51,10 @@
 		melee = ARMOR_MELEE_MINOR,
 		bio = ARMOR_BIO_MINOR
 		)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 /obj/item/clothing/under/rank/ntpilot
@@ -63,10 +63,10 @@
 	icon_state = "pilot"
 	item_state = "g_suit"
 	worn_state = "pilot"
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 /obj/item/clothing/under/suit_jacket/corp
@@ -76,10 +76,10 @@
 	item_state = "bl_suit"
 	worn_state = "suit"
 	starting_accessories = list(/obj/item/clothing/accessory/toggleable/corpjacket, /obj/item/clothing/accessory/corptie)
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	gender_icons = 1
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 //NanoTrasen
@@ -114,9 +114,9 @@
 	icon_state = "pilot_nt"
 	item_state = "r_suit"
 	worn_state = "pilot_nt"
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 /obj/item/clothing/under/suit_jacket/corp/nanotrasen
@@ -157,9 +157,9 @@
 	desc = "A sleek cyan Hephaestus Industries flight suit. It proudly sports three different patches with corporate logos on them, as well as several unnecessary looking flaps and pockets for effect."
 	icon_state = "pilot_heph"
 	worn_state = "pilot_heph"
-	item_icons = list(slot_w_uniform_str = 'icons/mob/onmob/onmob_under_corporate.dmi')
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under_corporate.dmi')
 	/*sprite_sheets = list(
-		SPECIES_UNATHI = 'icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
+		SPECIES_UNATHI = 'modular_skyrat/icons/mob/species/unathi/generated/onmob_under_corporate_unathi.dmi',
 		)*/
 
 /obj/item/clothing/under/suit_jacket/corp/heph

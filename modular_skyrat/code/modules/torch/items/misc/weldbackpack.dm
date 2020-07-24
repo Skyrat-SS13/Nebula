@@ -11,7 +11,7 @@
 	desc = "A heavy, unwieldy machine that can filter atmosphere."
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
-	icon = 'icons/obj/storage.dmi'
+	icon = 'modular_skyrat/icons/obj/storage.dmi'
 	icon_state = "scrubpack"
 	action_button_name = "Toggle Scrubber"
 
@@ -33,7 +33,7 @@
 		cell = new cell(src)
 	if (!length(scrub_names))
 		scrub_names = list()
-		for (var/name in gas_data.gases)
+		for (var/name in subtypesof(/decl/material/gas))
 			if (name != /decl/material/gas/oxygen && name != /decl/material/gas/nitrogen)
 				scrub_names += name
 
@@ -169,7 +169,7 @@
 
 /obj/item/scrubpack/proc/set_sound_state(on_off)
 	if (on_off)
-		sound_token = GLOB.sound_player.PlayLoopingSound(src, "\ref[src]", 'sound/machines/scrubber-active.ogg', 25, 3)
+		sound_token = GLOB.sound_player.PlayLoopingSound(src, "\ref[src]", 'modular_skyrat/sound/machines/scrubber-active.ogg', 25, 3)
 	else
 		QDEL_NULL(sound_token)
 

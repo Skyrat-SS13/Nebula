@@ -4,7 +4,7 @@
 	icobase = 'modular_skyrat/icons/mob/human_races/species/skrell/body.dmi'
 	deform = 'modular_skyrat/icons/mob/human_races/species/skrell/deformed_body.dmi'
 	preview_icon = 'modular_skyrat/icons/mob/human_races/species/skrell/preview.dmi'
-	bandages_icon = 'icons/mob/bandage.dmi'
+	bandages_icon = 'modular_skyrat/icons/mob/bandage.dmi'
 	primitive_form = "Neaera"
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/kick, /decl/natural_attack/punch, /decl/natural_attack/bite)
 	description = "An amphibious species, Skrell come from the star system known as Qerr'Vallis, which translates to 'Star of \

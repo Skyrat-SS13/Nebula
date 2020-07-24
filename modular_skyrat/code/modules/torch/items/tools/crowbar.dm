@@ -10,7 +10,7 @@
 	matter = list(/decl/material/solid/metal/steel = 80)
 
 	var/prybar_types = list("1","2","3","4","5")
-	valid_colours = list(COLOR_RED_GRAY, COLOR_BLUE_GRAY, COLOR_BOTTLE_GREEN, COLOR_MAROON, COLOR_DARK_BROWN, COLOR_VIOLET, COLOR_GRAY20)
+	//valid_colours = list(COLOR_RED_GRAY, COLOR_BLUE_GRAY, COLOR_BOTTLE_GREEN, COLOR_MAROON, COLOR_DARK_BROWN, COLOR_VIOLET, COLOR_GRAY20)
 
 /obj/item/crowbar/prybar/Initialize()
 	var/shape = pick(prybar_types)

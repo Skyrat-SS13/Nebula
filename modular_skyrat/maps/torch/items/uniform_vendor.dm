@@ -1,7 +1,7 @@
 /obj/machinery/uniform_vendor
 	name = "uniform vendor"
 	desc= "A uniform vendor for utility, service, and dress uniforms."
-	icon = 'icons/obj/vending.dmi'
+	icon = 'modular_skyrat/icons/obj/vending.dmi'
 	icon_state = "uniform"
 	layer = BELOW_OBJ_LAYER
 	anchored = 1
@@ -38,7 +38,7 @@
 	else
 		var/datum/job/job = SSjobs.get_by_path(ID.job_access_type)
 		if(job)
-			uniforms = find_uniforms(ID.military_rank, ID.military_branch, job.department_flag)
+			uniforms = find_uniforms(ID.military_rank, ID.military_branch, job.department_refs)
 		for(var/T in uniforms)
 			dat += "<b>[T]</b> <a href='byond://?src=\ref[src];get_all=[T]'>Select All</a>"
 			var/list/uniform = uniforms[T]
@@ -131,16 +131,16 @@
 		return null //Return no uniforms, which will cause the machine to spit out an error.
 
 	// we have found a branch.
-	if(department == COM) //Command only has one variant and they have to be an officer
+	if(department == list(DEPT_COMMAND)) //Command only has one variant and they have to be an officer
 		for(var/decl/hierarchy/mil_uniform/child in user_outfit.children)
-			if(child.departments & COM)
+			if(DEPT_COMMAND in child.departments)
 				user_outfit = child
 				for(var/decl/hierarchy/mil_uniform/seniorchild in user_outfit.children) //Check for variants of command outfits
 					if(user_rank.sort_order >= seniorchild.min_rank && user_outfit.min_rank < seniorchild.min_rank)
 						user_outfit = seniorchild
 	else
 		var/tmp_department = department
-		tmp_department &= ~COM //Parse departments, with complete disconsideration to the command flag (so we don't flag 2 outfit trees)
+		tmp_department -= DEPT_COMMAND //Parse departments, with complete disconsideration to the command flag (so we don't flag 2 outfit trees)
 
 		for(var/decl/hierarchy/mil_uniform/child in user_outfit.children) //find base department outfit
 			if(child.departments & tmp_department)
@@ -149,7 +149,7 @@
 		for(var/decl/hierarchy/mil_uniform/child in user_outfit.children) //find highest applicable ranking department outfit
 			if(user_rank.sort_order >= child.min_rank && user_outfit.min_rank < child.min_rank)
 				user_outfit = child
-		if(department & COM) //user is in command of their department
+		if(DEPT_COMMAND in department) //user is in command of their department
 			if(user_outfit.children[1])// Command outfit exists
 				user_outfit = user_outfit.children[1]
 				for(var/decl/hierarchy/mil_uniform/child in user_outfit.children) //Check for variants of command outfits

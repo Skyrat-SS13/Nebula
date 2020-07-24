@@ -16,7 +16,7 @@
 /obj/effect/overmap/visitable/sector/vox_base
 	name = "large asteroid"
 	desc = "Sensor array detects a large asteroid."
-	in_space = 1
+	//in_space = 1 //TODO?
 	icon_state = "meteor4"
 	hide_from_reports = TRUE
 	initial_generic_waypoints = list(
@@ -100,7 +100,7 @@
 /obj/effect/overmap/visitable/sector/vox_scav_ship
 	name = "small asteroid cluster"
 	desc = "Sensor array detects a small asteroid cluster."
-	in_space = 1
+	//in_space = 1 //TODO?
 	icon_state = "meteor4"
 	hide_from_reports = TRUE
 	initial_generic_waypoints = list(

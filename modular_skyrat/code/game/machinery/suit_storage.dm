@@ -90,7 +90,7 @@
 		return list()
 	return ..()
 
-/obj/machinery/suit_storage_unit/ex_act(severity)
+/obj/machinery/suit_storage_unit/explosion_act(severity)
 	switch(severity)
 		if(1)
 			if(prob(50))

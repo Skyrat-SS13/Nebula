@@ -40,7 +40,7 @@
 
 /obj/item/clothing/head/helmet/space/rig/command
 	light_overlay = "helmet_light_dual"
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'modular_skyrat/maps/torch/icons/mob/onmob_head_solgov.dmi')
 	camera = /obj/machinery/camera/network/command
 	//species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //no available icons for aliens
