@@ -3935,7 +3935,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/tcommsat/chamber)
 "hT" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/design_database,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
@@ -3945,7 +3945,7 @@
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
 "hV" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/design_database,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
@@ -5312,7 +5312,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 6
 	},
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3starboard)
 "km" = (
@@ -5389,7 +5389,7 @@
 /turf/simulated/floor/plating,
 /area/tcommsat/computer)
 "kz" = (
-/obj/machinery/computer/rdservercontrol{
+/obj/machinery/computer/design_console{
 	icon_state = "computer";
 	dir = 4
 	},
@@ -5533,7 +5533,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 0;
 	department = "Bar";
-	departmentType = 2;
 	name = "Bar RC";
 	pixel_x = 0;
 	pixel_y = 32
@@ -5936,7 +5935,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3starboard)
 "lI" = (
@@ -6737,7 +6736,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/red{
@@ -7168,7 +7166,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/aftstarboard)
 "oB" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3starboard)
 "oC" = (
@@ -7949,7 +7947,7 @@
 "ql" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3starboard)
 "qn" = (
@@ -8425,17 +8423,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/starboard)
 "rA" = (
-/obj/structure/window/phoronreinforced{
+/obj/structure/window/borosilicate_reinforced{
 	icon_state = "rwindow";
 	dir = 8
 	},
 /obj/structure/closet/crate,
-/obj/item/stack/material/phoron{
-	amount = 50
-	},
-/obj/item/stack/material/phoron{
-	amount = 50
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -10112,7 +10104,7 @@
 /turf/simulated/wall/prepainted,
 /area/maintenance/thirddeck/aftstarboard)
 "vf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bsa_pump"
 	},
@@ -11002,7 +10994,7 @@
 /area/engineering/hardstorage)
 "xx" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "chapoff_windows"
+	id_tag = "chapoff_windows"
 	},
 /turf/simulated/floor/plating,
 /area/chapel/office)
@@ -12304,7 +12296,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	icon_state = "map_injector";
-	id = "d3sh_in";
+	id_tag = "d3sh_in";
 	injecting = 0;
 	use_power = 1
 	},
@@ -13960,7 +13952,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/aftport)
 "FR" = (
-/obj/structure/window/phoronreinforced{
+/obj/structure/window/borosilicate_reinforced{
 	icon_state = "rwindow";
 	dir = 8
 	},
@@ -16973,7 +16965,7 @@
 "Nu" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "Nw" = (
@@ -17150,7 +17142,7 @@
 /area/chapel/main)
 "Oa" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	id = "fuelmode";
+	id_tag = "fuelmode";
 	injecting = 1;
 	use_power = 1;
 	volume_rate = 4000
@@ -17359,7 +17351,7 @@
 "OG" = (
 /obj/structure/bed/chair/office/comfy,
 /obj/machinery/button/windowtint{
-	id = "chapoff_windows";
+	id_tag = "chapoff_windows";
 	pixel_x = 6;
 	pixel_y = 24
 	},
@@ -17454,7 +17446,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3port)
 "OT" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
 	dir = 8;
@@ -17675,7 +17667,7 @@
 /obj/structure/lattice,
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3starboard)
 "PD" = (
@@ -17784,10 +17776,10 @@
 /obj/structure/table/rack{
 	dir = 8
 	},
-/obj/item/stack/material/glass/phoronrglass{
+/obj/item/stack/material/glass/borosilicate{
 	amount = 20
 	},
-/obj/item/stack/material/glass/phoronrglass{
+/obj/item/stack/material/glass/borosilicate{
 	amount = 20
 	},
 /obj/item/stack/material/titanium/ten,
@@ -18135,7 +18127,7 @@
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "Ra" = (
@@ -18388,7 +18380,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "RT" = (
@@ -18613,7 +18605,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
 	icon_state = "map_injector";
-	id = "d3ph_in";
+	id_tag = "d3ph_in";
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/hydrogen,
@@ -18997,7 +18989,7 @@
 "TG" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
-	id = "d3so2_in";
+	id_tag = "d3so2_in";
 	injecting = 1;
 	use_power = 1
 	},
@@ -19066,7 +19058,7 @@
 /area/maintenance/thirddeck/port)
 "TR" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "chapel_windows"
+	id_tag = "chapel_windows"
 	},
 /turf/simulated/floor/plating,
 /area/chapel/main)
@@ -20019,7 +20011,7 @@
 /turf/simulated/open,
 /area/maintenance/thirddeck/aftport)
 "Ws" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "Wu" = (
@@ -20102,7 +20094,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "WF" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d3starboard)
 "WG" = (
@@ -20167,7 +20159,7 @@
 	icon_state = "tube1"
 	},
 /obj/machinery/button/windowtint{
-	id = "chapel_windows";
+	id_tag = "chapel_windows";
 	pixel_x = -10;
 	pixel_y = 24
 	},
@@ -20342,7 +20334,7 @@
 	c_tag = "Telecommunications - Server Room Port";
 	dir = 1
 	},
-/obj/machinery/ntnet_relay,
+/obj/machinery/network/relay,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
 "Xj" = (
@@ -20981,7 +20973,7 @@
 	dir = 5
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d3port)
 "Ze" = (
@@ -21258,7 +21250,7 @@
 "ZR" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	id = "d3po2_in";
+	id_tag = "d3po2_in";
 	injecting = 1;
 	use_power = 1
 	},
@@ -21267,7 +21259,7 @@
 "ZT" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	id = "fuelmode";
+	id_tag = "fuelmode";
 	injecting = 1;
 	use_power = 1;
 	volume_rate = 4000

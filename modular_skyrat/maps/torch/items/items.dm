@@ -5,7 +5,7 @@ Random item spawning
 /obj/random/solgov
 	name = "random solgov equipment"
 	desc = "This is a random piece of solgov equipment or clothing."
-	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_head_solgov.dmi'
 	icon_state = "solsoft"
 
 /obj/random/solgov/spawn_choices()
@@ -120,7 +120,7 @@ Weapons
 
 /obj/item/gun/projectile/revolver/medium/captain
 	name = "\improper Final Argument"
-	icon = 'maps/torch/icons/obj/uniques.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 	icon_state = "mosley"
 	desc = "A shiny al-Maliki & Mosley Autococker automatic revolver, with black accents. Marketed as the 'Revolver for the Modern Era'. This one has 'To the Captain of SEV Torch' engraved."
 	fire_delay = 5.7 //Autorevolver. Also synced with the animation
@@ -151,7 +151,7 @@ Passports
 
 /obj/item/passport
 	name = "passport"
-	icon = 'maps/torch/icons/obj/uniques.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 	icon_state = "passport"
 	force = 0.5
 	w_class = ITEM_SIZE_SMALL

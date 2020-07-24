@@ -8,7 +8,7 @@
 /obj/item/rig/command
 	name = "command HCM"
 	suit_type = "command hardsuit"
-	icon = 'maps/torch/icons/obj/uniques.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 	desc = "A specialized hardsuit rig control module issued to command staff of the Expeditionary Corps and their peers."
 	icon_state = "command_rig"
 	armor = list(

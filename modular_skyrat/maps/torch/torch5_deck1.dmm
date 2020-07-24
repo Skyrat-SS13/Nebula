@@ -257,8 +257,7 @@
 "aaK" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "auxfuel_airlock";
+	id_tag = "auxfuel_airlock";
 	name = "exterior access button";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -298,7 +297,6 @@
 /area/engineering/fuelbay/aux)
 "aaO" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxfuel_outer";
 	locked = 1;
@@ -310,7 +308,6 @@
 "aaP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxfuel_outer";
 	locked = 1;
@@ -325,7 +322,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "auxfuel_pump"
 	},
@@ -360,7 +357,7 @@
 	pixel_x = 25;
 	pixel_y = 12
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	id_tag = "auxfuel_pump";
 	dir = 8
 	},
@@ -411,7 +408,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxfuel_inner";
 	locked = 1;
@@ -423,7 +419,6 @@
 "aaZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxfuel_inner";
 	locked = 1;
@@ -444,8 +439,7 @@
 "abb" = (
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "auxfuel_airlock";
+	id_tag = "auxfuel_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -516,7 +510,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/pager/robotics{
+/obj/machinery/pager{
 	pixel_y = 30;
 	},
 /turf/simulated/floor/tiled,
@@ -563,9 +557,6 @@
 /area/medical/chemistry)
 "abm" = (
 /obj/structure/table/standard,
-/obj/item/stack/material/phoron{
-	amount = 6
-	},
 /obj/item/chems/dropper,
 /obj/item/chems/glass/beaker/insulated/large,
 /obj/item/chems/glass/beaker/large,
@@ -867,8 +858,7 @@
 "abO" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "bridgestarboard_airlock";
+	id_tag = "bridgestarboard_airlock";
 	name = "exterior access button";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -936,7 +926,6 @@
 "abV" = (
 /obj/machinery/computer/air_control{
 	dir = 2;
-	frequency = 1441;
 	input_tag = "d1sh_in";
 	name = "Hydrogen Supply Control";
 	output_tag = "d1sh_out";
@@ -949,7 +938,6 @@
 "abW" = (
 /obj/machinery/computer/air_control{
 	dir = 2;
-	frequency = 1441;
 	input_tag = "d1so2_in";
 	name = "Oxygen Supply Control";
 	output_tag = "d1so2_out";
@@ -1009,7 +997,6 @@
 /area/maintenance/firstdeck/forestarboard)
 "acc" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridgestarboard_outer";
 	locked = 1;
@@ -1221,8 +1208,7 @@
 "acv" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1447;
-	id = "fuelmode";
+	id_tag = "fuelmode";
 	injecting = 1;
 	use_power = 1;
 	volume_rate = 4000
@@ -1235,8 +1221,7 @@
 /area/shuttle/escape_pod13/station)
 "acx" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1447;
-	id = "fuelmode";
+	id_tag = "fuelmode";
 	injecting = 1;
 	use_power = 1;
 	volume_rate = 4000
@@ -1294,7 +1279,7 @@
 /area/maintenance/firstdeck/centralstarboard)
 "acE" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id = "roboticlab_window"
+	id_tag = "roboticlab_window"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -1312,7 +1297,7 @@
 /obj/item/stack/nanopaste,
 /obj/item/stack/nanopaste,
 /obj/machinery/button/windowtint{
-	id = "roboticlab_window";
+	id_tag = "roboticlab_window";
 	pixel_x = -24;
 	pixel_y = 5;
 	pixel_z = 0
@@ -1569,7 +1554,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "adf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bridgestarboard_pump"
 	},
@@ -1584,14 +1569,12 @@
 /area/maintenance/firstdeck/forestarboard)
 "adg" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "bridgestarboard_sensor";
 	pixel_x = 25;
 	pixel_y = -6
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "bridgestarboard_airlock";
 	pixel_x = 25;
 	pixel_y = 8;
@@ -2032,7 +2015,7 @@
 "adQ" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
 /obj/machinery/door/firedoor,
-/obj/structure/sign/directions/infm{
+/obj/structure/sign/directions/infirmary{
 	pixel_y = 32
 	},
 /obj/machinery/door/blast/shutters{
@@ -2070,7 +2053,6 @@
 /area/maintenance/firstdeck/forestarboard)
 "adT" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridgestarboard_inner";
 	locked = 1;
@@ -2476,7 +2458,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_x = 32;
 	pixel_y = 0
 	},
@@ -2649,8 +2630,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "bridgestarboard_airlock";
+	id_tag = "bridgestarboard_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -2793,7 +2773,6 @@
 /area/shuttle/escape_pod12/station)
 "aeT" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_12_hatch";
 	locked = 1;
@@ -2809,7 +2788,6 @@
 /area/shuttle/escape_pod13/station)
 "aeV" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_13_hatch";
 	locked = 1;
@@ -3440,7 +3418,6 @@
 /area/maintenance/firstdeck/centralstarboard)
 "afV" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_12_berth_hatch";
 	locked = 1;
@@ -3451,7 +3428,6 @@
 /area/maintenance/firstdeck/centralstarboard)
 "afW" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_13_berth_hatch";
 	locked = 1;
@@ -3589,7 +3565,7 @@
 /area/medical/staging)
 "agl" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "counselor_office"
+	id_tag = "counselor_office"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
@@ -3638,7 +3614,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/item/autopsy_scanner,
+/obj/item/scanner/autopsy,
 /obj/item/scalpel,
 /obj/machinery/light/small{
 	dir = 4
@@ -3863,7 +3839,7 @@
 	c_tag = "Infirmary - Staging";
 	dir = 1
 	},
-/obj/effect/floor_decal/sign/tr,
+/obj/effect/floor_decal/industrial/traffic,
 /obj/machinery/light/spot,
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
@@ -3936,7 +3912,6 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
 	id_tag = "escape_pod_12_berth";
 	name = "escape pod seven berth controller";
 	pixel_x = -24;
@@ -3975,7 +3950,6 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
 	id_tag = "escape_pod_13_berth";
 	name = "escape pod eight berth controller";
 	pixel_x = -24;
@@ -4059,7 +4033,7 @@
 /area/medical/counselor/therapy)
 "ahe" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "counselor_therapy"
+	id_tag = "counselor_therapy"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
@@ -4074,7 +4048,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "counselor_office";
+	id_tag = "counselor_office";
 	pixel_x = -2;
 	pixel_y = 24
 	},
@@ -4132,7 +4106,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "counselor_therapy";
+	id_tag = "counselor_therapy";
 	pixel_x = -2;
 	pixel_y = 24
 	},
@@ -4467,7 +4441,6 @@
 	},
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - First Deck Subgrid";
-	name_tag = "First Deck Subgrid"
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/warning,
@@ -5805,7 +5778,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/evidence)
 "alX" = (
-/obj/machinery/dnaforensics,
+/obj/machinery/forensic,
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
@@ -5934,7 +5907,6 @@
 /obj/structure/cable,
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Auxiliary Power Storage";
-	name_tag = "Auxiliary Power Storage"
 	},
 /obj/structure/catwalk,
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -5968,7 +5940,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Medbay";
-	departmentType = 1;
 	name = "Medbay RC";
 	pixel_x = -32;
 	pixel_y = 0;
@@ -6162,7 +6133,7 @@
 /area/command/conference)
 "aob" = (
 /obj/machinery/button/windowtint{
-	id = "conference_window";
+	id_tag = "conference_window";
 	pixel_x = 6;
 	pixel_y = -24;
 	range = 11
@@ -6847,7 +6818,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "exam_windows";
+	id_tag = "exam_windows";
 	pixel_x = -30;
 	pixel_y = 24;
 	pixel_z = 0
@@ -7765,7 +7736,7 @@
 /area/maintenance/firstdeck/centralstarboard)
 "axu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -7786,7 +7757,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "axy" = (
-/obj/structure/sign/directions/med{
+/obj/structure/sign/directions/medical{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/paleblue{
@@ -7858,7 +7829,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "processwindow";
+	id_tag = "processwindow";
 	pixel_x = 6;
 	pixel_y = 24
 	},
@@ -9255,7 +9226,7 @@
 /area/security/bo)
 "aDF" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -9265,7 +9236,7 @@
 /area/security/bo)
 "aDG" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -9438,7 +9409,7 @@
 /area/security/wing)
 "aEI" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -9473,7 +9444,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_x = 32;
 	pixel_y = 32
 	},
@@ -9731,7 +9701,7 @@
 /area/maintenance/firstdeck/aftport)
 "aFQ" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -10418,7 +10388,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -10753,7 +10723,7 @@
 /area/security/wing)
 "aKE" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bo_windows"
+	id_tag = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -11694,7 +11664,7 @@
 /area/maintenance/firstdeck/aftport)
 "aOD" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	id = "rust_injector";
+	id_tag = "rust_injector";
 	injecting = 1;
 	use_power = 1
 	},
@@ -12021,7 +11991,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	dir = 1;
-	frequency = 1380;
 	id_tag = "escape_pod_15_berth";
 	name = "escape pod ten berth controller";
 	pixel_x = 24;
@@ -12101,7 +12070,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	dir = 1;
-	frequency = 1380;
 	id_tag = "escape_pod_16_berth";
 	name = "escape pod eleven berth controller";
 	pixel_x = 24;
@@ -12144,7 +12112,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	dir = 1;
-	frequency = 1380;
 	id_tag = "escape_pod_17_berth";
 	name = "escape pod twelve berth controller";
 	pixel_x = 24;
@@ -12383,7 +12350,6 @@
 /area/maintenance/firstdeck/centralport)
 "aQI" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_15_berth_hatch";
 	locked = 1;
@@ -12394,7 +12360,6 @@
 /area/maintenance/firstdeck/centralport)
 "aQJ" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_16_berth_hatch";
 	locked = 1;
@@ -12405,7 +12370,6 @@
 /area/maintenance/firstdeck/centralport)
 "aQK" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_17_berth_hatch";
 	locked = 1;
@@ -12583,8 +12547,7 @@
 "aRs" = (
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "bridgeport_airlock";
+	id_tag = "bridgeport_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -12748,7 +12711,6 @@
 /area/shuttle/escape_pod15/station)
 "aRC" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_15_hatch";
 	locked = 1;
@@ -12764,7 +12726,6 @@
 /area/shuttle/escape_pod16/station)
 "aRE" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_16_hatch";
 	locked = 1;
@@ -12780,7 +12741,6 @@
 /area/shuttle/escape_pod17/station)
 "aRG" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_17_hatch";
 	locked = 1;
@@ -13011,7 +12971,6 @@
 /area/maintenance/firstdeck/foreport)
 "aSq" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridgeport_inner";
 	locked = 1;
@@ -13119,7 +13078,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1port)
 "aST" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bridgeport_pump"
 	},
@@ -13626,7 +13585,6 @@
 /area/maintenance/firstdeck/foreport)
 "aUa" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridgeport_outer";
 	locked = 1;
@@ -13638,7 +13596,6 @@
 "aUb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	frequency = 1379;
 	id_tag = "xeno_airlock_exterior";
 	locked = 1;
 	name = "Xenobiology External Airlock"
@@ -13656,7 +13613,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	frequency = 1379;
 	id_tag = "xeno_airlock_exterior";
 	locked = 1;
 	name = "Xenobiology External Airlock"
@@ -13783,8 +13739,7 @@
 "aUo" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "bridgeport_airlock";
+	id_tag = "bridgeport_airlock";
 	name = "exterior access button";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -13861,7 +13816,6 @@
 "aUu" = (
 /obj/machinery/computer/air_control{
 	dir = 1;
-	frequency = 1441;
 	input_tag = "d1ph_in";
 	name = "Hydrogen Supply Control";
 	output_tag = "d1ph_out";
@@ -13874,7 +13828,6 @@
 "aUv" = (
 /obj/machinery/computer/air_control{
 	dir = 1;
-	frequency = 1441;
 	input_tag = "d1po2_in";
 	name = "Oxygen Supply Control";
 	output_tag = "d1po2_out";
@@ -13968,7 +13921,6 @@
 "aUF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	frequency = 1379;
 	id_tag = "xeno_airlock_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock"
@@ -13986,7 +13938,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/research{
-	frequency = 1379;
 	id_tag = "xeno_airlock_interior";
 	locked = 1;
 	name = "Xenobiology Internal Airlock"
@@ -14005,9 +13956,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
-	},
-/obj/item/stack/material/phoron{
-	amount = 5
 	},
 /obj/machinery/light{
 	dir = 1
@@ -14598,7 +14546,7 @@
 /area/thruster/d1starboard)
 "bdo" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "processwindow"
+	id_tag = "processwindow"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -14811,7 +14759,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "interviewwindow"
+	id_tag = "interviewwindow"
 	},
 /turf/simulated/floor/plating,
 /area/security/questioning)
@@ -15233,7 +15181,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_12";
 	name = "escape pod seven controller";
 	pixel_x = -24;
@@ -15253,7 +15200,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_13";
 	name = "escape pod eight controller";
 	pixel_x = -24;
@@ -15303,7 +15249,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_15";
 	name = "escape pod ten controller";
 	pixel_x = 24;
@@ -15323,7 +15268,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_16";
 	name = "escape pod eleven controller";
 	pixel_x = 24;
@@ -15365,7 +15309,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 8;
-	frequency = 1380;
 	id_tag = "escape_pod_17";
 	name = "escape pod twelve controller";
 	pixel_x = 24;
@@ -15729,7 +15672,7 @@
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/medical,
-/obj/item/chems/food/snacks/proteinbar,
+/obj/item/chems/food/snacks/candy/proteinbar,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/medical)
 "cwQ" = (
@@ -16575,7 +16518,7 @@
 "dsd" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
 "dtb" = (
@@ -16776,22 +16719,22 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/glass/bottle/inaprovaline,
-/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/syringe/antibiotic,
+/obj/item/chems/syringe/antibiotic,
+/obj/item/chems/syringe/antibiotic,
+/obj/item/chems/glass/bottle/stabilizer,
+/obj/item/chems/glass/bottle/stabilizer,
 /obj/item/chems/glass/bottle/antitoxin,
 /obj/item/chems/glass/bottle/antitoxin,
 /obj/item/chems/glass/bottle/antitoxin,
-/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/stabilizer,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "dMe" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/structure/sign/directions/med{
+/obj/structure/sign/directions/medical{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -17383,9 +17326,8 @@
 "eGl" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1441;
 	icon_state = "map_injector";
-	id = "d1sh_in";
+	id_tag = "d1sh_in";
 	injecting = 0;
 	use_power = 1
 	},
@@ -17443,7 +17385,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/foyer/storeroom)
 "eJy" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1starboard)
 "eKb" = (
@@ -17736,8 +17678,7 @@
 "fuV" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
-	frequency = 1441;
-	id = "d1so2_in";
+	id_tag = "d1so2_in";
 	injecting = 1;
 	use_power = 1
 	},
@@ -18189,7 +18130,7 @@
 /area/medical/surgery)
 "gkb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "or1"
+	id_tag = "or1"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
@@ -18400,7 +18341,7 @@
 /area/teleporter/firstdeck)
 "gEb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "exam_windows"
+	id_tag = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -18442,12 +18383,6 @@
 /area/security/storage)
 "gHb" = (
 /obj/structure/closet/crate,
-/obj/item/stack/material/phoron{
-	amount = 50
-	},
-/obj/item/stack/material/phoron{
-	amount = 50
-	},
 /obj/machinery/light/small{
 	icon_state = "bulb1";
 	dir = 4
@@ -18540,7 +18475,7 @@
 /area/assembly/chargebay)
 "gXb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id = "exam_windows"
+	id_tag = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -18984,11 +18919,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/stack/material/phoron,
-/obj/item/stack/material/phoron,
-/obj/item/stack/material/phoron,
-/obj/item/stack/material/phoron,
-/obj/item/stack/material/phoron,
 /obj/item/storage/box/beakers,
 /obj/machinery/light/spot{
 	dir = 1
@@ -19149,7 +19079,7 @@
 	pixel_y = 6
 	},
 /obj/machinery/button/windowtint{
-	id = "bo_windows";
+	id_tag = "bo_windows";
 	pixel_x = -24;
 	pixel_y = -6
 	},
@@ -19459,7 +19389,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/development)
 "iej" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
 "igb" = (
@@ -19572,7 +19502,7 @@
 /area/maintenance/firstdeck/aftport)
 "imK" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "conference_window"
+	id_tag = "conference_window"
 	},
 /turf/simulated/floor/plating,
 /area/command/conference)
@@ -19799,7 +19729,7 @@
 "izd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "iAS" = (
@@ -20500,7 +20430,7 @@
 /area/hallway/primary/firstdeck/aft)
 "jqD" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "forensicswindow"
+	id_tag = "forensicswindow"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -20830,7 +20760,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Science";
-	departmentType = 2;
 	name = "Science Requests Console";
 	pixel_x = -30;
 	pixel_y = 0
@@ -20867,8 +20796,7 @@
 "jMx" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1441;
-	id = "d1po2_in";
+	id_tag = "d1po2_in";
 	injecting = 1;
 	use_power = 1
 	},
@@ -21064,7 +20992,7 @@
 /area/hallway/primary/firstdeck/aft)
 "jZb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "misc_lab"
+	id_tag = "misc_lab"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
@@ -21079,7 +21007,7 @@
 	pixel_y = 26
 	},
 /obj/machinery/button/windowtint{
-	id = "misc_lab";
+	id_tag = "misc_lab";
 	pixel_x = 4;
 	pixel_y = 26
 	},
@@ -21206,7 +21134,6 @@
 "kib" = (
 /obj/machinery/requests_console{
 	department = "Robotics";
-	departmentType = 2;
 	name = "Robotics RC";
 	pixel_x = 0;
 	pixel_y = 30
@@ -21403,7 +21330,7 @@
 /area/command/armoury/tactical)
 "kvb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "roboticlab_window"
+	id_tag = "roboticlab_window"
 	},
 /turf/simulated/floor/plating,
 /area/assembly/robotics/office)
@@ -21513,7 +21440,7 @@
 /area/assembly/chargebay)
 "kFT" = (
 /obj/machinery/button/windowtint{
-	id = "exam_windows";
+	id_tag = "exam_windows";
 	pixel_x = -5;
 	pixel_y = -24;
 	pixel_z = 0
@@ -21594,7 +21521,7 @@
 /area/medical/staging)
 "kKb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "postop_window"
+	id_tag = "postop_window"
 	},
 /turf/simulated/floor/plating,
 /area/medical/staging)
@@ -21849,7 +21776,7 @@
 /area/medical/foyer/storeroom)
 "lab" = (
 /obj/machinery/button/windowtint{
-	id = "postop_window";
+	id_tag = "postop_window";
 	pixel_x = 0;
 	pixel_y = -24;
 	pixel_z = 0
@@ -21887,7 +21814,7 @@
 "lcL" = (
 /obj/machinery/door/window/brigdoor/westleft{
 	dir = 2;
-	id = "Cell 2";
+	id_tag = "Cell 2";
 	name = "Cell Two"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -22139,7 +22066,7 @@
 /area/hallway/primary/firstdeck/aft)
 "ltb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/design_console{
 	icon_state = "computer";
 	dir = 1
 	},
@@ -22217,7 +22144,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_x = 0;
 	pixel_y = -32
 	},
@@ -22279,7 +22205,7 @@
 	icon_state = "tube1";
 	dir = 1
 	},
-/obj/machinery/microscope,
+/obj/machinery/forensic/microscope,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "lAb" = (
@@ -22441,7 +22367,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
 "lKb" = (
@@ -22567,7 +22493,7 @@
 /area/assembly/chargebay)
 "mdv" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "processwindow"
+	id_tag = "processwindow"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -22997,7 +22923,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/button/windowtint{
-	id = "or2";
+	id_tag = "or2";
 	pixel_x = -6;
 	pixel_y = -24
 	},
@@ -23181,7 +23107,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/button/windowtint{
-	id = "forensicswindow";
+	id_tag = "forensicswindow";
 	pixel_x = 6;
 	pixel_y = -24
 	},
@@ -23339,7 +23265,7 @@
 /area/security/nuke_storage)
 "mVW" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "forensicswindow"
+	id_tag = "forensicswindow"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -23561,7 +23487,7 @@
 /area/security/locker)
 "nkh" = (
 /obj/structure/closet/secure_closet/brig{
-	id = "Cell 1";
+	id_tag = "Cell 1";
 	name = "Cell Locker"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -23797,7 +23723,7 @@
 /area/maintenance/firstdeck/centralport)
 "nBb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "exam_windows"
+	id_tag = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -24206,7 +24132,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "nZZ" = (
@@ -24699,7 +24625,7 @@
 "oMb" = (
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 2;
-	id = "Cell 1";
+	id_tag = "Cell 1";
 	name = "Cell One"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -25414,7 +25340,7 @@
 "pBb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "misc_lab"
+	id_tag = "misc_lab"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
@@ -25561,7 +25487,7 @@
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
 "pJb" = (
@@ -25677,7 +25603,7 @@
 "pRm" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/blue,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1starboard)
 "pSb" = (
@@ -25821,9 +25747,8 @@
 "qab" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
-	frequency = 1441;
 	icon_state = "map_injector";
-	id = "xenobot_in";
+	id_tag = "xenobot_in";
 	use_power = 1
 	},
 /obj/machinery/light/small{
@@ -25851,7 +25776,7 @@
 /obj/item/stack/material/glass/reinforced{
 	amount = 30
 	},
-/obj/item/stack/material/glass/phoronrglass{
+/obj/item/stack/material/glass/borosilicate{
 	amount = 5
 	},
 /obj/structure/window/reinforced{
@@ -26041,7 +25966,7 @@
 /area/rnd/misc_lab)
 "qnz" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id = "or2"
+	id_tag = "or2"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery2)
@@ -26059,7 +25984,7 @@
 /area/medical/surgery)
 "qqb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id = "sci_office"
+	id_tag = "sci_office"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/office)
@@ -26590,18 +26515,6 @@
 "qTX" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/closet/crate,
-/obj/item/stack/material/phoron{
-	amount = 25
-	},
-/obj/item/stack/material/phoron{
-	amount = 25
-	},
-/obj/item/stack/material/phoron{
-	amount = 25
-	},
-/obj/item/stack/material/phoron{
-	amount = 25
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -27123,9 +27036,8 @@
 "rxb" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1441;
 	icon_state = "map_injector";
-	id = "test_in";
+	id_tag = "test_in";
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced,
@@ -27361,7 +27273,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/xenobiology/xenoflora)
 "rKb" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -27405,7 +27317,7 @@
 /area/security/armoury)
 "rLb" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 1;
@@ -28236,7 +28148,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "interviewwindow";
+	id_tag = "interviewwindow";
 	pixel_x = 6;
 	pixel_y = 24
 	},
@@ -28294,14 +28206,12 @@
 /area/security/armoury)
 "sCb" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "bridgeport_sensor";
 	pixel_x = 25;
 	pixel_y = 12
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "bridgeport_airlock";
 	pixel_x = 25;
 	req_access = list("ACCESS_MAINT");
@@ -28803,8 +28713,10 @@
 	pixel_y = 0
 	},
 /obj/item/extinguisher,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/,
+/obj/machinery/fabricator/pipe,
+/obj/item/storage/box/,
+/obj/machinery/fabricator/pipe,
 /obj/machinery/button/blast_door{
 	id_tag = "xenobio2_vent";
 	name = "Cell 2 Vent";
@@ -28905,8 +28817,10 @@
 	pixel_y = 0
 	},
 /obj/item/extinguisher,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/,
+/obj/machinery/fabricator/pipe,
+/obj/item/storage/box/,
+/obj/machinery/fabricator/pipe,
 /obj/machinery/button/blast_door{
 	id_tag = "xenobio3_vent";
 	name = "Cell 3 Vent";
@@ -29053,7 +28967,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 6
 	},
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1starboard)
 "tsb" = (
@@ -29240,7 +29154,7 @@
 	pixel_y = 6
 	},
 /obj/machinery/button/windowtint{
-	id = "sci_office";
+	id_tag = "sci_office";
 	pixel_x = 22;
 	pixel_y = -6
 	},
@@ -29264,9 +29178,8 @@
 "tIF" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 2;
-	frequency = 1441;
 	icon_state = "map_injector";
-	id = "d1ph_in";
+	id_tag = "d1ph_in";
 	injecting = 0;
 	use_power = 1
 	},
@@ -29597,7 +29510,7 @@
 /area/security/detectives_office)
 "uDu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "interviewwindow"
+	id_tag = "interviewwindow"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -29852,7 +29765,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/button/windowtint{
-	id = "forensicswindow";
+	id_tag = "forensicswindow";
 	pixel_x = 6;
 	pixel_y = -24
 	},
@@ -29889,7 +29802,7 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "vci" = (
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "vcy" = (
@@ -30174,7 +30087,7 @@
 /area/security/locker)
 "vTH" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "forensicswindow"
+	id_tag = "forensicswindow"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -30188,7 +30101,7 @@
 /area/security/detectives_office)
 "vTY" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "processwindow"
+	id_tag = "processwindow"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -30290,7 +30203,7 @@
 /area/command/conference)
 "whm" = (
 /obj/structure/closet/secure_closet/brig{
-	id = "Cell 2";
+	id_tag = "Cell 2";
 	name = "Cell Locker"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -30691,7 +30604,7 @@
 	dir = 1
 	},
 /obj/machinery/button/windowtint{
-	id = "or1";
+	id_tag = "or1";
 	pixel_x = -6;
 	pixel_y = -24
 	},
@@ -30902,7 +30815,7 @@
 	dir = 5
 	},
 /obj/machinery/meter,
-/obj/effect/wallframe_spawn/reinforced_phoron,
+/obj/effect/wallframe_spawn/reinforced_borosilicate,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
 "xSf" = (

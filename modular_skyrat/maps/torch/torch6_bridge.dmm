@@ -4,7 +4,7 @@
 /area/space)
 "ab" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -37,7 +37,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar{
-	id = "auxsolarsbridge";
+	id_tag = "auxsolarsbridge";
 	name = "Bridge Auxiliary Solar Array"
 	},
 /obj/effect/floor_decal/solarpanel,
@@ -324,7 +324,7 @@
 "aI" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar{
-	id = "auxsolarsbridge";
+	id_tag = "auxsolarsbridge";
 	name = "Bridge Auxiliary Solar Array"
 	},
 /obj/effect/floor_decal/solarpanel,
@@ -965,7 +965,7 @@
 /area/crew_quarters/heads/office/xo)
 "bP" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -983,7 +983,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -1040,7 +1040,7 @@
 /area/hallway/primary/bridge/fore)
 "bV" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -1063,7 +1063,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -2038,7 +2038,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "ce_windows"
+	id_tag = "ce_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/ce)
@@ -2366,7 +2366,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Bridge Conference Room";
-	departmentType = 5;
 	name = "Bridge Conference Room";
 	pixel_x = 32;
 	pixel_y = 0
@@ -2907,7 +2906,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -3283,7 +3282,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "XO's Desk";
-	departmentType = 5;
 	name = "XO Request Console";
 	pixel_y = 30
 	},
@@ -3580,7 +3578,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -3717,8 +3715,7 @@
 "gn" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "bridge_eva_airlock";
+	id_tag = "bridge_eva_airlock";
 	name = "exterior access button";
 	pixel_x = -24;
 	pixel_y = 0;
@@ -3834,7 +3831,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 25;
 	pixel_y = -6;
-	id = "sgr_windows";
+	id_tag = "sgr_windows";
 	range = 11
 	},
 /turf/simulated/floor/carpet/blue2,
@@ -3937,7 +3934,6 @@
 "gV" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridge_eva_outer";
 	locked = 1;
@@ -3948,7 +3944,6 @@
 "gW" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridge_eva_outer";
 	locked = 1;
@@ -4112,7 +4107,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "ce_windows"
+	id_tag = "ce_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/ce)
@@ -4171,7 +4166,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/bridge/aft)
 "hK" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
 	id_tag = "bridge_eva_pump"
 	},
@@ -4319,7 +4314,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -4338,7 +4333,7 @@
 /obj/item/folder/white,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/button/windowtint{
-	id = "ce_windows";
+	id_tag = "ce_windows";
 	pixel_x = -24;
 	pixel_y = 6
 	},
@@ -4420,7 +4415,6 @@
 "ip" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
-	frequency = 1379;
 	id_tag = "bridge_eva_airlock";
 	name = "Engineering Airlock Console";
 	pixel_x = -24;
@@ -4431,7 +4425,7 @@
 	tag_exterior_door = "bridge_eva_outer";
 	tag_interior_door = "bridge_eva_inner"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bridge_eva_pump"
 	},
@@ -4447,12 +4441,11 @@
 /area/hallway/primary/bridge/aft)
 "is" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "bridge_eva_sensor";
 	pixel_x = 24;
 	pixel_y = 0
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
 	id_tag = "bridge_eva_pump"
 	},
@@ -4570,7 +4563,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_starboard"
+	id_tag = "bridge_starboard"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -4580,7 +4573,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_starboard"
+	id_tag = "bridge_starboard"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -4702,7 +4695,7 @@
 /obj/machinery/oxygen_pump{
 	pixel_x = -32
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bridge_eva_pump"
 	},
@@ -4800,8 +4793,7 @@
 "jn" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "ai_core_airlock";
+	id_tag = "ai_core_airlock";
 	name = "exterior access button";
 	pixel_x = -24;
 	pixel_y = 0;
@@ -4883,7 +4875,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 24;
 	pixel_y = 34;
-	id = "bridge_starboard"
+	id_tag = "bridge_starboard"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -4962,7 +4954,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -5039,7 +5031,6 @@
 "jY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridge_eva_inner";
 	locked = 1;
@@ -5049,7 +5040,6 @@
 /area/hallway/primary/bridge/aft)
 "jZ" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "bridge_eva_inner";
 	locked = 1;
@@ -5180,7 +5170,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "ai_core_outer";
 	locked = 1;
@@ -5287,7 +5276,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -5384,8 +5373,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "bridge_eva_airlock";
+	id_tag = "bridge_eva_airlock";
 	name = "interior access button";
 	pixel_x = -24;
 	pixel_y = 24;
@@ -5428,7 +5416,7 @@
 "kV" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -5563,7 +5551,6 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1379;
 	id_tag = "ai_core_airlock";
 	name = "AI Core Airlock Console";
 	pixel_x = 24;
@@ -5574,7 +5561,7 @@
 	tag_exterior_door = "ai_core_outer";
 	tag_interior_door = "ai_core_inner"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 2;
 	id_tag = "ai_core_pump"
 	},
@@ -5928,7 +5915,6 @@
 /area/hallway/primary/bridge/aft)
 "lR" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
 	id_tag = "aquila_shuttle_dock_sensor";
 	pixel_x = 0;
 	pixel_y = 24
@@ -6082,8 +6068,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "ai_core_airlock";
+	id_tag = "ai_core_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -6101,7 +6086,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "ai_core_inner";
 	locked = 1;
@@ -6145,7 +6129,6 @@
 	},
 /obj/machinery/requests_console{
 	department = "AI";
-	departmentType = 5;
 	pixel_x = -32;
 	pixel_y = -32
 	},
@@ -6173,7 +6156,6 @@
 /obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = -22;
-	frequency = 1475
 	},
 /obj/item/radio/intercom{
 	dir = 4;
@@ -6181,7 +6163,6 @@
 	},
 /obj/item/radio/intercom{
 	pixel_y = 22;
-	frequency = 1485
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -6332,7 +6313,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 9;
 	pixel_y = -24;
-	id = "sea_windows"
+	id_tag = "sea_windows"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
@@ -6633,8 +6614,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "aquila_shuttle";
+	id_tag = "aquila_shuttle";
 	name = "interior access button";
 	pixel_x = -24;
 	pixel_y = -24;
@@ -6828,7 +6808,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "ai_core_sensor";
 	pixel_x = -24;
 	pixel_y = 0
@@ -6850,7 +6829,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	id_tag = "ai_core_pump"
 	},
@@ -6971,7 +6950,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 24;
 	pixel_y = -35;
-	id = "bridge_port"
+	id_tag = "bridge_port"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -7102,7 +7081,7 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7116,7 +7095,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7126,7 +7105,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7168,7 +7147,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "ai_core_outer";
 	locked = 1;
@@ -7209,7 +7187,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_port"
+	id_tag = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -7219,7 +7197,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_port"
+	id_tag = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -7278,7 +7256,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -7528,7 +7506,7 @@
 	pixel_y = 6
 	},
 /obj/machinery/button/windowtint{
-	id = "cos_windows";
+	id_tag = "cos_windows";
 	pixel_x = -24;
 	pixel_y = -6
 	},
@@ -7592,7 +7570,7 @@
 "pI" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7926,7 +7904,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cos_windows"
+	id_tag = "cos_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cos)
@@ -7936,7 +7914,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cos_windows"
+	id_tag = "cos_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cos)
@@ -7956,7 +7934,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief Medical Officer's Desk";
-	departmentType = 5;
 	name = "Chief Medical Officer RC";
 	pixel_x = 32;
 	pixel_y = 0
@@ -8556,7 +8533,6 @@
 "rR" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/vault/bolted{
-	frequency = null;
 	id_tag = "bridge_safe_exterior";
 	name = "Bridge Safe Room"
 	},
@@ -8798,7 +8774,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sea_windows"
+	id_tag = "sea_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sea)
@@ -8859,7 +8835,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sgr_windows"
+	id_tag = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -8873,7 +8849,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sgr_windows"
+	id_tag = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -8896,7 +8872,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "rd_windows"
+	id_tag = "rd_windows"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -9116,7 +9092,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sgr_windows"
+	id_tag = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -9290,8 +9266,8 @@
 /area/aquila/maintenance)
 "tM" = (
 /obj/structure/table/standard,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
+/obj/item/chems/syringe/antibiotic,
+/obj/item/chems/syringe/antibiotic,
 /obj/item/stack/medical/advanced/bruise_pack,
 /turf/simulated/floor/tiled/white/monotile,
 /area/aquila/medical)
@@ -9392,7 +9368,7 @@
 "ug" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sgr_windows"
+	id_tag = "sgr_windows"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10355,8 +10331,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "solar_bridge_airlock";
+	id_tag = "solar_bridge_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -10375,7 +10350,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_bridge_inner";
 	locked = 1;
@@ -10399,7 +10373,6 @@
 	},
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_bridge_outer";
 	locked = 1;
@@ -10410,8 +10383,7 @@
 "wt" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "solar_bridge_airlock";
+	id_tag = "solar_bridge_airlock";
 	name = "exterior access button";
 	pixel_x = -24;
 	pixel_y = 24;
@@ -10663,7 +10635,7 @@
 "wV" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar_control{
-	id = "auxsolarbridge";
+	id_tag = "auxsolarbridge";
 	name = "Bridge Solar Control";
 	track = 1
 	},
@@ -10713,7 +10685,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/bridge/foreport)
 "xg" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
 	id_tag = "bridge_eva_pump"
 	},
@@ -11149,7 +11121,7 @@
 /area/maintenance/bridge/forestarboard)
 "yd" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -11159,7 +11131,7 @@
 /area/bridge/meeting_room)
 "yf" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_starboard"
+	id_tag = "bridge_starboard"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -11228,7 +11200,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 7;
 	pixel_y = -34;
-	id = "cmo_windows";
+	id_tag = "cmo_windows";
 	range = 11
 	},
 /turf/simulated/floor/tiled/white,
@@ -11366,7 +11338,7 @@
 "zh" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_port"
+	id_tag = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -11782,7 +11754,7 @@
 /area/crew_quarters/heads/office/rd)
 "AH" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_starboard"
+	id_tag = "bridge_starboard"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -11877,7 +11849,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief Engineer's Desk";
-	departmentType = 6;
 	name = "Chief Engineer RC";
 	pixel_x = 32;
 	pixel_y = 0
@@ -12176,7 +12147,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "CO's Desk";
-	departmentType = 5;
 	name = "CO Request Console";
 	pixel_x = -30;
 	pixel_y = 32
@@ -12232,7 +12202,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cmo_windows"
+	id_tag = "cmo_windows"
 	},
 /obj/structure/cable/green,
 /obj/structure/disposalpipe/segment{
@@ -12469,7 +12439,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "co_windows"
+	id_tag = "co_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/co)
@@ -12612,7 +12582,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_x = 0;
 	pixel_y = -32
 	},
@@ -12733,7 +12702,6 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	frequency = 1331;
 	id_tag = "aquila_shuttle_sensor_external";
 	pixel_x = 25;
 	pixel_y = -6
@@ -12744,8 +12712,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1331;
-	master_tag = "aquila_shuttle";
+	id_tag = "aquila_shuttle";
 	name = "exterior access button";
 	pixel_x = 23;
 	pixel_y = 6
@@ -12779,7 +12746,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/aux_eva)
 "Fj" = (
-/obj/machinery/computer/rdservercontrol{
+/obj/machinery/computer/design_console{
 	icon_state = "computer";
 	dir = 4
 	},
@@ -13011,7 +12978,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -13122,7 +13089,7 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -13212,7 +13179,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -13264,7 +13231,7 @@
 /area/crew_quarters/heads/cobed)
 "Hv" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -13561,7 +13528,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Captain's Desk";
-	departmentType = 5;
 	name = "Captain RC";
 	pixel_x = 30;
 	pixel_y = 0
@@ -13662,7 +13628,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Senior Enlisted Advisor's Desk";
-	departmentType = 6;
 	name = "Senior Enlisted Advisor RC";
 	pixel_x = 0;
 	pixel_y = -34
@@ -13924,7 +13889,7 @@
 "Ka" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -14119,7 +14084,6 @@
 	},
 /obj/item/stamp/cmo,
 /obj/item/radio{
-	frequency = 1487;
 	name = "medbay emergency radio link"
 	},
 /turf/simulated/floor/tiled/white,
@@ -14195,7 +14159,6 @@
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
 	id_tag = "aquila_shuttle_sensor";
 	pixel_x = 0;
 	pixel_y = -24
@@ -14391,7 +14354,6 @@
 "Mc" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1331;
 	id_tag = "aquila_shuttle";
 	pixel_x = 0;
 	pixel_y = 24;
@@ -14460,7 +14422,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief of Security's Desk";
-	departmentType = 5;
 	name = "Chief of Security RC";
 	pixel_x = 32;
 	pixel_y = 0
@@ -14561,7 +14522,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -14602,7 +14563,7 @@
 	department = "Torch - Commanding Officer"
 	},
 /obj/machinery/button/windowtint{
-	id = "co_windows";
+	id_tag = "co_windows";
 	pixel_x = 6;
 	pixel_y = 33
 	},
@@ -14805,7 +14766,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Bridge";
-	departmentType = 5;
 	name = "Bridge RC";
 	pixel_x = 30;
 	pixel_y = 0
@@ -14931,7 +14891,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -15429,7 +15389,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 8;
 	pixel_y = 39;
-	id = "xo_windows"
+	id_tag = "xo_windows"
 	},
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/paper_bin{
@@ -15553,7 +15513,7 @@
 /area/maintenance/bridge/aftstarboard)
 "Rj" = (
 /obj/machinery/button/windowtint{
-	id = "rd_windows";
+	id_tag = "rd_windows";
 	pixel_x = 6;
 	pixel_y = -24;
 	range = 11
@@ -15707,7 +15667,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "sea_windows"
+	id_tag = "sea_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sea)
@@ -15794,7 +15754,6 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
 	display_name = "Bridge Deck Dock";
-	frequency = 1331;
 	id_tag = "aquila_shuttle_dock_airlock";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -15845,7 +15804,6 @@
 /area/bridge/meeting_room)
 "So" = (
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
@@ -15995,7 +15953,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
 	id_tag = "solar_bridge_pump"
 	},
@@ -16005,7 +15963,6 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1379;
 	id_tag = "solar_bridge_airlock";
 	pixel_x = 2;
 	pixel_y = 24;
@@ -16016,7 +15973,6 @@
 	tag_interior_door = "solar_bridge_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "solar_bridge_sensor";
 	pixel_x = -12;
 	pixel_y = 24
@@ -16054,7 +16010,6 @@
 	},
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
-	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "aquila_shuttle_dock_inner";
 	locked = 1;
@@ -16301,7 +16256,6 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
-	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "aquila_shuttle_dock_outer";
 	locked = 1;
@@ -16512,7 +16466,6 @@
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
 	density = 1;
-	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "aquila_shuttle_outer";
 	locked = 1;
@@ -16549,7 +16502,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief Science Officer's Desk";
-	departmentType = 5;
 	name = "Chief Science Officer RC";
 	pixel_x = 0;
 	pixel_y = 30
@@ -16597,7 +16549,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -16669,7 +16621,7 @@
 /area/hallway/primary/bridge/fore)
 "VN" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "bridge_port"
+	id_tag = "bridge_port"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -16766,7 +16718,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = 25;
 	pixel_y = 7;
-	id = "cl_windows"
+	id_tag = "cl_windows"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/cl)
@@ -16792,7 +16744,6 @@
 	},
 /obj/machinery/door/airlock/external{
 	autoset_access = 0;
-	frequency = 1331;
 	icon_state = "closed";
 	id_tag = "aquila_shuttle_inner";
 	locked = 1;
@@ -17116,7 +17067,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "co_windows"
+	id_tag = "co_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -17186,7 +17137,7 @@
 /obj/machinery/button/windowtint{
 	pixel_x = -24;
 	pixel_y = -7;
-	id = "meeting_windows"
+	id_tag = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d1 = 1;

@@ -5,7 +5,7 @@ ranks - TCC
 /obj/item/clothing/accessory/terran/rank/navy
 	name = "naval ranks"
 	desc = "Insignia denoting naval rank of some kind. These appear blank."
-	icon = 'maps/torch/icons/obj/obj_accessories_terran.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_accessories_terran.dmi'
 	accessory_icons = list(slot_w_uniform_str = 'modular_skyrat/maps/torch/icons/mob/onmob_accessories_terran.dmi', slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_accessories_terran.dmi')
 	icon_state = "terranrank"
 	on_rolled = list("down" = "none")

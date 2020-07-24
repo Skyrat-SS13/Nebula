@@ -53,7 +53,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
-	id = "meatstation_mainsolars"
+	id_tag = "meatstation_mainsolars"
 	},
 /turf/simulated/floor/airless,
 /area/space)
@@ -392,7 +392,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
-	id = "meatstation_mainsolars"
+	id_tag = "meatstation_mainsolars"
 	},
 /turf/simulated/floor/airless,
 /area/space)
@@ -2040,7 +2040,7 @@
 /area/meatstation/medical)
 "eG" = (
 /obj/structure/table/glass,
-/obj/machinery/microscope,
+/obj/machinery/forensic/microscope,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4;
 	icon_state = "bordercolor"
@@ -2682,7 +2682,7 @@
 "fM" = (
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "meatstation_mainsolars"
+	id_tag = "meatstation_mainsolars"
 	},
 /turf/simulated/floor/airless,
 /area/space)
@@ -3220,7 +3220,7 @@
 "gX" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3479,7 +3479,7 @@
 "hH" = (
 /obj/machinery/power/solar_control{
 	dir = 4;
-	id = "meatstation_mainsolars"
+	id_tag = "meatstation_mainsolars"
 	},
 /obj/structure/cable/yellow{
 	d2 = 4;
@@ -3938,7 +3938,7 @@
 "iL" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5500,11 +5500,11 @@
 /turf/space,
 /area/space)
 "mE" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
 "mF" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/space,
 /area/space)
 "mG" = (
@@ -5582,12 +5582,12 @@
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
 "mP" = (
-/obj/machinery/pipedispenser/disposal,
+/obj/machinery/fabricator/pipe/disposal,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
 "mQ" = (
-/obj/machinery/pipedispenser,
+/obj/machinery/fabricator/pipe,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
@@ -5720,7 +5720,6 @@
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
 "nl" = (
-/obj/item/stack/material/phoron/ten,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
 "nm" = (
@@ -5736,7 +5735,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/stack/material/steel/fifty,
-/obj/machinery/pipedispenser/disposal,
+/obj/machinery/fabricator/pipe/disposal,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
@@ -6054,7 +6053,7 @@
 "oj" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -6201,7 +6200,7 @@
 "oz" = (
 /obj/structure/table/glass,
 /obj/effect/decal/cleanable/blood/drip,
-/obj/machinery/dnaforensics,
+/obj/machinery/forensic,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/lab)
 "oA" = (
@@ -6525,7 +6524,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "py" = (
-/obj/item/storage/box/monkeycubes/farwacubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe,
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "pz" = (
@@ -6554,7 +6553,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "pC" = (
-/obj/item/storage/box/monkeycubes/spidercubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe/spidercubes,
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "pD" = (
@@ -7301,7 +7300,7 @@
 	},
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/meatstation/storage)
@@ -8012,7 +8011,7 @@
 "tb" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -8754,13 +8753,13 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "uF" = (
-/obj/item/storage/box/monkeycubes/farwacubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "uG" = (
 /obj/structure/table/rack,
-/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe,
 /obj/item/storage/box/lights/bulbs,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/dark/airless,
@@ -9373,7 +9372,7 @@
 "vU" = (
 /obj/machinery/conveyor_switch/oneway{
 	convdir = -1;
-	id = "trashconveyor"
+	id_tag = "trashconveyor"
 	},
 /obj/effect/floor_decal/corner/b_green/border,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -9761,7 +9760,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "wQ" = (
-/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -9791,7 +9790,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "wT" = (
-/obj/item/storage/box/monkeycubes/stokcubes,
+/obj/item/storage/box//obj/machinery/fabricator/pipe,
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8;
 	icon_state = "bordercolor"
@@ -10168,7 +10167,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/pipedispenser,
+/obj/machinery/fabricator/pipe,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/airless,
 /area/meatstation/engineering)
@@ -10947,7 +10946,7 @@
 	},
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "meatstation_auxsolars"
+	id_tag = "meatstation_auxsolars"
 	},
 /turf/simulated/floor/plating,
 /area/space)
@@ -10986,7 +10985,7 @@
 	},
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "meatstation_auxsolars"
+	id_tag = "meatstation_auxsolars"
 	},
 /turf/simulated/floor/plating,
 /area/space)
@@ -10998,7 +10997,7 @@
 /obj/structure/cable/cyan,
 /obj/machinery/power/solar_control{
 	dir = 8;
-	id = "meatstation_auxsolars"
+	id_tag = "meatstation_auxsolars"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/meatstation/storage)
@@ -11401,7 +11400,7 @@
 	},
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "meatstation_auxsolars"
+	id_tag = "meatstation_auxsolars"
 	},
 /obj/machinery/button/alternate/door/bolts{
 	id_tag = "meatstation_sairlockext";

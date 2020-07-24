@@ -1353,7 +1353,7 @@
 "en" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/sorting)
@@ -2862,7 +2862,7 @@
 "jn" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "offmess_windows"
+	id_tag = "offmess_windows"
 	},
 /turf/simulated/floor/plating,
 /area/command/captainmess)
@@ -2985,7 +2985,7 @@
 "kg" = (
 /obj/effect/floor_decal/corner/mauve/mono,
 /obj/machinery/button/windowtint{
-	id = "pathfinder_office";
+	id_tag = "pathfinder_office";
 	pixel_x = -24;
 	pixel_y = 6
 	},
@@ -3474,7 +3474,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 0;
 	department = "Commissary";
-	departmentType = 2;
 	name = "Commissary Requests Console";
 	pixel_x = 32;
 	pixel_y = 0
@@ -4515,7 +4514,6 @@
 /obj/item/storage/box/lights/mixed,
 /obj/machinery/requests_console{
 	department = "Janitorial";
-	departmentType = 1;
 	pixel_y = -29
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -4794,7 +4792,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "pathfinder_office"
+	id_tag = "pathfinder_office"
 	},
 /turf/simulated/floor/plating,
 /area/command/pathfinder)
@@ -6794,7 +6792,6 @@
 "vw" = (
 /obj/machinery/requests_console{
 	department = "Tool Storage";
-	departmentType = 0;
 	pixel_y = -30
 	},
 /obj/machinery/light,
@@ -7198,7 +7195,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Security";
-	departmentType = 5;
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -7710,7 +7706,7 @@
 "yG" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -7783,7 +7779,7 @@
 "zl" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /obj/random/junk,
 /obj/machinery/alarm{
@@ -9162,7 +9158,6 @@
 	},
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
-	departmentType = 2;
 	pixel_x = 30;
 	pixel_y = 0
 	},
@@ -11967,7 +11962,7 @@
 /area/security/hangcheck)
 "Ol" = (
 /obj/machinery/button/windowtint{
-	id = "offmess_windows";
+	id_tag = "offmess_windows";
 	pixel_x = -4;
 	pixel_y = -24
 	},
@@ -12038,7 +12033,7 @@
 "Ox" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /obj/structure/plasticflaps,
 /turf/simulated/floor/plating,
@@ -13954,7 +13949,6 @@
 	},
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
-	departmentType = 2;
 	pixel_x = -30;
 	pixel_y = 0
 	},
@@ -14152,7 +14146,7 @@
 "TT" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id = "pathfinder_office"
+	id_tag = "pathfinder_office"
 	},
 /turf/simulated/floor/plating,
 /area/command/pathfinder)
@@ -15127,7 +15121,7 @@
 "WJ" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /obj/random/junk,
 /obj/machinery/light/spot,
@@ -16252,7 +16246,7 @@
 "Zu" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/conveyor_switch/oneway{
-	id = "packageSort1"
+	id_tag = "packageSort1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6

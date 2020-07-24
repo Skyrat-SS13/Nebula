@@ -22,7 +22,7 @@
 	all_security_levels = list(/decl/security_level/default/torchdept/code_green, /decl/security_level/default/torchdept/code_violet, /decl/security_level/default/torchdept/code_orange, /decl/security_level/default/torchdept/code_blue, /decl/security_level/default/torchdept/code_red, /decl/security_level/default/torchdept/code_delta)
 
 /decl/security_level/default/torchdept
-	icon = 'maps/torch/icons/security_state.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/security_state.dmi'
 
 /decl/security_level/default/torchdept/code_green
 	name = "code green"

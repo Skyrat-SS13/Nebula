@@ -102,3 +102,38 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 		list(mode_name="shock", projectile_type=/obj/item/projectile/beam/stun/shock, modifystate="skrell_pistol_shock"),
 		list(mode_name="kill", projectile_type=/obj/item/projectile/beam, modifystate="skrell_pistol_kill"),
 		)
+
+/obj/item/gun/energy/taser/carbine
+	name = "electrolaser carbine"
+	desc = "The NT Mk44 NL is a high capacity gun used for non-lethal takedowns. It can switch between high and low intensity stun shots."
+	icon = 'modular_skyrat/icons/obj/guns/taser_carbine.dmi'
+	icon_state = "tasercarbine"
+	w_class = ITEM_SIZE_LARGE
+	slot_flags = SLOT_BELT|SLOT_BACK
+	one_hand_penalty = 3
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
+	force = 8
+	max_shots = 10
+	accuracy = 1
+	projectile_type = /obj/item/projectile/beam/stun/heavy
+	wielded_item_state = "tasercarbine-wielded"
+
+	firemodes = list(
+		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/heavy),
+		list(mode_name="shock", projectile_type=/obj/item/projectile/beam/stun/shock/heavy),
+		)
+
+/obj/item/gun/energy/ionrifle/small
+	name = "ion pistol"
+	desc = "The NT Mk72 EW Preston is a personal defense weapon designed to disable mechanical threats."
+	icon = 'modular_skyrat/icons/obj/guns/ion_pistol.dmi'
+	icon_state = "ionpistol"
+	item_state = "ionpistol"
+	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
+	w_class = ITEM_SIZE_NORMAL
+	force = 5
+	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	one_hand_penalty = 0
+	charge_cost = 20
+	max_shots = 4
+	projectile_type = /obj/item/projectile/ion/small

@@ -31,3 +31,19 @@
 	one_hand_penalty = 1
 	w_class = ITEM_SIZE_NORMAL
 	fire_delay = 10
+
+/obj/item/gun/energy/stunrevolver/rifle
+	name = "stun rifle"
+	desc = "An A&M X10 Thor. A vastly oversized variant of the A&M X6 Zeus. Fires overcharged electrodes to obliterate pain receptors without harming them too much."
+	icon = 'modular_skyrat/icons/obj/guns/stunrifle.dmi'
+	icon_state = "stunrifle"
+	item_state = "stunrifle"
+	w_class = ITEM_SIZE_HUGE
+	slot_flags = SLOT_BACK
+	one_hand_penalty = 6
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
+	force = 10
+	max_shots = 5
+	accuracy = 2
+	projectile_type = /obj/item/projectile/energy/electrode/stunshot
+	wielded_item_state = "stunrifle-wielded"

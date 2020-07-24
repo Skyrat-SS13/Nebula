@@ -31,7 +31,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -45,7 +45,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -149,7 +149,7 @@
 /obj/effect/floor_decal/solarpanel,
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -163,7 +163,7 @@
 /area/space)
 "as" = (
 /obj/machinery/power/solar_control/autostart{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -196,7 +196,7 @@
 /area/lar_maria/solar_control)
 "az" = (
 /obj/machinery/power/solar_control/autostart{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -208,7 +208,7 @@
 /obj/effect/floor_decal/solarpanel,
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -218,7 +218,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/tracker{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -501,14 +501,14 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/tracker{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
 "aU" = (
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /obj/structure/cable/yellow{
 	d2 = 4;
@@ -537,7 +537,7 @@
 "aW" = (
 /obj/effect/floor_decal/solarpanel,
 /obj/machinery/power/solar{
-	id = "ZHSolarsWest"
+	id_tag = "ZHSolarsWest"
 	},
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -598,7 +598,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)
@@ -609,7 +609,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
-	id = "ZHSolarsEast"
+	id_tag = "ZHSolarsEast"
 	},
 /turf/simulated/floor/reinforced,
 /area/space)

@@ -2972,8 +2972,8 @@
 /obj/item/chems/syringe,
 /obj/item/tank/anesthetic,
 /obj/item/clothing/mask/breath/medical,
-/obj/item/chems/syringe/antiviral,
-/obj/item/chems/syringe/antiviral,
+/obj/item/chems/syringe/antibiotic,
+/obj/item/chems/syringe/antibiotic,
 /obj/item/stack/medical/advanced/bruise_pack,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/mask/surgical,
@@ -3683,14 +3683,14 @@
 	},
 /area/centcom/specops)
 "axn" = (
-/obj/machinery/pipedispenser,
+/obj/machinery/fabricator/pipe,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
 	},
 /area/centcom/specops)
 "axo" = (
-/obj/machinery/pipedispenser/disposal,
+/obj/machinery/fabricator/pipe/disposal,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -3762,7 +3762,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/obj/machinery/computer/rdservercontrol{
+/obj/machinery/computer/design_console{
 	badmin = 1;
 	dir = 1;
 	name = "Master R&amp;D Server Controller"
@@ -4936,9 +4936,9 @@
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
-/obj/item/chems/glass/bottle/inaprovaline,
-/obj/item/chems/glass/bottle/inaprovaline,
-/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/stabilizer,
+/obj/item/chems/glass/bottle/stabilizer,
+/obj/item/chems/glass/bottle/stabilizer,
 /obj/item/chems/hypospray/vial,
 /obj/item/chems/hypospray/vial,
 /obj/item/chems/hypospray/vial,
@@ -4953,9 +4953,9 @@
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical,
-/obj/item/chems/glass/bottle/inaprovaline,
-/obj/item/chems/glass/bottle/inaprovaline,
-/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/stabilizer,
+/obj/item/chems/glass/bottle/stabilizer,
+/obj/item/chems/glass/bottle/stabilizer,
 /obj/item/chems/hypospray/vial,
 /obj/item/chems/hypospray/vial,
 /obj/item/chems/hypospray/vial,
@@ -8718,7 +8718,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
 "aOr" = (
-/obj/machinery/pipedispenser,
+/obj/machinery/fabricator/pipe,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -9046,7 +9046,7 @@
 	},
 /area/acting/backstage)
 "aPD" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -9928,7 +9928,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/conveyor_switch{
-	id = "merchantbelt2"
+	id_tag = "merchantbelt2"
 	},
 /turf/simulated/floor/tiled,
 /area/merchant_station)
@@ -10065,7 +10065,7 @@
 "aTq" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)
@@ -10073,14 +10073,14 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)
 "aTs" = (
 /obj/machinery/conveyor{
 	dir = 8;
-	id = "merchantbelt2"
+	id_tag = "merchantbelt2"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)
@@ -10197,7 +10197,7 @@
 /obj/effect/decal/cleanable/ash,
 /obj/machinery/conveyor{
 	dir = 1;
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)
@@ -10349,7 +10349,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/conveyor{
 	dir = 1;
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)
@@ -10380,14 +10380,14 @@
 	icon_state = "warning"
 	},
 /obj/machinery/conveyor_switch{
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aUl" = (
 /obj/machinery/conveyor{
 	dir = 1;
-	id = "merchantbelt1"
+	id_tag = "merchantbelt1"
 	},
 /turf/simulated/floor/plating,
 /area/merchant_station)

@@ -9,7 +9,7 @@
 /obj/structure/sign/ecplaque
 	name = "\improper Expeditionary Directives"
 	desc = "A plaque with Expeditionary Corps logo etched in it."
-	icon = 'maps/torch/icons/obj/solgov-decals.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/solgov-decals.dmi'
 	icon_state = "ecplaque"
 	var/directives = {"<hr><center>
 		1. <b>Exploring the unknown is your Primary Mission</b><br>
@@ -54,19 +54,19 @@
 
 /obj/effect/floor_decal/scglogo
 	alpha = 230
-	icon = 'maps/torch/icons/obj/solgov_floor.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/solgov_floor.dmi'
 	icon_state = "center"
 
 /obj/structure/sign/solgov
 	name = "\improper SolGov Seal"
 	desc = "A sign which signifies who this vessel belongs to."
-	icon = 'maps/torch/icons/obj/solgov-decals.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/solgov-decals.dmi'
 	icon_state = "solgovseal"
 
 /obj/structure/sign/double/solgovflag
 	name = "Sol Central Government Flag"
 	desc = "The flag of the Sol Central Government, a symbol of many things to many people."
-	icon = 'maps/torch/icons/obj/solgov-decals.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/solgov-decals.dmi'
 
 /obj/structure/sign/double/solgovflag/left
 	icon_state = "solgovflag-left"
