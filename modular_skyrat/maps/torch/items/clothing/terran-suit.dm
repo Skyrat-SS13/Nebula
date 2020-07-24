@@ -1,6 +1,6 @@
 /obj/item/clothing/suit/storage/terran
 	name = "master ICCGN jacket"
-	icon = 'maps/torch/icons/obj/obj_suit_terran.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_terran.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_terran.dmi')
 
 //Service
@@ -21,7 +21,7 @@
 	name = "dress jacket"
 	desc = "A uniform dress jacket, fancy."
 	icon_state = "terrandress"
-	icon = 'maps/torch/icons/obj/obj_suit_terran.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_terran.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_terran.dmi')
 	body_parts_covered = UPPER_TORSO|ARMS
 	siemens_coefficient = 0.9

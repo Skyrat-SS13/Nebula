@@ -508,8 +508,8 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "bA" = (
-/obj/item/reagent_containers/glass/bottle/chloralhydrate,
-/obj/item/reagent_containers/glass/bottle/chloralhydrate,
+/obj/item/chems/glass/bottle/chloralhydrate,
+/obj/item/chems/glass/bottle/chloralhydrate,
 /obj/structure/table/rack,
 /obj/item/gun/projectile/dartgun/vox/raider,
 /obj/item/ammo_magazine/chemdart,
@@ -624,7 +624,7 @@
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/base)
 "bQ" = (
-/obj/item/reagent_containers/glass/bottle/cyanide,
+/obj/item/chems/glass/bottle/cyanide,
 /turf/simulated/floor/airless,
 /area/space)
 "bR" = (
@@ -828,7 +828,7 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "cr" = (
-/obj/item/reagent_containers/food/snacks/clownburger,
+/obj/item/chems/food/snacks/clownburger,
 /turf/simulated/floor/airless,
 /area/space)
 "cs" = (
@@ -997,7 +997,7 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "cT" = (
-/obj/item/reagent_containers/food/snacks/meat/monkey,
+/obj/item/chems/food/snacks/meat/monkey,
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "cU" = (
@@ -1022,10 +1022,10 @@
 /area/voxship/base)
 "cW" = (
 /obj/item/stack/material/rods,
-/obj/item/reagent_containers/food/snacks/meat/monkey,
-/obj/item/reagent_containers/food/snacks/meat/goat,
-/obj/item/reagent_containers/food/snacks/meat/corgi,
-/obj/item/reagent_containers/food/snacks/bearmeat,
+/obj/item/chems/food/snacks/meat/monkey,
+/obj/item/chems/food/snacks/meat/goat,
+/obj/item/chems/food/snacks/meat/corgi,
+/obj/item/chems/food/snacks/bearmeat,
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "cX" = (
@@ -1041,10 +1041,10 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "cZ" = (
-/obj/item/reagent_containers/food/snacks/meat/monkey,
-/obj/item/reagent_containers/food/snacks/meat/goat,
-/obj/item/reagent_containers/food/snacks/fish/carp,
-/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/chems/food/snacks/meat/monkey,
+/obj/item/chems/food/snacks/meat/goat,
+/obj/item/chems/food/snacks/fish/carp,
+/obj/item/chems/food/snacks/fish/carp,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg4"
 	},
@@ -1062,7 +1062,7 @@
 /area/voxship/base)
 "dc" = (
 /obj/item/stack/material/rods,
-/obj/item/reagent_containers/food/snacks/meat/corgi,
+/obj/item/chems/food/snacks/meat/corgi,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg4"
 	},
@@ -1072,21 +1072,21 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "de" = (
-/obj/item/reagent_containers/food/snacks/meat/goat,
-/obj/item/reagent_containers/food/snacks/meat/corgi,
-/obj/item/reagent_containers/food/snacks/organ,
-/obj/item/reagent_containers/food/snacks/bearmeat,
+/obj/item/chems/food/snacks/meat/goat,
+/obj/item/chems/food/snacks/meat/corgi,
+/obj/item/chems/food/snacks/organ,
+/obj/item/chems/food/snacks/bearmeat,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg4"
 	},
 /area/voxship/base)
 "df" = (
 /obj/item/stack/material/rods,
-/obj/item/reagent_containers/food/snacks/bearmeat,
-/obj/item/reagent_containers/food/snacks/canned/caviar,
-/obj/item/reagent_containers/food/snacks/canned/caviar,
-/obj/item/reagent_containers/food/snacks/canned/caviar,
-/obj/item/reagent_containers/food/snacks/canned/caviar,
+/obj/item/chems/food/snacks/bearmeat,
+/obj/item/chems/food/snacks/canned/caviar,
+/obj/item/chems/food/snacks/canned/caviar,
+/obj/item/chems/food/snacks/canned/caviar,
+/obj/item/chems/food/snacks/canned/caviar,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg4"
 	},
@@ -1096,7 +1096,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/space)
 "dh" = (
-/obj/item/reagent_containers/food/snacks/bearmeat,
+/obj/item/chems/food/snacks/bearmeat,
 /turf/simulated/floor/plating/vox{
 	icon_state = "dmg2"
 	},
@@ -1258,7 +1258,7 @@
 /area/voxship/ship)
 "dI" = (
 /obj/effect/floor_decal/borderfloor/cee,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/chems/food/drinks/cans/waterbottle,
 /turf/simulated/floor/plating/vox,
 /area/voxship/ship)
 "dJ" = (

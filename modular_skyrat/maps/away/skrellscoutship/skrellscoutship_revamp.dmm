@@ -903,14 +903,14 @@
 /obj/item/storage/box/beakers{
 	pixel_x = 8
 	},
-/obj/item/reagent_containers/glass/beaker/large{
+/obj/item/chems/glass/beaker/large{
 	pixel_x = -6
 	},
-/obj/item/reagent_containers/glass/beaker/large{
+/obj/item/chems/glass/beaker/large{
 	pixel_x = 6;
 	pixel_y = 11
 	},
-/obj/item/reagent_containers/glass/beaker/large{
+/obj/item/chems/glass/beaker/large{
 	pixel_x = -6;
 	pixel_y = 11
 	},
@@ -1146,7 +1146,7 @@
 "dX" = (
 /obj/structure/table/glass,
 /obj/item/auto_cpr,
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
+/obj/item/chems/glass/beaker/cryoxadone{
 	pixel_x = -7;
 	pixel_y = 11
 	},
@@ -1530,7 +1530,7 @@
 /area/ship/skrellscoutship/dock)
 "fq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	frequency = 1331;
 	master_tag = "xil_scoutship_fore_dock_controller";
 	pixel_x = -4;
@@ -2035,7 +2035,7 @@
 /obj/machinery/light/skrell{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup{
+/obj/item/chems/food/drinks/glass2/coffeecup{
 	pixel_x = -6
 	},
 /obj/item/pen/blue{
@@ -2270,7 +2270,7 @@
 	dir = 4;
 	id_tag = "main_airlock_door"
 	},
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	command = "cycle_exterior";
 	frequency = 1331;
 	master_tag = "xil_scoutship_fore_dock_controller";
@@ -2295,7 +2295,7 @@
 	pixel_x = -6;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/chems/food/drinks/cans/waterbottle{
 	pixel_x = 5
 	},
 /turf/simulated/floor/carpet/purple,
@@ -2485,11 +2485,11 @@
 /obj/item/folder/red{
 	pixel_x = 7
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/chems/food/drinks/cans/waterbottle{
 	pixel_x = -5;
 	pixel_y = 9
 	},
-/obj/item/reagent_containers/food/drinks/glass2/pint,
+/obj/item/chems/food/drinks/glass2/pint,
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/command/bridge)
 "hY" = (
@@ -3687,15 +3687,15 @@
 /area/ship/skrellscoutship/wings/starboard)
 "or" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/condiment/psilocybin{
+/obj/item/chems/food/condiment/psilocybin{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/condiment/space_drugs{
+/obj/item/chems/food/condiment/space_drugs{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/condiment/mindbreaker,
+/obj/item/chems/food/condiment/mindbreaker,
 /obj/machinery/light/skrell,
 /turf/simulated/floor/tiled/skrell/blue,
 /area/ship/skrellscoutship/crew/rec)
@@ -4107,8 +4107,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/rag{
+/obj/item/chems/glass/bucket,
+/obj/item/chems/glass/rag{
 	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/skrell,
@@ -4349,7 +4349,7 @@
 /turf/simulated/floor/tiled/skrell/blue,
 /area/ship/skrellscoutship/crew/quarters)
 "zZ" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1331;
 	master_tag = "xil_shuttle";
@@ -4451,9 +4451,9 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "Cd" = (
-/obj/item/reagent_containers/chem_disp_cartridge/acetone,
-/obj/item/reagent_containers/chem_disp_cartridge/ammonia,
-/obj/item/reagent_containers/chem_disp_cartridge/carbon,
+/obj/item/chems/chem_disp_cartridge/acetone,
+/obj/item/chems/chem_disp_cartridge/ammonia,
+/obj/item/chems/chem_disp_cartridge/carbon,
 /obj/item/scalpel/manager,
 /obj/item/storage/firstaid/surgery,
 /obj/structure/closet/crate/medical,
@@ -4711,7 +4711,7 @@
 	},
 /obj/structure/closet,
 /obj/item/mop/advanced,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /turf/simulated/floor/tiled/skrell,
@@ -4997,9 +4997,9 @@
 /area/ship/skrellscoutship/maintenance/atmos)
 "LV" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/food/snacks/liquidfood,
-/obj/item/reagent_containers/food/snacks/liquidfood,
-/obj/item/reagent_containers/food/snacks/liquidfood,
+/obj/item/chems/food/snacks/liquidfood,
+/obj/item/chems/food/snacks/liquidfood,
+/obj/item/chems/food/snacks/liquidfood,
 /turf/simulated/floor/tiled/skrell/white,
 /area/ship/skrellscoutship/crew/rec)
 "LW" = (
@@ -5131,15 +5131,15 @@
 	dir = 4
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/snacks/skrellsnacks{
+/obj/item/chems/food/snacks/skrellsnacks{
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/snacks/skrellsnacks{
+/obj/item/chems/food/snacks/skrellsnacks{
 	pixel_x = -6;
 	pixel_y = 6
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/chems/food/drinks/cans/waterbottle{
 	pixel_x = 7;
 	pixel_y = 12
 	},
@@ -5513,7 +5513,7 @@
 /obj/structure/table/glass,
 /obj/item/hatchet,
 /obj/item/minihoe,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/chems/glass/bucket,
 /obj/machinery/light/skrell{
 	dir = 1;
 	icon_state = "tube1"
@@ -5642,15 +5642,15 @@
 	icon_state = "tube1"
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/chems/food/drinks/cans/waterbottle{
 	pixel_x = -3;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+/obj/item/chems/food/drinks/cans/waterbottle{
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/chems/food/drinks/cans/waterbottle,
 /turf/simulated/floor/tiled/skrell,
 /area/ship/skrellscoutship/wings/port)
 "Va" = (
@@ -5691,7 +5691,7 @@
 /area/ship/skrellscoutship/hangar)
 "Vx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/black,
-/obj/machinery/access_button/airlock_exterior{
+/obj/machinery/button/access/exterior{
 	frequency = 1331;
 	master_tag = "xil_shuttle";
 	pixel_x = 32;
@@ -5715,8 +5715,8 @@
 /area/ship/skrellscoutship/dock)
 "VA" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/spray/sterilizine,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/antiseptic,
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{

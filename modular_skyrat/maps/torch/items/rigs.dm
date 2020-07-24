@@ -46,17 +46,17 @@
 	//species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //no available icons for aliens
 
 /obj/item/clothing/suit/space/rig/command
-	icon = 'maps/torch/icons/obj/obj_suit_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
 	//species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //TODO: bodytypes
 
 /obj/item/clothing/shoes/magboots/rig/command
-	icon = 'maps/torch/icons/obj/obj_feet_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_feet_solgov.dmi'
 	item_icons = list(slot_shoes_str = 'modular_skyrat/maps/torch/icons/mob/onmob_feet_solgov.dmi')
 	//species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //TODO: bodytypes
 
 /obj/item/clothing/gloves/rig/command
-	icon = 'maps/torch/icons/obj/obj_hands_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_hands_solgov.dmi'
 	item_icons = list(slot_gloves_str = 'modular_skyrat/maps/torch/icons/mob/onmob_hands_solgov.dmi')
 	//species_restricted = list(SPECIES_HUMAN,SPECIES_IPC) //TODO: bodytypes
 

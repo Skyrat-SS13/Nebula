@@ -104,7 +104,7 @@
 /turf/simulated/wall/r_wall,
 /area/lar_maria/cells)
 "ap" = (
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating,
 /area/lar_maria/morgue)
@@ -232,7 +232,7 @@
 	dir = 1
 	},
 /obj/item/storage/box/beakers,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/machinery/alarm{
 	alarm_id = "xenobio1_alarm";
 	dir = 2;
@@ -602,7 +602,7 @@
 /obj/structure/table/glass,
 /obj/item/storage/box/masks,
 /obj/item/storage/box/gloves,
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_main)
 "bK" = (
@@ -2847,7 +2847,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	frequency = 1039;
 	master_tag = "ZHPvirology_access_airlock";
 	pixel_x = 0;
@@ -3040,7 +3040,7 @@
 /obj/structure/sign/warning/biohazard{
 	pixel_x = 32
 	},
-/obj/machinery/access_button/airlock_exterior{
+/obj/machinery/button/access/exterior{
 	frequency = 1039;
 	master_tag = "ZHPvirology_access_airlock";
 	pixel_x = 25;

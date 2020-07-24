@@ -255,7 +255,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/fuelbay/aux)
 "aaK" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "auxfuel_airlock";
@@ -442,7 +442,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "abb" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "auxfuel_airlock";
@@ -567,8 +567,8 @@
 	amount = 6
 	},
 /obj/item/chems/dropper,
-/obj/item/reagent_containers/glass/beaker/insulated/large,
-/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/chems/glass/beaker/insulated/large,
+/obj/item/chems/glass/beaker/large,
 /obj/effect/floor_decal/corner/beige/mono,
 /obj/machinery/light{
 	dir = 1
@@ -865,7 +865,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/thruster/d1starboard)
 "abO" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "bridgestarboard_airlock";
@@ -963,7 +963,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "abX" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/destructive_analyzer,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/camera/network/research{
 	c_tag = "Research - Development Laboratory";
@@ -2085,7 +2085,7 @@
 /area/maintenance/firstdeck/forestarboard)
 "adV" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/forestarboard)
 "adW" = (
@@ -2647,7 +2647,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "bridgestarboard_airlock";
@@ -4209,7 +4209,7 @@
 "ahs" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue/mono,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/foundation,
+/obj/item/chems/food/drinks/glass2/coffeecup/foundation,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -4773,9 +4773,9 @@
 /area/medical/counselor)
 "ain" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/teacup,
-/obj/item/reagent_containers/food/drinks/teapot,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/teacup,
+/obj/item/chems/food/drinks/glass2/coffeecup/teacup,
+/obj/item/chems/food/drinks/teapot,
+/obj/item/chems/food/drinks/glass2/coffeecup/teacup,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -6467,7 +6467,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/one{
+/obj/item/chems/food/drinks/glass2/coffeecup/one{
 	custom_desc = "A white coffee cup, prominently featuring a #1 Gorpsman. Someone has scratched the C into a G."
 	},
 /turf/simulated/floor/tiled/white,
@@ -12581,7 +12581,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aRs" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "bridgeport_airlock";
@@ -13022,7 +13022,7 @@
 /area/maintenance/firstdeck/foreport)
 "aSs" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/foreport)
 "aSt" = (
@@ -13781,7 +13781,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1port)
 "aUo" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "bridgeport_airlock";
@@ -14728,7 +14728,7 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/hand_labeler,
 /obj/item/stack/package_wrap/twenty_five,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
 /obj/effect/floor_decal/corner/paleblue/mono,
@@ -15729,7 +15729,7 @@
 /obj/random/firstaid,
 /obj/random/firstaid,
 /obj/random/medical,
-/obj/item/reagent_containers/food/snacks/proteinbar,
+/obj/item/chems/food/snacks/proteinbar,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/safe_room/medical)
 "cwQ" = (
@@ -16779,12 +16779,12 @@
 /obj/item/chems/syringe/antiviral,
 /obj/item/chems/syringe/antiviral,
 /obj/item/chems/syringe/antiviral,
-/obj/item/reagent_containers/glass/bottle/inaprovaline,
-/obj/item/reagent_containers/glass/bottle/inaprovaline,
-/obj/item/reagent_containers/glass/bottle/antitoxin,
-/obj/item/reagent_containers/glass/bottle/antitoxin,
-/obj/item/reagent_containers/glass/bottle/antitoxin,
-/obj/item/reagent_containers/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/inaprovaline,
+/obj/item/chems/glass/bottle/antitoxin,
+/obj/item/chems/glass/bottle/antitoxin,
+/obj/item/chems/glass/bottle/antitoxin,
+/obj/item/chems/glass/bottle/inaprovaline,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "dMe" = (
@@ -17107,7 +17107,7 @@
 /obj/item/taperecorder{
 	pixel_y = 0
 	},
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/effect/floor_decal/corner/red/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/recharger/wallcharger{
@@ -17156,7 +17156,7 @@
 	},
 /obj/item/paper_bin,
 /obj/item/sticky_pad/random,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -18993,7 +18993,7 @@
 /obj/machinery/light/spot{
 	dir = 1
 	},
-/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/chems/glass/beaker/large,
 /obj/item/chems/dropper,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
@@ -21801,7 +21801,7 @@
 "kVb" = (
 /obj/structure/table/standard,
 /obj/item/weldpack,
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/floor_decal/corner/yellow/mono,
 /turf/simulated/floor/tiled/white/monotile,
@@ -22061,13 +22061,13 @@
 /turf/simulated/floor/tiled,
 /area/security/wing)
 "lmb" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/fabricator/protolathe,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/development)
 "lnb" = (
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
+/obj/machinery/fabricator/imprinter,
+/obj/item/chems/glass/beaker/sulphuric,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/reagent_dispensers/acid{
 	density = 0;
@@ -22424,8 +22424,8 @@
 /area/medical/sleeper)
 "lJb" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/spray/luminol,
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/luminol,
+/obj/item/chems/spray/antiseptic,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 25;
@@ -23472,10 +23472,10 @@
 /area/security/locker)
 "njg" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
@@ -26475,7 +26475,7 @@
 "qLr" = (
 /obj/effect/floor_decal/corner/paleblue/mono,
 /obj/structure/table/standard,
-/obj/item/reagent_containers/food/snacks/lunacake/mooncake,
+/obj/item/chems/food/snacks/lunacake/mooncake,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
@@ -26956,10 +26956,10 @@
 /area/rnd/misc_lab)
 "rpn" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
 /obj/machinery/vending/wallmed1{
 	pixel_y = 32
 	},
@@ -28251,7 +28251,7 @@
 /area/security/questioning)
 "szb" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/chems/glass/bucket,
 /obj/effect/floor_decal/corner/research/half,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -29208,11 +29208,11 @@
 	},
 /obj/item/auto_cpr,
 /obj/item/bodybag/rescue/loaded,
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
+/obj/item/chems/glass/beaker/cryoxadone{
 	pixel_x = 7;
 	pixel_y = 1
 	},
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
+/obj/item/chems/glass/beaker/cryoxadone{
 	pixel_x = 7;
 	pixel_y = 1
 	},
@@ -29778,7 +29778,7 @@
 /obj/item/storage/box/beakers,
 /obj/item/hand_labeler,
 /obj/item/stack/package_wrap/twenty_five,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
 	name = "Chemistry Cleaner"
 	},

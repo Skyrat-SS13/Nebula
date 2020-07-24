@@ -26,7 +26,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_11";
 	name = "escape pod six controller";
 	pixel_x = -32;
@@ -292,10 +291,9 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/maintenance/seconddeck/forestarboard)
 "aA" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "solar_starboard_airlock";
+	id_tag = "solar_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -24;
 	pixel_y = -24;
@@ -328,7 +326,6 @@
 /area/maintenance/auxsolarstarboard)
 "aE" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_starboard_outer";
 	locked = 1;
@@ -406,7 +403,6 @@
 "aL" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "solar_starboard_airlock";
 	pixel_x = 24;
 	req_access = list("ACCESS_EXTERNAL");
@@ -416,7 +412,6 @@
 	tag_interior_door = "solar_starboard_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "solar_starboard_sensor";
 	pixel_x = 24;
 	pixel_y = 12
@@ -623,7 +618,6 @@
 /area/maintenance/seconddeck/central)
 "bk" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_starboard_inner";
 	locked = 1;
@@ -777,7 +771,7 @@
 /area/medical/morgue)
 "bz" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue)
 "bA" = (
@@ -863,7 +857,6 @@
 /area/vacant/chapel)
 "bF" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxdock_outer";
 	locked = 1;
@@ -929,10 +922,9 @@
 	dir = 8;
 	icon_state = "map"
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "solar_starboard_airlock";
+	id_tag = "solar_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = 24;
@@ -1174,7 +1166,6 @@
 /area/maintenance/seconddeck/aftstarboard)
 "cd" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1379;
 	id_tag = "auxdock_airlock";
 	pixel_x = 0;
 	req_access = list("ACCESS_EXTERNAL");
@@ -1417,7 +1408,7 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/storage/tech)
 "cx" = (
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/robotics)
@@ -1450,7 +1441,7 @@
 /area/medical/morgue)
 "cD" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
@@ -1489,7 +1480,6 @@
 	id_tag = "auxdock_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "auxdock_sensor";
 	pixel_x = 25;
 	pixel_y = 12
@@ -1841,7 +1831,6 @@
 /area/maintenance/seconddeck/forestarboard)
 "du" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "auxdock_inner";
 	locked = 1;
@@ -1852,7 +1841,7 @@
 /area/maintenance/seconddeck/forestarboard)
 "dv" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/forestarboard)
 "dw" = (
@@ -2316,10 +2305,10 @@
 "en" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/module/power_control,
-/obj/item/module/power_control,
-/obj/item/module/power_control,
-/obj/item/module/power_control,
+/obj/item/stock_parts/circuitboard/apc,
+/obj/item/stock_parts/circuitboard/apc,
+/obj/item/stock_parts/circuitboard/apc,
+/obj/item/stock_parts/circuitboard/apc,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
 "eo" = (
@@ -3652,7 +3641,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
-	frequency = 1379;
 	id_tag = "";
 	name = "Engine Airlock Exterior"
 	},
@@ -4336,7 +4324,7 @@
 /area/engineering/drone_fabrication)
 "iR" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/chems/glass/bucket,
 /obj/machinery/light_switch{
 	pixel_x = 6;
 	pixel_y = 24
@@ -4384,7 +4372,7 @@
 /area/janitor)
 "iW" = (
 /obj/structure/closet/jcloset_torch,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4513,7 +4501,6 @@
 /area/space)
 "jk" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_11_hatch";
 	locked = 1;
@@ -4751,7 +4738,6 @@
 /area/engineering/foyer)
 "jQ" = (
 /obj/machinery/door/airlock/external/escapepod{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_11_berth_hatch";
 	locked = 1;
@@ -4974,9 +4960,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/airlock_sensor{
 	command = "cycle_exterior";
-	frequency = 1379;
 	id_tag = "engine_airlock_exterior_sensor";
-	master_tag = "engine_airlock";
+	id_tag = "engine_airlock";
 	pixel_x = -24;
 	pixel_y = 0
 	},
@@ -5080,7 +5065,6 @@
 	pixel_y = -24
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
 	id_tag = "escape_pod_11_berth";
 	name = "escape pod six berth controller";
 	pixel_x = -24;
@@ -5397,7 +5381,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
 	},
@@ -5617,7 +5601,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch{
-	frequency = 1379;
 	id_tag = "";
 	name = "Engine Airlock Interior"
 	},
@@ -5854,7 +5837,7 @@
 /obj/item/floor_painter,
 /obj/item/floor_painter,
 /obj/item/pipe_painter,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_bay)
 "mx" = (
@@ -6579,7 +6562,6 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	dir = 4;
-	frequency = 1380;
 	id_tag = "escape_pod_10";
 	name = "escape pod five controller";
 	pixel_x = -32;
@@ -7160,7 +7142,6 @@
 	name = "Engine Cooling Control";
 	icon_state = "computer";
 	dir = 8;
-	frequency = 1438;
 	sensor_tag = "engine_sensor";
 	sensor_name = "Engine Core";
 	input_tag = "cooling_in";
@@ -8412,7 +8393,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/foyer)
 "sS" = (
@@ -8845,7 +8826,6 @@
 "tV" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "co2_in";
 	pixel_y = 0;
@@ -8885,7 +8865,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	dir = 1;
-	frequency = 1380;
 	id_tag = "escape_pod_10_berth";
 	name = "escape pod five berth controller";
 	pixel_x = -24;
@@ -8979,7 +8958,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = 21
@@ -9365,7 +9344,6 @@
 	name = "Carbon Dioxide Supply Control";
 	icon_state = "computer";
 	dir = 8;
-	frequency = 1441;
 	sensor_tag = "co2_sensor";
 	sensor_name = "Carbon Dioxide Supply";
 	input_tag = "co2_in";
@@ -9423,7 +9401,6 @@
 /area/shuttle/escape_pod10/station)
 "vv" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_10_hatch";
 	locked = 1;
@@ -10081,7 +10058,6 @@
 "xE" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "n2_in";
 	use_power = 1
@@ -10463,7 +10439,6 @@
 "yN" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "n2o_in";
 	pixel_y = 0;
@@ -10639,7 +10614,6 @@
 	},
 /obj/machinery/computer/air_control{
 	dir = 4;
-	frequency = 1441;
 	input_tag = "o2_in";
 	name = "Oxygen Supply Control";
 	output_tag = "o2_out";
@@ -10993,7 +10967,6 @@
 "Ao" = (
 /obj/machinery/computer/air_control{
 	dir = 8;
-	frequency = 1441;
 	input_tag = "h2_in";
 	name = "Hydrogen Supply Control";
 	output_tag = "h2_out";
@@ -11282,7 +11255,6 @@
 "Bi" = (
 /obj/machinery/door/airlock/glass{
 	autoclose = 0;
-	frequency = 1379;
 	heat_proof = 1;
 	icon_state = "closed";
 	id_tag = "incinerator_airlock_interior";
@@ -11440,10 +11412,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftport)
 "BK" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "incinerator_access_control";
+	id_tag = "incinerator_access_control";
 	name = "Incinerator airlock control";
 	pixel_x = 10;
 	pixel_y = -22
@@ -11464,10 +11435,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "BL" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "incinerator_access_control";
+	id_tag = "incinerator_access_control";
 	name = "Incinerator airlock control";
 	pixel_x = -8;
 	pixel_y = 24
@@ -11488,7 +11458,7 @@
 /area/maintenance/incinerator)
 "BM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
 "BN" = (
@@ -11642,7 +11612,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
@@ -11713,7 +11682,6 @@
 "Co" = (
 /obj/machinery/door/airlock/glass{
 	autoclose = 0;
-	frequency = 1379;
 	heat_proof = 1;
 	icon_state = "closed";
 	id_tag = "incinerator_airlock_exterior";
@@ -11945,7 +11913,6 @@
 "CP" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1443;
 	icon_state = "map_injector";
 	id = "air_in";
 	use_power = 1
@@ -12118,7 +12085,7 @@
 /area/engineering/wastetank)
 "Dm" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/effect/floor_decal/industrial/warning{
 	icon_state = "warning";
 	dir = 4
@@ -12209,10 +12176,9 @@
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "solar_port_airlock";
+	id_tag = "solar_port_airlock";
 	name = "interior access button";
 	pixel_x = 24;
 	pixel_y = -24;
@@ -12255,7 +12221,7 @@
 /area/storage/research)
 "Dz" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/research)
 "DB" = (
@@ -12381,7 +12347,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_port_inner";
 	locked = 1;
@@ -12419,7 +12384,6 @@
 "DZ" = (
 /obj/machinery/computer/air_control{
 	dir = 4;
-	frequency = 1441;
 	input_tag = "waste_in";
 	name = "Waste Tank Control";
 	output_tag = "waste_out";
@@ -12467,7 +12431,6 @@
 "Eg" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 8;
-	frequency = 1379;
 	id_tag = "solar_port_airlock";
 	pixel_x = 24;
 	req_access = list("ACCESS_EXTERNAL");
@@ -12481,7 +12444,6 @@
 	id_tag = "solar_port_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1379;
 	id_tag = "solar_port_sensor";
 	pixel_x = 24;
 	pixel_y = 12
@@ -12563,7 +12525,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "closed";
 	id_tag = "solar_port_outer";
 	locked = 1;
@@ -12622,10 +12583,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "solar_port_airlock";
+	id_tag = "solar_port_airlock";
 	name = "exterior access button";
 	pixel_x = -24;
 	pixel_y = 24;
@@ -13167,7 +13127,6 @@
 "FE" = (
 /obj/machinery/computer/air_control{
 	dir = 1;
-	frequency = 1441;
 	input_tag = "fuel_in";
 	name = "Fuel Supply Control";
 	output_tag = "fuel_out";
@@ -13646,13 +13605,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/access_button/airlock_exterior{
-	master_tag = "prototype_controller";
+/obj/machinery/button/access/exterior{
+	id_tag = "prototype_controller";
 	pixel_x = 23;
 	pixel_y = -23
 	},
-/obj/machinery/access_button/airlock_interior{
-	master_tag = "prototype_controller";
+/obj/machinery/button/access/interior{
+	id_tag = "prototype_controller";
 	pixel_x = -23;
 	pixel_y = 23
 	},
@@ -13678,7 +13637,6 @@
 "Ho" = (
 /obj/machinery/computer/air_control{
 	dir = 8;
-	frequency = 1441;
 	input_tag = "n2o_in";
 	name = "Nitrous Oxide Supply Control";
 	output_tag = "n2o_out";
@@ -14140,7 +14098,7 @@
 /area/engineering/drone_fabrication)
 "IN" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/central)
 "IR" = (
@@ -14330,7 +14288,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
@@ -14357,7 +14315,6 @@
 	},
 /obj/machinery/computer/air_control{
 	dir = 4;
-	frequency = 1441;
 	name = "Tank Monitor";
 	sensor_tag = "o2_sensor"
 	},
@@ -14981,7 +14938,6 @@
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "o2_in";
 	use_power = 1
@@ -15173,7 +15129,7 @@
 /area/engineering/foyer)
 "Mn" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/ladder/up,
+/obj/structure/ladder,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftport)
 "Mo" = (
@@ -15250,8 +15206,8 @@
 /obj/item/airlock_electronics,
 /obj/item/airlock_electronics,
 /obj/item/airlock_electronics,
-/obj/item/module/power_control,
-/obj/item/module/power_control,
+/obj/item/stock_parts/circuitboard/apc,
+/obj/item/stock_parts/circuitboard/apc,
 /obj/item/airalarm_electronics,
 /obj/item/airalarm_electronics,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -15286,7 +15242,6 @@
 /area/storage/tech)
 "Na" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1441;
 	id = "rust_injector";
 	injecting = 1;
 	use_power = 1
@@ -15386,8 +15341,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/access_button/airlock_interior{
-	master_tag = "prototype_controller";
+/obj/machinery/button/access/interior{
+	id_tag = "prototype_controller";
 	pixel_x = 23;
 	pixel_y = 23
 	},
@@ -15475,7 +15430,6 @@
 "NC" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "waste_in";
 	use_power = 1
@@ -15743,7 +15697,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch/maintenance/bolted{
-	frequency = 1379;
 	id_tag = "prototype_interior";
 	name = "Fusion Maintenance"
 	},
@@ -15782,7 +15735,6 @@
 "On" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "h2_in";
 	pixel_y = 0;
@@ -15901,7 +15853,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
@@ -16392,7 +16343,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/hatch/maintenance/bolted{
-	frequency = 1379;
 	id_tag = "prototype_exterior";
 	name = "Fusion Maintenance"
 	},
@@ -16492,7 +16442,7 @@
 /area/engineering/storage)
 "QA" = (
 /obj/machinery/vending/robotics{
-	products = list(/obj/item/reagent_containers/food/drinks/bottle/oiljug = 5, /obj/item/stack/cable_coil = 6, /obj/item/flash/synthetic = 4, /obj/item/cell = 4, /obj/item/scanner/health = 2, /obj/item/scalpel = 1, /obj/item/circular_saw = 1, /obj/item/tank/anesthetic = 2, /obj/item/clothing/mask/breath/medical = 5, /obj/item/screwdriver = 2, /obj/item/crowbar = 2);
+	products = list(/obj/item/chems/food/drinks/bottle/oiljug = 5, /obj/item/stack/cable_coil = 6, /obj/item/flash/synthetic = 4, /obj/item/cell = 4, /obj/item/scanner/health = 2, /obj/item/scalpel = 1, /obj/item/circular_saw = 1, /obj/item/tank/anesthetic = 2, /obj/item/clothing/mask/breath/medical = 5, /obj/item/screwdriver = 2, /obj/item/crowbar = 2);
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -16648,7 +16598,6 @@
 "Rd" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	frequency = 1438;
 	icon_state = "map_injector";
 	id = "cooling_in";
 	name = "Coolant Injector";
@@ -16759,7 +16708,6 @@
 	},
 /obj/machinery/computer/air_control{
 	dir = 4;
-	frequency = 1441;
 	input_tag = "n2_in";
 	name = "Nitrogen Supply Control";
 	output_tag = "n2_out";
@@ -16790,7 +16738,6 @@
 "Ro" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	frequency = 1441;
 	icon_state = "map_injector";
 	id = "fuel_in";
 	pixel_y = 1;
@@ -16903,7 +16850,7 @@
 /area/hallway/primary/seconddeck/fore)
 "RL" = (
 /obj/structure/closet/jcloset_torch,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18278,10 +18225,10 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/reagent_containers/spray/cleaner{
+/obj/item/chems/spray/cleaner{
 	pixel_x = -5
 	},
-/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/chems/spray/antiseptic,
 /obj/item/stack/nanopaste,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/surgery)
@@ -18608,7 +18555,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/forestarboard)
 "XO" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/fabricator/imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/robotics)

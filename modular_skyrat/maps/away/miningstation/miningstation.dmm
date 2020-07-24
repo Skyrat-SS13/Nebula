@@ -615,7 +615,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/access_button/airlock_exterior{
+/obj/machinery/button/access/exterior{
 	master_tag = "bridge_safe";
 	name = "Exterior access button";
 	pixel_x = -26;
@@ -814,7 +814,7 @@
 /area/miningstation/prep2)
 "cf" = (
 /obj/structure/sign/warning/airlock,
-/obj/machinery/access_button/airlock_exterior,
+/obj/machinery/button/access/exterior,
 /obj/effect/paint/black,
 /turf/simulated/wall/r_titanium,
 /area/miningstation/power)
@@ -4237,7 +4237,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/miningstation/chief)
 "jF" = (
-/obj/machinery/access_button/airlock_interior,
+/obj/machinery/button/access/interior,
 /obj/effect/paint/black,
 /turf/simulated/wall/r_titanium,
 /area/miningstation/power)

@@ -673,7 +673,7 @@
 	pixel_x = -1;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/corp,
+/obj/item/chems/food/drinks/glass2/coffeecup/corp,
 /obj/item/storage/box/large/union_cards,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/cl/backroom)
@@ -1258,11 +1258,11 @@
 /area/crew_quarters/heads/office/xo)
 "cp" = (
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = 8;
 	pixel_y = -3
 	},
@@ -3715,7 +3715,7 @@
 /turf/unsimulated/mask,
 /area/hallway/primary/bridge/aft)
 "gn" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "bridge_eva_airlock";
@@ -4798,7 +4798,7 @@
 /turf/simulated/floor/reinforced,
 /area/turret_protected/ai_outer_chamber)
 "jn" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "ai_core_airlock";
@@ -5382,7 +5382,7 @@
 /area/hallway/primary/bridge/aft)
 "kR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "bridge_eva_airlock";
@@ -5717,7 +5717,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = -5;
 	pixel_y = 5
 	},
@@ -6080,7 +6080,7 @@
 	dir = 4;
 	target_pressure = 200
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "ai_core_airlock";
@@ -6631,7 +6631,7 @@
 	icon_state = "warning";
 	dir = 8
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1331;
 	master_tag = "aquila_shuttle";
@@ -7992,11 +7992,11 @@
 "qx" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/structure/table/glass,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
-/obj/item/reagent_containers/food/snacks/cookie,
+/obj/item/chems/food/snacks/cookie,
+/obj/item/chems/food/snacks/cookie,
+/obj/item/chems/food/snacks/cookie,
+/obj/item/chems/food/snacks/cookie,
+/obj/item/chems/food/snacks/cookie,
 /obj/item/storage/lunchbox/cat,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
@@ -9033,8 +9033,8 @@
 /obj/structure/closet/medical_wall{
 	pixel_x = -32
 	},
-/obj/item/reagent_containers/glass/bottle/stoxin,
-/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/item/chems/glass/bottle/stoxin,
+/obj/item/chems/glass/bottle/stoxin,
 /obj/item/chems/syringe,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/gloves/latex,
@@ -9048,8 +9048,8 @@
 /area/aquila/medical)
 "tf" = (
 /obj/structure/table/standard,
-/obj/item/reagent_containers/spray/sterilizine,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/antiseptic,
+/obj/item/chems/spray/cleaner,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -9178,8 +9178,8 @@
 /area/crew_quarters/heads/office/sgr)
 "tA" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/drinks/glass2/carafe,
-/obj/item/reagent_containers/food/drinks/glass2/square,
+/obj/item/chems/food/drinks/glass2/carafe,
+/obj/item/chems/food/drinks/glass2/square,
 /obj/structure/sign/double/icarus/solgovflag/left{
 	pixel_y = 32
 	},
@@ -9255,7 +9255,7 @@
 "tI" = (
 /obj/structure/table/rack,
 /obj/random/solgov,
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = 11;
 	pixel_y = 1
 	},
@@ -9615,7 +9615,7 @@
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
 "uC" = (
-/obj/item/reagent_containers/food/drinks/flask{
+/obj/item/chems/food/drinks/flask{
 	pixel_x = 8
 	},
 /obj/item/clothing/mask/smokable/cigarette/cigar,
@@ -9724,7 +9724,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = 11;
 	pixel_y = 1
 	},
@@ -9881,7 +9881,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/chems/food/drinks/cans/waterbottle,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
 "vm" = (
@@ -9961,11 +9961,11 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
-/obj/item/reagent_containers/food/drinks/ice,
-/obj/item/reagent_containers/food/drinks/bottle/cognac,
+/obj/item/chems/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/ice,
+/obj/item/chems/food/drinks/bottle/cognac,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/keycard_auth/torch{
 	pixel_x = 0;
@@ -10189,8 +10189,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/drinks/glass2/square,
-/obj/item/reagent_containers/food/drinks/glass2/square,
+/obj/item/chems/food/drinks/glass2/square,
+/obj/item/chems/food/drinks/glass2/square,
 /obj/structure/table/woodentable_reinforced/walnut,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/disciplinary_board_room)
@@ -10223,7 +10223,7 @@
 	icon_state = "corner_white";
 	dir = 10
 	},
-/obj/item/reagent_containers/food/drinks/glass2/square,
+/obj/item/chems/food/drinks/glass2/square,
 /obj/structure/table/woodentable_reinforced/walnut,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/disciplinary_board_room)
@@ -10353,7 +10353,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1379;
 	master_tag = "solar_bridge_airlock";
@@ -10408,7 +10408,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/auxsolarbridge)
 "wt" = (
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1379;
 	master_tag = "solar_bridge_airlock";
@@ -11210,8 +11210,8 @@
 /obj/structure/table/glass,
 /obj/item/sticky_pad/random,
 /obj/item/storage/box/cups,
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/item/reagent_containers/food/drinks/ice,
+/obj/item/chems/food/drinks/bottle/orangejuice,
+/obj/item/chems/food/drinks/ice,
 /obj/machinery/light,
 /obj/machinery/keycard_auth/torch{
 	pixel_x = 0;
@@ -11582,7 +11582,7 @@
 /obj/structure/closet/crate,
 /obj/random/toolbox,
 /obj/random/powercell,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/item/storage/bag/trash,
 /obj/item/storage/bag/trash,
 /obj/item/storage/bag/trash,
@@ -11720,9 +11720,9 @@
 	pixel_x = -32
 	},
 /obj/structure/table/woodentable/walnut,
-/obj/item/reagent_containers/food/drinks/ice,
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/ice,
+/obj/item/chems/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/glass2/rocks,
 /obj/random/drinkbottle,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
@@ -12327,7 +12327,7 @@
 /area/crew_quarters/heads/cobed)
 "CW" = (
 /obj/structure/table/woodentable_reinforced/walnut/maple,
-/obj/item/reagent_containers/food/drinks/glass2/rocks,
+/obj/item/chems/food/drinks/glass2/rocks,
 /obj/machinery/newscaster/security_unit{
 	pixel_x = 0;
 	pixel_y = -32
@@ -12742,7 +12742,7 @@
 	icon_state = "handrail";
 	dir = 8
 	},
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1331;
 	master_tag = "aquila_shuttle";
@@ -12791,7 +12791,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+/obj/item/chems/food/drinks/glass2/coffeecup/SCG{
 	pixel_x = 3;
 	pixel_y = 0
 	},
@@ -13077,7 +13077,7 @@
 /obj/machinery/vending/wallmed1{
 	pixel_x = 0;
 	pixel_y = 32;
-	products = list(/obj/item/stack/medical/bruise_pack = 6, /obj/item/stack/medical/ointment = 6, /obj/item/reagent_containers/pill/paracetamol = 8, /obj/item/storage/med_pouch/trauma = 4, /obj/item/storage/med_pouch/burn = 2, /obj/item/storage/med_pouch/oxyloss = 2, /obj/item/storage/med_pouch/toxin = 2)
+	products = list(/obj/item/stack/medical/bruise_pack = 6, /obj/item/stack/medical/ointment = 6, /obj/item/chems/pill/paracetamol = 8, /obj/item/storage/med_pouch/trauma = 4, /obj/item/storage/med_pouch/burn = 2, /obj/item/storage/med_pouch/oxyloss = 2, /obj/item/storage/med_pouch/toxin = 2)
 	},
 /obj/machinery/pointdefense_control{
 	initial_id_tag = "torch_primary_pd";
@@ -14645,8 +14645,8 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/reagent_containers/food/drinks/glass2/coffeecup/pawn,
-/obj/item/reagent_containers/food/condiment/small/packet/coffee,
+/obj/item/chems/food/drinks/glass2/coffeecup/pawn,
+/obj/item/chems/food/condiment/small/packet/coffee,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/sea)
 "Np" = (
@@ -16651,7 +16651,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "VF" = (
-/obj/item/reagent_containers/food/drinks/flask/barflask{
+/obj/item/chems/food/drinks/flask/barflask{
 	pixel_x = -4;
 	pixel_y = 8
 	},

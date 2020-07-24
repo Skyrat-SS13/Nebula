@@ -818,7 +818,7 @@
 /area/ship/ascent/habitation)
 "cn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on/ascent,
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	master_tag = "ascent_seedship_fore_dock_controller";
 	pixel_x = -4;
 	pixel_y = 24
@@ -1364,7 +1364,7 @@
 	id_tag = "ascent_seedship_fore_external"
 	},
 /obj/effect/catwalk_plated/ascent,
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	command = "cycle_exterior";
 	frequency = 1331;
 	master_tag = "ascent_seedship_fore_dock_controller";
@@ -1448,8 +1448,8 @@
 	},
 /obj/effect/catwalk_plated/ascent,
 /obj/structure/table/rack/dark,
-/obj/item/reagent_containers/glass/beaker,
-/obj/item/reagent_containers/glass/beaker,
+/obj/item/chems/glass/beaker,
+/obj/item/chems/glass/beaker,
 /turf/simulated/floor/ascent,
 /area/ship/ascent/fore_starboard_prow)
 "dN" = (
@@ -1478,7 +1478,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/access_button/airlock_interior,
+/obj/machinery/button/access/interior,
 /turf/simulated/floor/ascent,
 /area/ship/ascent/habitation)
 "dQ" = (
@@ -1550,7 +1550,7 @@
 	},
 /obj/effect/catwalk_plated/ascent,
 /obj/machinery/light/ascent,
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_interior";
 	frequency = 1331;
 	master_tag = "ascent_starboard";
@@ -3012,13 +3012,13 @@
 /area/ship/ascent/engineering)
 "gW" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/beef,
-/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/snacks/meat/syntiflesh,
+/obj/item/chems/food/snacks/meat/syntiflesh,
+/obj/item/chems/food/snacks/meat/syntiflesh,
+/obj/item/chems/food/snacks/meat/beef,
+/obj/item/chems/food/snacks/meat/beef,
 /turf/simulated/floor/tiled/ascent,
 /area/ship/ascent/fore_port_prow)
 "gX" = (
@@ -3395,12 +3395,12 @@
 /area/ship/ascent/fore_port_spike)
 "hY" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/chems/food/snacks/meat/syntiflesh,
 /turf/simulated/floor/tiled/ascent,
 /area/ship/ascent/fore_port_prow)
 "hZ" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/snacks/meat/beef,
+/obj/item/chems/food/snacks/meat/beef,
 /turf/simulated/floor/tiled/ascent,
 /area/ship/ascent/fore_port_prow)
 "ia" = (
@@ -3425,11 +3425,11 @@
 /area/ship/ascent/fore_port_spike)
 "ic" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
 /turf/simulated/floor/tiled/ascent,
 /area/ship/ascent/fore_port_prow)
 "id" = (
@@ -3443,7 +3443,7 @@
 	},
 /obj/effect/catwalk_plated/ascent,
 /obj/machinery/atmospherics/pipe/manifold/hidden/black,
-/obj/machinery/access_button{
+/obj/machinery/button/access{
 	command = "cycle_exterior";
 	frequency = 1331;
 	master_tag = "ascent_starboard";
@@ -3572,7 +3572,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	frequency = 1331;
 	master_tag = "ascent_port_shuttle_dock";
 	pixel_x = 4;
@@ -4113,7 +4113,7 @@
 /turf/simulated/floor/ascent,
 /area/ship/ascent/wing_port)
 "jM" = (
-/obj/machinery/access_button/airlock_interior{
+/obj/machinery/button/access/interior{
 	command = "cycle_exterior";
 	frequency = 1331;
 	master_tag = "ascent_port_shuttle_dock";
@@ -4173,7 +4173,7 @@
 /area/ship/ascent/hydroponics_starboard)
 "kv" = (
 /obj/item/mop/advanced/ascent,
-/obj/item/reagent_containers/glass/bucket/ascent,
+/obj/item/chems/glass/bucket/ascent,
 /turf/simulated/floor/tiled/ascent,
 /area/ship/ascent/fore_port_spike)
 "kH" = (
@@ -4664,7 +4664,7 @@
 /area/ship/ascent/fore_starboard_prow)
 "CV" = (
 /obj/structure/window/phoronreinforced,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
 /turf/simulated/floor/ascent,
 /area/ship/ascent/fore_starboard_jut)
 "CW" = (
@@ -4823,8 +4823,8 @@
 /turf/simulated/floor/ascent,
 /area/ship/ascent/habitation)
 "JZ" = (
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
+/obj/item/chems/food/drinks/cans/waterbottle/ascent,
 /turf/simulated/floor/ascent,
 /area/ship/ascent/fore_starboard_jut)
 "Ka" = (

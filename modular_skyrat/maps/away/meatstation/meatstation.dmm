@@ -1702,7 +1702,7 @@
 /turf/space,
 /area/space)
 "dW" = (
-/obj/item/reagent_containers/food/snacks/rawcutlet/meatstation,
+/obj/item/chems/food/snacks/rawcutlet/meatstation,
 /turf/space,
 /area/space)
 "dX" = (
@@ -1989,10 +1989,10 @@
 	dir = 4
 	},
 /obj/machinery/door/window/southleft,
-/obj/item/reagent_containers/glass/beaker/vial/random,
-/obj/item/reagent_containers/glass/beaker/vial/random,
-/obj/item/reagent_containers/glass/beaker/vial/random,
-/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/lab)
@@ -2018,7 +2018,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/steel,
-/obj/item/reagent_containers/spray/cleaner/deodorant,
+/obj/item/chems/spray/cleaner/deodorant,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/bathroom)
 "eF" = (
@@ -2200,7 +2200,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
 /obj/random/trash,
 /turf/simulated/floor/tiled/dark,
 /area/meatstation/medical)
@@ -2391,13 +2391,13 @@
 "fp" = (
 /obj/structure/window/basic,
 /obj/structure/closet,
-/obj/item/reagent_containers/pill/detergent,
+/obj/item/chems/pill/detergent,
 /obj/random/hat,
 /obj/random/accessory,
 /obj/random/clothing,
 /obj/random/clothing,
 /obj/item/clothing/ears/earring/stud/diamond,
-/obj/item/reagent_containers/spray/cleaner/deodorant,
+/obj/item/chems/spray/cleaner/deodorant,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/meatstation/storage)
 "fq" = (
@@ -2797,9 +2797,9 @@
 /obj/structure/closet/crate/hydroponics/beekeeping,
 /obj/item/toy/water_balloon,
 /obj/item/toy/water_balloon,
-/obj/item/lipstick/random,
+/obj/random/lipstick,
 /obj/random/junk,
-/obj/item/reagent_containers/spray/waterflower,
+/obj/item/chems/spray/waterflower,
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1;
 	icon_state = "bordercolor"
@@ -3046,7 +3046,7 @@
 "gH" = (
 /obj/item/ironingiron,
 /obj/structure/table/glass,
-/obj/item/reagent_containers/pill/detergent,
+/obj/item/chems/pill/detergent,
 /obj/item/storage/box/detergent,
 /obj/machinery/light{
 	dir = 1
@@ -3431,7 +3431,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/kitchen)
 "hB" = (
-/obj/item/reagent_containers/glass/beaker/vial/random/toxin,
+/obj/item/chems/glass/beaker/vial/random/toxin,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8;
 	icon_state = "bordercolor"
@@ -3520,7 +3520,7 @@
 	health = 1e+006
 	},
 /obj/machinery/door/window/southright,
-/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
 /obj/machinery/light/small/red{
 	dir = 1;
 	icon_state = "bulb_map"
@@ -3796,7 +3796,7 @@
 /turf/simulated/floor/tiled/white,
 /area/meatstation/bathroom)
 "ir" = (
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat,
+/obj/item/chems/food/snacks/meat/meatstationmeat,
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/kitchen)
 "is" = (
@@ -3862,7 +3862,7 @@
 /turf/space,
 /area/space)
 "iA" = (
-/obj/item/reagent_containers/food/snacks/sliceable/meatbread,
+/obj/item/chems/food/snacks/sliceable/meatbread,
 /turf/space,
 /area/space)
 "iB" = (
@@ -3889,11 +3889,11 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/meatstation/storage)
 "iC" = (
-/obj/item/reagent_containers/food/snacks/slice/meatbread,
+/obj/item/chems/food/snacks/slice/meatbread,
 /turf/simulated/floor/airless/ceiling,
 /area/meatstation/kitchen)
 "iD" = (
-/obj/item/reagent_containers/food/snacks/slice/meatpizza,
+/obj/item/chems/food/snacks/slice/meatpizza,
 /turf/space,
 /area/space)
 "iE" = (
@@ -3921,7 +3921,7 @@
 /turf/simulated/floor/airless/ceiling,
 /area/meatstation/kitchen)
 "iI" = (
-/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza,
+/obj/item/chems/food/snacks/sliceable/pizza/meatpizza,
 /turf/space,
 /area/space)
 "iJ" = (
@@ -3990,10 +3990,10 @@
 /area/space)
 "iS" = (
 /obj/structure/closet/crate/freezer/meat,
-/obj/item/reagent_containers/food/snacks/meat,
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat,
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat,
-/obj/item/reagent_containers/food/snacks/rawcutlet/meatstation,
+/obj/item/chems/food/snacks/meat,
+/obj/item/chems/food/snacks/meat/meatstationmeat,
+/obj/item/chems/food/snacks/meat/meatstationmeat,
+/obj/item/chems/food/snacks/rawcutlet/meatstation,
 /turf/space,
 /area/space)
 "iT" = (
@@ -4127,7 +4127,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/reagent_containers/glass/beaker/vial/random/toxin,
+/obj/item/chems/glass/beaker/vial/random/toxin,
 /obj/random/single/meatstation/meatworm,
 /turf/simulated/floor/tiled/dark,
 /area/meatstation/medical)
@@ -4199,7 +4199,7 @@
 /obj/item/clothing/under/rank/medical/scrubs/black,
 /obj/item/clothing/under/rank/medical/scrubs/black,
 /obj/item/clothing/head/surgery/black,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/item/defibrillator,
 /obj/item/stack/nanopaste,
 /obj/effect/floor_decal/corner/paleblue/border{
@@ -4676,7 +4676,7 @@
 	health = 1e+006
 	},
 /obj/machinery/door/window/northright,
-/obj/item/reagent_containers/glass/beaker/vial/random,
+/obj/item/chems/glass/beaker/vial/random,
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/lab)
@@ -4760,7 +4760,7 @@
 /area/meatstation/dorm)
 "kG" = (
 /obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/rawcutlet/meatstation,
+/obj/item/chems/food/snacks/rawcutlet/meatstation,
 /obj/item/trash/plate,
 /turf/simulated/floor/lino,
 /area/meatstation/mess)
@@ -4787,18 +4787,18 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza,
+/obj/item/chems/food/snacks/sliceable/pizza/meatpizza,
 /turf/simulated/floor/lino,
 /area/meatstation/mess)
 "kJ" = (
 /obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/slice/meatbread,
+/obj/item/chems/food/snacks/slice/meatbread,
 /turf/simulated/floor/lino,
 /area/meatstation/mess)
 "kK" = (
 /obj/structure/table/marble,
 /obj/item/trash/plate,
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat,
+/obj/item/chems/food/snacks/meat/meatstationmeat,
 /turf/simulated/floor/lino,
 /area/meatstation/mess)
 "kL" = (
@@ -4821,7 +4821,7 @@
 "kO" = (
 /obj/structure/table/glass,
 /obj/item/pen/multi,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/chems/glass/bucket,
 /obj/item/paper,
 /turf/simulated/floor/tiled/white,
 /area/meatstation/lab)
@@ -6570,7 +6570,7 @@
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "pG" = (
-/obj/item/reagent_containers/food/snacks/monkeycube/spidercube,
+/obj/item/chems/food/snacks/monkeycube/spidercube,
 /turf/simulated/floor/tiled/dark/airless,
 /area/meatstation/cargo)
 "pH" = (
@@ -7940,7 +7940,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/meatstation/medical)
 "sR" = (
-/obj/item/reagent_containers/glass/beaker/vial/random/toxin,
+/obj/item/chems/glass/beaker/vial/random/toxin,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -8819,7 +8819,7 @@
 /area/meatstation/centerhallway)
 "uN" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/chems/spray/cleaner,
 /obj/random/junk,
 /obj/random/junk,
 /obj/item/storage/bag/trash,

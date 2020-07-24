@@ -73,7 +73,7 @@
 	faction = "meat"
 	min_gas = null
 	minbodytemp = 0
-	meat_type = /obj/item/reagent_containers/food/snacks/meat/meatstationmeat
+	meat_type = /obj/item/chems/food/snacks/meat/meatstationmeat
 	meat_amount = 1
 	can_escape = TRUE
 
@@ -205,23 +205,23 @@
 	fire_delay = 15
 	max_shots = 12
 
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat
+/obj/item/chems/food/snacks/meat/meatstationmeat
 	name = "tainted meat"
 	desc = "A disgusting slab of meat."
 	icon = 'maps/away/meatstation/meatstation_sprites.dmi'
 	icon_state = "meat"
 	health = 150
 	filling_color = "#f41d7e"
-	slice_path = /obj/item/reagent_containers/food/snacks/rawcutlet/meatstation
+	slice_path = /obj/item/chems/food/snacks/rawcutlet/meatstation
 
-/obj/item/reagent_containers/food/snacks/meat/meatstationmeat/New()
+/obj/item/chems/food/snacks/meat/meatstationmeat/New()
 	..()
 	reagents.add_reagent(/datum/reagent/nutriment/protein, 6)
 	reagents.add_reagent(/datum/reagent/lexorin, 6)
 	reagents.add_reagent(/datum/reagent/toxin/bromide, 3)
 	bitesize = 3
 
-/obj/item/reagent_containers/food/snacks/rawcutlet/meatstation
+/obj/item/chems/food/snacks/rawcutlet/meatstation
 	name = "tainted meat chunk"
 	desc = "A disgusting chunk of meat."
 	icon = 'maps/away/meatstation/meatstation_sprites.dmi'

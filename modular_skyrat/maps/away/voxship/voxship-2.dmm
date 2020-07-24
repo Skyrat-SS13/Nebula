@@ -224,7 +224,7 @@
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "aI" = (
-/obj/item/reagent_containers/food/drinks/glass2/flute,
+/obj/item/chems/food/drinks/glass2/flute,
 /obj/random/junk,
 /obj/random/advdevice,
 /obj/random/powercell,
@@ -427,7 +427,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/voxship/fore)
 "bf" = (
-/obj/item/reagent_containers/food/drinks/glass2/flute,
+/obj/item/chems/food/drinks/glass2/flute,
 /obj/random/hat,
 /obj/random/closet,
 /turf/simulated/floor/tiled/techmaint/vox,
@@ -657,7 +657,7 @@
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "bI" = (
-/obj/item/reagent_containers/food/drinks/glass2/flute,
+/obj/item/chems/food/drinks/glass2/flute,
 /obj/random/junk,
 /obj/random/contraband,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -708,7 +708,7 @@
 /area/voxship/scavship)
 "bO" = (
 /obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
+/obj/item/chems/glass/bucket,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/scavship)
@@ -1305,7 +1305,7 @@
 	dir = 4
 	},
 /obj/random/drinkbottle,
-/obj/item/reagent_containers/food/drinks/glass2/flute,
+/obj/item/chems/food/drinks/glass2/flute,
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/fore)
 "cW" = (
@@ -2239,7 +2239,7 @@
 /area/voxship/fore)
 "eT" = (
 /obj/machinery/chemical_dispenser/full,
-/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/chems/glass/beaker/large,
 /turf/simulated/floor/tiled/freezer{
 	initial_gas = list("nitrogen" = 101.383)
 	},
@@ -2613,7 +2613,7 @@
 /turf/simulated/floor/airless,
 /area/space)
 "fR" = (
-/obj/item/reagent_containers/food/snacks/clownburger,
+/obj/item/chems/food/snacks/clownburger,
 /turf/simulated/floor/airless,
 /area/space)
 "fS" = (

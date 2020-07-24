@@ -2,7 +2,7 @@
 	name = "solgov duty gloves parent object"
 	desc = "You should never see this."
 	item_icons = list(slot_gloves_str = 'modular_skyrat/maps/torch/icons/mob/onmob_hands_solgov.dmi')
-	icon = 'maps/torch/icons/obj/obj_hands_solgov.dmi'
+	icon = 'modular_skyrat/maps/torch/icons/obj/obj_hands_solgov.dmi'
 
 /obj/item/clothing/gloves/thick/duty/solgov/eng
 	name = "engineering duty gloves"
@@ -14,7 +14,7 @@
 	name = "command duty gloves"
 	desc = "These black duty gloves are made from durable synthetic materials, and have a lovely gold accent color."
 	icon_state = "duty_gloves_cmd"
-	item_state = "duty_gloves_cmd"	
+	item_state = "duty_gloves_cmd"
 
 /obj/item/clothing/gloves/thick/duty/solgov/exp
 	name = "exploration duty gloves"
