@@ -23487,7 +23487,7 @@
 /area/security/locker)
 "nkh" = (
 /obj/structure/closet/secure_closet/brig{
-	id_tag = "Cell 1";
+	id = "Cell 1";
 	name = "Cell Locker"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -30203,7 +30203,7 @@
 /area/command/conference)
 "whm" = (
 /obj/structure/closet/secure_closet/brig{
-	id_tag = "Cell 2";
+	id = "Cell 2";
 	name = "Cell Locker"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,

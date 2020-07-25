@@ -2880,7 +2880,7 @@
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
 "avd" = (
-/obj/machinery/robotic_fabricator,
+/obj/machinery/fabricator/robotics,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -3760,7 +3760,7 @@
 	},
 /area/centcom/control)
 "axy" = (
-/obj/machinery/r_n_d/server/centcom,
+/obj/machinery/design_database,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
@@ -4667,12 +4667,12 @@
 /area/centcom/specops)
 "aAr" = (
 /obj/structure/table/rack,
-/obj/item/clothing/head/beret/centcom/officer,
-/obj/item/clothing/head/beret/centcom/officer,
-/obj/item/clothing/head/beret/centcom/officer,
-/obj/item/clothing/head/beret/centcom/officer,
-/obj/item/clothing/head/beret/centcom/officer,
-/obj/item/clothing/head/beret/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
+/obj/item/clothing/head/beret/corp/centcom/officer,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/mask/balaclava,
 /obj/item/clothing/mask/balaclava,
@@ -5183,10 +5183,10 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/pill_bottle/antitox,
-/obj/item/storage/pill_bottle/kelotane,
-/obj/item/storage/pill_bottle/kelotane,
+/obj/item/storage/pill_bottle/burn_meds,
+/obj/item/storage/pill_bottle/burn_meds,
 /obj/item/storage/pill_bottle/antitox,
-/obj/item/storage/pill_bottle/kelotane,
+/obj/item/storage/pill_bottle/burn_meds,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/toxin,
@@ -5240,7 +5240,7 @@
 /obj/item/cautery{
 	pixel_y = 4
 	},
-/obj/item/FixOVein{
+/obj/item/sutures{
 	pixel_x = -6;
 	pixel_y = 1
 	},
@@ -6873,7 +6873,7 @@
 /area/tdome)
 "aIU" = (
 /obj/structure/table/standard,
-/obj/item/FixOVein{
+/obj/item/sutures{
 	pixel_x = -6;
 	pixel_y = 1
 	},

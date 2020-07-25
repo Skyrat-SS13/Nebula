@@ -3011,7 +3011,7 @@
 /area/ship/skrellscoutship/wings/starboard)
 "ju" = (
 /obj/structure/closet/secure_closet/brig{
-	id_tag = "Cell 1";
+	id = "Cell 1";
 	name = "Cell Locker";
 	req_access = list("ACCESS_SKRELLSCOUT")
 	},
@@ -4332,7 +4332,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/closet/secure_closet/brig{
-	id_tag = "Cell 1";
+	id = "Cell 1";
 	name = "Cell Locker";
 	req_access = list("ACCESS_SKRELLSCOUT")
 	},

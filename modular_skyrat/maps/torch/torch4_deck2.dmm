@@ -4954,7 +4954,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/airlock_sensor{
-	command = "cycle_exterior";
 	id_tag = "engine_airlock_exterior_sensor";
 	id_tag = "engine_airlock";
 	pixel_x = -24;
@@ -18050,8 +18049,7 @@
 	dir = 4;
 	icon_state = "pdoor1";
 	id_tag = "EngineVent";
-	name = "Reactor Vent";
-	p_open = 0
+	name = "Reactor Vent"
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
