@@ -315,7 +315,7 @@
 	pixel_y = -21
 	},
 /obj/machinery/button/windowtint{
-	id = "rcheckinner_windows";
+	id_tag = "rcheckinner_windows";
 	pixel_x = 10;
 	pixel_y = -21
 	},
@@ -11176,7 +11176,7 @@
 "AC" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
-	id = "toxins_in"
+	id_tag = "toxins_in"
 	},
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5;
@@ -12901,7 +12901,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "rd_windows";
+	id_tag = "rd_windows";
 	pixel_x = 6;
 	pixel_y = 24;
 	range = 11
@@ -13796,7 +13796,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "rd_windows"
+	id_tag = "rd_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14324,7 +14324,7 @@
 /area/shuttle/petrov/toxins)
 "LW" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "rd_windows"
+	id_tag = "rd_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14792,7 +14792,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "rcheckinner_windows"
+	id_tag = "rcheckinner_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14834,7 +14834,7 @@
 "NO" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id = "rcheckinner_windows"
+	id_tag = "rcheckinner_windows"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -15841,7 +15841,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	icon_state = "map_injector";
-	id = "phoron_in";
+	id_tag = "phoron_in";
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced,
