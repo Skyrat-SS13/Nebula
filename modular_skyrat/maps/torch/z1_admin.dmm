@@ -2317,8 +2317,7 @@
 /area/prison/solitary)
 "atc" = (
 /obj/machinery/vending/cola{
-	name = "Robust Softdrinks";
-	prices = list()
+	name = "Robust Softdrinks"
 	},
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
@@ -2374,9 +2373,7 @@
 	},
 /area/prison/solitary)
 "atn" = (
-/obj/machinery/vending/coffee{
-	prices = list()
-	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
 "ato" = (
@@ -2461,8 +2458,7 @@
 /area/shuttle/administration/centcom)
 "atD" = (
 /obj/machinery/vending/snack{
-	name = "Getmore Chocolate Corp";
-	prices = list()
+	name = "Getmore Chocolate Corp"
 	},
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
@@ -2628,9 +2624,7 @@
 	},
 /area/prison/solitary)
 "aug" = (
-/obj/machinery/vending/cigarette{
-	prices = list()
-	},
+/obj/machinery/vending/cigarette,
 /turf/simulated/floor/shuttle/red,
 /area/shuttle/administration/centcom)
 "auh" = (
@@ -3751,7 +3745,6 @@
 	dir = 10
 	},
 /obj/machinery/computer/design_console{
-	badmin = 1;
 	dir = 1;
 	name = "Master R&amp;D Server Controller"
 	},
@@ -5312,8 +5305,7 @@
 /area/centcom/specops)
 "aCr" = (
 /obj/machinery/vending/snack{
-	name = "hacked Getmore Chocolate Corp";
-	prices = list()
+	name = "hacked Getmore Chocolate Corp"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -5379,8 +5371,7 @@
 /area/centcom/control)
 "aCP" = (
 /obj/machinery/vending/cola{
-	name = "Robust Softdrinks";
-	prices = list()
+	name = "Robust Softdrinks"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -5449,8 +5440,7 @@
 /area/centcom/holding)
 "aDk" = (
 /obj/machinery/vending/cigarette{
-	name = "cigarette machine";
-	prices = list()
+	name = "cigarette machine"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -7161,7 +7151,7 @@
 	},
 /area/shuttle/transport1/centcom)
 "aJG" = (
-/obj/machinery/door/unpowered/shuttle,
+/obj/machinery/door/airlock,
 /turf/simulated/floor/shuttle/blue,
 /area/shuttle/transport1/centcom)
 "aJH" = (
@@ -7742,7 +7732,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
 /obj/item/clothing/shoes/brown,
-/obj/item/melee/energy/axe,
+/obj/item/energy_blade/axe,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -7773,7 +7763,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/green,
 /obj/item/clothing/shoes/brown,
-/obj/item/melee/energy/axe,
+/obj/item/energy_blade/axe,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -7857,7 +7847,7 @@
 /obj/item/clothing/suit/armor/tdome/red,
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/baton/loaded,
-/obj/item/melee/energy/sword/red,
+/obj/item/energy_blade/sword/red,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -7924,7 +7914,7 @@
 /obj/item/clothing/suit/armor/tdome/green,
 /obj/item/clothing/head/helmet/thunderdome,
 /obj/item/baton/loaded,
-/obj/item/melee/energy/sword/green,
+/obj/item/energy_blade/sword/green,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -8256,8 +8246,7 @@
 /area/merchant_station)
 "aMR" = (
 /obj/machinery/vending/cola{
-	name = "hacked Robust Softdrinks";
-	prices = list()
+	name = "hacked Robust Softdrinks"
 	},
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -8334,7 +8323,6 @@
 "aNh" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	prices = list();
 	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo/random = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
 	},
 /turf/unsimulated/floor{
@@ -8791,7 +8779,6 @@
 "aOC" = (
 /obj/machinery/vending/cigarette{
 	name = "hacked cigarette machine";
-	prices = list();
 	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo/random = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
 	},
 /obj/structure/window/reinforced{
@@ -9311,15 +9298,13 @@
 /area/merchant_station)
 "aQl" = (
 /obj/machinery/vending/cola{
-	name = "hacked Robust Softdrinks";
-	prices = list()
+	name = "hacked Robust Softdrinks"
 	},
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aQm" = (
 /obj/machinery/vending/snack{
-	name = "hacked Getmore Chocolate Corp";
-	prices = list()
+	name = "hacked Getmore Chocolate Corp"
 	},
 /turf/simulated/floor/tiled,
 /area/merchant_station)
@@ -9615,11 +9600,11 @@
 /area/merchant_station)
 "aRI" = (
 /obj/structure/table/steel,
-/obj/item/spacecash/bundle/c1000,
-/obj/item/spacecash/bundle/c1000,
-/obj/item/spacecash/bundle/c1000,
-/obj/item/spacecash/bundle/c1000,
-/obj/item/spacecash/bundle/c1000,
+/obj/item/cash/c1000,
+/obj/item/cash/c1000,
+/obj/item/cash/c1000,
+/obj/item/cash/c1000,
+/obj/item/cash/c1000,
 /obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
@@ -12177,7 +12162,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
 "qIk" = (
-/obj/machinery/door/unpowered/simple/sandstone,
+/obj/structure/door/sandstone,
 /turf/simulated/floor/holofloor/tiled/stone,
 /area/holodeck/source_temple)
 "qMl" = (
@@ -12223,7 +12208,7 @@
 	},
 /area/holodeck/source_volleyball)
 "rqJ" = (
-/obj/machinery/door/unpowered/simple/wood,
+/obj/structure/door/wood,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_cafe)
 "rxE" = (
@@ -12452,7 +12437,7 @@
 /area/holodeck/source_volleyball)
 "xTc" = (
 /obj/structure/table/holo_woodentable,
-/obj/item/tray{
+/obj/item/storage/tray{
 	holographic = 1
 	},
 /turf/simulated/floor/holofloor/wood,

@@ -1423,12 +1423,12 @@
 /area/ship/skrellscoutship/command/armory)
 "eS" = (
 /obj/structure/table/rack,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/command/armory)
@@ -3215,10 +3215,10 @@
 /obj/structure/window/borosilicate_reinforced{
 	dir = 4
 	},
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
-/obj/item/melee/energy/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
+/obj/item/energy_blade/machete,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/robotics)
