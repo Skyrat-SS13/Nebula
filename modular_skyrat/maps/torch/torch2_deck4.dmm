@@ -3091,7 +3091,6 @@
 	dir = 9
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /obj/structure/sign/deck/fourth{
 	dir = 4;
 	pixel_x = -32
@@ -12576,7 +12575,6 @@
 	dir = 9
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -14079,7 +14077,6 @@
 	dir = 9
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/fourthdeck/aft)
 "VB" = (
@@ -15043,7 +15040,6 @@
 	dir = 9
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /obj/machinery/light{
 	dir = 8
 	},

@@ -991,3 +991,18 @@
 		///datum/computer_file/program/library,
 		/datum/computer_file/program/wordprocessor
 	)
+
+/datum/job
+	department_refs = list(DEPT_MISC)
+
+/obj/machinery/atmospherics/unary/vent_pump
+	plane = FLOOR_PLANE
+
+/obj/machinery/atmospherics/unary/vent_scrubber
+	plane = FLOOR_PLANE
+
+/obj/machinery/power/terminal 
+	plane = FLOOR_PLANE
+
+/obj/machinery/hologram/holopad
+	plane = FLOOR_PLANE

@@ -10168,11 +10168,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/brig)
-"aJG" = (
-/obj/structure/table/rack,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/firstdeck/foreport)
 "aJK" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -21060,7 +21055,6 @@
 /area/rnd/entry)
 "lkb" = (
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
 "lkp" = (
@@ -22888,7 +22882,6 @@
 	icon_state = "warning"
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
 "nLo" = (
@@ -23232,7 +23225,6 @@
 	icon_state = "warning"
 	},
 /obj/structure/ladder,
-/obj/effect/catwalk_plated,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
 "oeb" = (
@@ -28925,20 +28917,6 @@
 /obj/structure/bed/chair/padded/blue,
 /turf/simulated/floor/tiled/dark,
 /area/command/conference)
-"whm" = (
-/obj/structure/closet/secure_closet/brig{
-	name = "Cell Locker"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	pixel_x = 21
-	},
-/turf/simulated/floor/tiled,
-/area/security/wing)
 "wiT" = (
 /obj/random_multi/single_item/skelestand/maint,
 /turf/simulated/floor/tiled/techfloor,
@@ -40056,7 +40034,7 @@ taR
 tJM
 jpt
 oby
-whm
+nkh
 wEb
 tkr
 aRp
@@ -41269,7 +41247,7 @@ edT
 aMM
 aIl
 aGP
-aJG
+aDW
 kny
 aRu
 jTV
@@ -43485,7 +43463,7 @@ aEZ
 aGi
 aGY
 jTV
-aJG
+aDW
 aKR
 aBb
 aMS

@@ -645,13 +645,6 @@
 /obj/structure/bed/chair/shuttle/blue,
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/crew)
-"bC" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 1
-	},
-/obj/structure/bed/chair/shuttle/blue,
-/turf/simulated/floor/tiled,
-/area/exploration_shuttle/crew)
 "bE" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
@@ -1794,9 +1787,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/guppy_hangar/start)
-"dK" = (
-/turf/simulated/wall/titanium,
-/area/exploration_shuttle/cargo)
 "dL" = (
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -3931,10 +3921,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/expedition/eva)
-"jD" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/exploration)
 "jE" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
@@ -4289,10 +4275,6 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/exploration)
-"ko" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kp" = (
 /obj/machinery/computer/ship/navigation{
@@ -7018,16 +7000,6 @@
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/expedition/eva)
-"qe" = (
-/obj/effect/floor_decal/corner/brown/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/expedition)
-"qf" = (
-/obj/effect/floor_decal/corner/brown/mono,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/expedition)
 "qg" = (
 /obj/structure/table/rack,
 /obj/item/shovel{
@@ -15595,14 +15567,6 @@
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/eva)
-"Tr" = (
-/obj/machinery/door/airlock/external{
-	icon_state = "closed";
-	id_tag = "petrov_shuttle_outer";
-	name = "Petrov Exterior Access"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/petrov/hallwaya)
 "Ts" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -31537,9 +31501,9 @@ kh
 hO
 eu
 jE
-ko
+iQ
 kM
-ko
+iQ
 kP
 eu
 hM
@@ -31944,7 +31908,7 @@ iP
 kg
 hz
 ki
-ko
+iQ
 eu
 nf
 si
@@ -32142,7 +32106,7 @@ hz
 kw
 ky
 hl
-ko
+iQ
 hz
 hz
 kI
@@ -34346,7 +34310,7 @@ UH
 ih
 ee
 bj
-bC
+bA
 bY
 aA
 bj
@@ -34750,7 +34714,7 @@ UH
 ih
 ee
 bk
-bC
+bA
 bZ
 cr
 cD
@@ -34952,7 +34916,7 @@ UH
 ih
 ee
 bk
-bC
+bA
 ca
 cs
 cE
@@ -35154,7 +35118,7 @@ FZ
 ih
 ee
 bk
-bC
+bA
 Lc
 cu
 bj
@@ -41021,8 +40985,8 @@ bP
 aa
 Al
 Al
-Tr
-Tr
+ML
+ML
 Al
 aa
 Fx
