@@ -2488,7 +2488,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/miningstation/vault)
 "fW" = (
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/space)
 "fX" = (
 /obj/structure/cable{
@@ -5515,7 +5515,7 @@
 /area/miningstation/bathroom)
 "mF" = (
 /obj/effect/floor_decal/asteroid,
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/space)
 "mG" = (
 /obj/structure/cable{
@@ -5615,7 +5615,7 @@
 /area/miningstation/mess)
 "mU" = (
 /obj/structure/lattice,
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/space)
 "mV" = (
 /obj/random/trash,
@@ -7959,7 +7959,7 @@
 /turf/simulated/floor/tiled/white,
 /area/miningstation/cryo)
 "vH" = (
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/miningstation/fix)
 "vM" = (
 /obj/structure/table/marble,

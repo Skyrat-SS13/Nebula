@@ -771,3 +771,223 @@
 	products = list(/obj/item/clothing/suit/bio_suit = 6,/obj/item/clothing/head/bio_hood = 6,
 					/obj/item/transfer_valve = 6,/obj/item/assembly/timer = 6,/obj/item/assembly/signaler = 6,
 					/obj/item/assembly/prox_sensor = 6,/obj/item/assembly/igniter = 6)
+
+
+/obj/structure/sign/thera
+	icon_state = "thera"
+	icon = 'modular_skyrat/icons/obj/decals.dmi'
+	name = "\improper THERA SAFE ROOM"
+	desc = "A detailed sign that reads 'Temporary Housing for Emergency, Radioactive, Atmospheric. This location is unsuitable for extended Habitation. Do not shelter here beyond immediate need.'"
+
+/obj/effect/floor_decal/sign/or1
+	icon = 'modular_skyrat/icons/turf/flooring/decals.dmi'
+	icon_state = "modular_skyrat/white_or1"
+
+/obj/effect/floor_decal/sign/or2
+	icon = 'modular_skyrat/icons/turf/flooring/decals.dmi'
+	icon_state = "modular_skyrat/white_or2"
+
+/obj/effect/floor_decal/sign/tr
+	icon = 'modular_skyrat/icons/turf/flooring/decals.dmi'
+	icon_state = "modular_skyrat/white_tr"
+
+/obj/effect/floor_decal/sign/pop
+	icon = 'modular_skyrat/icons/turf/flooring/decals.dmi'
+	icon_state = "white_pop"
+
+/obj/effect/floor_decal/torchltdlogo
+	alpha = 230
+	icon = 'modular_skyrat/icons/turf/flooring/corp_floor.dmi'
+	icon_state = "bottomleft"
+
+/obj/structure/sign/noidle
+	name = "\improper NO IDLING"
+	desc = "A warning sign which reads 'NO IDLING!'."
+	icon = 'modular_skyrat/icons/obj/decals.dmi'
+	icon_state = "noidle"
+
+/obj/structure/sign/emergonly
+	name = "\improper EMERGENCY ONLY"
+	desc = "A warning sign which reads 'EMERGENCY ONLY!'."
+	icon = 'modular_skyrat/icons/obj/decals.dmi'
+	icon_state = "emerg"
+
+/obj/item/chems/glass/beaker/cryoxadone/Initialize()
+	. = ..()
+	reagents.add_reagent(/decl/material/liquid/cryoxadone, 60)
+	update_icon()
+
+//to pass tests and make vesrion not depending on Torch code. Sol gov floor decal had to go though :(
+/obj/structure/sign/icarus/solgov
+	name = "\improper SolGov Seal"
+	desc = "A familiar seal showing this vessel is SolGov property."
+	icon = 'modular_skyrat/icons/icarus_sprites.dmi'
+	icon_state = "solgovseal"
+
+/obj/item/clothing/under/icarus/ec_uniform
+	name = "expeditionary uniform"
+	desc = "An older model of the utility uniform of the SCG Expeditionary Corps. It has a patch on the left sleeve signifying the wearer served on the SEV Icarus."
+	icon_state = "blackutility_crew"
+	worn_state = "blackutility_crew"
+	icon = 'modular_skyrat/icons/icarus_sprites.dmi'
+	item_icons = list(slot_w_uniform_str = 'modular_skyrat/icons/icarus_sprites.dmi')
+
+/obj/structure/sign/double/icarus/solgovflag
+	name = "Sol Central Government Flag"
+	desc = "The iconic flag of the Sol Central Government, a symbol with many different meanings."
+	icon = 'modular_skyrat/icons/icarus_sprites.dmi'
+
+/obj/structure/sign/double/icarus/solgovflag/left
+	icon_state = "solgovflag-left"
+
+/obj/structure/sign/double/icarus/solgovflag/right
+	icon_state = "solgovflag-right"
+
+/obj/item/toy/torchmodel
+	name = "table-top SEV Torch model"
+	desc = "This is a replica of the SEV Torch, in 1:250th scale, on a handsome wooden stand. Small lights blink on the hull and at the engine exhaust."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "torch_model_figure"
+
+/obj/machinery/nuke_cylinder_dispenser
+	name = "nuclear cylinder storage"
+	desc = "It's a secure, armored storage unit embeded into the floor for storing the nuclear cylinders."
+	icon = 'icons/obj/machines/self_destruct.dmi'
+	icon_state = "base"
+	anchored = TRUE	
+	density = FALSE
+	req_access = list(access_heads_vault)
+
+	var/locked = TRUE
+	var/open = FALSE
+	var/list/cylinders = list() //Should only hold 6
+
+/obj/machinery/nuke_cylinder_dispenser/Initialize()
+	. = ..()
+	for(var/i in 1 to 6)
+		cylinders += new /obj/item/nuclear_cylinder()
+	update_icon()
+
+/obj/machinery/nuke_cylinder_dispenser/emag_act(remaining_charges, mob/user, emag_source)
+	to_chat(user, SPAN_NOTICE("The card fails to do anything. It seems this device has an advanced encryption system."))
+	return NO_EMAG_ACT
+
+/obj/machinery/nuke_cylinder_dispenser/physical_attack_hand(mob/user)
+	if(!(stat & NOPOWER) && locked && check_access(user))
+		locked = FALSE
+		user.visible_message("[user] unlocks \the [src].", "You unlock \the [src].")
+		update_icon()
+		add_fingerprint(user)
+		return TRUE
+	if(!locked)
+		open = !open
+		user.visible_message("[user] [open ? "opens" : "closes"] \the [src].", "You [open ? "open" : "close"] \the [src].")
+		update_icon()
+		add_fingerprint(user)
+	return TRUE
+
+/obj/machinery/nuke_cylinder_dispenser/attackby(obj/item/O, mob/user)
+	if(!open && !(stat & NOPOWER) && istype(O, /obj/item/card/id))
+		var/obj/item/card/id/id = O
+		if(check_access(id))
+			locked = !locked
+			user.visible_message("[user] [locked ? "locks" : "unlocks"] \the [src].", "You [locked ? "lock" : "unlock"] \the [src].")
+			update_icon()
+		return
+	if(open && istype(O, /obj/item/nuclear_cylinder) && (length(cylinders) < 6))
+		user.visible_message("[user] begins inserting \the [O] into storage.", "You begin inserting \the [O] into storage.")
+		if(do_after(user, 80, src) && open && (length(cylinders) < 6) && user.unEquip(O, src))
+			user.visible_message("[user] places \the [O] into storage.", "You place \the [O] into storage.")
+			cylinders.Add(O)
+			update_icon()
+		add_fingerprint(user)
+
+/obj/machinery/nuke_cylinder_dispenser/MouseDrop(atom/over)
+	if(!CanMouseDrop(over, usr))
+		return
+	if(over == usr && open && length(cylinders))
+		usr.visible_message("[usr] begins to extract \the [cylinders[1]].", "You begin to extract \the [cylinders[1]].")
+		if(do_after(usr, 70, src) && open && length(cylinders))
+			usr.visible_message("[usr] picks up \the [cylinders[1]].", "You pick up \the [cylinders[1]].")
+			usr.put_in_hands(cylinders[length(cylinders)])
+			cylinders.Cut(length(cylinders))
+			update_icon()
+		add_fingerprint(usr)
+
+/obj/machinery/nuke_cylinder_dispenser/on_update_icon()
+	overlays.Cut()
+	if(length(cylinders))
+		overlays += "rods_[length(cylinders)]"
+	if(!open)
+		overlays += "hatch"
+	if(!(stat & NOPOWER))
+		if(locked)
+			overlays += "red_light"
+		else
+			overlays += "green_light"
+
+/obj/item/documents/scgr
+	name = "private memos and faxes"
+	desc = "\"Top Secret\" memos and faxes between the SCGR and other officials of the SCG. It's like a chat client ran on pure paperwork."
+	description_antag = "The SCGR's conversations contain a massive amount of dirt on politicians: drugs, sex, money..."
+
+/obj/machinery/computer/modular/preset/cardslot/command_sec
+	default_software = list(
+		/datum/computer_file/program/comm,
+		/datum/computer_file/program/camera_monitor,
+		/datum/computer_file/program/email_client,
+		/datum/computer_file/program/records,
+		/datum/computer_file/program/docking,
+		/datum/computer_file/program/wordprocessor,
+		/datum/computer_file/program/digitalwarrant,
+		/datum/computer_file/program/forceauthorization
+	)
+
+/obj/item/clothing/suit/storage/vest/merc
+	slots = 4
+
+/obj/machinery/computer/crew
+	name = "crew monitoring computer"
+	desc = "Used to monitor active health sensors built into most of the crew's uniforms."
+	icon_keyboard = "med_key"
+	icon_screen = "crew"
+	light_color = "#315ab4"
+	idle_power_usage = 250
+	active_power_usage = 500
+	var/datum/nano_module/crew_monitor/crew_monitor
+
+/obj/item/clothing/shoes/sandal/xeno/caligae
+	name = "caligae"
+	desc = "A pair of sandals modelled after the ancient Roman caligae."
+	icon_state = "caligae"
+	item_state = "caligae"
+	body_parts_covered = FEET|LEGS
+
+/obj/item/clothing/shoes/sandal/xeno/caligae/white
+	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a white covering."
+	icon_state = "whitecaligae"
+	item_state = "whitecaligae"
+
+/obj/item/clothing/shoes/sandal/xeno/caligae/grey
+	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a grey covering."
+	icon_state = "greycaligae"
+	item_state = "greycaligae"
+
+/obj/item/clothing/shoes/sandal/xeno/caligae/black
+	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a black covering."
+	icon_state = "blackcaligae"
+	item_state = "blackcaligae"
+
+/obj/item/clothing/shoes/leather
+	name = "leather shoes"
+	desc = "A sturdy pair of leather shoes."
+	icon_state = "leather"
+
+/obj/machinery/computer/modular/preset/library
+	default_software = list(
+		///datum/computer_file/program/nttransfer,
+		///datum/computer_file/program/newsbrowser,
+		/datum/computer_file/program/email_client,
+		///datum/computer_file/program/library,
+		/datum/computer_file/program/wordprocessor
+	)

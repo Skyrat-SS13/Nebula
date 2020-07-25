@@ -6,13 +6,13 @@
 /turf/simulated/wall/r_wall/hull,
 /area/space)
 "ac" = (
-/turf/simulated/mineral/random/high_chance,
+/turf/simulated/wall/natural/random/high_chance,
 /area/space)
 "ad" = (
 /turf/simulated/wall/r_wall/hull,
 /area/voxship/base)
 "ae" = (
-/turf/simulated/mineral/random,
+/turf/simulated/wall/natural/random,
 /area/space)
 "af" = (
 /turf/simulated/floor/airless,
@@ -1149,7 +1149,7 @@
 	},
 /area/voxship/base)
 "dr" = (
-/turf/simulated/mineral/random/high_chance,
+/turf/simulated/wall/natural/random/high_chance,
 /area/voxship/base)
 "ds" = (
 /obj/effect/catwalk_plated/dark,

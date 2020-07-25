@@ -21,3 +21,17 @@
 
 /obj/item/ammo_magazine/pistol/small/empty
 	initial_ammo = 0
+
+/obj/item/ammo_magazine/box/machinegun
+	name = "magazine box"
+	icon_state = "machinegun"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = CALIBER_RIFLE
+	matter = list(MATERIAL_STEEL = 4500)
+	ammo_type = /obj/item/ammo_casing/rifle
+	max_ammo = 50
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/box/machinegun/empty
+	initial_ammo = 0

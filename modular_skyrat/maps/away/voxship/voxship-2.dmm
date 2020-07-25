@@ -2554,7 +2554,7 @@
 /turf/simulated/floor/tiled/techmaint/vox,
 /area/voxship/engineering)
 "fG" = (
-/turf/simulated/mineral/random,
+/turf/simulated/wall/natural/random,
 /area/space)
 "fH" = (
 /obj/item/stack/material/rods,
