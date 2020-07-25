@@ -151,7 +151,7 @@
 	#include "z2_transit.dmm"
 
 	#include "../../../maps/away/empty.dmm"
-	#include "../away/ascent/ascent.dm"
+	#include "../../../mods/ascent/away_sites/ascent/ascent.dm"
 	#include "../../../maps/away/mining/mining.dm"
 	#include "../../../maps/away/derelict/derelict.dm"
 	#include "../../../maps/away/bearcat/bearcat.dm"
@@ -163,7 +163,7 @@
 	#include "../../../maps/away/blueriver/blueriver.dm"
 	#include "../../../maps/away/slavers/slavers_base.dm"
 	#include "../../../maps/away/mobius_rift/mobius_rift.dm"
-	//#include "../../../mods/government/maps/away/icarus.dm"
+	#include "../../../mods/government/away_sites/icarus/icarus.dm"
 	#include "../../../maps/away/errant_pisces/errant_pisces.dm"
 	#include "../away/lar_maria/lar_maria.dm"
 	#include "../../../maps/away/unishi/unishi.dm"

@@ -52,7 +52,7 @@
 	stomach_capacity = 12
 
 	breath_type = /decl/material/gas/nitrogen
-	poison_types = list(GAS_OXYGEN = TRUE)
+	poison_types = list(/decl/material/gas/oxygen = TRUE)
 	siemens_coefficient = 0.2
 
 	species_flags = SPECIES_FLAG_NO_SCAN

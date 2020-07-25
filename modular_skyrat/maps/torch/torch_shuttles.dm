@@ -162,6 +162,13 @@ TORCH_ESCAPE_POD(17)
 	landmark_tag = "nav_admin_out"
 	docking_controller = "admin_shuttle_dock_airlock"
 
+//Ascent dock
+
+//Add Torck Docking Port for Trichoptera
+/obj/effect/shuttle_landmark/ascent_seedship/torch/trichoptera
+	name = "Trichoptera Docking Port"
+	landmark_tag = "nav_trichoptera_altdock"
+
 //Transport
 
 /datum/shuttle/autodock/ferry/centcom
