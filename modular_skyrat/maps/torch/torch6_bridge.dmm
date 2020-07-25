@@ -4,7 +4,7 @@
 /area/space)
 "ab" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -965,7 +965,7 @@
 /area/crew_quarters/heads/office/xo)
 "bP" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -983,7 +983,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "xo_windows"
+	id = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -1040,7 +1040,7 @@
 /area/hallway/primary/bridge/fore)
 "bV" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -1063,7 +1063,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -2037,7 +2037,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "ce_windows"
+	id = "ce_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/ce)
@@ -2905,7 +2905,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "xo_windows"
+	id = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -3577,7 +3577,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -4106,7 +4106,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "ce_windows"
+	id = "ce_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/ce)
@@ -4313,7 +4313,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -4562,7 +4562,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_starboard"
+	id = "bridge_starboard"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -4572,7 +4572,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_starboard"
+	id = "bridge_starboard"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -4953,7 +4953,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -5275,7 +5275,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "xo_windows"
+	id = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -5415,7 +5415,7 @@
 "kV" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "xo_windows"
+	id = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 1;
@@ -7079,7 +7079,7 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7093,7 +7093,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7103,7 +7103,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7185,7 +7185,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_port"
+	id = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -7195,7 +7195,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_port"
+	id = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -7254,7 +7254,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -7568,7 +7568,7 @@
 "pI" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cmo)
@@ -7902,7 +7902,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cos_windows"
+	id = "cos_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cos)
@@ -7912,7 +7912,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cos_windows"
+	id = "cos_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cos)
@@ -8772,7 +8772,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sea_windows"
+	id = "sea_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sea)
@@ -8833,7 +8833,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sgr_windows"
+	id = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -8847,7 +8847,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sgr_windows"
+	id = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -8870,7 +8870,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "rd_windows"
+	id = "rd_windows"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -9090,7 +9090,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sgr_windows"
+	id = "sgr_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sgr)
@@ -9366,7 +9366,7 @@
 "ug" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sgr_windows"
+	id = "sgr_windows"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11119,7 +11119,7 @@
 /area/maintenance/bridge/forestarboard)
 "yd" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -11129,7 +11129,7 @@
 /area/bridge/meeting_room)
 "yf" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_starboard"
+	id = "bridge_starboard"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -11336,7 +11336,7 @@
 "zh" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_port"
+	id = "bridge_port"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -11752,7 +11752,7 @@
 /area/crew_quarters/heads/office/rd)
 "AH" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_starboard"
+	id = "bridge_starboard"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -12200,7 +12200,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cmo_windows"
+	id = "cmo_windows"
 	},
 /obj/structure/cable/green,
 /obj/structure/disposalpipe/segment{
@@ -12437,7 +12437,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "co_windows"
+	id = "co_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/co)
@@ -12976,7 +12976,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -13087,7 +13087,7 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -13177,7 +13177,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "xo_windows"
+	id = "xo_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -13229,7 +13229,7 @@
 /area/crew_quarters/heads/cobed)
 "Hv" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -13887,7 +13887,7 @@
 "Ka" = (
 /obj/structure/cable/green,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -14520,7 +14520,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -14889,7 +14889,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "cl_windows"
+	id = "cl_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/cl)
@@ -15665,7 +15665,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "sea_windows"
+	id = "sea_windows"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/sea)
@@ -16547,7 +16547,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "meeting_windows"
+	id = "meeting_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -16619,7 +16619,7 @@
 /area/hallway/primary/bridge/fore)
 "VN" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bridge_port"
+	id = "bridge_port"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -17065,7 +17065,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "co_windows"
+	id = "co_windows"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)

@@ -17838,7 +17838,7 @@
 /area/engineering/engineering_bay)
 "VE" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "robotics_surg"
+	id = "robotics_surg"
 	},
 /turf/simulated/floor/plating,
 /area/assembly/robotics/surgery)

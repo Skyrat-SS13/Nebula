@@ -3449,7 +3449,7 @@
 	icon_state = "pdoor1";
 	id_tag = "ASSAULT";
 	name = "Assault Weapon Storage";
-	p_open = 0
+	density = 0
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -3580,7 +3580,7 @@
 	icon_state = "pdoor1";
 	id_tag = "ASSAULT";
 	name = "Assault Armor Storage";
-	p_open = 0
+	density = 0
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -4528,7 +4528,7 @@
 	icon_state = "pdoor1";
 	id_tag = "CREED";
 	name = "Ready Room";
-	p_open = 0
+	density = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
@@ -4551,7 +4551,7 @@
 	icon_state = "pdoor1";
 	id_tag = "CREED";
 	name = "Ready Room";
-	p_open = 0
+	density = 0
 	},
 /turf/unsimulated/floor{
 	icon_state = "steel"
@@ -9823,14 +9823,14 @@
 "aSL" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	master_tag = "merchant_ship_dock";
+	id_tag = "merchant_ship_dock";
 	name = "exterior access button";
 	pixel_x = 6;
 	pixel_y = 28
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	master_tag = "merchant_ship_dock";
+	id_tag = "merchant_ship_dock";
 	name = "interior access button";
 	pixel_x = -6;
 	pixel_y = 28
@@ -10213,7 +10213,7 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	master_tag = "merchant_ship_dock";
+	id_tag = "merchant_ship_dock";
 	pixel_x = -28;
 	pixel_y = 0
 	},

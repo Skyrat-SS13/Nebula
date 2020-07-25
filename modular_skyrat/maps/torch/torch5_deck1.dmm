@@ -1279,7 +1279,7 @@
 /area/maintenance/firstdeck/centralstarboard)
 "acE" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id_tag = "roboticlab_window"
+	id = "roboticlab_window"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -3565,7 +3565,7 @@
 /area/medical/staging)
 "agl" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "counselor_office"
+	id = "counselor_office"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
@@ -4033,7 +4033,7 @@
 /area/medical/counselor/therapy)
 "ahe" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "counselor_therapy"
+	id = "counselor_therapy"
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
@@ -7736,7 +7736,7 @@
 /area/maintenance/firstdeck/centralstarboard)
 "axu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -9226,7 +9226,7 @@
 /area/security/bo)
 "aDF" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -9236,7 +9236,7 @@
 /area/security/bo)
 "aDG" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -9409,7 +9409,7 @@
 /area/security/wing)
 "aEI" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -9701,7 +9701,7 @@
 /area/maintenance/firstdeck/aftport)
 "aFQ" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -10388,7 +10388,7 @@
 	icon_state = "0-8"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -10723,7 +10723,7 @@
 /area/security/wing)
 "aKE" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "bo_windows"
+	id = "bo_windows"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -14546,7 +14546,7 @@
 /area/thruster/d1starboard)
 "bdo" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "processwindow"
+	id = "processwindow"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -14759,7 +14759,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "interviewwindow"
+	id = "interviewwindow"
 	},
 /turf/simulated/floor/plating,
 /area/security/questioning)
@@ -18130,7 +18130,7 @@
 /area/medical/surgery)
 "gkb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "or1"
+	id = "or1"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
@@ -18341,7 +18341,7 @@
 /area/teleporter/firstdeck)
 "gEb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "exam_windows"
+	id = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -18475,7 +18475,7 @@
 /area/assembly/chargebay)
 "gXb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id_tag = "exam_windows"
+	id = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -19502,7 +19502,7 @@
 /area/maintenance/firstdeck/aftport)
 "imK" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "conference_window"
+	id = "conference_window"
 	},
 /turf/simulated/floor/plating,
 /area/command/conference)
@@ -20430,7 +20430,7 @@
 /area/hallway/primary/firstdeck/aft)
 "jqD" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "forensicswindow"
+	id = "forensicswindow"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -20992,7 +20992,7 @@
 /area/hallway/primary/firstdeck/aft)
 "jZb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "misc_lab"
+	id = "misc_lab"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
@@ -21330,7 +21330,7 @@
 /area/command/armoury/tactical)
 "kvb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "roboticlab_window"
+	id = "roboticlab_window"
 	},
 /turf/simulated/floor/plating,
 /area/assembly/robotics/office)
@@ -21521,7 +21521,7 @@
 /area/medical/staging)
 "kKb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "postop_window"
+	id = "postop_window"
 	},
 /turf/simulated/floor/plating,
 /area/medical/staging)
@@ -22493,7 +22493,7 @@
 /area/assembly/chargebay)
 "mdv" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "processwindow"
+	id = "processwindow"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -23265,7 +23265,7 @@
 /area/security/nuke_storage)
 "mVW" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "forensicswindow"
+	id = "forensicswindow"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -23723,7 +23723,7 @@
 /area/maintenance/firstdeck/centralport)
 "nBb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "exam_windows"
+	id = "exam_windows"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -25340,7 +25340,7 @@
 "pBb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "misc_lab"
+	id = "misc_lab"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
@@ -25966,7 +25966,7 @@
 /area/rnd/misc_lab)
 "qnz" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille/regular{
-	id_tag = "or2"
+	id = "or2"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery2)
@@ -25984,7 +25984,7 @@
 /area/medical/surgery)
 "qqb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id_tag = "sci_office"
+	id = "sci_office"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/office)
@@ -29510,7 +29510,7 @@
 /area/security/detectives_office)
 "uDu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "interviewwindow"
+	id = "interviewwindow"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -30087,7 +30087,7 @@
 /area/security/locker)
 "vTH" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "forensicswindow"
+	id = "forensicswindow"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -30101,7 +30101,7 @@
 /area/security/detectives_office)
 "vTY" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "processwindow"
+	id = "processwindow"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;

@@ -13794,7 +13794,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "rd_windows"
+	id = "rd_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14322,7 +14322,7 @@
 /area/shuttle/petrov/toxins)
 "LW" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "rd_windows"
+	id = "rd_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14790,7 +14790,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "rcheckinner_windows"
+	id = "rcheckinner_windows"
 	},
 /obj/effect/paint/silver,
 /turf/simulated/floor/plating,
@@ -14832,7 +14832,7 @@
 "NO" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	id_tag = "rcheckinner_windows"
+	id = "rcheckinner_windows"
 	},
 /obj/machinery/door/blast/regular{
 	density = 0;

@@ -2862,7 +2862,7 @@
 "jn" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "offmess_windows"
+	id = "offmess_windows"
 	},
 /turf/simulated/floor/plating,
 /area/command/captainmess)
@@ -4792,7 +4792,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "pathfinder_office"
+	id = "pathfinder_office"
 	},
 /turf/simulated/floor/plating,
 /area/command/pathfinder)
@@ -14145,7 +14145,7 @@
 "TT" = (
 /obj/machinery/door/firedoor,
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "pathfinder_office"
+	id = "pathfinder_office"
 	},
 /turf/simulated/floor/plating,
 /area/command/pathfinder)

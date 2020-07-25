@@ -10993,7 +10993,7 @@
 /area/engineering/hardstorage)
 "xx" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "chapoff_windows"
+	id = "chapoff_windows"
 	},
 /turf/simulated/floor/plating,
 /area/chapel/office)
@@ -19057,7 +19057,7 @@
 /area/maintenance/thirddeck/port)
 "TR" = (
 /obj/effect/wallframe_spawn/reinforced/polarized/no_grille{
-	id_tag = "chapel_windows"
+	id = "chapel_windows"
 	},
 /turf/simulated/floor/plating,
 /area/chapel/main)
