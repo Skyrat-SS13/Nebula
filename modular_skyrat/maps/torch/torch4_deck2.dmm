@@ -2481,8 +2481,7 @@
 /area/maintenance/seconddeck/forestarboard)
 "eF" = (
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Second Deck Subgrid";
-	name_tag = "Second Deck Subgrid"
+	name = "Powernet Sensor - Second Deck Subgrid"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -3450,8 +3449,7 @@
 /area/engineering/engine_room)
 "gB" = (
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Atmospherics Subgrid";
-	name_tag = "Atmospherics Subgrid"
+	name = "Powernet Sensor - Atmospherics Subgrid"
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -3757,8 +3755,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Master Grid";
-	name_tag = "Master"
+	name = "Powernet Sensor - Master Grid"
 	},
 /obj/structure/cable{
 	d2 = 8;
@@ -3889,8 +3886,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Engine Output";
-	name_tag = "Engine Output"
+	name = "Powernet Sensor - Engine Output"
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -9292,8 +9288,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/power/sensor{
-	name = "R-UST Power Generation - Powernet Sensor";
-	name_tag = "R-UST Power Generation"
+	name = "R-UST Power Generation - Powernet Sensor"
 	},
 /obj/structure/cable/yellow{
 	d2 = 8;
@@ -16723,8 +16718,7 @@
 /area/engineering/atmos)
 "Rn" = (
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Shield Subgrid";
-	name_tag = "Shield Subgrid"
+	name = "Powernet Sensor - Shield Subgrid"
 	},
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -17931,8 +17925,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Engine Subgrid";
-	name_tag = "Engine Subgrid"
+	name = "Powernet Sensor - Engine Subgrid"
 	},
 /obj/machinery/power/apc/super/critical{
 	dir = 2;

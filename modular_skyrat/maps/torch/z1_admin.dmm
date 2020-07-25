@@ -404,7 +404,6 @@
 /area/centcom/evac)
 "ace" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_1_recovery_hatch";
 	locked = 1;
@@ -417,7 +416,6 @@
 /area/centcom/evac)
 "acf" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_2_recovery_hatch";
 	locked = 1;
@@ -547,7 +545,6 @@
 /area/centcom/evac)
 "acI" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "escape_pod_1_recovery";
 	pixel_x = 25;
 	pixel_y = 30;
@@ -600,7 +597,6 @@
 /area/centcom/evac)
 "acM" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "escape_pod_2_recovery";
 	pixel_x = -25;
 	pixel_y = 30;
@@ -1044,7 +1040,6 @@
 /area/space)
 "aeI" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_5_recovery_hatch";
 	locked = 1;
@@ -1057,7 +1052,6 @@
 /area/centcom/evac)
 "aeJ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "escape_pod_5_recovery";
 	pixel_x = -25;
 	pixel_y = 25;
@@ -1080,7 +1074,6 @@
 /area/centcom/evac)
 "aeL" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "escape_pod_3_recovery";
 	pixel_x = 25;
 	pixel_y = -25;
@@ -1094,7 +1087,6 @@
 /area/centcom/evac)
 "aeM" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "escape_pod_3_recovery_hatch";
 	locked = 1;
@@ -2162,7 +2154,7 @@
 /turf/simulated/floor/plating,
 /area/centcom/evac)
 "ala" = (
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/space)
 "alg" = (
 /turf/unsimulated/beach/sand{
@@ -2590,7 +2582,6 @@
 /area/shuttle/administration/centcom)
 "atX" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "admin_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 25;
@@ -2677,7 +2668,6 @@
 /area/shuttle/administration/centcom)
 "aun" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "admin_shuttle_bay_door";
 	locked = 1
@@ -3089,7 +3079,6 @@
 /area/shuttle/administration/centcom)
 "avI" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "admin_shuttle";
 	pixel_x = -25;
 	pixel_y = 0;
@@ -3160,7 +3149,6 @@
 /area/centcom/living)
 "avS" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "admin_shuttle_hatch";
 	locked = 1;
@@ -5730,7 +5718,6 @@
 /area/shuttle/specops/centcom)
 "aEC" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "specops_shuttle_port";
 	name = "port docking hatch controller";
 	pixel_x = 24;
@@ -5785,7 +5772,6 @@
 /area/shuttle/specops/centcom)
 "aEW" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "specops_shuttle_port_hatch";
 	locked = 1;
@@ -5797,7 +5783,6 @@
 /area/shuttle/specops/centcom)
 "aEX" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "specops_centcom_dock_door";
 	locked = 1
@@ -5915,7 +5900,6 @@
 /area/centcom/holding)
 "aFK" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "specops_shuttle_fore";
 	name = "forward docking hatch controller";
 	pixel_x = 0;
@@ -6042,7 +6026,6 @@
 /area/centcom/holding)
 "aGq" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "specops_shuttle_fore_hatch";
 	locked = 1;
@@ -6312,7 +6295,6 @@
 /area/centcom/holding)
 "aHn" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "centcom_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 0;
@@ -6420,7 +6402,6 @@
 /area/centcom/holding)
 "aHC" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	glass = 1380;
 	icon_state = "closed";
 	id_tag = "centcom_shuttle_bay_door";
@@ -6530,7 +6511,6 @@
 /area/shuttle/transport1/centcom)
 "aHR" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "centcom_shuttle_hatch";
 	locked = 1;
@@ -7245,7 +7225,6 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	id_tag = "centcom_shuttle";
 	pixel_x = -24;
 	pixel_y = 0;
@@ -8091,7 +8070,7 @@
 	},
 /area/tdome/tdome1)
 "aLW" = (
-/turf/simulated/mineral,
+/turf/simulated/wall/natural,
 /area/merchant_station)
 "aMb" = (
 /obj/machinery/vending/robotics,
@@ -8188,7 +8167,6 @@
 	dir = 1
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list("ACCESS_MERCHANT")
 	},
@@ -8241,7 +8219,6 @@
 /area/merchant_station)
 "aMF" = (
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list("ACCESS_MERCHANT")
 	},
@@ -8627,7 +8604,6 @@
 /area/merchant_station)
 "aNV" = (
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = list("ACCESS_MERCHANT")
 	},
@@ -9808,7 +9784,6 @@
 	pixel_y = 0
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
 	id_tag = "merchant_ship_dock";
 	pixel_x = -24;
 	pixel_y = 0;
@@ -9863,7 +9838,6 @@
 "aSL" = (
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1380;
 	master_tag = "merchant_ship_dock";
 	name = "exterior access button";
 	pixel_x = 6;
@@ -9871,7 +9845,6 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1380;
 	master_tag = "merchant_ship_dock";
 	name = "interior access button";
 	pixel_x = -6;
@@ -10024,7 +9997,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "merchant_ship_interior";
 	locked = 1;
@@ -10044,7 +10016,6 @@
 	icon_state = "map"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
 	id_tag = "merchant_ship_sensor";
 	pixel_x = 28;
 	pixel_y = 0
@@ -10250,7 +10221,6 @@
 /area/shuttle/merchant/home)
 "aTY" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "merchant_ship_exterior";
 	locked = 1;
@@ -10258,7 +10228,6 @@
 	},
 /obj/machinery/button/access{
 	command = "cycle_exterior";
-	frequency = 1380;
 	master_tag = "merchant_ship_dock";
 	pixel_x = -28;
 	pixel_y = 0
@@ -10355,7 +10324,6 @@
 /area/merchant_station)
 "aUh" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "merchant_station_exterior";
 	locked = 1;
@@ -10401,7 +10369,6 @@
 /area/shuttle/merchant/home)
 "aUw" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
 	id_tag = "merchant_station_dock";
 	pixel_x = -28;
 	pixel_y = 0;
@@ -10413,7 +10380,6 @@
 	tag_interior_sensor = null
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
 	id_tag = "merchant_station_sensor";
 	pixel_x = -28;
 	pixel_y = -10
@@ -10433,7 +10399,6 @@
 /area/merchant_station)
 "aUy" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
 	icon_state = "closed";
 	id_tag = "merchant_station_interior";
 	locked = 1;

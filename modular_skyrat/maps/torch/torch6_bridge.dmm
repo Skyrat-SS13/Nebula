@@ -1149,8 +1149,7 @@
 	c_tag = "Substation - Bridge"
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Bridge Subgrid";
-	name_tag = "Bridge Subgrid"
+	name = "Powernet Sensor - Bridge Subgrid"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -5609,8 +5608,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - AI Subgrid";
-	name_tag = "AI Subgrid"
+	name = "Powernet Sensor - AI Subgrid"
 	},
 /obj/structure/cable/cyan{
 	d2 = 8;

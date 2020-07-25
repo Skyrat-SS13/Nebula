@@ -1912,8 +1912,7 @@
 	dir = 4
 	},
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Third Deck Subgrid";
-	name_tag = "Third Deck Subgrid"
+	name = "Powernet Sensor - Third Deck Subgrid"
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,

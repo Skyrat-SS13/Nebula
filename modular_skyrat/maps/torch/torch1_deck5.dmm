@@ -7870,8 +7870,7 @@
 /area/maintenance/substation/fifthdeck)
 "rc" = (
 /obj/machinery/power/sensor{
-	name = "Powernet Sensor - Fifth Deck Subgrid";
-	name_tag = "Fifth Deck Subgrid"
+	name = "Powernet Sensor - Fifth Deck Subgrid"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -12620,7 +12619,6 @@
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief Science Officer's Desk";
-	departmentType = 5;
 	name = "Chief Science Officer RC";
 	pixel_x = -30;
 	pixel_y = 0
@@ -15017,7 +15015,6 @@
 "Oy" = (
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
-	departmentType = 2;
 	pixel_x = 32;
 	pixel_y = 0
 	},
