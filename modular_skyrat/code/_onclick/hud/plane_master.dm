@@ -52,11 +52,10 @@
 	appearance_flags = PLANE_MASTER
 
 /obj/screen/plane_master/wall/backdrop(mob/mymob)
-	/*if(mymob?.client?.prefs.ambientocclusion)
+	if(mymob?.client?.get_preference_value(/datum/client_preference/ambient_occlusion) == GLOB.PREF_YES)
 		add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(4, "#04080FAA"))
 	else
-		remove_filter("ambient_occlusion")*/
-	add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(4, "#04080FAA"))
+		remove_filter("ambient_occlusion")
 
 /obj/screen/plane_master/above_wall
 	name = "above wall plane master"
@@ -64,11 +63,10 @@
 	appearance_flags = PLANE_MASTER
 
 /obj/screen/plane_master/above_wall/backdrop(mob/mymob)
-	/*if(mymob?.client?.prefs.ambientocclusion)
+	if(mymob?.client?.get_preference_value(/datum/client_preference/ambient_occlusion) == GLOB.PREF_YES)
 		add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(3, "#04080F64"))
 	else
-		remove_filter("ambient_occlusion")*/
-	add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(3, "#04080F64"))
+		remove_filter("ambient_occlusion")
 
 ///Contains most things in the game world
 /obj/screen/plane_master/game_world
@@ -78,9 +76,8 @@
 	blend_mode = BLEND_OVERLAY
 
 /obj/screen/plane_master/game_world/backdrop(mob/mymob)
-	/*if(mymob?.client?.prefs.ambientocclusion)
+	if(mymob?.client?.get_preference_value(/datum/client_preference/ambient_occlusion) == GLOB.PREF_YES)
 		add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(4, "#04080FAA"))
 	else
-		remove_filter("ambient_occlusion")*/
-	add_filter("ambient_occlusion", 0, AMBIENT_OCCLUSION(4, "#04080FAA"))
+		remove_filter("ambient_occlusion")
 

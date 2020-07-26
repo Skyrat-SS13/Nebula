@@ -1013,5 +1013,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden
 	plane = FLOOR_PLANE
 
+/obj/machinery/atmospherics/pipe/manifold/hidden
+	plane = FLOOR_PLANE
+
+/obj/machinery/atmospherics/pipe/manifold4w/hidden
+	plane = FLOOR_PLANE
+
+/obj/machinery/atmospherics/pipe/cap/hidden
+	plane = FLOOR_PLANE
+
 /obj/structure/cable
+	plane = FLOOR_PLANE
+
+/obj/structure/disposalpipe
 	plane = FLOOR_PLANE
