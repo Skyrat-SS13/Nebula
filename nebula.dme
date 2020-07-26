@@ -3344,6 +3344,7 @@
 #include "modular_skyrat\code\modules\species\station\lizard_subspecies.dm"
 #include "modular_skyrat\code\modules\species\station\machine.dm"
 #include "modular_skyrat\code\modules\species\station\sergal.dm"
+#include "modular_skyrat\code\modules\species\station\serpentid.dm"
 #include "modular_skyrat\code\modules\species\station\skrell.dm"
 #include "modular_skyrat\code\modules\species\station\station.dm"
 #include "modular_skyrat\code\modules\species\station\tajaran.dm"

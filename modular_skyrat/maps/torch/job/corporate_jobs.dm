@@ -17,7 +17,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/workplace_liaison
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-	min_skill = list(   SKILL_BUREAUCRACY	= SKILL_EXPERT,
+	min_skill = list(   SKILL_LITERACY	= SKILL_EXPERT,
 	                    SKILL_FINANCE		= SKILL_BASIC)
 	skill_points = 20
 	access = list(access_liaison, access_bridge, access_solgov_crew,
@@ -48,7 +48,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/passenger/corporate_bodyguard
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
 	                    SKILL_WEAPONS     = SKILL_ADEPT,

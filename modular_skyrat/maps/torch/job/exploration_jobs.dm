@@ -14,7 +14,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o1
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_ADEPT,
 	                    SKILL_SCIENCE     = SKILL_ADEPT,
 	                    SKILL_PILOT       = SKILL_BASIC)

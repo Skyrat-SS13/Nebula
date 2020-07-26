@@ -1006,3 +1006,12 @@
 
 /obj/machinery/hologram/holopad
 	plane = FLOOR_PLANE
+
+/obj/structure/catwalk 
+	plane = FLOOR_PLANE
+
+/obj/machinery/atmospherics/pipe/simple/hidden
+	plane = FLOOR_PLANE
+
+/obj/structure/cable
+	plane = FLOOR_PLANE

@@ -18,7 +18,7 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/ec/o1)
-	min_skill = list(SKILL_BUREAUCRACY = SKILL_BASIC)
+	min_skill = list(SKILL_LITERACY = SKILL_BASIC)
 	access = list(access_morgue, access_chapel_office, access_crematorium, access_solgov_crew)
 	minimal_access = list()
 

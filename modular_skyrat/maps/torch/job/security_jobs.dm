@@ -18,7 +18,7 @@
 		/datum/mil_rank/fleet/e7,
 		/datum/mil_rank/fleet/e8,
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
 	                    SKILL_WEAPONS     = SKILL_ADEPT,
@@ -66,7 +66,7 @@
 		/datum/mil_rank/civ/contractor,
 		/datum/mil_rank/sol/agent
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
@@ -107,7 +107,7 @@
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
 	                    SKILL_WEAPONS     = SKILL_ADEPT,

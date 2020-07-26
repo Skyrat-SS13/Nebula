@@ -23,7 +23,7 @@
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/civ/contractor
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_MEDICAL     = SKILL_EXPERT,
 	                    SKILL_ANATOMY     = SKILL_EXPERT,
 	                    SKILL_CHEMISTRY   = SKILL_BASIC,
@@ -63,7 +63,7 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/civ/contractor
 	)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_LITERACY = SKILL_ADEPT,
 	                    SKILL_MEDICAL     = SKILL_EXPERT,
 	                    SKILL_ANATOMY     = SKILL_EXPERT,
 	                    SKILL_CHEMISTRY   = SKILL_BASIC,
@@ -221,7 +221,7 @@
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/ec/o1)
 	min_skill = list(
-		SKILL_BUREAUCRACY = SKILL_BASIC,
+		SKILL_LITERACY = SKILL_ADEPT,
 		SKILL_MEDICAL     = SKILL_BASIC
 	)
 	max_skill = list(
