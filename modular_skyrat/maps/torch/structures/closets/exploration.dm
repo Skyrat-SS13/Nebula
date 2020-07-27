@@ -99,7 +99,7 @@
 		/obj/item/radio/headset/headset_pilot/alt,
 		/obj/item/binoculars,
 		/obj/item/clothing/gloves/thick,
-		/obj/item/clothing/suit/storage/hazardvest/blue,
+		/obj/item/clothing/suit/storage/hazardvest,
 		/obj/item/clothing/head/helmet/solgov/pilot,
 		/obj/item/clothing/head/helmet/solgov/pilot/fleet,
 		/obj/item/clothing/head/helmet/nt/pilot,

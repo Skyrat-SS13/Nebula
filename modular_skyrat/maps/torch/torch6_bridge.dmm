@@ -6044,7 +6044,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_foyer)
 "me" = (
-/obj/machinery/bluespace_beacon,
+/obj/machinery/tracking_beacon,
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 6;
 	icon_state = "intact"

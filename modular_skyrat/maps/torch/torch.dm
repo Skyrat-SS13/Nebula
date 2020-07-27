@@ -160,7 +160,7 @@
 	#include "../../../maps/away/magshield/magshield.dm"
 	#include "../../../maps/away/casino/casino.dm"
 	#include "../../../maps/away/yacht/yacht.dm"
-	#include "../../../maps/away/blueriver/blueriver.dm"
+	//#include "../../../maps/away/blueriver/blueriver.dm"
 	#include "../../../maps/away/slavers/slavers_base.dm"
 	#include "../../../maps/away/mobius_rift/mobius_rift.dm"
 	#include "../../../mods/government/away_sites/icarus/icarus.dm"

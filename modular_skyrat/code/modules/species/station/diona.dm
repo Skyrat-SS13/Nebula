@@ -291,8 +291,8 @@
 
 	if(holding_item)
 		unEquip(holding_item)
-	if(hat)
-		unEquip(hat)
+	/*if(hat)
+		unEquip(hat)*/
 
 	jump_to_next_nymph()
 

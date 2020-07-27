@@ -2950,7 +2950,7 @@
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
 "gb" = (
-/obj/machinery/bluespacerelay,
+/obj/machinery/commsrelay,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/bluegrid,
 /area/tcommsat/chamber)
@@ -12032,7 +12032,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/thirddeck)
 "Au" = (
-/obj/machinery/bluespace_beacon,
+/obj/machinery/tracking_beacon,
 /obj/effect/floor_decal/techfloor{
 	icon_state = "techfloor_edges";
 	dir = 1

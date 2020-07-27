@@ -1027,3 +1027,79 @@
 
 /obj/structure/disposalpipe
 	plane = FLOOR_PLANE
+
+//stripper
+/obj/item/clothing/under/stripper
+	body_parts_covered = 0
+
+/obj/item/clothing/under/stripper/stripper_pink
+	name = "pink swimsuit"
+	desc = "A rather skimpy pink swimsuit."
+	icon_state = "stripper_p_under"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/stripper/stripper_green
+	name = "green swimsuit"
+	desc = "A rather skimpy green swimsuit."
+	icon_state = "stripper_g_under"
+	siemens_coefficient = 1
+
+/obj/item/clothing/suit/stripper/stripper_pink
+	name = "pink skimpy dress"
+	desc = "A rather skimpy pink dress."
+	icon_state = "stripper_p_over"
+	siemens_coefficient = 1
+
+/obj/item/clothing/suit/stripper/stripper_green
+	name = "green skimpy dress"
+	desc = "A rather skimpy green dress."
+	icon_state = "stripper_g_over"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/stripper/mankini
+	name = "mankini"
+	desc = "No honest man would wear this abomination."
+	icon_state = "mankini"
+	siemens_coefficient = 1
+
+/obj/item/clothing/suit/xenos
+	name = "xenos suit"
+	desc = "A suit made out of chitinous alien hide."
+	icon_state = "xenos"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	siemens_coefficient = 2.0
+//swimsuit
+/obj/item/clothing/under/swimsuit/
+	siemens_coefficient = 1
+	body_parts_covered = 0
+
+/obj/item/clothing/under/swimsuit/black
+	name = "black swimsuit"
+	desc = "An oldfashioned black swimsuit."
+	icon_state = "swim_black"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/swimsuit/blue
+	name = "blue swimsuit"
+	desc = "An oldfashioned blue swimsuit."
+	icon_state = "swim_blue"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/swimsuit/purple
+	name = "purple swimsuit"
+	desc = "An oldfashioned purple swimsuit."
+	icon_state = "swim_purp"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/swimsuit/green
+	name = "green swimsuit"
+	desc = "An oldfashioned green swimsuit."
+	icon_state = "swim_green"
+	siemens_coefficient = 1
+
+/obj/item/clothing/under/swimsuit/red
+	name = "red swimsuit"
+	desc = "An oldfashioned red swimsuit."
+	icon_state = "swim_red"
+	siemens_coefficient = 1

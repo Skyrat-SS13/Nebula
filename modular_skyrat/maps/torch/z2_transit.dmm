@@ -51,7 +51,7 @@
 /turf/space/transit/north,
 /area/space)
 "f" = (
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "g" = (
 /obj/effect/step_trigger/thrower{
@@ -60,7 +60,7 @@
 	name = "thrower_throwdown";
 	tiles = 0
 	},
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "h" = (
 /obj/effect/step_trigger/thrower{
@@ -88,7 +88,7 @@
 	name = "thrower_escapeshuttletop(right)";
 	tiles = 0
 	},
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "l" = (
 /obj/effect/step_trigger/thrower{
@@ -97,7 +97,7 @@
 	name = "thrower_escapeshuttletop(left)";
 	tiles = 0
 	},
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "m" = (
 /obj/effect/shuttle_landmark/escape_pod/transit/pod12,
@@ -113,7 +113,7 @@
 /area/space)
 "q" = (
 /obj/effect/shuttle_landmark/ert/internim,
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "s" = (
 /obj/effect/step_trigger/thrower{
@@ -158,7 +158,7 @@
 	stopper = 0;
 	tiles = 0
 	},
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "y" = (
 /obj/effect/shuttle_landmark/escape_pod/transit/pod8,
@@ -175,7 +175,7 @@
 	nostop = 0;
 	tiles = 0
 	},
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "B" = (
 /turf/space/transit/east,
@@ -193,7 +193,7 @@
 /area/space)
 "E" = (
 /obj/effect/shuttle_landmark/ninja/internim,
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "F" = (
 /obj/effect/step_trigger/thrower{
@@ -206,7 +206,7 @@
 /area/space)
 "G" = (
 /obj/effect/shuttle_landmark/skipjack/internim,
-/turf/space/bluespace,
+/turf/space/infinity,
 /area/space)
 "H" = (
 /obj/effect/shuttle_landmark/transit/torch/guppy,

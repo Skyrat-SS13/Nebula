@@ -16405,7 +16405,7 @@
 "Qv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/bluespace_beacon,
+/obj/machinery/tracking_beacon,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
