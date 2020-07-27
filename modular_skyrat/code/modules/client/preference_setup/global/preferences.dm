@@ -1,3 +1,6 @@
+/datum/preferences
+	icon_size = 64
+
 /datum/client_preference/ambient_occlusion
 	description ="Ambient occlusion"
 	key = "AMBIENT_OCCLUSION"
@@ -19,3 +22,6 @@
 /datum/client_preference/widescreen/changed(var/mob/preference_mob, var/new_value)
 	if(preference_mob.client)
 		preference_mob.client.set_view()
+
+/datum/client_preference/chat_position
+	default_value = GLOB.PREF_YES

@@ -39,7 +39,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_type = /obj/item/card/id/torch/silver/medical
 	pda_type = /obj/item/modular_computer/pda/heads/cmo
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 
 /decl/hierarchy/outfit/job/torch/crew/command/cmo/New()
 	..()
@@ -57,7 +57,7 @@
 	l_ear = /obj/item/radio/headset/heads/ce
 	id_type = /obj/item/card/id/torch/silver/engineering
 	pda_type = /obj/item/modular_computer/pda/heads/ce
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/New()

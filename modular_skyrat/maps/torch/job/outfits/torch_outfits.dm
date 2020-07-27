@@ -5,7 +5,7 @@
 	l_ear = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/black
 	pda_type = /obj/item/modular_computer/pda
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 
 /decl/hierarchy/outfit/job/torch/crew
 	name = OUTFIT_JOB_NAME("Torch Crew Outfit")

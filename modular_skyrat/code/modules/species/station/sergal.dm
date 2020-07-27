@@ -99,7 +99,7 @@
 
 /datum/species/sergal/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes_str)
 
 /datum/species/sergal/get_root_species_name(var/mob/living/carbon/human/H)
 	return SPECIES_SERGAL

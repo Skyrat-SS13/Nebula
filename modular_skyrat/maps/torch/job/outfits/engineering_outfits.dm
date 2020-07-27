@@ -1,7 +1,7 @@
 /decl/hierarchy/outfit/job/torch/crew/engineering
 	hierarchy_type = /decl/hierarchy/outfit/job/torch/crew/engineering
 	l_ear = /obj/item/radio/headset/headset_eng
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/job/torch/crew/engineering/New()

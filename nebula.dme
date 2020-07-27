@@ -3284,6 +3284,7 @@
 #include "modular_skyrat\code\modules\culture_descriptor\religion\religions_human.dm"
 #include "modular_skyrat\code\modules\culture_descriptor\religion\religions_unathi.dm"
 #include "modular_skyrat\code\modules\culture_descriptor\religion\religions_vox.dm"
+#include "modular_skyrat\code\modules\dmapi\tgs\includes.dm"
 #include "modular_skyrat\code\modules\hydroponics\seed_packets.dm"
 #include "modular_skyrat\code\modules\mob\animations.dm"
 #include "modular_skyrat\code\modules\mob\inventory.dm"
@@ -3387,6 +3388,5 @@
 #include "modular_skyrat\maps\torch\torch.dm"
 #include "modular_skyrat\maps\torch\torch_define.dm"
 #include "modular_skyrat\~mapload_init\~mapload_init.dm"
-#include "modular_skyrat\code\modules\dmapi\tgs\includes.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

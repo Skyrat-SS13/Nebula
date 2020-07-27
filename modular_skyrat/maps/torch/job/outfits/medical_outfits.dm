@@ -2,7 +2,7 @@
 	hierarchy_type = /decl/hierarchy/outfit/job/torch/crew/medical
 	l_ear = /obj/item/radio/headset/headset_med
 	pda_type = /obj/item/modular_computer/pda/medical
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 
 /decl/hierarchy/outfit/job/torch/crew/medical/New()
 	..()

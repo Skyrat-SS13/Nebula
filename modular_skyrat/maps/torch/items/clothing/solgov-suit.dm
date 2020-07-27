@@ -429,7 +429,7 @@
 
 /obj/item/clothing/suit/space/void/command/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0
+	slowdown_per_slot[slot_wear_suit_str] = 0
 
 /obj/item/clothing/suit/space/void/command/prepared
 	helmet = /obj/item/clothing/head/helmet/space/void/command

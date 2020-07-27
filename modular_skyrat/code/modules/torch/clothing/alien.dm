@@ -19,7 +19,7 @@
 
 /obj/item/clothing/suit/space/vox/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1
+	slowdown_per_slot[slot_wear_suit_str] = 1
 
 /obj/item/clothing/head/helmet/space/vox
 	armor = list(

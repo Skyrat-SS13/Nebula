@@ -48,9 +48,9 @@
 				var/list/accessory_args = accessory_data.Copy()
 				accessory_args[1] = src
 				for(var/i in 1 to amt)
-					player.equip_to_slot_or_del(new accessory_path(arglist(accessory_args)), slot_tie)
+					player.equip_to_slot_or_del(new accessory_path(arglist(accessory_args)), slot_tie_str)
 			else
 				for(var/i in 1 to (isnull(accessory_data)? 1 : accessory_data))
-					player.equip_to_slot_or_del(new accessory_path(src), slot_tie)
+					player.equip_to_slot_or_del(new accessory_path(src), slot_tie_str)
 
 	return 1

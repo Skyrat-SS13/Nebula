@@ -58,7 +58,7 @@
 	l_ear = /obj/item/radio/headset
 	shoes = /obj/item/clothing/shoes/terran
 	pda_type = /obj/item/modular_computer/pda
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 
 /decl/hierarchy/outfit/job/terran/crew/service
 	name = OUTFIT_JOB_NAME("Independent Navy - Service")

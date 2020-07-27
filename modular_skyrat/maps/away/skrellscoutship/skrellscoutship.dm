@@ -136,7 +136,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	gloves = /obj/item/clothing/gloves/thick/swat/skrell
 	pda_type = /obj/item/modular_computer/pda
-	pda_slot = slot_l_store
+	pda_slot = slot_l_store_str
 	l_ear = /obj/item/radio/headset/skrellian
 	id_type = /obj/item/card/id/skrellscoutship
 	l_pocket = /obj/item/clothing/accessory/badge/tags/skrell

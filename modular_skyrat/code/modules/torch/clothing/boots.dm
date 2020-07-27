@@ -111,7 +111,7 @@
 
 /obj/item/clothing/shoes/swimmingfins/New()
 	..()
-	slowdown_per_slot[slot_shoes] = 1
+	slowdown_per_slot[slot_shoes_str] = 1
 
 /obj/item/clothing/shoes/athletic
 	name = "athletic shoes"
@@ -175,11 +175,11 @@ obj/item/clothing/shoes/heels/red
 	icon_state = "jungle"
 	force = 3
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_MINOR, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_MINOR, 
-		bomb = ARMOR_BOMB_PADDED, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_MINOR,
+		bomb = ARMOR_BOMB_PADDED,
 		bio = ARMOR_BIO_MINOR
 		)
 	siemens_coefficient = 0.7

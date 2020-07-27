@@ -111,15 +111,15 @@
 	)
 
 /datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H)
-	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/vox(H), slot_wear_mask)
+	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/vox(H), slot_wear_mask_str)
 
-	if(istype(H.get_equipped_item(slot_back), /obj/item/storage/backpack))
-		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand)
-		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H.back), slot_in_backpack)
+	if(istype(H.get_equipped_item(slot_back_str), /obj/item/storage/backpack))
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_r_hand_str)
+		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H.back), slot_in_backpack_str)
 		H.set_internals(H.r_hand)
 	else
-		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back)
-		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H), slot_r_hand)
+		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back_str)
+		H.equip_to_slot_or_del(new /obj/item/storage/box/vox(H), slot_r_hand_str)
 		H.set_internals(H.back)
 
 /datum/species/vox/disfigure_msg(var/mob/living/carbon/human/H)

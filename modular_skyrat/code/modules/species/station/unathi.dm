@@ -126,7 +126,7 @@
 
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes_str)
 
 /*/datum/species/unathi/proc/handle_sugar(var/mob/living/carbon/human/M, var/datum/reagent/sugar, var/efficiency = 1)
 	var/effective_dose = efficiency * M.chem_doses[sugar.type]

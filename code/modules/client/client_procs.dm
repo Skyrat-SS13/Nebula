@@ -449,8 +449,8 @@ client/verb/character_setup()
 
 /client/verb/OnResize()
 	set hidden = 1
-	/*var/divisor = text2num(winget(src, "mapwindow.map", "icon-size")) || world.icon_size
-	var/winsize_string = winget(src, "mapwindow.map", "size")
+	var/divisor = text2num(winget(src, "mapwindow.map", "icon-size")) || world.icon_size
+	/*var/winsize_string = winget(src, "mapwindow.map", "size")
 	last_view_x_dim = Clamp(ceil(text2num(winsize_string) / divisor), 15, 41)
 	last_view_y_dim = Clamp(ceil(text2num(copytext(winsize_string,findtext(winsize_string,"x")+1,0)) / divisor), 15, 41)
 	if(last_view_x_dim % 2 == 0) last_view_x_dim++
