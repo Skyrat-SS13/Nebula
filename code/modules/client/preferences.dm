@@ -1,6 +1,6 @@
 #define SAVE_RESET -1
 
-datum/preferences
+/datum/preferences
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
@@ -15,7 +15,7 @@ datum/preferences
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change
 
-		//Mob preview
+	//Mob preview
 	var/icon/preview_icon = null
 
 	var/client/client = null
@@ -324,3 +324,12 @@ datum/preferences
 		panel.close()
 		panel = null
 	close_browser(user, "window=saves")
+
+/datum/preferences/proc/apply_post_login_preferences()
+	set waitfor = 0
+	if(!client)
+		return
+	if(client.get_preference_value(/datum/client_preference/chat_position) == GLOB.PREF_YES)
+		client.update_chat_position(TRUE)
+	if(client.get_preference_value(/datum/client_preference/fullscreen_mode) != GLOB.PREF_OFF)
+		client.toggle_fullscreen(client.get_preference_value(/datum/client_preference/fullscreen_mode))

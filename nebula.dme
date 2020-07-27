@@ -86,6 +86,9 @@
 #include "code\__defines\_modular_skyrat\_planes+layers.dm"
 #include "code\__defines\_modular_skyrat\colors.dm"
 #include "code\__defines\_modular_skyrat\mobs.dm"
+#include "code\__defines\modular_skyrat\_protect.dm"
+#include "code\__defines\modular_skyrat\tgs.config.dm"
+#include "code\__defines\modular_skyrat\tgs.dm"
 #include "code\_global_vars\configuration.dm"
 #include "code\_global_vars\logging.dm"
 #include "code\_global_vars\mapping.dm"
@@ -3384,5 +3387,6 @@
 #include "modular_skyrat\maps\torch\torch.dm"
 #include "modular_skyrat\maps\torch\torch_define.dm"
 #include "modular_skyrat\~mapload_init\~mapload_init.dm"
+#include "modular_skyrat\code\modules\dmapi\tgs\includes.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE
