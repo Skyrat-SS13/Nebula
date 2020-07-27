@@ -17,7 +17,7 @@
 	base_species = SPECIES_HUMAN
 	limb_blend = ICON_MULTIPLY
 	tail_blend = ICON_MULTIPLY
-	bodytype =              BODYTYPE_HUMANOID
+	bodytype = BODYTYPE_HUMANOID
 
 	unarmed_attacks = list(/decl/natural_attack/stomp, /decl/natural_attack/kick, /decl/natural_attack/punch, /decl/natural_attack/bite)
 
@@ -144,9 +144,9 @@
 		)
 	)
 
-/datum/species/custom/get_bodytype()
+/*/datum/species/custom/get_bodytype()
 	var/datum/species/real = all_species[base_species]
-	return real.name
+	return real.name*/
 
 /datum/species/custom/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
 	var/datum/species/real = all_species[base_species]
