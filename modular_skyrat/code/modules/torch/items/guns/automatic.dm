@@ -1,7 +1,7 @@
 /obj/item/gun/projectile/automatic/bullpup_rifle
 	name = "bullpup assault rifle"
 	desc = "The Hephaestus Industries Z8 Bulldog is an older model bullpup carbine. Makes you feel like a space marine when you hold it."
-	icon = 'icons/obj/guns/bullpup_rifle.dmi'
+	icon = 'modular_skyrat/icons/obj/guns/bullpup_rifle.dmi'
 	icon_state = "carbine"
 	item_state = "z8carbine"
 	w_class = ITEM_SIZE_HUGE
@@ -77,7 +77,7 @@
 /obj/item/gun/projectile/automatic/sec_smg
 	name = "submachine gun"
 	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use."
-	icon = 'icons/obj/guns/sec_smg.dmi'
+	icon = 'modular_skyrat/icons/obj/guns/sec_smg.dmi'
 	icon_state = "smg"
 	item_state = "wt550"
 	safety_icon = "safety"

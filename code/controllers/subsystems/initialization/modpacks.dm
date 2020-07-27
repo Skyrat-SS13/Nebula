@@ -5,7 +5,7 @@ SUBSYSTEM_DEF(modpacks)
 	var/list/loaded_modpacks = list()
 
 	// Compiled modpack information.
-	var/list/default_submap_whitelisted_species = list()
+	var/list/default_submap_whitelisted_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SERGAL, SPECIES_NORTHERN, SPECIES_EASTERN, SPECIES_CUSTOM, SPECIES_VULP, SPECIES_VASS, SPECIES_TAJ, SPECIES_AKULA, SPECIES_OLDUNATHI, SPECIES_HUMAN2, SPECIES_YEOSA, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_TRITONIAN, SPECIES_GRAVWORLDER, SPECIES_MULE, SPECIES_BOOSTER, SPECIES_VOX) //Skyrat change oh god thats a lot of species
 	var/list/default_submap_blacklisted_species = list(SPECIES_ALIEN, SPECIES_GOLEM)
 
 /datum/controller/subsystem/modpacks/Initialize()

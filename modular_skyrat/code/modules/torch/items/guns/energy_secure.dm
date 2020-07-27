@@ -4,6 +4,8 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 	name = "compact smartgun"
 	desc = "Combining the two LAEP90 variants, the secure and compact LAEP90-CS is the next best thing to keeping your security forces on a literal leash."
 	icon = 'modular_skyrat/icons/obj/guns/small_egun_secure.dmi'
+	icon_state = "smallgunstun"
+	item_state = "smallgunstun"
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_guns_secure.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_guns_secure.dmi',
@@ -28,6 +30,8 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 	name = "smartgun"
 	desc = "A more secure LAEP90, the LAEP90-S is designed to please paranoid constituents. Body cam not included."
 	icon = 'modular_skyrat/icons/obj/guns/energy_gun_secure.dmi'
+	icon_state = "energystun"
+	item_state = "energystun"
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_guns_secure.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_guns_secure.dmi',
