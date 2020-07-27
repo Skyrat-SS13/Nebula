@@ -445,18 +445,15 @@ client/verb/character_setup()
 	set hidden = 1
 	handle_resize(src)
 
-/proc/handle_resize(client/C)
+/*/proc/handle_resize(client/C) MOVED TO MODULAR_SKYRAT client_view
 	if (!C)
 		return
-	//SKYRAT CHANGES: oh god this view hurts my eyes but this is just a bandaid
-	/*var/divisor = text2num(winget(C, "mapwindow.map", "icon-size")) || world.icon_size
+	var/divisor = text2num(winget(C, "mapwindow.map", "icon-size")) || world.icon_size
 	var/winsize_string = winget(C, "mapwindow.map", "size")
 	C.last_view_x_dim = Clamp(ceil(text2num(winsize_string) / divisor), 15, 41)
 	C.last_view_y_dim = Clamp(ceil(text2num(copytext(winsize_string,findtext(winsize_string,"x")+1,0)) / divisor), 15, 41)
 	if(C.last_view_x_dim % 2 == 0) C.last_view_x_dim++
-	if(C.last_view_y_dim % 2 == 0) C.last_view_y_dim++*/
-	C.last_view_x_dim = 21
-	C.last_view_y_dim = 15
+	if(C.last_view_y_dim % 2 == 0) C.last_view_y_dim++
 	C.view = "[C.last_view_x_dim]x[C.last_view_y_dim]"
 
 	// Reset eye/perspective
@@ -474,7 +471,7 @@ client/verb/character_setup()
 	if(C.mob)
 		if(C.mob.l_general)
 			C.mob.l_general.fit_to_client_view(C.last_view_x_dim, C.last_view_y_dim)
-		C.mob.reload_fullscreen()
+		C.mob.reload_fullscreen()*/
 
 /client/proc/update_chat_position(use_alternative)
 	var/input_height = 0

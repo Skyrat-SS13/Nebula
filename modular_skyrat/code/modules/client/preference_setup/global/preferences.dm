@@ -11,10 +11,11 @@
 		PM.backdrop(preference_mob)
 
 /datum/client_preference/widescreen
-	description ="Widescreen (15x21)"
+	description ="Widescreen (21x15)"
 	key = "WIDESCREEN"
 	options = list(GLOB.PREF_YES, GLOB.PREF_NO)
 	default_value = GLOB.PREF_YES
 
 /datum/client_preference/widescreen/changed(var/mob/preference_mob, var/new_value)
-	return
+	if(preference_mob.client)
+		preference_mob.client.set_view()

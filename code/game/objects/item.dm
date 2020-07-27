@@ -820,7 +820,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 		return
 
 	user.client.view = world.view
-	user.client.OnResize()
+	//user.client.OnResize() //Skyrat change
 	if(!user.hud_used.hud_shown)
 		user.toggle_zoom_hud()
 

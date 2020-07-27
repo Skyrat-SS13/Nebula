@@ -3241,6 +3241,7 @@
 #include "modular_skyrat\code\game\objects\items\weapons\storage\boxes.dm"
 #include "modular_skyrat\code\game\objects\items\weapons\tanks\tank_types.dm"
 #include "modular_skyrat\code\game\turfs\flooring\flooring_premade.dm"
+#include "modular_skyrat\code\modules\client\client_view.dm"
 #include "modular_skyrat\code\modules\client\preference_setup\global\preferences.dm"
 #include "modular_skyrat\code\modules\client\preference_setup\loadout\geartweaks.dm"
 #include "modular_skyrat\code\modules\client\preference_setup\loadout\lists\clothing.dm"
