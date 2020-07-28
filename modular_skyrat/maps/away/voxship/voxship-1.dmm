@@ -508,8 +508,8 @@
 /turf/simulated/floor/plating/vox,
 /area/voxship/base)
 "bA" = (
-/obj/item/chems/glass/bottle/chloralhydrate,
-/obj/item/chems/glass/bottle/chloralhydrate,
+/obj/item/chems/glass/bottle/sedatives,
+/obj/item/chems/glass/bottle/sedatives,
 /obj/structure/table/rack,
 /obj/item/gun/projectile/dartgun/vox/raider,
 /obj/item/ammo_magazine/chemdart,

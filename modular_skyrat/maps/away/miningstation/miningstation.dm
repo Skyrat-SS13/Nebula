@@ -11,6 +11,7 @@
 	name = "Mining Station"
 	id = "awaysite_miningstation"
 	description = "An orbital Mining Station bearing authentication codes from Grayson Mining Industries, sensors show inconsistant lifesigns aboard the station."
+	prefix = "modular_skyrat/maps/away/"
 	suffixes = list("miningstation/miningstation.dmm")
 	cost = 2
 	area_usage_test_exempted_root_areas = list(/area/miningstation)

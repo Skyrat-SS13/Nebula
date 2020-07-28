@@ -7,6 +7,7 @@
 	name = "Skrellian Scout Ship"
 	id = "awaysite_skrell_scout"
 	description = "A Skrellian SDTF scouting vessel."
+	prefix = "modular_skyrat/maps/away/"
 	suffixes = list("skrellscoutship/skrellscoutship_revamp.dmm")
 	cost = 0.5
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/skrellscoutship, /datum/shuttle/autodock/overmap/skrellscoutshuttle)

@@ -3363,6 +3363,7 @@
 #include "modular_skyrat\code\modules\sprite_accessories\_accessory_markings.dm"
 #include "modular_skyrat\code\modules\sprite_accessories\accessory_tajara.dm"
 #include "modular_skyrat\code\modules\torch\torch_placeholder_code.dm"
+#include "modular_skyrat\code\modules\torch\torch_placeholder_part2.dm"
 #include "modular_skyrat\code\modules\torch\clothing\accessory.dm"
 #include "modular_skyrat\code\modules\torch\clothing\alien.dm"
 #include "modular_skyrat\code\modules\torch\clothing\boots.dm"

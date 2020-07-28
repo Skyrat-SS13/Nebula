@@ -260,8 +260,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/button/access/exterior{
-	frequency = 1439;
-	master_tag = "ZHPWestSolar";
+	id_tag = "ZHPWestSolar";
 	pixel_x = 25;
 	pixel_y = 25
 	},
@@ -270,7 +269,6 @@
 "aF" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPWestSolar_outer"
 	},
 /obj/structure/cable/yellow{
@@ -291,13 +289,10 @@
 	id_tag = "ZHPWestSolar_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1439;
-	id_tag = "ZHPWestSolar_sensor";
-	master_tag = "ZHPWestSolar";
+	id_tag = "ZHPWestSolar";
 	pixel_y = 25
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1439;
 	id_tag = "ZHPWestSolar";
 	pixel_y = -25;
 	tag_airpump = "ZHPWestSolar_pump";
@@ -310,7 +305,6 @@
 "aH" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPWestSolar_inner"
 	},
 /obj/structure/cable/yellow{
@@ -336,8 +330,7 @@
 	icon_state = "warning"
 	},
 /obj/machinery/button/access/interior{
-	frequency = 1439;
-	master_tag = "ZHPWestSolar";
+	id_tag = "ZHPWestSolar";
 	pixel_x = -25;
 	pixel_y = 25
 	},
@@ -362,8 +355,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/button/access/interior{
-	frequency = 1303;
-	master_tag = "ZHPEastSolar";
+	id_tag = "ZHPEastSolar";
 	pixel_x = 25;
 	pixel_y = 25
 	},
@@ -372,7 +364,6 @@
 "aL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPEastSolar_inner"
 	},
 /obj/structure/cable/yellow{
@@ -395,7 +386,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1439;
 	id_tag = "ZHPEastSolar";
 	pixel_y = -25;
 	tag_airpump = "ZHPEastSolar_pump";
@@ -404,9 +394,7 @@
 	tag_interior_door = "ZHPEastSolar_inner"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1439;
-	id_tag = "ZHPEastSolar_sensor";
-	master_tag = "ZHPWestSolar";
+	id_tag = "ZHPWestSolar";
 	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
@@ -414,7 +402,6 @@
 "aN" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPEastSolar_outer"
 	},
 /obj/structure/cable/yellow{
@@ -443,8 +430,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/button/access/exterior{
-	frequency = 1439;
-	master_tag = "ZHPEastSolar";
+	id_tag = "ZHPEastSolar";
 	pixel_x = -25;
 	pixel_y = 25
 	},
@@ -2406,7 +2392,6 @@
 	dir = 4
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = newlist()
 	},
@@ -2501,7 +2486,6 @@
 /area/lar_maria/mess_hall)
 "gX" = (
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = newlist()
 	},
@@ -2626,7 +2610,6 @@
 /obj/random/soap,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = newlist()
 	},
@@ -3039,7 +3022,6 @@
 	pixel_x = 0
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = newlist()
 	},
@@ -3353,8 +3335,7 @@
 	dir = 10
 	},
 /obj/machinery/button/access/interior{
-	frequency = 1439;
-	master_tag = "ZHPDock_airlock";
+	id_tag = "ZHPDock_airlock";
 	pixel_x = 25;
 	pixel_y = -25
 	},
@@ -3362,7 +3343,6 @@
 /area/lar_maria/hallway)
 "ji" = (
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPDock_airlock_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3370,7 +3350,6 @@
 /area/lar_maria/hallway)
 "jj" = (
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPDock_airlock_inner"
 	},
 /obj/machinery/door/firedoor,
@@ -3394,7 +3373,6 @@
 	id_tag = "ZHPDock_airlock_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1037;
 	id_tag = "ZHPCells_airlock";
 	pixel_x = 25;
 	pixel_y = 0;
@@ -3407,9 +3385,7 @@
 /area/lar_maria/hallway)
 "jn" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1439;
-	id_tag = "ZHPDock_airlock_sensor";
-	master_tag = "ZHPWestSolar";
+	id_tag = "ZHPWestSolar";
 	pixel_x = 25;
 	pixel_y = 0
 	},
@@ -3417,7 +3393,6 @@
 /area/lar_maria/hallway)
 "jo" = (
 /obj/machinery/door/airlock/external/bolted{
-	frequency = 1439;
 	id_tag = "ZHPDock_airlock_outer"
 	},
 /turf/simulated/floor/plating,
@@ -3431,8 +3406,7 @@
 /area/space)
 "jr" = (
 /obj/machinery/button/access/exterior{
-	frequency = 1039;
-	master_tag = "ZHPvirology_access_airlock";
+	id_tag = "ZHPvirology_access_airlock";
 	pixel_x = 25;
 	pixel_y = 15
 	},
@@ -3557,7 +3531,6 @@
 	pixel_x = 30
 	},
 /obj/machinery/alarm{
-	frequency = 1439;
 	pixel_y = 23;
 	req_access = newlist()
 	},

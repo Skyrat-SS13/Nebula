@@ -217,7 +217,7 @@
 /turf/simulated/floor/tiled,
 /area/lar_maria/vir_hallway)
 "ay" = (
-/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/smartfridge/chemistry,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_main)
 "aA" = (
@@ -1178,7 +1178,6 @@
 "de" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
-	frequency = 1041;
 	id_tag = "ZHPcells_access_airlock_outer"
 	},
 /obj/machinery/door/blast/regular/open{
@@ -1356,7 +1355,6 @@
 /area/lar_maria/cells)
 "dA" = (
 /obj/machinery/door/airlock/security{
-	frequency = 1041;
 	id_tag = "ZHPcells_access_airlock_outer"
 	},
 /obj/machinery/door/firedoor,
@@ -1640,7 +1638,6 @@
 "eu" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1041;
 	id_tag = "ZHPcells_access_airlock";
 	pixel_x = 0;
 	pixel_y = 0;
@@ -1899,7 +1896,7 @@
 /turf/simulated/floor/tiled,
 /area/lar_maria/vir_hallway)
 "eX" = (
-/obj/machinery/smartfridge/chemistry/virology,
+/obj/machinery/smartfridge/chemistry,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/lar_maria/vir_aux)
@@ -1988,7 +1985,6 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1043;
 	id_tag = "ZHPsec_access_airlock";
 	pixel_x = 0;
 	pixel_y = 0;
@@ -2482,7 +2478,6 @@
 /area/lar_maria/sec_wing)
 "fX" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1043;
 	id_tag = "ZHPsec__access_airlock_inner"
 	},
 /obj/machinery/door/firedoor,
@@ -2525,7 +2520,6 @@
 /area/lar_maria/sec_wing)
 "fZ" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1043;
 	id_tag = "ZHPsec__access_airlock_outer"
 	},
 /obj/machinery/door/firedoor,
@@ -2711,7 +2705,6 @@
 /area/lar_maria/vir_hallway)
 "gw" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1039;
 	id_tag = "ZHPvirology_access_airlock_inner"
 	},
 /obj/machinery/door/blast/regular/open{
@@ -2731,7 +2724,6 @@
 	icon_state = "tube1"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1039;
 	id_tag = "ZHPvirology_access_airlock";
 	pixel_x = 0;
 	pixel_y = 25;
@@ -2848,8 +2840,7 @@
 	dir = 4
 	},
 /obj/machinery/button/access/interior{
-	frequency = 1039;
-	master_tag = "ZHPvirology_access_airlock";
+	id_tag = "ZHPvirology_access_airlock";
 	pixel_x = 0;
 	pixel_y = -25
 	},
@@ -2857,7 +2848,6 @@
 /area/lar_maria/vir_hallway)
 "gP" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1039;
 	id_tag = "ZHPvirology_access_airlock_inner"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2885,9 +2875,7 @@
 "gR" = (
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/airlock_sensor{
-	frequency = 1039;
-	id_tag = "ZHPvirology_access_airlock_sensor";
-	master_tag = "ZHPvirology_access_airlock";
+	id_tag = "ZHPvirology_access_airlock";
 	pixel_x = 25;
 	pixel_y = 0
 	},
@@ -2930,7 +2918,6 @@
 /area/lar_maria/vir_access)
 "gY" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1039;
 	id_tag = "ZHPvirology_access_airlock_outer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2939,7 +2926,6 @@
 /area/lar_maria/vir_access)
 "gZ" = (
 /obj/machinery/door/airlock/virology{
-	frequency = 1039;
 	id_tag = "ZHPvirology_access_airlock_outer"
 	},
 /turf/simulated/floor/tiled,
@@ -3041,8 +3027,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/access/exterior{
-	frequency = 1039;
-	master_tag = "ZHPvirology_access_airlock";
+	id_tag = "ZHPvirology_access_airlock";
 	pixel_x = 25;
 	pixel_y = 15
 	},
@@ -3620,7 +3605,6 @@
 "iB" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1439;
 	id_tag = "ZHPCells_airlock";
 	pixel_x = 0;
 	pixel_y = 0;
@@ -3721,7 +3705,6 @@
 /area/lar_maria/sec_wing)
 "iN" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1439;
 	id_tag = "ZHPCells_airlock_inner"
 	},
 /obj/machinery/door/firedoor,
@@ -3742,7 +3725,6 @@
 /area/lar_maria/cells)
 "iP" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1439;
 	id_tag = "ZHPCells_airlock_outer"
 	},
 /obj/machinery/door/firedoor,

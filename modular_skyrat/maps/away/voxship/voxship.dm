@@ -7,6 +7,7 @@
 	name = "Vox Base"
 	id = "awaysite_voxship"
 	description = "Vox ship and base."
+	prefix = "modular_skyrat/maps/away/"
 	suffixes = list("voxship/voxship-1.dmm")
 	cost = 0.5
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/vox_shuttle)
@@ -92,6 +93,7 @@
 	name = "Vox Scavenger Ship"
 	id = "awaysite_voxship2"
 	description = "Vox Scavenger Ship."
+	prefix = "modular_skyrat/maps/away/"
 	suffixes = list("voxship/voxship-2.dmm")
 	cost = 0.5
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/vox_ship, /datum/shuttle/autodock/overmap/vox_lander)

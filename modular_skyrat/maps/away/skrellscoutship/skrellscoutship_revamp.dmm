@@ -1488,7 +1488,6 @@
 	id_tag = "main_airlock_door"
 	},
 /obj/machinery/door/airlock/external/glass/bolted_open{
-	frequency = 1331;
 	id_tag = "xil_scoutship_fore_internal"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -1529,8 +1528,7 @@
 "fq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/button/access/interior{
-	frequency = 1331;
-	master_tag = "xil_scoutship_fore_dock_controller";
+	id_tag = "xil_scoutship_fore_dock_controller";
 	pixel_x = -4;
 	pixel_y = 24
 	},
@@ -1660,7 +1658,7 @@
 /turf/simulated/floor/tiled/skrell,
 /area/ship/skrellscoutship/dock)
 "fF" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -1786,7 +1784,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "fY" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /obj/structure/cable/yellow{
@@ -1896,7 +1894,7 @@
 /turf/simulated/floor/tiled/skrell,
 /area/ship/skrellscoutshuttle)
 "go" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -1962,7 +1960,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "gu" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -2257,7 +2255,6 @@
 /obj/effect/paint/black,
 /obj/effect/shuttle_landmark/skrellscoutship/start,
 /obj/machinery/door/airlock/external/glass{
-	frequency = 1331;
 	id_tag = "xil_scoutship_fore_external";
 	locked = 1
 	},
@@ -2270,8 +2267,7 @@
 	},
 /obj/machinery/button/access/interior{
 	command = "cycle_exterior";
-	frequency = 1331;
-	master_tag = "xil_scoutship_fore_dock_controller";
+	id_tag = "xil_scoutship_fore_dock_controller";
 	pixel_x = 24;
 	pixel_y = 12
 	},
@@ -3133,11 +3129,11 @@
 /obj/structure/table/rack,
 /obj/structure/window/basic,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/stack/material/glass/borosilicate/ten,
-/obj/item/stack/material/glass/borosilicate/ten,
-/obj/item/stack/material/glass/borosilicate/ten,
-/obj/item/stack/material/glass/borosilicate/ten,
-/obj/item/stack/material/glass/borosilicate/ten,
+/obj/item/stack/material/glass/reinforced_borosilicate/ten,
+/obj/item/stack/material/glass/reinforced_borosilicate/ten,
+/obj/item/stack/material/glass/reinforced_borosilicate/ten,
+/obj/item/stack/material/glass/reinforced_borosilicate/ten,
+/obj/item/stack/material/glass/reinforced_borosilicate/ten,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/robotics)
 "jV" = (
@@ -3150,16 +3146,16 @@
 /area/ship/skrellscoutship/robotics)
 "jW" = (
 /obj/structure/table/rack,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/robotics)
@@ -3197,16 +3193,16 @@
 /area/ship/skrellscoutship/robotics)
 "ke" = (
 /obj/structure/table/rack,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/robotics)
@@ -3425,7 +3421,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/externalwing/port)
 "kF" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3762,7 +3758,6 @@
 	id_tag = "xil_shuttle_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
 	id_tag = "xil_shuttle_sensor";
 	pixel_y = 22
 	},
@@ -3981,7 +3976,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "tN" = (
-/obj/machinery/ion_engine{
+/obj/machinery/zero_point_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -4071,22 +4066,22 @@
 /area/ship/skrellscoutship/maintenance/power)
 "vh" = (
 /obj/structure/table/rack,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
-/obj/item/magnetic_ammo/skrell,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
+/obj/item/magnetic_ammo,
 /obj/machinery/light/skrell{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
-/obj/item/magnetic_ammo/skrell/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
+/obj/item/magnetic_ammo/slug,
 /turf/simulated/floor/tiled/skrell/green,
 /area/ship/skrellscoutship/command/armory)
 "vI" = (
@@ -4218,7 +4213,6 @@
 "xL" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/door/airlock/external/bolted_open{
-	frequency = 1331;
 	id_tag = "xil_shuttle_inner"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -4349,8 +4343,7 @@
 "zZ" = (
 /obj/machinery/button/access{
 	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "xil_shuttle";
+	id_tag = "xil_shuttle";
 	pixel_y = -24
 	},
 /obj/structure/bed/chair/shuttle/blue{
@@ -4854,14 +4847,12 @@
 /area/ship/skrellscoutshuttle)
 "JZ" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
 	id_tag = "xil_scoutship_fore_dock_sensor";
 	pixel_x = -24
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	airflow_dest = "xil_scoutship_fore_dock_controller";
 	cycle_to_external_air = 1;
-	frequency = 1331;
 	id_tag = "xil_scoutship_fore_dock_controller";
 	pixel_y = 24;
 	req_access = list("ACCESS_SKRELLSCOUT");
@@ -4909,7 +4900,6 @@
 	id_tag = "xil_shuttle_pump_out_external"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1331;
 	id_tag = "xil_shuttle_sensor_external";
 	pixel_y = 22
 	},
@@ -5314,7 +5304,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1331;
 	id_tag = "xil_shuttle";
 	pixel_y = -24;
 	req_access = list("ACCESS_SKRELLSCOUT");
@@ -5689,14 +5678,12 @@
 "Vx" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/black,
 /obj/machinery/button/access/exterior{
-	frequency = 1331;
-	master_tag = "xil_shuttle";
+	id_tag = "xil_shuttle";
 	pixel_x = 32;
 	pixel_y = -4;
 	req_access = list("ACCESS_SKRELLSCOUT")
 	},
 /obj/machinery/door/airlock/external/bolted_open{
-	frequency = 1331;
 	id_tag = "xil_shuttle_outer"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
