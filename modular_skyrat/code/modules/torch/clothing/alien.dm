@@ -16,6 +16,8 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
 
 /obj/item/clothing/suit/space/vox/New()
 	..()
@@ -35,6 +37,12 @@
 	item_flags = 0
 	flags_inv = 0
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/space/vox/pressure
 	name = "alien helmet"
@@ -83,6 +91,12 @@
 /obj/item/clothing/under/vox
 	has_sensor = 0
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/vox/vox_casual
 	name = "alien clothing"
@@ -105,6 +119,8 @@
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_hands.dmi'
+	item_icons = list(slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/onmob_hands.dmi')
 
 /obj/item/clothing/shoes/magboots/vox
 
@@ -113,7 +129,8 @@
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
-
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 	action_button_name = "Toggle the magclaws"
 
 /obj/item/clothing/shoes/magboots/vox/attack_self(mob/user)
@@ -161,3 +178,5 @@
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	//species_restricted = list(SPECIES_NABBER)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_hands.dmi'
+	item_icons = list(slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/onmob_hands.dmi')

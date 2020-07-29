@@ -13,6 +13,12 @@
 		)
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = list(SPECIES_SKRELL,SPECIES_HUMAN) //TODO BODYTYPES
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/space/void/skrell/white
 	icon_state = "skrell_helmet_white"
@@ -36,6 +42,8 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = list(SPECIES_SKRELL,SPECIES_HUMAN) //TODO BODYTYPES
+	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
 
 /obj/item/clothing/suit/space/void/skrell/white
 	icon_state = "skrell_suit_white"
@@ -49,3 +57,9 @@
 	icon_state = "spacebowl"
 	light_overlay = "yellow_light"
 	tinted = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)

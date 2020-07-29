@@ -5,6 +5,12 @@
 	item_state = "jensensuit"
 	worn_state = "pcrc"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/pcrcsuit
 	name = "\improper PCRC suit"
@@ -13,12 +19,24 @@
 	item_state = "jensensuit"
 	worn_state = "pcrcsuit"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/grayson
 	name = "\improper Grayson overalls"
 	desc = "A set of overalls belonging to Grayson Manufactories, a manufacturing and mining company."
 	icon_state = "grayson"
 	worn_state = "grayson"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/wardt
 	name = "\improper Ward-Takahashi jumpsuit"
@@ -26,12 +44,24 @@
 	icon_state = "wardt"
 	worn_state = "wardt"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/dais
 	name = "\improper Deimos Advanced Information Systems uniform"
 	desc = "The uniform of Deimos Advanced Information Systems, an IT company."
 	icon_state = "dais"
 	worn_state = "dais"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/mbill
 	name = "\improper Major Bill's uniform"
@@ -39,18 +69,36 @@
 	icon_state = "mbill"
 	worn_state = "mbill"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/morpheus
 	name = "\improper Morpheus Cyberkinetics uniform"
 	desc = "A pair of overalls belonging to Morpheus Cyberkinetics, an IPC manufacturing company. It doesn't look like it would be comfortable on a human."
 	icon_state = "morpheus"
 	worn_state = "morpheus"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/skinner
 	name = "\improper Skinner Catering uniform"
 	desc = "A uniform belonging to Skinner's Catering, a dining company."
 	icon_state = "skinner"
 	worn_state = "skinner"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 // Replace this with actual uniform when someone wants to sprite one
 /obj/item/clothing/under/confederacy
@@ -58,6 +106,12 @@
 	desc = "A military uniform belonging to the Gilgamesh Colonial Confederation, an independent human government."
 	icon_state = "confed"
 	worn_state = "confed"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/saare
 	name = "\improper SAARE uniform"
@@ -65,12 +119,24 @@
 	icon_state = "saare"
 	worn_state = "saare"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/frontier
 	name = "frontier clothes"
 	desc = "A rugged flannel shirt and denim overalls. A popular style among frontier colonists."
 	icon_state = "frontier"
 	worn_state = "frontier"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/aether
 	name = "\improper Aether jumpsuit"
@@ -78,12 +144,24 @@
 	icon_state = "aether"
 	worn_state = "aether"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/focal
 	name = "\improper Focal Point jumpsuit"
 	desc = "A jumpsuit belonging to Focal Point Energistics, an engineering corporation."
 	icon_state = "focal"
 	worn_state = "focal"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/hephaestus
 	name = "\improper Hephaestus jumpsuit"
@@ -91,3 +169,9 @@
 	icon_state = "heph"
 	worn_state = "heph"
 	gender_icons = 1
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)

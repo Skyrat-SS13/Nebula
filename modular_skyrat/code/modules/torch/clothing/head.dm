@@ -2,11 +2,23 @@
 	name = "\improper corporate security helmet"
 	desc = "A helmet with 'CORPORATE SECURITY' printed on the back in red lettering."
 	icon_state = "helmet_nt"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/pcrc
 	name = "\improper PCRC helmet"
 	desc = "A helmet with 'PRIVATE SECURITY' printed on the back in cyan lettering."
 	icon_state = "helmet_pcrc"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/nt/guard
 	starting_accessories = list(/obj/item/clothing/accessory/armor/helmcover/nt)
@@ -29,70 +41,154 @@
 		energy = ARMOR_ENERGY_RESISTANT,
 		bomb = ARMOR_BIO_MINOR
 		)
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 //Security
 /obj/item/clothing/head/helmet/ert/security
 	name = "asset protection security helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red highlights."
 	icon_state = "erthelmet_sec"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 //Engineer
 /obj/item/clothing/head/helmet/ert/engineer
 	name = "asset protection engineering helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has orange highlights."
 	icon_state = "erthelmet_eng"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 //Medical
 /obj/item/clothing/head/helmet/ert/medical
 	name = "asset protection medical helmet"
 	desc = "An in-atmosphere helmet worn by many corporate and private asset protection forces. Has red and white highlights."
 	icon_state = "erthelmet_med"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/nt/pilot
 	name = "corporate pilot's helmet"
 	desc = "A corporate pilot's helmet for operating the cockpit in style for a hefty paycheck."
 	icon_state = "pilotnt"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/helmet/skrell
 	name = "skrellian helmet"
 	desc = "A helmet built for use by a Skrell. This one appears to be fairly standard and reliable."
 	icon_state = "helmet_skrell"
 	valid_accessory_slots = null
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 
 /obj/item/clothing/head/hardhat/damage_control/Yellow
 	name = "senior damage control helmet"
 	icon_state = "Damage-Control-Helmet-Yellow"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/hardhat/damage_control/White
 	name = "chief damage control helmet"
 	icon_state = "Damage-Control-Helmet-White"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB
 	name = "\improper Emergency Management Bureau helmet"
 	desc = "The helmet currently issued by the emergency management bureau, commonly used by engineers and first responders throughout the human space. Comes with a built-in flashlight."
 	icon_state = "Damage-Control-Helmet-EMB"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient
 	name = "ancient red EMB helmet"
 	desc = "This helmet used to be issued by the emergency management bureau once upon a time, and is still being used in frontier systems. Comes with a built-in flashlight."
 	icon_state = "EMB-ancient-red"
 	light_overlay = "EMB-ancient_light"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient/yellow
 	name = "ancient yellow EMB helmet"
 	icon_state = "EMB-ancient-yellow"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient/white
 	name = "ancient white EMB helmet"
 	icon_state = "EMB-ancient-white"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/beret/guard
 	name = "corporate security beret"
 	desc = "A white beret adorned with a corporate logo. For security guards that are more inclined towards style than safety."
 	icon_state = "corpsec_beret"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)
 
 /obj/item/clothing/head/beret/plaincolor
 	name = "beret"
 	desc = "A simple, solid color beret. This one has no emblems or insignia on it."
 	icon_state = "beret_white"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_head.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		)

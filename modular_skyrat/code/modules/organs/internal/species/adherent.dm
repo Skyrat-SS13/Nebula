@@ -84,6 +84,7 @@
 	organ_tag = BP_JETS
 	parent_organ = BP_CHEST
 	gender = PLURAL
+	icon = 'modular_skyrat/icons/mob/human_races/species/adherent/organs.dmi'
 	icon_state = "jets"
 	base_action_state = "adherent-pack"
 	maintenance_cost = 2
@@ -94,6 +95,7 @@
 	action_button_name = "Toggle Antigravity"
 	organ_tag = BP_FLOAT
 	parent_organ = BP_GROIN
+	icon = 'modular_skyrat/icons/mob/human_races/species/adherent/organs.dmi'
 	icon_state = "float"
 	use_descriptor = "hover"
 	base_action_state = "adherent-float"
@@ -128,6 +130,7 @@
 	action_button_name = "Toggle Cooling"
 	organ_tag = BP_COOLING_FINS
 	parent_organ = BP_GROIN
+	icon = 'modular_skyrat/icons/mob/human_races/species/adherent/organs.dmi'
 	icon_state = "fins"
 	maintenance_cost = 0
 	use_descriptor = "radiate heat"

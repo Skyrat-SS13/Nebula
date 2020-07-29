@@ -739,6 +739,7 @@
 	name = "mre-dispenser"
 	desc = "A Vending machine filled with MRE's."
 	icon_state = "mrevend"
+	icon = 'modular_skyrat/icons/obj/vending.dmi'
 	icon_deny = "mrevend-deny"
 	icon_vend = "mrevend-vend"
 	products = list(
@@ -963,26 +964,36 @@
 	icon_state = "caligae"
 	item_state = "caligae"
 	body_parts_covered = FEET|LEGS
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/sandal/xeno/caligae/white
 	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a white covering."
 	icon_state = "whitecaligae"
 	item_state = "whitecaligae"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/sandal/xeno/caligae/grey
 	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a grey covering."
 	icon_state = "greycaligae"
 	item_state = "greycaligae"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/sandal/xeno/caligae/black
 	desc = "A pair of sandals modelled after the ancient Roman caligae. This one has a black covering."
 	icon_state = "blackcaligae"
 	item_state = "blackcaligae"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/leather
 	name = "leather shoes"
 	desc = "A sturdy pair of leather shoes."
 	icon_state = "leather"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/machinery/computer/modular/preset/library
 	default_software = list(
@@ -1032,12 +1043,19 @@
 //stripper
 /obj/item/clothing/under/stripper
 	body_parts_covered = 0
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/stripper/stripper_pink
 	name = "pink swimsuit"
 	desc = "A rather skimpy pink swimsuit."
 	icon_state = "stripper_p_under"
 	siemens_coefficient = 1
+	
 
 /obj/item/clothing/under/stripper/stripper_green
 	name = "green swimsuit"
@@ -1070,10 +1088,19 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 2.0
+	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
+	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
+	
 //swimsuit
 /obj/item/clothing/under/swimsuit/
 	siemens_coefficient = 1
 	body_parts_covered = 0
+	icon = 'modular_skyrat/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
+		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		)
 
 /obj/item/clothing/under/swimsuit/black
 	name = "black swimsuit"

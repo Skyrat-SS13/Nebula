@@ -483,6 +483,7 @@
 	name = "\improper Radical Renard"
 	desc = "A softdrink vendor promoted by Radical Renard."
 	icon_state = "Soda_Machine"
+	icon = 'modular_skyrat/icons/obj/vending.dmi'
 	icon_vend = "Soda_Machine-vend"
 	icon_deny = "Soda_Machine-deny"
 	vend_delay = 11

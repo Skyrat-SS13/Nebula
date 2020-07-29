@@ -15,6 +15,8 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/tactical
 	name = "tactical boots"
@@ -28,6 +30,9 @@
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_RESISTANT)
 	siemens_coefficient = 0.7
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
@@ -35,11 +40,16 @@
 	icon_state = "laceups"
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
+	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
 
 /obj/item/clothing/shoes/dress/white
 	name = "white dress shoes"
 	desc = "Brilliantly white shoes, not a spot on them."
 	icon_state = "whitedress"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/sandal
 	desc = "A pair of rather plain, wooden sandals."
@@ -50,12 +60,16 @@
 	wizard_garb = 1
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/sandal/marisa
 	desc = "A pair of magic, black shoes."
 	name = "magic shoes"
 	icon_state = "black"
 	body_parts_covered = FEET
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/cult
 	name = "boots"
@@ -70,11 +84,15 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = null
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/cyborg
 	name = "cyborg boots"
 	desc = "Shoes for a cyborg costume."
 	icon_state = "boots"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/slippers
 	name = "bunny slippers"
@@ -86,12 +104,16 @@
 	w_class = ITEM_SIZE_SMALL
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/slippers/worn
 	name = "worn bunny slippers"
 	desc = "Fluffy..."
 	icon_state = "slippers_worn"
 	item_state = "slippers_worn"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"
@@ -99,6 +121,8 @@
 	icon_state = "laceups"
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/swimmingfins
 	desc = "Help you swim good."
@@ -108,6 +132,8 @@
 	//species_restricted = null
 	can_add_hidden_item = FALSE
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/swimmingfins/New()
 	..()
@@ -117,6 +143,8 @@
 	name = "athletic shoes"
 	desc = "A pair of sleek atheletic shoes. Made by and for the sporty types."
 	icon_state = "sportshoe"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/laceup/sneakies
 	desc = "The height of fashion, and they're pre-polished. Upon further inspection, the soles appear to be on backwards. They look uncomfortable."
@@ -129,21 +157,29 @@
 	icon_state = "heels"
 	desc = "A pair of colourable high heels."
 	can_add_cuffs = FALSE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/heels/black
 	name = "black high heels"
 	desc = "A pair of black high heels."
 	color = COLOR_GRAY15
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 obj/item/clothing/shoes/heels/red
 	name = "red high heels"
 	desc = "A pair of red high heels."
 	color = COLOR_RED
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/white
 	name = "white shoes"
 	icon_state = "white"
 	permeability_coefficient = 0.01
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/black
 	name = "black shoes"
@@ -153,6 +189,8 @@ obj/item/clothing/shoes/heels/red
 	min_cold_protection_temperature = SHOE_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/jackboots/unathi
 	name = "toe-less jackboots"
@@ -160,14 +198,8 @@ obj/item/clothing/shoes/heels/red
 	item_state = "digiboots"
 	icon_state = "digiboots"
 	//species_restricted = null
-
-/obj/item/clothing/shoes/magboots/vox
-	desc = "A pair of heavy, jagged armoured foot pieces, seemingly suitable for a velociraptor."
-	name = "vox magclaws"
-	item_state = "boots-vox"
-	icon_state = "boots-vox"
-	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
-	action_button_name = "Toggle the magclaws"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/jungleboots
 	name = "jungle boots"
@@ -183,14 +215,20 @@ obj/item/clothing/shoes/heels/red
 		bio = ARMOR_BIO_MINOR
 		)
 	siemens_coefficient = 0.7
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 
 /obj/item/clothing/shoes/brown
 	name = "brown shoes"
 	desc = "A pair of brown shoes."
 	icon_state = "brown"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
 /obj/item/clothing/shoes/orange
 	name = "orange shoes"
 	icon_state = "orange"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
+	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 

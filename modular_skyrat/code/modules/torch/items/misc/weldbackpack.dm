@@ -1,6 +1,7 @@
 /obj/item/tank/scrubber
 	name = "high capacity gas tank"
 	desc = "An unwieldy tank for lots of gas, although not lots of GAS."
+	icon = 'modular_skyrat/icons/obj/tank.dmi'
 	icon_state = "scrubber"
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = 0
