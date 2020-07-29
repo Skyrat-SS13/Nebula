@@ -1047,7 +1047,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/stripper/stripper_pink
@@ -1099,7 +1099,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/swimsuit/black

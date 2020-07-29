@@ -6,7 +6,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/helmet/pcrc
@@ -17,7 +17,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/helmet/nt/guard
@@ -45,7 +45,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 //Security
@@ -57,7 +57,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 //Engineer
@@ -69,7 +69,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 //Medical
@@ -81,7 +81,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/helmet/nt/pilot
@@ -92,7 +92,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/helmet/skrell
@@ -104,7 +104,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 
@@ -115,7 +115,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/hardhat/damage_control/White
@@ -125,7 +125,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB
@@ -136,7 +136,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient
@@ -148,7 +148,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient/yellow
@@ -158,7 +158,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/hardhat/damage_control/EMB_Ancient/white
@@ -168,7 +168,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/beret/guard
@@ -179,7 +179,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/beret/plaincolor
@@ -190,5 +190,5 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)

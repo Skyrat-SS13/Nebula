@@ -9,7 +9,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/pcrcsuit
@@ -23,7 +23,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/grayson
@@ -35,7 +35,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/wardt
@@ -48,7 +48,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/dais
@@ -60,7 +60,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/mbill
@@ -73,7 +73,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/morpheus
@@ -85,7 +85,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/skinner
@@ -97,7 +97,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 // Replace this with actual uniform when someone wants to sprite one
@@ -110,7 +110,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/saare
@@ -123,7 +123,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/frontier
@@ -135,7 +135,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/aether
@@ -148,7 +148,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/focal
@@ -160,7 +160,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/hephaestus
@@ -173,5 +173,5 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)

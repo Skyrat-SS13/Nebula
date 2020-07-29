@@ -41,7 +41,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_hats.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_hats.dmi',
-		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob/onmob_head.dmi'
+		slot_head_str = 'modular_skyrat/icons/mob/onmob/onmob_head.dmi'
 		)
 
 /obj/item/clothing/head/helmet/space/vox/pressure
@@ -95,7 +95,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'modular_skyrat/icons/mob/onmob/items/lefthand_uniforms.dmi',
 		slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/items/righthand_uniforms.dmi',
-		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmod/onmob_under.dmi'
+		slot_w_uniform_str = 'modular_skyrat/icons/mob/onmob/onmob_under.dmi'
 		)
 
 /obj/item/clothing/under/vox/vox_casual
