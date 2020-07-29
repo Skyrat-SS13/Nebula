@@ -20,7 +20,7 @@
 
 /datum/game_mode/meteor/on_meteor_warn()
 	..()
-	var/datum/evacuation_option/meteor_bluespace_jump/auto_evac = Initialize()
+	var/datum/evacuation_option/meteor_bluespace_jump/auto_evac = new()
 	auto_evac.execute()
 
 /datum/game_mode/meteor/declare_completion()

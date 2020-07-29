@@ -2,7 +2,7 @@
 /datum/computer_file/report/recipient/sec
 	logo = "\[solcrest\]"
 
-/datum/computer_file/report/recipient/sec/Initialize()
+/datum/computer_file/report/recipient/sec/New()
 	..()
 	set_access(access_security)
 	set_access(access_heads, override = 0)

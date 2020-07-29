@@ -160,7 +160,7 @@
 		/datum/mob_descriptor/vox_markings = 0
 	)
 
-/datum/species/vox/armalis/Initialize()
+/datum/species/vox/armalis/New()
 	..()
 	equip_adjust = list(
 		slot_l_hand_str = list("[NORTH]" = list("x" = 0, "y" = 4), "[EAST]" = list("x" = -3, "y" = 4), "[SOUTH]" = list("x" = 0, "y" = 4), "[WEST]" = list("x" =  3, "y" = 4)),

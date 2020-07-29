@@ -8,7 +8,7 @@
 	var/secondary
 	var/tertiary
 
-/datum/gear_tweak/polychrome/Initialize()
+/datum/gear_tweak/polychrome/New()
 	src.primary = primary
 	src.secondary = secondary
 	src.tertiary = tertiary
@@ -44,4 +44,4 @@
 	PC.primary_color = metadata[1]
 	PC.secondary_color = metadata[2]
 	PC.tertiary_color = metadata[3]
-	PC.update_icon() 
+	PC.update_icon()

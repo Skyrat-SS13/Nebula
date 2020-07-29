@@ -8,7 +8,7 @@
 	title = "Docked Vessel Report"
 	//available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/docked/Initialize()
+/datum/computer_file/report/recipient/docked/New()
 	..()
 	set_access(access_cargo, access_cargo)
 	set_access(access_heads, override = 0)

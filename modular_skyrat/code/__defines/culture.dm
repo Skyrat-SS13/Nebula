@@ -11,7 +11,7 @@
 #define FACTION_PCRC           "Proxima Centauri Risk Control"
 #define FACTION_CORPORATE       "Expeditionary Corps Organisation"
 #define FACTION_DAIS           "Deimos Advanced Information Systems"
-#define FACTION_TEST_SUBJECTS  "Test Subjects"
+#define FACTION_TEST_SUBJECTS  "Test-Subjects"
 #define FACTION_SPACECOPS  "Sol Federal Police"
 
 #define HOME_SYSTEM_EARTH      "Earth"
