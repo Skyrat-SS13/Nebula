@@ -88,7 +88,7 @@
 	shorthand = "AL"
 	hidden_from_codex = TRUE
 
-/decl/language/alium/New()
+/decl/language/alium/Initialize()
 	speech_verb = pick("hisses","growls","whistles","blubbers","chirps","skreeches","rumbles","clicks")
 	..()
 

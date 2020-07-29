@@ -273,7 +273,7 @@
 	icon_state = "coolanttank"
 	amount_per_transfer_from_this = 10
 
-/obj/structure/reagent_dispensers/coolanttank/New()
+/obj/structure/reagent_dispensers/coolanttank/Initialize()
 	..()
 	reagents.add_reagent(/decl/material/liquid/coolant, 1000)
 
@@ -463,7 +463,7 @@
 	// update the ui if it exists, returns null if no ui is passed/found
 	ui = SSnano.try_update_ui(user, src, ui_key, ui, data, force_open)
 	if (!ui)
-		// the ui does not exist, so we'll create a new() one
+		// the ui does not exist, so we'll create a Initialize() one
 		// for a list of parameters and their descriptions see the code docs in \code\modules\nano\nanoui.dm
 		ui = new(user, src, ui_key, "cryo.tmpl", "Cryo Cell Control System", 520, 410)
 		// when the ui is first opened this is the data it will use

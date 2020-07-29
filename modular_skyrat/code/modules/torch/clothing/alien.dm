@@ -19,7 +19,7 @@
 	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
 
-/obj/item/clothing/suit/space/vox/New()
+/obj/item/clothing/suit/space/vox/Initialize()
 	..()
 	slowdown_per_slot[slot_wear_suit_str] = 1
 

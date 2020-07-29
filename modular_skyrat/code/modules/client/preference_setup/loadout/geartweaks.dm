@@ -8,7 +8,7 @@
 	var/secondary
 	var/tertiary
 
-/datum/gear_tweak/polychrome/New()
+/datum/gear_tweak/polychrome/Initialize()
 	src.primary = primary
 	src.secondary = secondary
 	src.tertiary = tertiary

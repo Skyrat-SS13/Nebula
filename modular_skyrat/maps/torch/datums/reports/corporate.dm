@@ -23,7 +23,7 @@
 	title = "Internal Memorandum"
 	//available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/corp/memo/internal/New()
+/datum/computer_file/report/recipient/corp/memo/internal/Initialize()
 	..()
 	set_access(access_nanotrasen, access_nanotrasen)
 
@@ -32,7 +32,7 @@
 	title = "External Memorandum"
 	//available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/corp/memo/external/New()
+/datum/computer_file/report/recipient/corp/memo/external/Initialize()
 	..()
 	set_access(access_edit = access_nanotrasen)
 
@@ -78,7 +78,7 @@
 	title = "Corporate Employment Termination Form"
 	//available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/corp/fire/New()
+/datum/computer_file/report/recipient/corp/fire/Initialize()
 	..()
 	set_access(access_heads, access_heads)
 	set_access(access_nanotrasen, override = 0)
@@ -93,7 +93,7 @@
 	add_field(/datum/report_field/signature, "Authorized by")
 	add_field(/datum/report_field/text_label/instruction, "Please attach employment records alongside notice of termination.")
 
-/datum/computer_file/report/recipient/corp/incident/New()
+/datum/computer_file/report/recipient/corp/incident/Initialize()
 	..()
 	set_access(access_edit = access_nanotrasen)
 

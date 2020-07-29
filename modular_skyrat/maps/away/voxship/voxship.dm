@@ -66,7 +66,7 @@
 /obj/effect/submap_landmark/joinable_submap/voxship
 	archetype = /decl/submap_archetype/derelict/voxship
 
-/obj/effect/submap_landmark/joinable_submap/voxship/New()
+/obj/effect/submap_landmark/joinable_submap/voxship/Initialize()
 	var/decl/cultural_info/culture/vox/pidgin = decls_repository.get_decl(/decl/cultural_info/culture/vox)
 	name = "[pidgin.get_random_name()]-[pidgin.get_random_name()]"
 	..()
@@ -192,7 +192,7 @@
 	)
 	req_access = list(access_voxship)
 
-/obj/effect/submap_landmark/joinable_submap/voxship/scavship/New()
+/obj/effect/submap_landmark/joinable_submap/voxship/scavship/Initialize()
 	var/decl/cultural_info/culture/vox/pidgin = decls_repository.get_decl(/decl/cultural_info/culture/vox)
 	name = "[pidgin.get_random_name()]-[pidgin.get_random_name()]"
 	..()

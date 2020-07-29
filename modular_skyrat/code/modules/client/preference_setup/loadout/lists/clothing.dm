@@ -2,7 +2,7 @@
 	display_name = "polychromic clothing selection"
 	path = /obj/item/clothing/under/polychromic
 
-/datum/gear/uniform/polychrome/New()
+/datum/gear/uniform/polychrome/Initialize()
 	..()
 	var/list/polychromes = list()
 	for(var/polychromic in typesof(/obj/item/clothing/under/polychromic))

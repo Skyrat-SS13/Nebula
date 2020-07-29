@@ -17,7 +17,7 @@
 /datum/goal/department/plant_samples
 	var/seeds
 
-/datum/goal/department/plant_samples/New()
+/datum/goal/department/plant_samples/Initialize()
 	var/total_seeds = 0
 	var/area/map = locate(/area/overmap)
 	for(var/obj/effect/overmap/visitable/sector/exoplanet/P in map)
@@ -42,7 +42,7 @@
 /datum/goal/department/fauna_samples
 	var/species
 
-/datum/goal/department/fauna_samples/New()
+/datum/goal/department/fauna_samples/Initialize()
 	var/list/total_species = list()
 	var/area/map = locate(/area/overmap)
 	for(var/obj/effect/overmap/visitable/sector/exoplanet/P in map)

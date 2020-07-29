@@ -4,7 +4,7 @@
 /datum/gear/eyes/fashionglasses
 	allowed_branches = CIVILIAN_BRANCHES
 
-/datum/gear/eyes/sciencegoggles/New()
+/datum/gear/eyes/sciencegoggles/Initialize()
 	allowed_roles = RESEARCH_ROLES | EXPLORATION_ROLES
 	..()
 

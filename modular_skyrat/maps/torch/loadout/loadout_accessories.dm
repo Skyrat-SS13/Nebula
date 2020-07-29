@@ -5,7 +5,7 @@
 	cost = 8
 	allowed_branches = SOLGOV_BRANCHES
 
-/datum/gear/accessory/solawardmajor/New()
+/datum/gear/accessory/solawardmajor/Initialize()
 	..()
 	var/solmajors = list()
 	solmajors["iron star"] = /obj/item/clothing/accessory/medal/solgov/iron/star
@@ -25,7 +25,7 @@
 	cost = 5
 	allowed_branches = SOLGOV_BRANCHES
 
-/datum/gear/accessory/solawardminor/New()
+/datum/gear/accessory/solawardminor/Initialize()
 	..()
 	var/solminors = list()
 	solminors["expeditionary medal"] = /obj/item/clothing/accessory/medal/solgov/iron/sol
@@ -139,7 +139,7 @@
 /datum/gear/tactical/holster
 	allowed_roles = ARMED_ROLES
 
-/datum/gear/tactical/holster/New()
+/datum/gear/tactical/holster/Initialize()
 	..()
 	var/holsters = list()
 	holsters["shoulder holster"] = /obj/item/clothing/accessory/storage/holster
@@ -237,7 +237,7 @@
 	path = /obj/item/clothing/accessory/ubac
 	allowed_branches = CIVILIAN_BRANCHES
 
-/datum/gear/tactical/ubac/misc/New()
+/datum/gear/tactical/ubac/misc/Initialize()
 	..()
 	var/shirts = list()
 	shirts["green UBAC shirt"] = /obj/item/clothing/accessory/ubac/green
@@ -260,7 +260,7 @@
 	path = /obj/item/clothing/accessory/storage/pouches
 	allowed_branches = CIVILIAN_BRANCHES
 
-/datum/gear/tactical/armor_pouches/misc/New()
+/datum/gear/tactical/armor_pouches/misc/Initialize()
 	..()
 	var/pouches = list()
 	pouches["green armor pouches"] = /obj/item/clothing/accessory/storage/pouches/green
@@ -283,7 +283,7 @@
 	path = /obj/item/clothing/accessory/storage/pouches/large
 	allowed_branches = CIVILIAN_BRANCHES
 
-/datum/gear/tactical/large_pouches/misc/New()
+/datum/gear/tactical/large_pouches/misc/Initialize()
 	..()
 	var/pouches = list()
 	pouches["green large armor pouches"] = /obj/item/clothing/accessory/storage/pouches/large/green

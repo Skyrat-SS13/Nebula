@@ -214,7 +214,7 @@
 	filling_color = "#f41d7e"
 	slice_path = /obj/item/chems/food/snacks/rawcutlet/meatstation
 
-/obj/item/chems/food/snacks/meat/meatstationmeat/New()
+/obj/item/chems/food/snacks/meat/meatstationmeat/Initialize()
 	..()
 	reagents.add_reagent(/datum/reagent/nutriment/protein, 6)
 	reagents.add_reagent(/datum/reagent/lexorin, 6)

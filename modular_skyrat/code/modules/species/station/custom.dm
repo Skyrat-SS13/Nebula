@@ -173,7 +173,7 @@
 	if(istext(to_copy))
 		to_copy = all_species[to_copy]
 
-	var/datum/species/custom/new_copy = new()
+	var/datum/species/custom/new_copy = Initialize()
 
 	//Initials so it works with a simple path passed, or an instance
 	new_copy.base_species = to_copy.name

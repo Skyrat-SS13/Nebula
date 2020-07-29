@@ -23,7 +23,7 @@
 	)
 
 
-/obj/effect/overmap/visitable/ship/landable/skrellscoutship/New()
+/obj/effect/overmap/visitable/ship/landable/skrellscoutship/Initialize()
 	name = "SSV [pick("Xilvuxix", "Zuuvixix", "Quizuu", "Vulzxixvuu","Quumzoox","Quuvuzxuu")]"
 	..()
 

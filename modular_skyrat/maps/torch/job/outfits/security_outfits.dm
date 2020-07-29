@@ -3,7 +3,7 @@
 	l_ear = /obj/item/radio/headset/headset_sec
 	pda_slot = slot_l_store_str
 
-/decl/hierarchy/outfit/job/torch/crew/security/New()
+/decl/hierarchy/outfit/job/torch/crew/security/Initialize()
 	..()
 	BACKPACK_OVERRIDE_SECURITY
 

@@ -111,7 +111,7 @@
 	allowed_roles = ARMORED_ROLES
 	allowed_branches = CIVILIAN_BRANCHES
 
-/datum/gear/tactical/pcarrier/misc/New()
+/datum/gear/tactical/pcarrier/misc/Initialize()
 	..()
 	var/armors = list()
 	armors["green plate carrier"] = /obj/item/clothing/suit/armor/pcarrier/green

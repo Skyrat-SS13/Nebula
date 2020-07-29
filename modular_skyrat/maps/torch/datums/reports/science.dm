@@ -4,7 +4,7 @@
 	logo = "\[eclogo\]\[logo\]"
 	//available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/sci/anomaly/New()
+/datum/computer_file/report/recipient/sci/anomaly/Initialize()
 	..()
 	set_access(access_research, access_research)
 

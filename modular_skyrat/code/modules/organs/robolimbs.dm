@@ -136,7 +136,7 @@
 	//lifelike = 1
 	skintone = 1
 	//suggested_species = "Teshari"
-/datum/robolimb/dsi_teshari/New()
+/datum/robolimb/dsi_teshari/Initialize()
 	species_cannot_use = all_species.Copy()
 	species_cannot_use -= SPECIES_TESHARI
 	..()

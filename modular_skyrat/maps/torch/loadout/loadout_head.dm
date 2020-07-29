@@ -4,7 +4,7 @@
 	path = /obj/item/clothing/head/beret/solgov
 	allowed_branches = SOLGOV_BRANCHES
 
-/datum/gear/head/solberet/New()
+/datum/gear/head/solberet/Initialize()
 	..()
 	var/berets = list()
 	berets["peacekeeper beret"] = /obj/item/clothing/head/beret/solgov
@@ -91,7 +91,7 @@
 	path = /obj/item/clothing/head/beret/solgov/fleet/branch
 	allowed_branches = list(/datum/mil_branch/fleet)
 
-/datum/gear/head/fleetberet/New()
+/datum/gear/head/fleetberet/Initialize()
 	..()
 	var/berets = list()
 	berets["first fleet beret"] = /obj/item/clothing/head/beret/solgov/fleet/branch
@@ -107,7 +107,7 @@
 	path = /obj/item/clothing/head/beret/solgov/expedition/branch
 	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 
-/datum/gear/head/ECberet/New()
+/datum/gear/head/ECberet/Initialize()
 	..()
 	var/berets = list()
 	berets["field operation beret"] = /obj/item/clothing/head/beret/solgov/expedition/branch
