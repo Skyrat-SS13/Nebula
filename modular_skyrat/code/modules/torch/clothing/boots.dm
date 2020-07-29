@@ -124,21 +124,6 @@
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
-/obj/item/clothing/shoes/swimmingfins
-	desc = "Help you swim good."
-	name = "swimming fins"
-	icon_state = "flippers"
-	item_flags = ITEM_FLAG_NOSLIP
-	//species_restricted = null
-	can_add_hidden_item = FALSE
-	can_add_cuffs = FALSE
-	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
-	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
-
-/obj/item/clothing/shoes/swimmingfins/New()
-	..()
-	slowdown_per_slot[slot_shoes_str] = 1
-
 /obj/item/clothing/shoes/athletic
 	name = "athletic shoes"
 	desc = "A pair of sleek atheletic shoes. Made by and for the sporty types."

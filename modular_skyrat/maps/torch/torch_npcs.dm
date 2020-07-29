@@ -3,7 +3,7 @@
 	id = "Punitelli"
 	item_path = /mob/living/carbon/human/monkey/punitelli
 
-/mob/living/carbon/human/monkey/punitelli/New()
+/mob/living/carbon/human/monkey/punitelli/Initialize()
 	..()
 	name = "Warrant Officer Punitelli"
 	real_name = name
@@ -12,7 +12,8 @@
 	C = new /obj/item/clothing/under/solgov/utility/expeditionary/monkey(src)
 	equip_to_appropriate_slot(C)
 	put_in_hands(new /obj/item/chems/food/drinks/glass2/coffeecup/punitelli)
-	equip_to_appropriate_slot(new /obj/item/clothing/mask/smokable/cigarette/jerichos)
+	C = new /obj/item/clothing/mask/smokable/cigarette/jerichos(src)
+	equip_to_appropriate_slot(C)
 
 /obj/random_multi/single_item/runtime
 	name = "Multi Point - Runtime"
