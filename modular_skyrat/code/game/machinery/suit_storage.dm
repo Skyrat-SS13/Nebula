@@ -100,6 +100,7 @@
 			if(prob(35))
 				dump_everything()
 				qdel(src)
+	. = ..()
 
 /obj/machinery/suit_storage_unit/attackby(var/obj/item/I, var/mob/user)
 	if(isScrewdriver(I))

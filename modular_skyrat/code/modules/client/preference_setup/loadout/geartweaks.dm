@@ -17,7 +17,7 @@
 /datum/gear_tweak/polychrome/get_contents(var/metadata)
 	return "Colors: [english_list(metadata, and_text = ", ")]"
 
-/datum/gear_tweak/polychrome/get_metadata(var/user, var/list/metadata)
+/datum/gear_tweak/polychrome/get_metadata(var/user, var/list/metadata, title)
 	. = list()
 	var/primary_color_input = input(usr,"","Choose Primary Color",primary) as color|null	//color input menu, the "|null" adds a cancel button to it.
 	if(primary_color_input)	//Checks if the color selected is NULL, rejects it if it is NULL.

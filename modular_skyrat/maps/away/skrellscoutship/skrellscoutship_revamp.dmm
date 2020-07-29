@@ -1658,7 +1658,7 @@
 /turf/simulated/floor/tiled/skrell,
 /area/ship/skrellscoutship/dock)
 "fF" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -1784,7 +1784,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "fY" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /obj/structure/cable/yellow{
@@ -1894,7 +1894,7 @@
 /turf/simulated/floor/tiled/skrell,
 /area/ship/skrellscoutshuttle)
 "go" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -1960,7 +1960,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "gu" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3421,7 +3421,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/externalwing/port)
 "kF" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -3976,7 +3976,7 @@
 /turf/simulated/floor/tiled/skrell/red,
 /area/ship/skrellscoutship/hangar)
 "tN" = (
-/obj/machinery/zero_point_thruster{
+/obj/machinery/ion_thruster{
 	dir = 8
 	},
 /turf/simulated/floor/plating,

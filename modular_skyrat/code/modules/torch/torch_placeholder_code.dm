@@ -283,6 +283,7 @@
 
 /obj/structure/reagent_dispensers/coolanttank/explosion_act()
 	explode()
+	. = ..()
 
 /obj/structure/reagent_dispensers/coolanttank/proc/explode()
 	var/datum/effect/effect/system/smoke_spread/S = new /datum/effect/effect/system/smoke_spread
