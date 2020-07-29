@@ -13,7 +13,7 @@
 	id_type = /obj/item/card/id/torch/gold
 	pda_type = /obj/item/modular_computer/pda/captain
 
-/decl/hierarchy/outfit/job/torch/crew/command/CO/Initialize()
+/decl/hierarchy/outfit/job/torch/crew/command/CO/New()
 	..()
 	backpack_overrides[/decl/backpack_outfit/backpack] = /obj/item/storage/backpack/captain
 	backpack_overrides[/decl/backpack_outfit/satchel] = /obj/item/storage/backpack/satchel/cap
@@ -41,7 +41,7 @@
 	pda_type = /obj/item/modular_computer/pda/heads/cmo
 	pda_slot = slot_l_store_str
 
-/decl/hierarchy/outfit/job/torch/crew/command/cmo/Initialize()
+/decl/hierarchy/outfit/job/torch/crew/command/cmo/New()
 	..()
 	BACKPACK_OVERRIDE_MEDICAL
 
@@ -60,7 +60,7 @@
 	pda_slot = slot_l_store_str
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
-/decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/Initialize()
+/decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
 
@@ -77,7 +77,7 @@
 	id_type = /obj/item/card/id/torch/silver/security
 	pda_type = /obj/item/modular_computer/pda/heads/hos
 
-/decl/hierarchy/outfit/job/torch/crew/command/cos/Initialize()
+/decl/hierarchy/outfit/job/torch/crew/command/cos/New()
 	..()
 	BACKPACK_OVERRIDE_SECURITY
 

@@ -2,7 +2,7 @@
 	l_ear = /obj/item/radio/headset/headset_cargo
 	hierarchy_type = /decl/hierarchy/outfit/job/torch/crew/supply
 
-/decl/hierarchy/outfit/job/torch/crew/supply/Initialize()
+/decl/hierarchy/outfit/job/torch/crew/supply/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING
 
@@ -47,6 +47,6 @@
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 	l_ear = /obj/item/radio/headset/headset_mining
 
-/decl/hierarchy/outfit/job/torch/passenger/research/prospector/Initialize()
+/decl/hierarchy/outfit/job/torch/passenger/research/prospector/New()
 	..()
 	BACKPACK_OVERRIDE_ENGINEERING

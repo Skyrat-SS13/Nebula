@@ -38,7 +38,7 @@
 	victory_text = "The heads of staff remained at their posts; the mission will continue as ordered."
 	loss_text = "The heads of staff could not contain the mutiny, and the Torch is now heading home."
 
-/datum/antagonist/loyalists/Initialize()
+/datum/antagonist/loyalists/New()
 	..()
 	welcome_text = "The SEV Torch, the most ambitious and prestigious human research project ever established, is now under threat from her very crew as a result of the Expeditionary Corps' brass decision \
 					to enter 'hibernation mode' (with crew in cryosleep, and the AI piloting the ship) instead of making the scheduled return to Sol. Crew morale is dangerously low. What the Torch needs now \

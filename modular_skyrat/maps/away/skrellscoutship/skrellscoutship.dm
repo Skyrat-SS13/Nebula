@@ -78,7 +78,7 @@
 	title = "Qrri-Zuumqix"
 	supervisors = "your Qrri-Vuxix"
 	total_positions = 5
-	whitelisted_species = list("Skrell")
+	whitelisted_species = list(SPECIES_SKRELL)
 	outfit_type = /decl/hierarchy/outfit/job/skrellscoutship
 	info = "Your vessel is scouting through unknown space, working to map out any potential dangers, as well as potential allies."
 	branch = /datum/mil_branch/skrell_fleet

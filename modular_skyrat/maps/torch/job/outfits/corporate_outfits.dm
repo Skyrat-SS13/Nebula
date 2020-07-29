@@ -17,7 +17,7 @@
 	pda_type = /obj/item/modular_computer/pda/science
 	id_type = /obj/item/card/id/torch/passenger/research/scientist
 
-/decl/hierarchy/outfit/job/torch/passenger/research/scientist/Initialize()
+/decl/hierarchy/outfit/job/torch/passenger/research/scientist/New()
 	..()
 	BACKPACK_OVERRIDE_RESEARCH
 

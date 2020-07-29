@@ -59,19 +59,19 @@
 				species_blacklist |= job.type
 
 // Some jobs for nabber grades defined here due to map-specific job datums.
-/*/decl/cultural_info/culture/ascent/Initialize()
+/*/decl/cultural_info/culture/ascent/New()
 	LAZYADD(qualifications, /datum/job/scientist_assistant)
 	..()
 
-/decl/cultural_info/culture/ascent/Initialize()
+/decl/cultural_info/culture/ascent/New()
 	LAZYADD(qualifications, /datum/job/cargo_tech)
 	..()
 
-/decl/cultural_info/culture/ascent/Initialize()
+/decl/cultural_info/culture/ascent/New()
 	LAZYADD(qualifications, /datum/job/engineer)
 	..()
 
-/decl/cultural_info/culture/ascent/plus/Initialize()
+/decl/cultural_info/culture/ascent/plus/New()
 	LAZYADD(qualifications, /datum/job/doctor)
 	..()*/
 
