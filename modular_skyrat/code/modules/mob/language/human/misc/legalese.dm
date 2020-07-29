@@ -7,7 +7,7 @@
 	space_chance = 100
 	key = "u"
 	partial_understanding = list(
-		/decl/language/human/euro = 10,
+		/decl/language/human/common = 10,
 		/decl/language/human/selenian = 25,
 		/decl/language/skrell = 5
 	)

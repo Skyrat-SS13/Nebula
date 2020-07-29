@@ -12,7 +12,7 @@
 	shorthand = "Dehv"
 	space_chance = 30
 	partial_understanding = list(
-		/decl/language/human/euro = 10,
+		/decl/language/human/common = 10,
 		/decl/language/human/chinese = 5,
 		/decl/language/human/arabic = 10,
 		/decl/language/human/iberian = 5,

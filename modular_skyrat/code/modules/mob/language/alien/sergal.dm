@@ -5,12 +5,12 @@
 	ask_verb = "snarls"
 	exclaim_verb = "barks"
 	colour = "changeling"
-	key = "z"
+	key = "s"
 	flags = WHITELISTED
 	space_chance = 40
 	syllables = list("grr", "gah", "woof", "arf", "arra", "rah", "wor", "sarg")
 	shorthand = "SG"
 	partial_understanding = list(
-		/decl/language/human/euro = 2,
+		/decl/language/human/common = 2,
 		/decl/language/spacer = 2
 	)

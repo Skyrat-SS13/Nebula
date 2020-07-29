@@ -11,7 +11,6 @@
 #define FACTION_PCRC           "Proxima Centauri Risk Control"
 #define FACTION_CORPORATE       "Expeditionary Corps Organisation"
 #define FACTION_DAIS           "Deimos Advanced Information Systems"
-#define FACTION_OTHER          "Other Faction"
 #define FACTION_TEST_SUBJECTS  "Test Subjects"
 #define FACTION_SPACECOPS  "Sol Federal Police"
 
@@ -49,13 +48,10 @@
 #define CULTURE_HUMAN_CONFED   "Terran"
 #define CULTURE_HUMAN_OTHER    "Other, Humanity"
 #define CULTURE_STARLIGHT      "Starlit Realms"
-#define CULTURE_MONKEY         "Monkey Business"
 #define CULTURE_FARWA          "Farwa Business"
 #define CULTURE_NEARA          "Neara Business"
 #define CULTURE_STOK           "Stok Business"
-#define CULTURE_SYMBIOTIC      "Symbiote Host"
 
-#define RELIGION_OTHER         "Other Religion"
 #define RELIGION_JUDAISM       "Judaism"
 #define RELIGION_HINDUISM      "Hinduism"
 #define RELIGION_BUDDHISM      "Buddhism"
@@ -161,11 +157,6 @@
 #define CULTURE_NABBER_AMINUS "Grade A-"
 #define CULTURE_NABBER_A      "Grade A"
 #define CULTURE_NABBER_APLUS  "Grade A+"
-
-// Ascent culture.
-#define HOME_SYSTEM_KHARMAANI    "Core"
-#define FACTION_ASCENT_GYNE      "Ascent Gyne"
-#define FACTION_ASCENT_ALATE     "Ascent Alate"
 
 // Sergal culture
 #define CULTURE_SERGAL "The Sergals"

@@ -5,7 +5,7 @@
 						https://www.sttmedia.com/syllablefrequency-german
 *///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/decl/language/human/euro
+/decl/language/human/common
 	name = "Zurich Accord Common"
 	desc = "A constructed language established by a conference of European and African research universities convening in Zurich, Switzerland starting in 2119, \
 			later adopted with little controversy as the lingua franca of the entirety of Sol space following the establishment of the SCG."

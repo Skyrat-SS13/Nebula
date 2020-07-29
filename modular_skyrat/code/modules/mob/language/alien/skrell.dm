@@ -10,6 +10,6 @@
 	syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix","*","!")
 	shorthand = "SK"
 	partial_understanding = list(
-		/decl/language/human/euro = 2,
+		/decl/language/human/common = 2,
 		/decl/language/spacer = 2
 	)

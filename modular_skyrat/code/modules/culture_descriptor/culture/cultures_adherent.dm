@@ -8,7 +8,7 @@
 	hidden_from_codex = TRUE
 	language = /decl/language/adherent
 	secondary_langs = list(
-		/decl/language/human/euro,
+		/decl/language/human/common,
 		/decl/language/gutter,
 		/decl/language/spacer
 	)

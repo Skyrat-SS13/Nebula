@@ -1,1 +1,1 @@
-/datum/antagonist/ert/required_language = /decl/language/human/euro
+/datum/antagonist/ert/required_language = /decl/language/human/common

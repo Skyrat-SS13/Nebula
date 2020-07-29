@@ -13,7 +13,7 @@
 	key = "c"
 	shorthand = "NCos"
 	partial_understanding = list(
-		/decl/language/human/euro = 60,
+		/decl/language/human/common = 60,
 		/decl/language/human/russian = 60,
 		/decl/language/human/chinese = 10,
 		/decl/language/human/arabic = 10,

@@ -5,7 +5,7 @@
 	key = "j"
 	shorthand = "Spc"
 	partial_understanding = list(
-		/decl/language/human/euro = 25,
+		/decl/language/human/common = 25,
 		/decl/language/human/chinese = 25,
 		/decl/language/human/arabic = 25,
 		/decl/language/human/indian = 25,

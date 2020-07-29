@@ -5,7 +5,7 @@
 	key = "r"
 	shorthand = "Slav"
 	partial_understanding = list(
-		/decl/language/human/euro = 10,
+		/decl/language/human/common = 10,
 		/decl/language/human/iberian = 5,
 		/decl/language/human/chinese = 5,
 		/decl/language/human/indian = 5,

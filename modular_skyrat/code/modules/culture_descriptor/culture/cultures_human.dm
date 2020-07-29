@@ -6,7 +6,7 @@
 	name = CULTURE_HUMAN
 	description = "You are from one of various planetary cultures of humankind."
 	secondary_langs = list(
-		/decl/language/human/euro,
+		/decl/language/human/common,
 		/decl/language/human/chinese,
 		/decl/language/human/arabic,
 		/decl/language/human/indian,

@@ -6,7 +6,7 @@
 	shorthand = "Sel"
 	space_chance = 100
 	partial_understanding = list(
-		/decl/language/human/euro = 85,
+		/decl/language/human/common = 85,
 		/decl/language/human/chinese = 15,
 		/decl/language/human/arabic = 5,
 		/decl/language/human/indian = 25,

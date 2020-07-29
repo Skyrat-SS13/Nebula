@@ -7,7 +7,7 @@
 	shorthand = "PSA"
 	space_chance = 35
 	partial_understanding = list(
-		/decl/language/human/euro = 10,
+		/decl/language/human/common = 10,
 		/decl/language/human/iberian = 20,
 		/decl/language/human/chinese = 5,
 		/decl/language/human/indian = 10,

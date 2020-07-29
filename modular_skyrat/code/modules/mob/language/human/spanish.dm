@@ -12,7 +12,7 @@
 	key = "5"
 	shorthand = "Iber"
 	partial_understanding = list(
-		/decl/language/human/euro = 35,
+		/decl/language/human/common = 35,
 		/decl/language/human/arabic = 20,
 		/decl/language/human/russian = 5,
 		/decl/language/human/chinese = 5,

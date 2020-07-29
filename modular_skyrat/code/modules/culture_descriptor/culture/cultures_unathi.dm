@@ -11,7 +11,7 @@
 	name_language = /decl/language/unathi
 	secondary_langs = list(
 		/decl/language/sign,
-		/decl/language/human/euro,
+		/decl/language/human/common,
 		/decl/language/gutter,
 		/decl/language/spacer
 	)

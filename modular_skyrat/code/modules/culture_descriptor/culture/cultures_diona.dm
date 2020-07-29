@@ -5,7 +5,7 @@
 	language = /decl/language/diona
 	additional_langs = list(/decl/language/diona/global)
 	secondary_langs = list(
-		/decl/language/human/euro,
+		/decl/language/human/common,
 		/decl/language/spacer,
 		/decl/language/gutter,
 		/decl/language/sign
