@@ -1,6 +1,8 @@
 /datum/job/captain
 	title = "Commanding Officer"
 	supervisors = "the Sol Central Government and the Sol Code of Uniform Justice"
+	total_positions = 1
+	spawn_positions = 1
 	minimal_player_age = 14
 	economic_power = 15
 	minimum_character_age = list(SPECIES_HUMAN = 40)
@@ -36,6 +38,8 @@
 /datum/job/hop
 	title = "Executive Officer"
 	supervisors = "the Commanding Officer"
+	total_positions = 1
+	spawn_positions = 1
 	department_refs = list(DEPT_COMMAND)
 	minimal_player_age = 14
 	economic_power = 10
@@ -95,6 +99,8 @@
 /datum/job/rd
 	title = "Chief Science Officer"
 	supervisors = "the Commanding Officer"
+	total_positions = 1
+	spawn_positions = 1
 	economic_power = 20
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
@@ -142,6 +148,8 @@
 /datum/job/cmo
 	title = "Chief Medical Officer"
 	supervisors = "the Commanding Officer and the Executive Officer"
+	total_positions = 1
+	spawn_positions = 1
 	economic_power = 10
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
@@ -185,6 +193,8 @@
 /datum/job/chief_engineer
 	title = "Chief Engineer"
 	supervisors = "the Commanding Officer and the Executive Officer"
+	total_positions = 1
+	spawn_positions = 1
 	economic_power = 9
 	minimum_character_age = list(SPECIES_HUMAN = 27)
 	ideal_character_age = 40
@@ -241,6 +251,8 @@
 /datum/job/hos
 	title = "Chief of Security"
 	supervisors = "the Commanding Officer and the Executive Officer"
+	total_positions = 1
+	spawn_positions = 1
 	economic_power = 8
 	minimal_player_age = 14
 	minimum_character_age = list(SPECIES_HUMAN = 25)
