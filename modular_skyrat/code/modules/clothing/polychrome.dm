@@ -34,8 +34,8 @@
 	var/hasprimary = FALSE	//These vars allow you to choose which overlays a clothing has
 	var/hassecondary = FALSE
 	var/hastertiary = FALSE
-	var/primary_color = "#FFFFFF" //RGB in hexcode
-	var/secondary_color = "#FFFFFF"
+	var/primary_color = "#ffffff" //RGB in hexcode
+	var/secondary_color = "#ffffff"
 	var/tertiary_color = "#808080"
 	var/item_color
 
@@ -86,4 +86,4 @@
 /obj/item/clothing/Initialize()
 	. = ..()
 	if(hasprimary | hassecondary | hastertiary)
-		update_icon() //Applies the overlays and default colors onto the clothes on spawn. 
+		update_icon() //Applies the overlays and default colors onto the clothes on spawn.
