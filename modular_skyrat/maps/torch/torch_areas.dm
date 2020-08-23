@@ -90,6 +90,12 @@
 /area/crew_quarters/safe_room/fourthdeck
 	name = "\improper Fourth Deck Safe Room"
 
+/area/crew_quarters/pool
+	name = "\improper Pool"
+
+/area/crew_quarters/publicgarden
+	name = "\improper Garden"
+
 //Third Deck (Z-2)
 /area/hallway/primary/thirddeck/fore
 	name = "\improper Third Deck Fore Hallway"
@@ -693,6 +699,11 @@
 	name = "\improper Command - SEA's Office"
 	req_access = list(access_senadv)
 
+/area/crew_quarters/heads/office/PADV
+	icon_state = "heads"
+	name = "\improper Command - PADV Office"
+	req_access = list(access_psiadvisor)
+
 // Engineering
 
 /area/engineering/shieldbay
@@ -965,15 +976,33 @@
 	sound_env = SMALL_ENCLOSED
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-/area/crew_quarters/sleep/bunk
-	name = "\improper Bunk Room"
+/area/crew_quarters/sleep/hall
+	name = "\improper Dorm Hall"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep/dorm
+	name = "\improper Dorm One"
 	icon_state = "Sleep"
 	sound_env = SMALL_SOFTFLOOR
 	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
-/area/crew_quarters/sleep/cryo/aux
-	name = "\improper First Deck Cryogenic Storage"
+/area/crew_quarters/sleep/dorm/two
+	name = "\improper Dorm Two"
 	icon_state = "Sleep"
+	sound_env = SMALL_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+/area/crew_quarters/sleep/dorm/three
+	name = "\improper Dorm Three"
+	icon_state = "Sleep"
+	sound_env = SMALL_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
+
+/area/crew_quarters/sleep/dorm/four
+	name = "\improper Dorm Four"
+	icon_state = "Sleep"
+	sound_env = SMALL_SOFTFLOOR
+	area_flags = AREA_FLAG_RAD_SHIELDED | AREA_FLAG_ION_SHIELDED
 
 /area/crew_quarters/adherent
 	name = "\improper Adherent Maintenence"
@@ -1567,8 +1596,12 @@ area/assembly/robotics/office
 // Crew
 
 /area/crew_quarters/sleep/cryo
-	name = "\improper Third Deck Cryogenic Storage"
+	name = "\improper First Deck Cryogenic Storage"
 	icon_state = "Sleep"
+
+/area/crew_quarters/sleep/changing
+	name = "\improper First Deck Cryogenic Storage"
+	icon_state = "Yellow"
 
 /area/hydroponics
 	name = "\improper Hydroponics"

@@ -106,6 +106,29 @@
 		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger, 50)
 	)
 
+
+/obj/structure/closet/secure_closet/psiadv
+	name = "\improper Psionic Advisor Closet"
+	req_access = list(access_representative)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/sol/rep
+
+/obj/structure/closet/secure_closet/psiadv/WillContain()
+	return list(
+		/obj/item/flash,
+		/obj/item/camera_film = 2,
+		/obj/item/clipboard,
+		/obj/item/folder,
+		/obj/item/tape/random = 3,
+		/obj/item/storage/briefcase/foundation,
+		/obj/item/radio/headset/headset_com,
+		/obj/item/clothing/suit/storage/toggle/labcoat/foundation,
+		/obj/item/storage/belt/general,
+		/obj/item/storage/box/psioniccontrol,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel)),
+		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger, 50)
+	)
+
+
 //equipment closets that everyone on the crew or in research can access, for storing things securely
 
 /obj/structure/closet/secure_closet/crew
@@ -163,3 +186,11 @@
 		/obj/item/clothing/suit/armor/pcarrier/medium/command = 3,
 		/obj/item/clothing/head/helmet/solgov/command = 3
 	)
+
+/obj/item/storage/box/psioniccontrol
+	name = "psionic control implant kit"
+	desc = "Box of stuff used to implant psionic control implants."
+	icon_state = "implant"
+	item_state = "syringe_kit"
+	startswith = list(/obj/item/implanter = 1,
+		/obj/item/implant/psi_control = 6)

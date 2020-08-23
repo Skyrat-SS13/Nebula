@@ -3240,6 +3240,7 @@
 #include "modular_skyrat\code\datums\item_modifiers\space_suits.dm"
 #include "modular_skyrat\code\game\atoms.dm"
 #include "modular_skyrat\code\game\turf.dm"
+#include "modular_skyrat\code\game\jobs\access_datum.dm"
 #include "modular_skyrat\code\game\machinery\suit_storage.dm"
 #include "modular_skyrat\code\game\machinery\suit_storage_unit.dm"
 #include "modular_skyrat\code\game\machinery\suit_storage_units.dm"
