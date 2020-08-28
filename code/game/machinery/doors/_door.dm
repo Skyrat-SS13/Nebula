@@ -13,6 +13,9 @@
 	interact_offline = TRUE
 	construct_state = /decl/machine_construction/default/panel_closed/door
 	uncreated_component_parts = null
+	required_interaction_dexterity = DEXTERITY_SIMPLE_MACHINES
+
+	var/can_open_manually = TRUE
 
 	var/open_layer = OPEN_DOOR_LAYER
 	var/closed_layer = CLOSED_DOOR_LAYER
@@ -182,6 +185,7 @@
 		take_damage(min(damage, 100))
 
 /obj/machinery/door/hitby(var/atom/movable/AM, var/datum/thrownthing/TT)
+	..()
 	visible_message("<span class='danger'>[src.name] was hit by [AM].</span>")
 	var/tforce = 0
 	if(ismob(AM))
@@ -193,7 +197,7 @@
 
 // This is legacy code that should be revisited, probably by moving the bulk of the logic into here.
 /obj/machinery/door/physical_attack_hand(user)
-	if(operating)
+	if(operating || !can_open_manually)
 		return FALSE
 
 	if(allowed(user))
@@ -394,6 +398,7 @@
 	return world.time + (normalspeed ? 150 : 5)
 
 /obj/machinery/door/proc/close(var/forced = 0)
+	set waitfor = FALSE
 	if(!can_close(forced))
 		return
 	operating = 1
@@ -414,7 +419,6 @@
 	var/obj/fire/fire = locate() in loc
 	if(fire)
 		qdel(fire)
-	return
 
 /obj/machinery/door/proc/toggle(to_open = density)
 	if(to_open)
@@ -523,7 +527,7 @@
 		req_access = req_access_diff(fore, aft)
 
 /obj/machinery/door/do_simple_ranged_interaction(var/mob/user)
-	if(!requiresID() || allowed(null))
+	if((!requiresID() || allowed(null)) && can_open_manually)
 		toggle()
 	return TRUE
 

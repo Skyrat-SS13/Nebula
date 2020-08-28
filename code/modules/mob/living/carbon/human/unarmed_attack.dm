@@ -74,17 +74,17 @@ var/global/list/sparring_attack_cache = list()
 				// Induce blurriness
 				target.visible_message("<span class='danger'>[target] looks momentarily disoriented.</span>", "<span class='danger'>You see stars.</span>")
 				target.apply_effect(attack_damage*2, EYE_BLUR, armour)
-			if(BP_L_ARM, BP_L_HAND)
-				if (target.l_hand)
+			if(BP_L_ARM, BP_L_HAND, BP_R_ARM, BP_R_HAND)
+				var/check_zone = zone
+				if(check_zone == BP_L_ARM)
+					check_zone = BP_L_HAND
+				else if(check_zone == BP_R_ARM)
+					check_zone = BP_R_HAND
+				var/datum/inventory_slot/inv_slot = LAZYACCESS(target.held_item_slots, check_zone)
+				if(inv_slot?.holding)
 					// Disarm left hand
-					//Urist McAssistant dropped the macguffin with a scream just sounds odd.
-					target.visible_message("<span class='danger'>\The [target.l_hand] was knocked right out of [target]'s grasp!</span>")
-					target.drop_l_hand()
-			if(BP_R_ARM, BP_R_HAND)
-				if (target.r_hand)
-					// Disarm right hand
-					target.visible_message("<span class='danger'>\The [target.r_hand] was knocked right out of [target]'s grasp!</span>")
-					target.drop_r_hand()
+					target.visible_message(SPAN_DANGER("\The [inv_slot.holding] was knocked right out of [target]'s grasp!"))
+					target.drop_from_inventory(inv_slot.holding)
 			if(BP_CHEST)
 				if(!target.lying)
 					var/turf/T = get_step(get_turf(target), get_dir(get_turf(user), get_turf(target)))
@@ -154,10 +154,10 @@ var/global/list/sparring_attack_cache = list()
 
 /decl/natural_attack/bite/is_usable(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone)
 
-	if(istype(user.wear_mask, /obj/item/clothing/mask/muzzle))
+	if(user.is_muzzled())
 		return 0
 	for(var/obj/item/clothing/C in list(user.wear_mask, user.head, user.wear_suit))
-		if(C && (C.body_parts_covered & FACE) && (C.item_flags & ITEM_FLAG_THICKMATERIAL))
+		if(C && (C.body_parts_covered & SLOT_FACE) && (C.item_flags & ITEM_FLAG_THICKMATERIAL))
 			return 0 //prevent biting through a space helmet or similar
 	if (user == target && (zone == BP_HEAD || zone == BP_EYES || zone == BP_MOUTH))
 		return 0 //how do you bite yourself in the head?

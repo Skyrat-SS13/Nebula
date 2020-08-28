@@ -18,6 +18,7 @@
 	idle_power_usage = 10
 	emagged = 0 //Ignores if somebody doesn't have card access to that machine.
 	wires = /datum/wires/vending
+	required_interaction_dexterity = DEXTERITY_SIMPLE_MACHINES
 
 	var/icon_vend //Icon_state when vending
 	var/icon_deny //Icon_state when denying access
@@ -202,7 +203,7 @@
 	if(currently_vending.price > cashmoney.absolute_worth)
 		// This is not a status display message, since it's something the character
 		// themselves is meant to see BEFORE putting the money in
-		to_chat(usr, "\icon[cashmoney] <span class='warning'>That is not enough money.</span>")
+		to_chat(usr, "[html_icon(cashmoney)] <span class='warning'>That is not enough money.</span>")
 		return 0
 	visible_message("<span class='info'>\The [usr] inserts some cash into \the [src].</span>")
 	cashmoney.adjust_worth(-(currently_vending.price))

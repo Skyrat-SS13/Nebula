@@ -85,10 +85,10 @@
 				if(!check_has_mouth())
 					to_chat(H, "<span class='warning'>They don't have a mouth, you cannot do mouth-to-mouth resuscitation!</span>")
 					return TRUE
-				if((H.head && (H.head.body_parts_covered & FACE)) || (H.wear_mask && (H.wear_mask.body_parts_covered & FACE)))
+				if((H.head && (H.head.body_parts_covered & SLOT_FACE)) || (H.wear_mask && (H.wear_mask.body_parts_covered & SLOT_FACE)))
 					to_chat(H, "<span class='warning'>You need to remove your mouth covering for mouth-to-mouth resuscitation!</span>")
 					return TRUE
-				if((head && (head.body_parts_covered & FACE)) || (wear_mask && (wear_mask.body_parts_covered & FACE)))
+				if((head && (head.body_parts_covered & SLOT_FACE)) || (wear_mask && (wear_mask.body_parts_covered & SLOT_FACE)))
 					to_chat(H, "<span class='warning'>You need to remove \the [src]'s mouth covering for mouth-to-mouth resuscitation!</span>")
 					return TRUE
 				if (!H.internal_organs_by_name[H.species.breathing_organ])
@@ -235,22 +235,13 @@
 
 //Breaks all grips and pulls that the mob currently has.
 /mob/living/carbon/human/proc/break_all_grabs(mob/living/carbon/user)
-	var/success = 0
-	if(istype(l_hand, /obj/item/grab))
-		var/obj/item/grab/lgrab = l_hand
-		if(lgrab.affecting)
-			visible_message("<span class='danger'>[user] has broken [src]'s grip on [lgrab.affecting]!</span>")
-			success = 1
-		spawn(1)
-			qdel(lgrab)
-	if(istype(r_hand, /obj/item/grab))
-		var/obj/item/grab/rgrab = r_hand
-		if(rgrab.affecting)
-			visible_message("<span class='danger'>[user] has broken [src]'s grip on [rgrab.affecting]!</span>")
-			success = 1
-		spawn(1)
-			qdel(rgrab)
-	return success
+	. = FALSE
+	for(var/obj/item/grab/grab in get_active_grabs())
+		if(grab.affecting)
+			visible_message(SPAN_DANGER("\The [user] has broken \the [src]'s grip on [grab.affecting]!"))
+			. = TRUE
+		drop_from_inventory(grab)
+
 /*
 	We want to ensure that a mob may only apply pressure to one organ of one mob at any given time. Currently this is done mostly implicitly through
 	the behaviour of do_after() and the fact that applying pressure to someone else requires a grab:

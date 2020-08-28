@@ -84,7 +84,7 @@
 		return
 
 	// Do not allow player facing change in fixed chairs
-	if(!istype(buckled) || buckled.buckle_movable)
+	if(!istype(buckled) || buckled.buckle_movable || buckled.buckle_allow_rotation)
 		face_atom(A) // change direction to face what you clicked on
 
 	if(!canClick()) // in the year 2000...
@@ -107,10 +107,7 @@
 	if(W == A) // Handle attack_self
 		W.attack_self(src)
 		trigger_aiming(TARGET_CAN_CLICK)
-		if(hand)
-			update_inv_l_hand(0)
-		else
-			update_inv_r_hand(0)
+		update_inv_hands(0)
 		return 1
 
 	//Atoms on your person
@@ -225,7 +222,6 @@
 */
 /mob/proc/MiddleClickOn(var/atom/A)
 	swap_hand()
-	return
 
 // In case of use break glass
 /*
