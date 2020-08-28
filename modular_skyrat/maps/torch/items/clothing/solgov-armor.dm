@@ -14,7 +14,7 @@
 
 /obj/item/clothing/suit/storage/vest/solgov/security
 	name = "master at arms heavy armored vest"
-	desc = "A synthetic armor vest with MASTER AT ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
+	desc = "A synthetic armor vest with MASTER AT SLOT_ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
 	icon_state = "secwebvest"
 
 /obj/item/clothing/suit/storage/vest/solgov/command

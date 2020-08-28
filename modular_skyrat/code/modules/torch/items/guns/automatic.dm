@@ -44,7 +44,7 @@
 		..()
 
 /obj/item/gun/projectile/automatic/bullpup_rifle/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src && use_launcher)
+	if(user.get_empty_hand_slot() == src && use_launcher)
 		launcher.unload(user)
 	else
 		..()
@@ -84,7 +84,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	caliber = CALIBER_PISTOL_SMALL
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2)
-	slot_flags = SLOT_BELT
+	slot_flags = SLOT_HOLSTER
 	ammo_type = /obj/item/ammo_casing/pistol/small
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/smg_top/rubber

@@ -584,8 +584,8 @@
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(get_step(loc, SOUTH))
-	if (occupant.bodytemperature < 261 && occupant.bodytemperature >= 70) 
-		occupant.bodytemperature = 261									  
+	if (occupant.bodytemperature < 261 && occupant.bodytemperature >= 70)
+		occupant.bodytemperature = 261
 	occupant = null
 	current_heat_capacity = initial(current_heat_capacity)
 	update_use_power(POWER_USE_IDLE)
@@ -856,7 +856,7 @@
 	desc = "It's a secure, armored storage unit embeded into the floor for storing the nuclear cylinders."
 	icon = 'icons/obj/machines/self_destruct.dmi'
 	icon_state = "base"
-	anchored = TRUE	
+	anchored = TRUE
 	density = FALSE
 	req_access = list(access_heads_vault)
 
@@ -963,7 +963,7 @@
 	desc = "A pair of sandals modelled after the ancient Roman caligae."
 	icon_state = "caligae"
 	item_state = "caligae"
-	body_parts_covered = FEET|LEGS
+	body_parts_covered = SLOT_FEET|SLOT_LEGS
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
@@ -1013,13 +1013,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber
 	plane = FLOOR_PLANE
 
-/obj/machinery/power/terminal 
+/obj/machinery/power/terminal
 	plane = FLOOR_PLANE
 
 /obj/machinery/hologram/holopad
 	plane = FLOOR_PLANE
 
-/obj/structure/catwalk 
+/obj/structure/catwalk
 	plane = FLOOR_PLANE
 
 /obj/machinery/atmospherics/pipe/simple/hidden
@@ -1055,7 +1055,7 @@
 	desc = "A rather skimpy pink swimsuit."
 	icon_state = "stripper_p_under"
 	siemens_coefficient = 1
-	
+
 
 /obj/item/clothing/under/stripper/stripper_green
 	name = "green swimsuit"
@@ -1085,12 +1085,12 @@
 	name = "xenos suit"
 	desc = "A suit made out of chitinous alien hide."
 	icon_state = "xenos"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_LEGS|SLOT_FEET|SLOT_ARMS|SLOT_HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	siemens_coefficient = 2.0
 	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_suit.dmi')
-	
+
 //swimsuit
 /obj/item/clothing/under/swimsuit/
 	siemens_coefficient = 1

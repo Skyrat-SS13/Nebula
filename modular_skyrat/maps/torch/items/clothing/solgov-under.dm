@@ -12,7 +12,7 @@
 	desc = "Shorts! Shirt! Miami! Sexy!"
 	icon_state = "miami"
 	worn_state = "miami"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY
 
 /obj/item/clothing/under/solgov/pt/expeditionary
 	name = "expeditionary pt uniform"

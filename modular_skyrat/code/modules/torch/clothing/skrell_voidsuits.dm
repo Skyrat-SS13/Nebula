@@ -39,7 +39,7 @@
 		rad = ARMOR_RAD_SHIELDED
 		)
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/storage/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd)
-	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	heat_protection = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_LEGS|SLOT_FEET|SLOT_ARMS|SLOT_HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = list(SPECIES_SKRELL,SPECIES_HUMAN) //TODO BODYTYPES
 	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'

@@ -11,8 +11,8 @@
 	siemens_coefficient = 0.7
 	gas_transfer_coefficient = 0.90
 	permeability_coefficient = 0.50
-	body_parts_covered = FEET
-	heat_protection = FEET
+	body_parts_covered = SLOT_FEET
+	heat_protection = SLOT_FEET
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	max_pressure_protection = FIRESUIT_MAX_PRESSURE
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
@@ -67,7 +67,7 @@
 	desc = "A pair of magic, black shoes."
 	name = "magic shoes"
 	icon_state = "black"
-	body_parts_covered = FEET
+	body_parts_covered = SLOT_FEET
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')
 
@@ -79,9 +79,9 @@
 	force = 2
 	siemens_coefficient = 0.7
 
-	cold_protection = FEET
+	cold_protection = SLOT_FEET
 	min_cold_protection_temperature = SHOE_MIN_COLD_PROTECTION_TEMPERATURE
-	heat_protection = FEET
+	heat_protection = SLOT_FEET
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = null
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
@@ -170,9 +170,9 @@ obj/item/clothing/shoes/heels/red
 	name = "black shoes"
 	icon_state = "black"
 	desc = "A pair of black shoes."
-	cold_protection = FEET
+	cold_protection = SLOT_FEET
 	min_cold_protection_temperature = SHOE_MIN_COLD_PROTECTION_TEMPERATURE
-	heat_protection = FEET
+	heat_protection = SLOT_FEET
 	max_heat_protection_temperature = SHOE_MAX_HEAT_PROTECTION_TEMPERATURE
 	icon = 'modular_skyrat/icons/obj/clothing/obj_feet.dmi'
 	item_icons = list(slot_shoes_str = 'modular_skyrat/icons/mob/onmob/onmob_feet.dmi')

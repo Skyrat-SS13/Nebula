@@ -3,7 +3,7 @@
 	name = "\improper SFP Agent's badge"
 	desc = "A leather-backed gold badge displaying the crest of the Sol Federal Police."
 	icon_state = "agentbadge"
-	slot_flags = SLOT_BELT | SLOT_TIE | SLOT_MASK
+	slot_flags = SLOT_HOLSTER | SLOT_TIE | SLOT_FACE
 	slot = ACCESSORY_SLOT_INSIGNIA
 	badge_string = FACTION_SPACECOPS
 	icon = 'modular_skyrat/icons/obj/clothing/obj_accessories.dmi'
@@ -75,23 +75,23 @@
 	if(!istype(H))
 		return
 	desc = "Blood type: [H.b_type]"
-	
+
 /obj/item/clothing/accessory/badge/tags/skrell/verb/set_sdtf()
 	set name = "Set SDTF Name"
 	set category = "Object"
 	set src in usr
-	
+
 	if(usr.incapacitated())
 		to_chat(usr, "<span class='warning'>You're unable to do that.</span>")
 		return
-	
+
 	var/obj/item/in_hand = usr.get_active_hand()
 	if(in_hand != src)
 		to_chat(usr, "<span class='warning'>You have to be holding [src] to modify it.</span>")
 		return
-	
+
 	badge_string = sanitize(input(usr, "Input your SDTF.", "SDTF Holobadge") as null|text, MAX_NAME_LEN)
-	
+
 	if(usr.incapacitated())	//Because things can happen while you're typing
 		to_chat(usr, "<span class='warning'>You're unable to do that.</span>")
 		return
@@ -99,7 +99,7 @@
 	if(in_hand != src)
 		to_chat(usr, "<span class='warning'>You have to be holding [src] to modify it.</span>")
 		return
-		
+
 	if(badge_string)
 		set_name(usr.real_name)
 		set_desc(usr)
@@ -112,4 +112,4 @@
 	icon_override = 'modular_skyrat/icons/mob/onmob/onmob_modular_armor.dmi'
 	icon = 'modular_skyrat/icons/obj/clothing/obj_suit_modular_armor.dmi'
 	accessory_icons = list(slot_tie_str = 'modular_skyrat/icons/mob/onmob/onmob_modular_armor.dmi', slot_wear_suit_str = 'modular_skyrat/icons/mob/onmob/onmob_modular_armor.dmi')
-	
+

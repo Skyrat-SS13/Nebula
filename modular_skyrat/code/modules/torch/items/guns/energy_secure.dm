@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 	name = "skrellian handgun"
 	desc = "A common Skrellian side-arm, the Xuxquu*'Voom-5, or XV-5, is a more traditional energy weapon, tuned to dispense beams in three different wavelengths."
 	w_class = ITEM_SIZE_NORMAL
-	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	slot_flags = SLOT_HOLSTER
 	icon = 'modular_skyrat/icons/obj/guns/skrell_pistol.dmi'
 	icon_state = "skrell_pistol_stun_100"
 	max_shots = 10
@@ -113,7 +113,7 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 	icon = 'modular_skyrat/icons/obj/guns/taser_carbine.dmi'
 	icon_state = "tasercarbine"
 	w_class = ITEM_SIZE_LARGE
-	slot_flags = SLOT_BELT|SLOT_BACK
+	slot_flags = SLOT_HOLSTER|SLOT_BACK
 	one_hand_penalty = 3
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	force = 8
@@ -136,7 +136,7 @@ GLOBAL_LIST_INIT(secure_weapons, list())
 	origin_tech = list(TECH_COMBAT = 2, TECH_MAGNET = 4)
 	w_class = ITEM_SIZE_NORMAL
 	force = 5
-	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	slot_flags = SLOT_HOLSTER
 	one_hand_penalty = 0
 	charge_cost = 20
 	max_shots = 4

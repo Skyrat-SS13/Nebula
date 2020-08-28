@@ -23,7 +23,7 @@
 	icon_state = "terrandress"
 	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_terran.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_terran.dmi')
-	body_parts_covered = UPPER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS
 	siemens_coefficient = 0.9
 	allowed = list(/obj/item/tank/emergency,/obj/item/flashlight,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/radio,/obj/item/pen)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL,ACCESSORY_SLOT_RANK)

@@ -16,7 +16,7 @@
 	icon_state = "evening_gloves"
 	item_state = "evening_gloves"
 	color = COLOR_WHITE //original colour was "#7f7f7f", but white is fancier of course
-	body_parts_covered = ARMS|HANDS //evening gloves don't quite cover the entire arm, but might as well differentiate the item a bit
+	body_parts_covered = SLOT_ARMS|SLOT_HANDS //evening gloves don't quite cover the entire arm, but might as well differentiate the item a bit
 	icon = 'modular_skyrat/icons/obj/clothing/obj_hands.dmi'
 	item_icons = list(slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/onmob_hands.dmi')
 

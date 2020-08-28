@@ -74,7 +74,7 @@
 	primary_color = "#ffffff" //RGB in hexcode
 	secondary_color = "#f08080"
 	hastertiary = FALSE // so it doesn't futz with digilegs
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS
 
 /obj/item/clothing/under/polychromic/skirt
 	name = "polychromic skirt"
@@ -85,7 +85,7 @@
 	primary_color = "#ffffff" //RGB in hexcode
 	secondary_color = "#f08080"
 	tertiary_color = "#808080"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS
 
 /obj/item/clothing/under/polychromic/shorts
 	name = "polychromic shorts"
@@ -96,7 +96,7 @@
 	primary_color = "#353535" //RGB in hexcode
 	secondary_color = "#808080"
 	tertiary_color = "#808080"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS
 
 /obj/item/clothing/under/polychromic/jumpsuit
 	name = "polychromic tri-tone jumpsuit"
@@ -118,7 +118,7 @@
 	primary_color = "#ffffff" //RGB in hexcode
 	secondary_color = "#f08080"
 	gender = PLURAL	//Because shortS
-	body_parts_covered = LOWER_TORSO	//Because there's no shirt included
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS	//Because there's no shirt included
 
 /obj/item/clothing/under/polychromic/pleat
 	name = "polychromic pleated skirt"
@@ -129,7 +129,7 @@
 	primary_color = "#8cc6ff" //RGB in hexcode
 	secondary_color = "#808080"
 	tertiary_color = "#ff3535"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS
 
 /obj/item/clothing/under/polychromic/femtank
 	name = "polychromic feminine tank top"
@@ -140,7 +140,7 @@
 	hastertiary = FALSE
 	primary_color = "#808080" //RGB in hexcode
 	secondary_color = "#ff3535"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_ARMS
 
 /obj/item/clothing/under/polychromic/shortpants/pantsu
 	name = "polychromic panties"
@@ -151,7 +151,7 @@
 	hastertiary = FALSE
 	primary_color = "#ffffff" //RGB in hexcode
 	secondary_color = "#8cc6ff"
-	body_parts_covered = LOWER_TORSO
+	body_parts_covered = SLOT_LOWER_BODY
 
 /obj/item/clothing/under/polychromic/bottomless
 	name = "polychromic bottomless shirt"
@@ -162,7 +162,7 @@
 	hastertiary = FALSE
 	primary_color = "#808080" //RGB in hexcode
 	secondary_color = "#ff3535"
-	body_parts_covered = UPPER_TORSO|ARMS	//Because there's no bottom included
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS	//Because there's no bottom included
 
 /obj/item/clothing/under/polychromic/shimatank
 	name = "polychromic tank top"
@@ -173,4 +173,4 @@
 	primary_color = "#808080" //RGB in hexcode
 	secondary_color = "#ffffff"
 	tertiary_color = "#8cc6ff"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_LOWER_BODY

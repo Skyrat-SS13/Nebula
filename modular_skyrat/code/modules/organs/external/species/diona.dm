@@ -13,7 +13,7 @@
 	min_broken_damage = 50
 	w_class = ITEM_SIZE_HUGE
 	cavity_max_w_class = ITEM_SIZE_NORMAL
-	body_part = UPPER_TORSO
+	body_part = SLOT_UPPER_BODY
 	vital = 1
 	parent_organ = null
 	limb_flags = ORGAN_FLAG_HEALS_OVERKILL
@@ -26,7 +26,7 @@
 	min_broken_damage = 50
 	w_class = ITEM_SIZE_LARGE
 	cavity_max_w_class = ITEM_SIZE_SMALL
-	body_part = LOWER_TORSO
+	body_part = SLOT_LOWER_BODY
 	parent_organ = BP_CHEST
 
 /obj/item/organ/external/diona/arm
@@ -36,15 +36,15 @@
 	max_damage = 35
 	min_broken_damage = 20
 	w_class = ITEM_SIZE_NORMAL
-	body_part = ARM_LEFT
+	body_part = SLOT_ARM_LEFT
 	parent_organ = BP_CHEST
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE
 
 /obj/item/organ/external/diona/arm/right
 	name = "right upper tendril"
 	organ_tag = BP_R_ARM
 	icon_name = "r_arm"
-	body_part = ARM_RIGHT
+	body_part = SLOT_ARM_RIGHT
 
 /obj/item/organ/external/diona/leg
 	name = "left lower tendril"
@@ -53,7 +53,7 @@
 	max_damage = 35
 	min_broken_damage = 20
 	w_class = ITEM_SIZE_NORMAL
-	body_part = LEG_LEFT
+	body_part = SLOT_LEG_LEFT
 	icon_position = LEFT
 	parent_organ = BP_GROIN
 	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND
@@ -62,7 +62,7 @@
 	name = "right lower tendril"
 	organ_tag = BP_R_LEG
 	icon_name = "r_leg"
-	body_part = LEG_RIGHT
+	body_part = SLOT_LEG_RIGHT
 	icon_position = RIGHT
 
 /obj/item/organ/external/diona/foot
@@ -72,7 +72,7 @@
 	max_damage = 20
 	min_broken_damage = 10
 	w_class = ITEM_SIZE_SMALL
-	body_part = FOOT_LEFT
+	body_part = SLOT_FOOT_LEFT
 	icon_position = LEFT
 	parent_organ = BP_L_LEG
 	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND
@@ -81,7 +81,7 @@
 	name = "right foot"
 	organ_tag = BP_R_FOOT
 	icon_name = "r_foot"
-	body_part = FOOT_RIGHT
+	body_part = SLOT_FOOT_RIGHT
 	icon_position = RIGHT
 	parent_organ = BP_R_LEG
 	joint = "right ankle"
@@ -94,15 +94,15 @@
 	max_damage = 30
 	min_broken_damage = 15
 	w_class = ITEM_SIZE_SMALL
-	body_part = HAND_LEFT
+	body_part = SLOT_HAND_LEFT
 	parent_organ = BP_L_ARM
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE
 
 /obj/item/organ/external/diona/hand/right
 	name = "right grasper"
 	organ_tag = BP_R_HAND
 	icon_name = "r_hand"
-	body_part = HAND_RIGHT
+	body_part = SLOT_HAND_RIGHT
 	parent_organ = BP_R_ARM
 
 //DIONA ORGANS.

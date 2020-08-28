@@ -58,7 +58,7 @@
 		..()
 
 /obj/item/gun/launcher/net/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src)
+	if(user.get_empty_hand_slot() == src)
 		unload(user)
 	else
 		..()

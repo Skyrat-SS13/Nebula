@@ -9,7 +9,7 @@
 	name = "service jacket"
 	desc = "A uniform service jacket, plain and undecorated."
 	icon_state = "blackservice"
-	body_parts_covered = UPPER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS
 	siemens_coefficient = 0.9
 	allowed = list(/obj/item/tank/emergency,/obj/item/flashlight,/obj/item/pen,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/storage/fancy/cigarettes,/obj/item/flame/lighter,/obj/item/taperecorder,/obj/item/scanner/gas,/obj/item/radio,/obj/item/taperoll)
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND,ACCESSORY_SLOT_MEDAL,ACCESSORY_SLOT_INSIGNIA,ACCESSORY_SLOT_RANK,ACCESSORY_SLOT_DEPT)
@@ -162,7 +162,7 @@
 	name = "dress jacket"
 	desc = "A uniform dress jacket, plain and undecorated."
 	icon_state = "ecdress_xpl"
-	body_parts_covered = UPPER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS
 	siemens_coefficient = 0.9
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL,ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_INSIGNIA)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
@@ -232,7 +232,7 @@
 	icon_state = "blackdress"
 	icon = 'modular_skyrat/maps/torch/icons/obj/obj_suit_solgov.dmi'
 	item_icons = list(slot_wear_suit_str = 'modular_skyrat/maps/torch/icons/mob/onmob_suit_solgov.dmi')
-	body_parts_covered = UPPER_TORSO|ARMS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS
 	siemens_coefficient = 0.9
 	allowed = list(/obj/item/tank/emergency,/obj/item/flashlight,/obj/item/clothing/head/soft,/obj/item/clothing/head/beret,/obj/item/radio,/obj/item/pen)
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL,ACCESSORY_SLOT_RANK)

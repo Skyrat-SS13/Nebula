@@ -4,7 +4,7 @@
 	joint =                   "central axis"
 	cavity_name =             "core"
 	w_class =                 ITEM_SIZE_LARGE
-	body_part =               LOWER_TORSO
+	body_part =               SLOT_LOWER_BODY
 	parent_organ =            BP_CHEST
 	dislocated =              -1
 	max_damage =              50
@@ -52,7 +52,7 @@
 	min_broken_damage =       10
 	force_icon = 'modular_skyrat/icons/mob/human_races/species/adherent/body.dmi'
 	status = ORGAN_PROSTHETIC
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
 
 /obj/item/organ/external/arm/right/crystal
 	name =                    "right grasping tendril"
@@ -64,7 +64,7 @@
 	min_broken_damage =       10
 	force_icon = 'modular_skyrat/icons/mob/human_races/species/adherent/body.dmi'
 	status = ORGAN_PROSTHETIC
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
 
 /obj/item/organ/external/hand/crystal
 	name =                    "left maniple tendril"
@@ -76,7 +76,7 @@
 	min_broken_damage =       10
 	force_icon = 'modular_skyrat/icons/mob/human_races/species/adherent/body.dmi'
 	status = ORGAN_PROSTHETIC
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
 
 /obj/item/organ/external/hand/right/crystal
 	name =                    "right maniple tendril"
@@ -88,7 +88,7 @@
 	min_broken_damage =       10
 	force_icon = 'modular_skyrat/icons/mob/human_races/species/adherent/body.dmi'
 	status = ORGAN_PROSTHETIC
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
 
 /obj/item/organ/external/tendril
 	name =                    "first tendril"
@@ -103,7 +103,7 @@
 	min_broken_damage =       10
 	force_icon = 'modular_skyrat/icons/mob/human_races/species/adherent/body.dmi'
 	status = ORGAN_PROSTHETIC
-	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_GRASP | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
+	limb_flags = ORGAN_FLAG_CAN_AMPUTATE | ORGAN_FLAG_CAN_STAND | ORGAN_FLAG_CAN_BREAK
 
 /obj/item/organ/external/tendril/two
 	name =                    "second tendril"

@@ -13,7 +13,7 @@
 		rad = ARMOR_RAD_MINOR
 		)
 	siemens_coefficient = 0.6
-	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	heat_protection = SLOT_UPPER_BODY|SLOT_LOWER_BODY|SLOT_LEGS|SLOT_FEET|SLOT_ARMS|SLOT_HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
 	icon = 'modular_skyrat/icons/obj/clothing/obj_suit.dmi'
@@ -103,7 +103,7 @@
 	desc = "This doesn't look very comfortable."
 	icon_state = "vox-casual-1"
 	item_state = "vox-casual-1"
-	body_parts_covered = LEGS
+	body_parts_covered = SLOT_LEGS
 
 /obj/item/clothing/under/vox/vox_robes
 	name = "alien robes"

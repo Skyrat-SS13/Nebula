@@ -25,7 +25,7 @@
 	icon = 'modular_skyrat/icons/obj/guns/xray_pistol.dmi'
 	icon_state = "oldxray"
 	item_state = "oldxray"
-	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	slot_flags = SLOT_HOLSTER
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 	projectile_type = /obj/item/projectile/beam/xray
 	one_hand_penalty = 1

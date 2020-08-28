@@ -22,7 +22,7 @@
 	desc = "A weapon that uses advanced pulse-based beam generation technology to emit powerful laser blasts. Less bulky than the full-sized rifle."
 	icon = 'modular_skyrat/icons/obj/guns/pulse_carbine.dmi'
 	icon_state = "pulse_carbine"
-	slot_flags = SLOT_BACK|SLOT_BELT
+	slot_flags = SLOT_BACK|SLOT_HOLSTER
 	force = 8
 	projectile_type = /obj/item/projectile/beam/pulse/mid
 	max_shots = 24
@@ -36,7 +36,7 @@
 	desc = "A weapon that uses advanced pulse-based beam generation technology to emit powerful laser blasts. Even smaller than the carbine."
 	icon = 'modular_skyrat/icons/obj/guns/pulse_pistol.dmi'
 	icon_state = "pulse_pistol"
-	slot_flags = SLOT_BELT|SLOT_HOLSTER
+	slot_flags = SLOT_HOLSTER
 	force = 6
 	projectile_type = /obj/item/projectile/beam/pulse
 	max_shots = 21
@@ -61,13 +61,13 @@
 
 /obj/item/gun/energy/pulse_rifle/destroyer/attack_self(mob/living/user as mob)
 	to_chat(user, "<span class='warning'>[src.name] has three settings, and they are all DESTROY.</span>")
-	
+
 /obj/item/gun/energy/pulse_rifle/skrell
 	name = "skrellian carbine"
 	icon = 'modular_skyrat/icons/obj/guns/skrell_carbine.dmi'
 	icon_state = "skrell_carbine"
 	item_state = "skrell_carbine"
-	slot_flags = SLOT_BACK|SLOT_BELT
+	slot_flags = SLOT_HOLSTER
 	desc = "The Vuu'Xqu*ix T-3, known as 'VT-3' by SolGov. Rarely seen out in the wild by anyone outside of a Skrellian SDTF."
 	cell_type = /obj/item/cell
 	self_recharge = 1
@@ -78,7 +78,7 @@
 	burst_delay=null
 	wielded_item_state = "skrell_carbine-wielded"
 	accuracy = 1
-	
+
 	firemodes = list(
 		list(mode_name="single", projectile_type=/obj/item/projectile/beam/pulse/single, charge_cost=120, burst=1, burst_delay=null),
 		list(mode_name="heavy", projectile_type=/obj/item/projectile/beam/pulse/heavy, charge_cost=55, burst=2, burst_delay=3),
@@ -372,12 +372,12 @@
 	suit_type = "alien rig"
 	icon_state = "vox_rig"
 	armor = list(
-		melee = ARMOR_MELEE_MAJOR, 
-		bullet = ARMOR_BALLISTIC_RESISTANT, 
-		laser = ARMOR_LASER_HANDGUNS, 
-		energy = ARMOR_ENERGY_RESISTANT, 
-		bomb = ARMOR_BOMB_PADDED, 
-		bio = ARMOR_BIO_SHIELDED, 
+		melee = ARMOR_MELEE_MAJOR,
+		bullet = ARMOR_BALLISTIC_RESISTANT,
+		laser = ARMOR_LASER_HANDGUNS,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_PADDED,
+		bio = ARMOR_BIO_SHIELDED,
 		rad = ARMOR_RAD_SHIELDED
 		)
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
@@ -388,9 +388,9 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/vox_rig
 	glove_type = /obj/item/clothing/gloves/rig/vox_rig
 	air_type =     /obj/item/tank/nitrogen
-	
+
 	allowed = list(/obj/item/flashlight, /obj/item/tank, /obj/item/ammo_magazine, /obj/item/ammo_casing, /obj/item/ammo_magazine/shotholder, /obj/item/handcuffs, /obj/item/radio, /obj/item/baton, /obj/item/gun, /obj/item/pickaxe)
-	
+
 	online_slowdown = 1
 
 	initial_modules = list(
@@ -400,7 +400,7 @@
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/cooling_unit
 		)
-		
+
 /obj/item/clothing/head/helmet/space/rig/vox_rig
 	//species_restricted = list(SPECIES_VOX)
 
@@ -419,12 +419,12 @@
 	desc = "A hodgepodge of various pieces of metal scrapped together into a rudimentary vox-shaped piece of armor."
 	allowed = list(/obj/item/gun, /obj/item/tank)
 	armor = list(
-		melee = ARMOR_MELEE_VERY_HIGH, 
-		bullet = ARMOR_BALLISTIC_PISTOL, 
+		melee = ARMOR_MELEE_VERY_HIGH,
+		bullet = ARMOR_BALLISTIC_PISTOL,
 		laser = ARMOR_LASER_MINOR,
 		bomb = ARMOR_BOMB_PADDED) //Higher melee armor versus lower everything else.
 	icon_state = "vox-scrap"
-	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
+	body_parts_covered = SLOT_UPPER_BODY|SLOT_ARMS|SLOT_LOWER_BODY|SLOT_LEGS
 	//species_restricted = list(SPECIES_VOX, SPECIES_VOX_ARMALIS)
 	siemens_coefficient = 1 //Its literally metal
 
