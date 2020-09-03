@@ -330,7 +330,7 @@
 /obj/machinery/suit_storage_unit/proc/uv_burn()
 	if(occupant)
 		occupant.apply_damage(50, IRRADIATE, damage_flags = DAM_DISPERSED)
-		var/obj/item/organ/internal/diona/nutrients/rad_organ = locate() in occupant.internal_organs
+		/*var/obj/item/organ/internal/diona/nutrients/rad_organ = locate() in occupant.internal_organs
 		if(!rad_organ)
 			if(occupant.can_feel_pain())
 				occupant.emote("scream")
@@ -339,7 +339,7 @@
 				occupant.take_organ_damage(0,burndamage)
 			else
 				var/burndamage = rand(10,15)
-				occupant.take_organ_damage(0,burndamage)
+				occupant.take_organ_damage(0,burndamage)*/
 
 /obj/machinery/suit_storage_unit/proc/uv_finish()
 	isUV = FALSE

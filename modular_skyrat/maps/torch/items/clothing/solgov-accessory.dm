@@ -268,7 +268,7 @@ badges
 	gender = PLURAL
 	icon_state = "tags"
 	badge_string = "Sol Central Government"
-	slot_flags = SLOT_MASK | SLOT_TIE
+	slot_flags = SLOT_FACE | SLOT_TIE
 	var/owner_rank
 	var/owner_name
 	var/owner_branch

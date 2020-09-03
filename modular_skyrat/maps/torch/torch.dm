@@ -150,7 +150,7 @@
 	#include "z1_admin.dmm"
 	#include "z2_transit.dmm"
 
-	#include "../../../maps/away/empty.dmm"
+	//#include "../../../maps/away/empty.dmm"
 	#include "../../../mods/ascent/away_sites/ascent/ascent.dm"
 	#include "../../../maps/away/mining/mining.dm"
 	#include "../../../maps/away/derelict/derelict.dm"

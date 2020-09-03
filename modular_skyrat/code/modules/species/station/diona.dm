@@ -133,7 +133,7 @@
 	if(istype(H.get_equipped_item(slot_back_str), /obj/item/storage/backpack))
 		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack_str)
 	else
-		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand_str)
+		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), BP_R_HAND)
 
 /datum/species/diona/skills_from_age(age)
 	switch(age)
