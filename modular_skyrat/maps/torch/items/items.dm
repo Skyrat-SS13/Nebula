@@ -148,6 +148,8 @@ Weapons
 /******
 Passports
 ******/
+/obj/item/passport
+	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
 /*
 /obj/item/passport
 	name = "passport"
