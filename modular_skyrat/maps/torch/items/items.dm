@@ -148,7 +148,7 @@ Weapons
 /******
 Passports
 ******/
-
+/*
 /obj/item/passport
 	name = "passport"
 	icon = 'modular_skyrat/maps/torch/icons/obj/uniques.dmi'
@@ -179,7 +179,7 @@ Passports
 	if(info)
 		to_chat(user, "[info].")
 	else
-		to_chat(user, SPAN_WARNING("[src] is completely blank!"))
+		to_chat(user, SPAN_WARNING("[src] is completely blank!"))*/
 
 /obj/item/passport/scg
 	name = "\improper SCG passport"
