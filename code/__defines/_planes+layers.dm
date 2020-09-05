@@ -60,7 +60,7 @@ What is the naming convention for planes or layers?
 	FLOAT_PLANE = -32767
 */
 
-#define CLICKCATCHER_PLANE -100
+/*#define CLICKCATCHER_PLANE -100 MOVED TO code/__defines/_modular_skyrat/
 
 #define SPACE_PLANE               -99
 	#define SPACE_LAYER                  1
@@ -192,9 +192,9 @@ What is the naming convention for planes or layers?
 
 
 //This is difference between planes used for atoms and effects
-#define PLANE_DIFFERENCE              3
+#define PLANE_DIFFERENCE              3*/
 
-/atom
+/*/atom
 	plane = DEFAULT_PLANE
 
 /atom/proc/hud_layerise()
@@ -203,13 +203,13 @@ What is the naming convention for planes or layers?
 
 /atom/proc/reset_plane_and_layer()
 	plane = initial(plane)
-	layer = initial(layer)
+	layer = initial(layer)*/
 
 /*
   PLANE MASTERS
 */
 
-/obj/screen/plane_master
+/*/obj/screen/plane_master MOVED TO MODULAR_SKYRAT
 	appearance_flags = PLANE_MASTER
 	screen_loc = "CENTER,CENTER"
 	globalscreen = 1
@@ -226,4 +226,4 @@ What is the naming convention for planes or layers?
 GLOBAL_LIST_INIT(ghost_master, list(
 	new /obj/screen/plane_master/ghost_master(),
 	new /obj/screen/plane_master/ghost_dummy()
-))
+))*/

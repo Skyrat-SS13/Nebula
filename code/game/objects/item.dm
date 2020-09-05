@@ -305,8 +305,11 @@
 
 	if(user.put_in_active_hand(src))
 		if (isturf(old_loc))
-			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
-			ghost.animate_towards(user)
+			//SKYRAT EDIT START - ports eris pickup animations
+			//var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
+			//ghost.animate_towards(user)
+			do_pickup_animation(user,old_loc)
+			//SKYRAT EDIT END
 		if(randpixel)
 			pixel_x = rand(-randpixel, randpixel)
 			pixel_y = rand(-randpixel/2, randpixel/2)

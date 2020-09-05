@@ -1,0 +1,38 @@
+/obj/item/clothing/gloves/color/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
+
+/obj/item/clothing/gloves/color/white
+	color = COLOR_WHITE
+
+/obj/item/clothing/gloves/color/black
+	color = COLOR_BLACK
+
+/obj/item/clothing/gloves/color/white/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
+
+/obj/item/clothing/gloves/color/evening
+	desc = "A pair of gloves that reach past the elbow. Fancy!"
+	name = "evening gloves"
+	icon_state = "evening_gloves"
+	item_state = "evening_gloves"
+	color = COLOR_WHITE //original colour was "#7f7f7f", but white is fancier of course
+	body_parts_covered = SLOT_ARMS|SLOT_HANDS //evening gloves don't quite cover the entire arm, but might as well differentiate the item a bit
+	icon = 'modular_skyrat/icons/obj/clothing/obj_hands.dmi'
+	item_icons = list(slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/onmob_hands.dmi')
+
+/obj/item/clothing/gloves/color/evening/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
+
+/obj/item/clothing/gloves/rainbow
+	name = "rainbow gloves"
+	desc = "A pair of gloves, they don't look special in any way."
+	icon_state = "rainbow"
+	item_state = "rainbowgloves"
+	icon = 'modular_skyrat/icons/obj/clothing/obj_hands.dmi'
+	item_icons = list(slot_r_hand_str = 'modular_skyrat/icons/mob/onmob/onmob_hands.dmi')
+
+/obj/item/clothing/gloves/rainbow/modified
+	item_flags = ITEM_FLAG_PREMODIFIED
+
+/obj/item/clothing/gloves/thick/duty/modified
+	item_flags = ITEM_FLAG_PREMODIFIED

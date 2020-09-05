@@ -56,6 +56,11 @@
 	next_click = world.time + 1
 
 	var/list/modifiers = params2list(params)
+	//SKYRAT EDIT START - Adds shift+middle click shortcut. This edit is not modularised due to the performance impact of modular callbacks on such an essential proc.
+	if(modifiers["shift"] && modifiers["middle"])
+		ShiftMiddleClickOn(A)
+		return 1
+	//SKYRAT EDIT END
 	if(modifiers["shift"] && modifiers["ctrl"])
 		CtrlShiftClickOn(A)
 		return 1
@@ -160,7 +165,7 @@
 
 // Default behavior: ignore double clicks, the second click that makes the doubleclick call already calls for a normal click
 /mob/proc/DblClickOn(var/atom/A, var/params)
-	. = A.show_atom_list_for_turf(src, get_turf(A))
+	/*. = A.show_atom_list_for_turf(src, get_turf(A)) SKYRAT EDIT*/return
 
 /*
 	Translates into attack_hand, etc.

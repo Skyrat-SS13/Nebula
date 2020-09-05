@@ -64,7 +64,7 @@ var/list/limb_icon_cache = list()
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 		if (mark_style.draw_target == MARKING_TARGET_SKIN)
 			var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-			mark_s.Blend(markings[M]["color"], mark_style.blend)
+			mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) // Skyrat edit
 			overlays |= mark_s //So when it's not on your body, it has icons
 			mob_icon.Blend(mark_s, mark_style.layer_blend) //So when it's on your body, it has icons
 			icon_cache_key += "[M][markings[M]["color"]]"
@@ -82,7 +82,12 @@ var/list/limb_icon_cache = list()
 	icon_state = "[icon_name][gender]"
 	if(species.base_skin_colours && !isnull(species.base_skin_colours[skin_base]))
 		icon_state += species.base_skin_colours[skin_base]
-	icon_cache_key = "[icon_state]_[species ? species.name : "unknown"]"
+	//SKYRAT EDIT - START
+	if(species.selects_bodytype && !BP_IS_PROSTHETIC(src))
+		icon_cache_key = "[icon_state]_[custom_species_override]"
+	else
+		icon_cache_key = "[icon_state]_[species ? species.name : SPECIES_HUMAN]"
+	//SKYRAT EDIT - END
 	if(model)
 		icon_cache_key += "_model_[model]"
 
@@ -106,7 +111,7 @@ var/list/limb_icon_cache = list()
 		var/datum/sprite_accessory/marking/mark_style = markings[M]["datum"]
 		if (mark_style.draw_target == MARKING_TARGET_SKIN)
 			var/icon/mark_s = new/icon("icon" = mark_style.icon, "icon_state" = "[mark_style.icon_state]-[organ_tag]")
-			mark_s.Blend(markings[M]["color"], mark_style.blend)
+			mark_s.Blend(markings[M]["color"], mark_style.color_blend_mode) //SKYRAT edit
 			overlays |= mark_s //So when it's not on your body, it has icons
 			mob_icon.Blend(mark_s, mark_style.layer_blend) //So when it's on your body, it has icons
 			icon_cache_key += "[M][markings[M]["color"]]"
@@ -115,7 +120,7 @@ var/list/limb_icon_cache = list()
 		var/cache_key = "[body_hair]-[icon_name]-[hair_colour]"
 		if(!limb_icon_cache[cache_key])
 			var/icon/I = icon(species.get_icobase(owner), "[icon_name]_[body_hair]")
-			I.Blend(hair_colour, ICON_ADD)
+			I.Blend(hair_colour, ICON_MULTIPLY) //SKYRAT edit
 			limb_icon_cache[cache_key] = I
 		mob_icon.Blend(limb_icon_cache[cache_key], ICON_OVERLAY)
 
@@ -194,7 +199,7 @@ var/list/robot_hud_colours = list("#ffffff","#cccccc","#aaaaaa","#888888","#6666
 	return applying
 
 /obj/item/organ/external/proc/bandage_level()
-	if(damage_state_text() == "00") 
+	if(damage_state_text() == "00")
 		return 0
 	if(!is_bandaged())
 		return 0

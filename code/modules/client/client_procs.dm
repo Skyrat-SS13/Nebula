@@ -453,7 +453,7 @@ client/verb/character_setup()
 /client/verb/OnResize()
 	set hidden = 1
 
-	var/divisor = text2num(winget(src, "mapwindow.map", "icon-size")) || world.icon_size
+	/*var/divisor = text2num(winget(src, "mapwindow.map", "icon-size")) || world.icon_size
 	if(!isnull(config.lock_client_view_x) && !isnull(config.lock_client_view_y))
 		last_view_x_dim = config.lock_client_view_x
 		last_view_y_dim = config.lock_client_view_y
@@ -467,7 +467,8 @@ client/verb/character_setup()
 		winset(src, "menu.icon[check_icon_size]", "is-checked=false")
 	winset(src, "menu.icon[divisor]", "is-checked=true")
 
-	view = "[last_view_x_dim]x[last_view_y_dim]"
+	view = "[last_view_x_dim]x[last_view_y_dim]"*/
+	set_view() //Skyrat change
 
 	// Reset eye/perspective
 	var/last_perspective = perspective

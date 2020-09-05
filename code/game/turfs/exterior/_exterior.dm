@@ -108,7 +108,7 @@
 			switch(direction)
 				if(NORTH)
 					I.pixel_y += world.icon_size
-				if(SOUTH) 
+				if(SOUTH)
 					I.pixel_y -= world.icon_size
 				if(EAST)
 					I.pixel_x += world.icon_size
@@ -136,7 +136,7 @@
 					I.layer = layer + icon_edge_layer
 					if(direction & NORTH)
 						I.pixel_y += world.icon_size
-					else if(direction & SOUTH) 
+					else if(direction & SOUTH)
 						I.pixel_y -= world.icon_size
 					if(direction & EAST)
 						I.pixel_x += world.icon_size

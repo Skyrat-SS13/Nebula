@@ -58,7 +58,8 @@
 
 	if(anchored)
 		if(HasBelow(z) && istype(loc, /turf/simulated/open))
-			var/failed
+			//SKYRAT CHANGES DOWN BELOW
+			/*var/failed
 			for(var/obj/structure/catwalk/catwalk in loc)
 				if(catwalk.plated_tile)
 					failed = TRUE
@@ -69,11 +70,18 @@
 						target_down = ladder
 						target_down.target_up = src
 						target_down.update_icon()
-						break
+						break*/
+			for(var/obj/structure/ladder/ladder in GetBelow(src))
+				if(ladder.anchored && !ladder.target_up)
+					target_down = ladder
+					target_down.target_up = src
+					target_down.update_icon()
+					break
 		if(HasAbove(z))
 			var/turf/T = GetAbove(src)
 			if(istype(T, /turf/simulated/open))
-				var/failed
+				//SKYRAT CHANGES DOWN BELOW
+				/*var/failed
 				for(var/obj/structure/catwalk/catwalk in T)
 					if(catwalk.plated_tile)
 						failed = TRUE
@@ -84,7 +92,13 @@
 							target_up = ladder
 							target_up.target_down = src
 							target_up.update_icon()
-							break
+							break*/
+				for(var/obj/structure/ladder/ladder in T)
+					if(ladder.anchored && !ladder.target_down)
+						target_up = ladder
+						target_up.target_down = src
+						target_up.update_icon()
+						break
 	update_icon()
 
 /obj/structure/ladder/Destroy()
@@ -200,18 +214,18 @@
 			if(!istype(target_up.loc, /turf/simulated/open))
 				to_chat(M, SPAN_WARNING("The ceiling is in the way!"))
 				return null
-			for(var/obj/structure/catwalk/catwalk in target_up.loc)
+			/*for(var/obj/structure/catwalk/catwalk in target_up.loc)
 				if(catwalk.plated_tile)
 					to_chat(M, SPAN_WARNING("\The [catwalk] is in the way!"))
-					return null
+					return null*/
 		if(. == target_down)
 			if(!istype(loc, /turf/simulated/open))
 				to_chat(M, SPAN_WARNING("\The [loc] is in the way!"))
 				return null
-			for(var/obj/structure/catwalk/catwalk in loc)
+			/*for(var/obj/structure/catwalk/catwalk in loc)
 				if(catwalk.plated_tile)
 					to_chat(M, SPAN_WARNING("\The [catwalk] is in the way!"))
-					return null
+					return null*/
 
 /mob/proc/may_climb_ladders(var/ladder)
 	if(!Adjacent(ladder))

@@ -1,0 +1,1 @@
+/datum/antagonist/raider/required_language = /decl/language/spacer
