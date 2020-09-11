@@ -74,16 +74,13 @@
 
 	var/lname
 	var/mob/observer/ghost/DM
-<<<<<<< HEAD
-=======
 	var/anon_say_pref = (C.get_preference_value(/datum/client_preference/anon_say) == GLOB.PREF_YES)
->>>>>>> 61612f5a05... Merge pull request #883 from eckff/screw-you-ghost
 	if(isghost(C.mob))
 		DM = C.mob
 	if(M.client.holder) 							// What admins see
-		lname = "[keyname][(DM && DM.anonsay) ? "*" : (DM ? "" : "^")] ([name])"
+		lname = "[keyname][(DM && anon_say_pref) ? "*" : (DM ? "" : "^")] ([name])"
 	else
-		if(DM && DM.anonsay)						// If the person is actually observer they have the option to be anonymous
+		if(DM && anon_say_pref)						// If the person is actually observer they have the option to be anonymous
 			lname = "Ghost of [name]"
 		else if(DM)									// Non-anons
 			lname = "[keyname] ([name])"
