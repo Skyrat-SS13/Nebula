@@ -74,6 +74,10 @@
 
 	var/lname
 	var/mob/observer/ghost/DM
+<<<<<<< HEAD
+=======
+	var/anon_say_pref = (C.get_preference_value(/datum/client_preference/anon_say) == GLOB.PREF_YES)
+>>>>>>> 61612f5a05... Merge pull request #883 from eckff/screw-you-ghost
 	if(isghost(C.mob))
 		DM = C.mob
 	if(M.client.holder) 							// What admins see
