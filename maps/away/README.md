@@ -54,7 +54,11 @@ The game will read this to learn about your new shiny away sites, including what
 
 ### Include your .dm file in any main map file, and away sites testing
 
+<<<<<<< HEAD
 That's `maps/away_sites_testing/away_sites_testing.dm` plus your main map definition. It goes in the testing one to make sure Travis runs it through unit testing, and it goes in the primary map to make it available during real play.
+=======
+That's `maps/away_sites_testing/away_sites_testing.dm` plus your main map definition. It goes in the testing one to make sure it is checked by unit testing, and it goes in the primary map to make it available during real play.
+>>>>>>> 5b9cabe671... Merge pull request #950 from MistakeNot4892/byetravis
 
 ### Don't include it, or the .dmms, in the .dme
 
