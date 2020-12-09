@@ -62,6 +62,7 @@
 
 /turf/simulated/Entered(atom/A, atom/OL)
 	. = ..()
+<<<<<<< HEAD
 	if (istype(A,/mob/living))
 		var/mob/living/M = A
 
@@ -120,6 +121,80 @@
 				for(var/i = 1 to slip_dist)
 					step(M, M.dir)
 					sleep(1)
+=======
+	if (istype(A))
+		A.OnSimulatedTurfEntered(src)
+
+/atom/proc/OnSimulatedTurfEntered(turf/simulated/T)
+	set waitfor = FALSE
+	return
+
+/mob/living/OnSimulatedTurfEntered(turf/simulated/T)
+	T.update_dirt()
+
+	HandleBloodTrail(T)
+
+	if(lying || !T.wet)
+		return
+
+	if(buckled || (MOVING_DELIBERATELY(src) && prob(min(100, 100/(T.wet/10)))))
+		return
+
+	// skillcheck for slipping
+	if(!prob(min(100, skill_fail_chance(SKILL_HAULING, 100, SKILL_MAX+1)/(3/T.wet))))
+		return
+
+	var/slip_dist = 1
+	var/slip_stun = 6
+	var/floor_type = "wet"
+
+	if(2 <= T.wet) // Lube
+		floor_type = "slippery"
+		slip_dist = 4
+		slip_stun = 10
+
+	if(slip("the [floor_type] floor", slip_stun))
+		for(var/i = 1 to slip_dist)
+			step(src, dir)
+			sleep(1)
+
+/mob/living/proc/HandleBloodTrail(turf/simulated/T)
+	return
+
+/mob/living/carbon/human/HandleBloodTrail(turf/simulated/T)
+	// Tracking blood
+	var/obj/item/source
+	if(shoes)
+		var/obj/item/clothing/shoes/S = shoes
+		if(istype(S))
+			S.handle_movement(src, MOVING_QUICKLY(src))
+			if(S.coating && S.coating.total_volume > 1)
+				source = S
+	else
+		for(var/bp in list(BP_L_FOOT, BP_R_FOOT))
+			var/obj/item/organ/external/stomper = get_organ(bp)
+			if(stomper && !stomper.is_stump() && stomper.coating && stomper.coating.total_volume > 1)
+				source = stomper
+	if(!source)
+		return
+
+	var/list/bloodDNA
+	var/bloodcolor
+	var/list/blood_data = REAGENT_DATA(source.coating, /decl/material/liquid/blood)
+	if(blood_data)
+		bloodDNA = list(blood_data["blood_DNA"] = blood_data["blood_type"])
+	else
+		bloodDNA = list()
+	bloodcolor = source.coating.get_color()
+	source.remove_coating(1)
+	update_inv_shoes(1)
+
+	if(species.get_move_trail(src))
+		T.AddTracks(species.get_move_trail(src),bloodDNA, dir, 0, bloodcolor) // Coming
+		var/turf/simulated/from = get_step(src, GLOB.reverse_dir[dir])
+		if(istype(from))
+			from.AddTracks(species.get_move_trail(src), bloodDNA, 0, dir, bloodcolor) // Going
+>>>>>>> bec2ca3cdf... Merge pull request #966 from comma/goopy
 
 //returns 1 if made bloody, returns 0 otherwise
 /turf/simulated/add_blood(mob/living/carbon/human/M)
@@ -132,6 +207,7 @@
 				B.blood_DNA = list()
 			if(!B.blood_DNA[M.dna.unique_enzymes])
 				B.blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
+				B.blood_data[M.dna.unique_enzymes] = REAGENT_DATA(M.vessel, M.species.blood_reagent)
 				var/datum/extension/forensic_evidence/forensics = get_or_create_extension(B, /datum/extension/forensic_evidence)
 				forensics.add_data(/datum/forensics/blood_dna, M.dna.unique_enzymes)
 			return 1 //we bloodied the floor
