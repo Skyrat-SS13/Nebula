@@ -470,11 +470,16 @@ var/world_topic_spam_protect_time = world.timeofday
 
 
 /world/Reboot(var/reason)
+<<<<<<< HEAD
 	TgsReboot() //Skyrat change
 	/*spawn(0)
 		sound_to(world, sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')))// random end sounds!! - LastyBatsy
 
 		*/
+=======
+	if(GLOB.using_map.reboot_sound)
+		sound_to(world, sound(pick(GLOB.using_map.reboot_sound)))// random end sounds!! - LastyBatsy
+>>>>>>> 77ddc0ecf2... Merge pull request #970 from eckff/endroundsound
 
 	Master.Shutdown()
 
