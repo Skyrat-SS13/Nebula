@@ -560,8 +560,18 @@ var/global/list/damage_icon_parts = list()
 	if(shoes && !((wear_suit && wear_suit.flags_inv & HIDESHOES) || (w_uniform && w_uniform.flags_inv & HIDESHOES)))
 		overlays_standing[HO_SHOES_LAYER] = shoes.get_mob_overlay(src,slot_shoes_str)
 	else
+<<<<<<< HEAD
 		if(feet_blood_DNA && species.blood_mask)
 			var/image/bloodsies = overlay_image(species.blood_mask, "shoeblood", hand_blood_color, RESET_COLOR)
+=======
+		var/list/blood_color
+		for(var/bp in list(BP_L_FOOT, BP_R_FOOT))
+			var/obj/item/organ/external/stomper = get_organ(bp)
+			if(istype(stomper) && !stomper.is_stump() && stomper.coating)
+				blood_color = stomper.coating.get_color()
+		if(blood_color && species.blood_mask)
+			var/image/bloodsies = overlay_image(species.blood_mask, "shoeblood", blood_color, RESET_COLOR)
+>>>>>>> 018178601e... Merge pull request #1013 from MistakeNot4892/pewpewpew
 			overlays_standing[HO_SHOES_LAYER] = bloodsies
 		else
 			overlays_standing[HO_SHOES_LAYER] = null
