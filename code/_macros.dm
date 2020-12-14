@@ -87,9 +87,13 @@
 
 #define attack_animation(A) if(istype(A)) A.do_attack_animation(src)
 
+<<<<<<< HEAD
 #define isopenspace(A) istype(A, /turf/simulated/open)
 
 #define isPlunger(A) istype(A, /obj/item/clothing/mask/plunger) || istype(A, /obj/item/plunger/robot)
+=======
+#define isplunger(A) istype(A, /obj/item/plunger)
+>>>>>>> 6716c3a72d... Merge pull request #1011 from MistakeNot4892/opensesame
 
 /proc/isspecies(A, B)
 	if(!iscarbon(A))
