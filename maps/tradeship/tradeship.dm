@@ -1,5 +1,11 @@
 #if !defined(USING_MAP_DATUM)
 
+<<<<<<< HEAD
+=======
+	#include "../antag_spawn/heist/heist.dm"
+
+	#include "../../mods/utility_frames/_utility_frames.dme"
+>>>>>>> 79a370a187... Merge pull request #1050 from MistakeNot4892/cleanup
 	#include "../../mods/corporate/_corporate.dme"
 	#include "../../mods/ascent/_ascent.dme"
 
