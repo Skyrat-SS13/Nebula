@@ -25,7 +25,26 @@
 		)
 	)
 
+<<<<<<< HEAD
 /datum/species/human/get_root_species_name(var/mob/living/carbon/human/H)
+=======
+	exertion_effect_chance = 10
+	exertion_hydration_scale = 1
+	exertion_charge_scale = 1
+	exertion_reagent_scale = 5
+	exertion_reagent_path = /decl/material/liquid/lactate
+	exertion_emotes_biological = list(
+		/decl/emote/exertion/biological,
+		/decl/emote/exertion/biological/breath,
+		/decl/emote/exertion/biological/pant
+	)
+	exertion_emotes_synthetic = list(
+		/decl/emote/exertion/synthetic,
+		/decl/emote/exertion/synthetic/creak
+	)
+
+/decl/species/human/get_root_species_name(var/mob/living/carbon/human/H)
+>>>>>>> 32507afb38... Merge pull request #1051 from MistakeNot4892/species-exertion
 	return SPECIES_HUMAN
 
 /datum/species/human/get_ssd(var/mob/living/carbon/human/H)
