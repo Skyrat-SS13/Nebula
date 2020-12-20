@@ -52,11 +52,16 @@
 /datum/species/utility_frame/post_organ_rejuvenate(obj/item/organ/org, mob/living/carbon/human/H)
 	var/obj/item/organ/external/E = org
 	if(istype(E) && !BP_IS_PROSTHETIC(E))
+<<<<<<< HEAD:code/modules/species/station/utility_frame.dm
 		E.robotize("Utility Frame")
 	var/obj/item/organ/external/head/head = H.organs_by_name[BP_HEAD]
+=======
+		E.robotize(SPECIES_FRAME)
+	var/obj/item/organ/external/head/head = org
+>>>>>>> d159fe293a... Merge pull request #1021 from MistakeNot4892/eye-for-an-eye:mods/utility_frames/species.dm
 	if(istype(head))
 		head.glowing_eyes = TRUE
-	var/obj/item/organ/internal/eyes/eyes = H.internal_organs_by_name[vision_organ || BP_EYES]
+	var/obj/item/organ/internal/eyes/eyes = org
 	if(istype(eyes))
 		eyes.eye_icon = 'icons/mob/human_races/cyberlimbs/utility/eyes.dmi'
 	H.regenerate_icons()
