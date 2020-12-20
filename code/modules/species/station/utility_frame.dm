@@ -49,7 +49,18 @@
 		BP_EYES = /obj/item/organ/internal/eyes/robot
 	)
 
+<<<<<<< HEAD:code/modules/species/station/utility_frame.dm
 /datum/species/utility_frame/post_organ_rejuvenate(obj/item/organ/org, mob/living/carbon/human/H)
+=======
+	exertion_effect_chance = 10
+	exertion_charge_scale = 1
+	exertion_emotes_synthetic = list(
+		/decl/emote/exertion/synthetic,
+		/decl/emote/exertion/synthetic/creak
+	)
+
+/decl/species/utility_frame/post_organ_rejuvenate(obj/item/organ/org, mob/living/carbon/human/H)
+>>>>>>> 32507afb38... Merge pull request #1051 from MistakeNot4892/species-exertion:mods/utility_frames/species.dm
 	var/obj/item/organ/external/E = org
 	if(istype(E) && !BP_IS_PROSTHETIC(E))
 		E.robotize("Utility Frame")
