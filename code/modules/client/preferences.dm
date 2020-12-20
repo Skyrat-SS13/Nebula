@@ -91,7 +91,50 @@
 	dat += "</html></body>"
 	var/datum/browser/popup = new(user, "Character Setup","Character Setup", 1200, 800, src)
 	popup.set_content(dat)
+<<<<<<< HEAD
 	popup.open()
+=======
+	popup.open(FALSE) // Skip registring onclose on the browser pane
+	onclose(user, "preferences_window", src) // We want to register on the window itself
+
+/datum/preferences/proc/update_character_previews(mutable_appearance/MA)
+	if(!client)
+		return
+
+	var/obj/screen/setup_preview/bg/BG = LAZYACCESS(char_render_holders, "BG")
+	if(!BG)
+		BG = new
+		BG.icon = 'icons/effects/32x32.dmi'
+		BG.pref = src
+		LAZYSET(char_render_holders, "BG", BG)
+		client.screen |= BG
+	BG.icon_state = bgstate
+	BG.screen_loc = preview_screen_locs["BG"]
+
+	for(var/D in GLOB.cardinal)
+		var/obj/screen/setup_preview/O = LAZYACCESS(char_render_holders, "[D]")
+		if(!O)
+			O = new
+			O.pref = src
+			LAZYSET(char_render_holders, "[D]", O)
+			client.screen |= O
+		O.appearance = MA
+		O.dir = D
+		O.screen_loc = preview_screen_locs["[D]"]
+
+/datum/preferences/proc/show_character_previews()
+	if(!client || !char_render_holders)
+		return
+	for(var/render_holder in char_render_holders)
+		client.screen |= char_render_holders[render_holder]
+
+/datum/preferences/proc/clear_character_previews()
+	for(var/index in char_render_holders)
+		var/obj/screen/S = char_render_holders[index]
+		client?.screen -= S
+		qdel(S)
+	char_render_holders = null
+>>>>>>> a6a142ded3... Merge pull request #1026 from eckff/screeeam
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 
