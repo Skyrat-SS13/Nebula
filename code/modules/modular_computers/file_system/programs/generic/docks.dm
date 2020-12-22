@@ -1,8 +1,13 @@
 /datum/computer_file/program/docking
 	filename = "docking"
 	filedesc = "Docking Control"
+<<<<<<< HEAD
 	required_access = access_bridge
 	nanomodule_path = /datum/nano_module/docking
+=======
+	required_access = list(access_bridge)
+	nanomodule_path = /datum/nano_module/program/docking
+>>>>>>> af4c29a77e... Merge pull request #1053 from NataKilar/network-fixes
 	program_icon_state = "supply"
 	program_key_state = "rd_key"
 	program_menu_icon = "triangle-2-e-w"
