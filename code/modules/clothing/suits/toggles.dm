@@ -63,11 +63,11 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-/obj/item/clothing/suit/storage/hooded/experimental_mob_overlay(mob/user_mob, slot, var/bodypart)
-	var/image/I = ..()
-	if(suittoggled)
-		I.icon_state += "_t"
-	return I
+/obj/item/clothing/suit/storage/hooded/get_mob_overlay(mob/user_mob, slot, var/bodypart)
+	var/image/ret = ..()
+	if(ret && suittoggled)
+		ret.icon_state += "_t"
+	return ret
 
 /obj/item/clothing/suit/storage/hooded/wintercoat
 	name = "winter coat"
@@ -87,7 +87,7 @@
 /obj/item/clothing/head/winterhood
 	name = "winter hood"
 	desc = "A hood attached to a heavy winter jacket."
-	icon_state = "generic_hood"
+	icon = 'icons/clothing/head/hood_winter.dmi'
 	body_parts_covered = SLOT_HEAD
 	cold_protection = SLOT_HEAD
 	flags_inv = HIDEEARS | BLOCKHAIR
@@ -167,8 +167,7 @@
 /obj/item/clothing/head/hoodiehood
 	name = "hoodie hood"
 	desc = "A hood attached to a warm sweatshirt."
-	icon_state = "hood"
-	icon = 'icons/clothing/suit/hoodie.dmi'
+	icon = 'icons/clothing/head/hood.dmi'
 	body_parts_covered = SLOT_HEAD
 	min_cold_protection_temperature = T0C - 20
 	cold_protection = SLOT_HEAD

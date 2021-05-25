@@ -3,6 +3,8 @@
 	if(applies_material_colour && material)
 		color = material.color
 		alpha = 100 + material.opacity * 255
+	if(blood_overlay)
+		overlays += blood_overlay
 
 /obj/item/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
@@ -59,7 +61,7 @@
 
 /obj/item/proc/set_material(var/new_material)
 	if(new_material)
-		material = decls_repository.get_decl(new_material)
+		material = GET_DECL(new_material)
 	if(istype(material))
 		health = round(material_health_multiplier * material.integrity)
 		max_health = health

@@ -1,6 +1,6 @@
-var/list/outfits_decls_
-var/list/outfits_decls_root_
-var/list/outfits_decls_by_type_
+var/global/list/outfits_decls_
+var/global/list/outfits_decls_root_
+var/global/list/outfits_decls_by_type_
 
 /proc/outfit_by_type(var/outfit_type)
 	if(!outfits_decls_root_)
@@ -17,7 +17,7 @@ var/list/outfits_decls_by_type_
 		return
 	outfits_decls_ = list()
 	outfits_decls_by_type_ = list()
-	outfits_decls_root_ = decls_repository.get_decl(/decl/hierarchy/outfit)
+	outfits_decls_root_ = GET_DECL(/decl/hierarchy/outfit)
 
 /decl/hierarchy/outfit
 	name = "Naked"
@@ -98,13 +98,14 @@ var/list/outfits_decls_by_type_
 	return 1
 
 /decl/hierarchy/outfit/proc/equip_base(mob/living/carbon/human/H, var/equip_adjustments)
+	set waitfor = FALSE
 	pre_equip(H)
 
 	//Start with uniform,suit,backpack for additional slots
 	if(uniform)
 		H.equip_to_slot_or_del(new uniform(H),slot_w_uniform_str)
 		if(!H.get_equipped_item(slot_w_uniform_str))
-			H.equip_to_slot_or_del(new /obj/item/clothing/under/harness, slot_w_uniform_str)
+			H.species.equip_default_fallback_uniform(H)
 	if(holster && H.w_uniform)
 		var/obj/item/clothing/accessory/equip_holster = new holster
 		H.w_uniform.attackby(H, equip_holster)

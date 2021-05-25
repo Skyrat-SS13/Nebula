@@ -22,6 +22,9 @@
 	body_parts_covered = SLOT_HEAD
 	attack_verb = list("bapped")
 
+	drop_sound = 'sound/foley/paperpickup1.ogg'
+	pickup_sound = 'sound/foley/paperpickup2.ogg'
+
 	var/info		//What's actually written on the paper.
 	var/info_links	//A different version of the paper which includes html links at fields and EOF
 	var/stamps		//The (text for the) stamps on the paper.
@@ -52,6 +55,7 @@
 		SSpersistence.track_value(src, /datum/persistent/paper)
 
 /obj/item/paper/proc/set_content(text,title)
+	set waitfor = FALSE
 	if(title)
 		SetName(title)
 	info = html_encode(text)
@@ -98,14 +102,14 @@
 	var/n_name = sanitizeSafe(input(usr, "What would you like to label the paper?", "Paper Labelling", null)  as text, MAX_NAME_LEN)
 
 	// We check loc one level up, so we can rename in clipboards and such. See also: /obj/item/photo/rename()
-	if(!n_name || !CanInteract(usr, GLOB.deep_inventory_state))
+	if(!n_name || !CanInteract(usr, global.deep_inventory_topic_state))
 		return
 	n_name = usr.handle_writing_literacy(usr, n_name)
 	if(n_name)
 		SetName(n_name)
 	add_fingerprint(usr)
 
-/obj/item/paper/attack_self(mob/living/user)
+/obj/item/paper/attack_self(mob/user)
 	if(user.a_intent == I_HURT)
 		if(icon_state == "scrap")
 			user.show_message("<span class='warning'>\The [src] is already crumpled.</span>")
@@ -123,7 +127,7 @@
 			spawn(20)
 				spam_flag = 0
 
-/obj/item/paper/attack_ai(var/mob/living/silicon/ai/user)
+/obj/item/paper/attack_ai(mob/living/silicon/ai/user)
 	show_content(user)
 
 /obj/item/paper/attack(mob/living/carbon/M, mob/living/carbon/user)
@@ -254,7 +258,8 @@
 		if(istype(P, /obj/item/flame/lighter/zippo))
 			class = "rose"
 
-		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like \he's trying to burn it!</span>", \
+		var/decl/pronouns/G = user.get_pronouns()
+		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [G.he]'s trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 
 		spawn(20)

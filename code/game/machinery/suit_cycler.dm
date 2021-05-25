@@ -82,10 +82,10 @@
 
 	if(irradiating)
 		LAZYADD(new_overlays, image(icon, "light_radiation"))
-		set_light(0.8, 1, 3, 2, COLOR_RED_LIGHT)
+		set_light(3, 0.8, COLOR_RED_LIGHT)
 	else if(active)
 		LAZYADD(new_overlays, image(icon, "light_active"))
-		set_light(0.8, 1, 3, 2, COLOR_YELLOW)
+		set_light(3, 0.8, COLOR_YELLOW)
 	else
 		set_light(0)
 
@@ -97,7 +97,7 @@
 /obj/machinery/suit_cycler/Initialize(mapload, d=0, populate_parts = TRUE)
 	. = ..()
 	if(!length(available_modifications) || !length(available_bodytypes))
-		crash_with("Invalid setup: [log_info_line(src)]")
+		PRINT_STACK_TRACE("Invalid setup: [log_info_line(src)]")
 		return INITIALIZE_HINT_QDEL
 
 	if(populate_parts)
@@ -121,8 +121,10 @@
 	DROP_NULL(boots)
 	return ..()
 
-/obj/machinery/suit_cycler/MouseDrop_T(var/mob/target, var/mob/user)
-	. = CanMouseDrop(target, user) && try_move_inside(target, user)
+/obj/machinery/suit_cycler/receive_mouse_drop(var/atom/dropping, var/mob/user)
+	. = ..()
+	if(!. && ismob(dropping) && try_move_inside(dropping, user))
+		return TRUE
 
 /obj/machinery/suit_cycler/proc/try_move_inside(var/mob/living/target, var/mob/living/user)
 	if(!istype(target) || !istype(user) || !target.Adjacent(user) || !user.Adjacent(src) || user.incapacitated())
@@ -179,9 +181,6 @@
 		if(boots)
 			to_chat(user, SPAN_WARNING("The cycler already contains some boots."))
 			return
-		if(I.icon_override == CUSTOM_ITEM_MOB)
-			to_chat(user, "You cannot refit a customised voidsuit.")
-			return
 		if(!user.unEquip(I, src))
 			return
 		to_chat(user, "You fit \the [I] into the suit cycler.")
@@ -197,10 +196,6 @@
 
 		if(helmet)
 			to_chat(user, SPAN_WARNING("The cycler already contains a helmet."))
-			return
-
-		if(I.icon_override == CUSTOM_ITEM_MOB)
-			to_chat(user, "You cannot refit a customised voidsuit.")
 			return
 		if(!user.unEquip(I, src))
 			return
@@ -220,9 +215,6 @@
 			to_chat(user, SPAN_WARNING("The cycler already contains a voidsuit."))
 			return
 
-		if(I.icon_override == CUSTOM_ITEM_MOB)
-			to_chat(user, "You cannot refit a customised voidsuit.")
-			return
 		if(!user.unEquip(I, src))
 			return
 		to_chat(user, "You fit \the [I] into the suit cycler.")
@@ -415,9 +407,9 @@
 		if(prob(radiation_level*2) && occupant.can_feel_pain())
 			occupant.emote("scream")
 		if(radiation_level > 2)
-			occupant.take_organ_damage(0,radiation_level*2 + rand(1,3))
+			occupant.take_organ_damage(0, radiation_level*2 + rand(1,3))
 		if(radiation_level > 1)
-			occupant.take_organ_damage(0,radiation_level + rand(1,3))
+			occupant.take_organ_damage(0, radiation_level + rand(1,3))
 		occupant.apply_damage(radiation_level*10, IRRADIATE, damage_flags = DAM_DISPERSED)
 
 /obj/machinery/suit_cycler/proc/finished_job()
@@ -425,6 +417,7 @@
 	T.visible_message(SPAN_NOTICE("\The [src] pings loudly."))
 	active = 0
 	updateUsrDialog()
+	update_icon()
 
 /obj/machinery/suit_cycler/proc/repair_suit()
 	if(!suit || !suit.damage || !suit.can_breach)

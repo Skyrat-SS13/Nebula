@@ -12,6 +12,7 @@
 	status_flags = PASSEMOTES
 	a_intent =     I_HURT
 	mob_size =     MOB_SIZE_LARGE
+	atom_flags = ATOM_FLAG_SHIELD_CONTENTS | ATOM_FLAG_NO_TEMP_CHANGE
 
 	meat_type = null
 	meat_amount = 0
@@ -43,9 +44,6 @@
 	var/obj/item/mech_component/sensors/head
 	var/obj/item/mech_component/chassis/body
 
-	// Invisible components.
-	var/datum/effect/effect/system/spark_spread/sparks
-
 	// Equipment tracking vars.
 	var/obj/item/mech_equipment/selected_system
 	var/selected_hardpoint
@@ -69,6 +67,7 @@
 	var/obj/screen/exosuit/health/hud_health
 	var/obj/screen/exosuit/toggle/hatch_open/hud_open
 	var/obj/screen/exosuit/power/hud_power
+	var/obj/screen/exosuit/heat/hud_heat
 
 /mob/living/exosuit/is_flooded(lying_mob, absolute)
 	. = (body && body.pilot_coverage >= 100 && hatch_closed) ? FALSE : ..()
@@ -80,7 +79,6 @@
 
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
-	sparks = new(src)
 
 	// Grab all the supplied components.
 	if(source_frame)
@@ -163,6 +161,8 @@
 	. = ..()
 	if(LAZYLEN(pilots) && (!hatch_closed || body.pilot_coverage < 100 || body.transparent_cabin))
 		to_chat(user, "It is being piloted by [english_list(pilots, nothing_text = "nobody")].")
+	if(body && LAZYLEN(body.pilot_positions))
+		to_chat(user, "It can seat [body.pilot_positions.len] pilot\s total.")
 	if(hardpoints.len)
 		to_chat(user, "It has the following hardpoints:")
 		for(var/hardpoint in hardpoints)
@@ -191,6 +191,8 @@
 	if(.)
 		update_pilots()
 
-
+/mob/living/exosuit/increaseBodyTemp(value)
+	bodytemperature += value
+	return bodytemperature
 
 

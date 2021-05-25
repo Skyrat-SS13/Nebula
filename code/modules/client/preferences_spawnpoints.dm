@@ -1,14 +1,14 @@
-GLOBAL_VAR(spawntypes)
+var/global/list/spawntypes
 
 /proc/spawntypes()
-	if(!GLOB.spawntypes)
-		GLOB.spawntypes = list()
+	if(!global.spawntypes)
+		global.spawntypes = list()
 		for(var/type in typesof(/datum/spawnpoint)-/datum/spawnpoint)
 			var/datum/spawnpoint/S = type
 			var/display_name = initial(S.display_name)
-			if((display_name in GLOB.using_map.allowed_spawns) || initial(S.always_visible))
-				GLOB.spawntypes[display_name] = new S
-	return GLOB.spawntypes
+			if((display_name in global.using_map.allowed_spawns) || initial(S.always_visible))
+				global.spawntypes[display_name] = new S
+	return global.spawntypes
 
 /datum/spawnpoint
 	var/msg		  //Message to display on the arrivals computer.
@@ -33,11 +33,11 @@ GLOBAL_VAR(spawntypes)
 
 #ifdef UNIT_TEST
 /datum/spawnpoint/Del()
-	crash_with("Spawn deleted: [log_info_line(src)]")
+	PRINT_STACK_TRACE("Spawn deleted: [log_info_line(src)]")
 	..()
 
 /datum/spawnpoint/Destroy()
-	crash_with("Spawn destroyed: [log_info_line(src)]")
+	PRINT_STACK_TRACE("Spawn destroyed: [log_info_line(src)]")
 	. = ..()
 #endif
 
@@ -47,7 +47,7 @@ GLOBAL_VAR(spawntypes)
 
 /datum/spawnpoint/arrivals/New()
 	..()
-	turfs = GLOB.latejoin
+	turfs = global.latejoin_locations
 
 /datum/spawnpoint/gateway
 	display_name = "Gateway"
@@ -55,7 +55,7 @@ GLOBAL_VAR(spawntypes)
 
 /datum/spawnpoint/gateway/New()
 	..()
-	turfs = GLOB.latejoin_gateway
+	turfs = global.latejoin_gateway_locations
 
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
@@ -64,7 +64,7 @@ GLOBAL_VAR(spawntypes)
 
 /datum/spawnpoint/cryo/New()
 	..()
-	turfs = GLOB.latejoin_cryo
+	turfs = global.latejoin_cryo_locations
 
 /datum/spawnpoint/cryo/after_join(mob/living/carbon/human/victim)
 	if(!istype(victim))
@@ -81,8 +81,9 @@ GLOBAL_VAR(spawntypes)
 					pack.handle_item_insertion(thing)
 
 			C.set_occupant(victim, 1)
-			victim.Sleeping(rand(1,3))
-			to_chat(victim,SPAN_NOTICE("You are slowly waking up from the cryostasis aboard [GLOB.using_map.full_name]. It might take a few seconds."))
+			SET_STATUS_MAX(victim, STAT_ASLEEP, rand(1,3))
+			C.on_mob_spawn()
+			to_chat(victim,SPAN_NOTICE("You are slowly waking up from the cryostasis aboard [global.using_map.full_name]. It might take a few seconds."))
 			return
 
 /datum/spawnpoint/cyborg
@@ -92,7 +93,7 @@ GLOBAL_VAR(spawntypes)
 
 /datum/spawnpoint/cyborg/New()
 	..()
-	turfs = GLOB.latejoin_cyborg
+	turfs = global.latejoin_cyborg_locations
 
 /datum/spawnpoint/default
 	display_name = DEFAULT_SPAWNPOINT_ID

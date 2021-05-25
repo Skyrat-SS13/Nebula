@@ -42,7 +42,7 @@ meteor_act
 
 	radio_interrupt_cooldown = world.time + RADIO_INTERRUPT_DEFAULT
 
-	if(!affected.can_feel_pain() || (chem_effects[CE_PAINKILLER]/3 > agony_amount))//stops blurry eyes and stutter if you can't feel pain
+	if(!affected.can_feel_pain() || (GET_CHEMICAL_EFFECT(src, CE_PAINKILLER)/3 > agony_amount)) //stops blurry eyes and stutter if you can't feel pain
 		agony_amount = 0
 
 	..(stun_amount, agony_amount, def_zone)
@@ -188,7 +188,7 @@ meteor_act
 		return 0
 
 	if(effective_force > 10 || effective_force >= 5 && prob(33))
-		forcesay(GLOB.hit_appends)	//forcesay checks stat already
+		forcesay(global.hit_appends)	//forcesay checks stat already
 		radio_interrupt_cooldown = world.time + (RADIO_INTERRUPT_DEFAULT * 0.8) //getting beat on can briefly prevent radio use
 
 	if((I.damtype == BRUTE || I.damtype == PAIN) && prob(25 + (effective_force * 2)))
@@ -213,7 +213,7 @@ meteor_act
 
 	return 1
 
-/mob/living/carbon/human/proc/attack_bloody(obj/item/W, mob/living/attacker, var/effective_force, var/hit_zone)
+/mob/living/carbon/human/proc/attack_bloody(obj/item/W, mob/attacker, var/effective_force, var/hit_zone)
 	if(W.damtype != BRUTE)
 		return
 
@@ -373,13 +373,9 @@ meteor_act
 /mob/living/carbon/human/proc/bloody_hands(var/mob/living/source, var/amount = 2)
 	var/obj/item/clothing/gloves/gloves = get_equipped_item(slot_gloves_str)
 	if(istype(gloves))
-		gloves.add_blood(source)
-		gloves.transfer_blood = amount
-		gloves.bloody_hands_mob = source
+		gloves.add_blood(source, amount)
 	else
-		add_blood(source)
-		bloody_hands = amount
-		bloody_hands_mob = source
+		add_blood(source, amount)
 	update_inv_gloves()		//updates on-mob overlays for bloody hands and/or bloody gloves
 
 /mob/living/carbon/human/proc/bloody_body(var/mob/living/source)

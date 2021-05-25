@@ -20,7 +20,6 @@
 	var/obj/item/card/id/held_card
 	var/editing_security_level = 0
 	var/view_screen = NO_SCREEN
-	var/datum/effect/effect/system/spark_spread/spark_system
 	var/account_security_level = 0
 	var/charge_stick_type = /obj/item/charge_stick
 
@@ -31,12 +30,8 @@
 /obj/machinery/atm/Initialize()
 	. = ..()
 	machine_id = "[station_name()] ATM #[num_financial_terminals++]"
-	spark_system = new /datum/effect/effect/system/spark_spread
-	spark_system.set_up(5, 0, src)
-	spark_system.attach(src)
 
 /obj/machinery/atm/Destroy()
-	QDEL_NULL(spark_system)
 	QDEL_NULL(held_card)
 	authenticated_account = null
 	. = ..()
@@ -66,7 +61,7 @@
 	if(!emagged)
 		//short out the machine, shoot sparks, spew money!
 		emagged = 1
-		spark_system.start()
+		spark_at(src, amount = 5, holder = src)
 		var/obj/item/cash/cash = new(get_turf(src))
 		cash.adjust_worth(rand(100,500))
 
@@ -79,7 +74,7 @@
 		return 1
 
 /obj/machinery/atm/attackby(obj/item/I, mob/user)
-	if(istype(I, /obj/item/card))
+	if(istype(I, /obj/item/card/id))
 		if(emagged > 0)
 			//prevent inserting id into an emagged ATM
 			to_chat(user, "[html_icon(src)] <span class='warning'>CARD READER ERROR. This system has been compromised!</span>")
@@ -292,7 +287,7 @@
 						if(D)
 							account_security_level = D.security_level
 
-					authenticated_account = attempt_account_access(tried_account_num, tried_pin, held_card && login_card.associated_account_number == tried_account_num ? 2 : 1)
+					authenticated_account = attempt_account_access(tried_account_num, tried_pin, (login_card?.associated_account_number == tried_account_num))
 
 					if(!authenticated_account)
 						number_incorrect_tries++
@@ -332,7 +327,7 @@
 				if(amount <= 0)
 					alert("That is not a valid amount.")
 				else if(amount > initial(E.max_worth))
-					var/decl/currency/cur = decls_repository.get_decl(initial(E.currency) || GLOB.using_map.default_currency)
+					var/decl/currency/cur = GET_DECL(initial(E.currency) || global.using_map.default_currency)
 					alert("That amount exceeds the maximum amount holdable by charge sticks from this machine ([cur.format_value(initial(E.max_worth))]).")
 				else if(authenticated_account && amount > 0)
 					//create an entry in the account transaction log

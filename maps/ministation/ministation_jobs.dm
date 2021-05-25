@@ -1,5 +1,4 @@
 /datum/map/ministation
-	default_assistant_title = "Assistant"
 	allowed_jobs = list(
 		/datum/job/assistant,
 		/datum/job/ministation/bartender,
@@ -13,4 +12,5 @@
 		/datum/job/ministation/janitor,
 		/datum/job/ministation/scientist,
 		/datum/job/ministation/security,
+		/datum/job/ministation/librarian
 	)

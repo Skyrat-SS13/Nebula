@@ -164,9 +164,6 @@
 /datum/fabricator_recipe/imprinter/circuit/dronecontrol
 	path = /obj/item/stock_parts/circuitboard/drone_control
 
-/datum/fabricator_recipe/imprinter/circuit/powermonitor
-	path = /obj/item/stock_parts/circuitboard/powermonitor
-
 /datum/fabricator_recipe/imprinter/circuit/solarcontrol
 	path = /obj/item/stock_parts/circuitboard/solar_control
 
@@ -448,3 +445,6 @@
 
 /datum/fabricator_recipe/imprinter/circuit/inertial_damper
 	path = /obj/item/stock_parts/circuitboard/inertial_damper
+
+/datum/fabricator_recipe/imprinter/circuit/docking_beacon
+	path = /obj/item/stock_parts/circuitboard/docking_beacon

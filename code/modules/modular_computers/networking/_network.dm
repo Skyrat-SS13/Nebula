@@ -17,7 +17,7 @@
 	var/intrusion_detection_enabled
 	var/intrusion_detection_alarm
 	var/list/banned_nids = list()
-	var/global/list/all_software_categories
+	var/static/list/all_software_categories
 	var/list/chat_channels = list()
 
 /datum/computer_network/New(var/new_id)
@@ -210,5 +210,13 @@
 		if(istype(device.holder, type))
 			if(bypass_auth || device.has_access(user))
 				results += device.holder
+	return results
+
+/datum/computer_network/proc/get_tags_by_type(var/type)
+	var/list/results = list()
+	for(var/tag in devices_by_tag)
+		var/datum/extension/network_device/device = devices_by_tag[tag]
+		if(istype(device.holder, type))
+			results |= tag
 	return results
 

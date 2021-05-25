@@ -3,7 +3,7 @@
 	name = "void helmet"
 	desc = "A high-tech dark red space suit helmet. Used for AI satellite maintenance."
 	icon = 'icons/clothing/spacesuit/void/nasa/helmet.dmi'
-
+	bodytype_restricted = list(BODYTYPE_HUMANOID)
 	heat_protection = SLOT_HEAD
 	armor = list(
 		melee = ARMOR_MELEE_RESISTANT, 
@@ -22,7 +22,7 @@
 /obj/item/clothing/suit/space/void
 	name = "voidsuit"
 	icon = 'icons/clothing/spacesuit/void/nasa/suit.dmi'
-	item_state_slots = null
+	bodytype_restricted = list(BODYTYPE_HUMANOID)
 	w_class = ITEM_SIZE_HUGE//bulky item
 	desc = "A high-tech dark red space suit. Used for AI satellite maintenance."
 	armor = list(
@@ -213,7 +213,7 @@ else if(##equipment_var) {\
 	if(istype(W,/obj/item/clothing/accessory) || istype(W, /obj/item/hand_labeler))
 		return ..()
 
-	if(istype(W,/obj/item/screwdriver))
+	if(isScrewdriver(W))
 		if(user.get_inventory_slot(src) == slot_wear_suit_str)//maybe I should make this into a proc?
 			to_chat(user, "<span class='warning'>You cannot modify \the [src] while it is being worn.</span>")
 			return
@@ -285,7 +285,7 @@ else if(##equipment_var) {\
 
 /obj/item/clothing/suit/space/void/get_mob_overlay(mob/user_mob, slot, bodypart)
 	var/image/ret = ..()
-	if(tank && slot == slot_back_str)
+	if(ret && tank && slot == slot_back_str)
 		ret.overlays += tank.get_mob_overlay(user_mob, slot_back_str)
 	return ret
 

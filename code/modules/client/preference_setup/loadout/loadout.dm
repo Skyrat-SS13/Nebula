@@ -1,5 +1,5 @@
-var/list/loadout_categories = list()
-var/list/gear_datums = list()
+var/global/list/loadout_categories = list()
+var/global/list/gear_datums = list()
 
 /datum/preferences
 	var/list/gear_list //Custom/fluff item loadouts.
@@ -23,7 +23,7 @@ var/list/gear_datums = list()
 		var/datum/gear/G = geartype
 		if(initial(G.category) == geartype)
 			continue
-		if(GLOB.using_map.loadout_blacklist && (geartype in GLOB.using_map.loadout_blacklist))
+		if(global.using_map.loadout_blacklist && (geartype in global.using_map.loadout_blacklist))
 			continue
 
 		var/use_name = initial(G.display_name)
@@ -35,10 +35,10 @@ var/list/gear_datums = list()
 		gear_datums[use_name] = new geartype
 		LC.gear[use_name] = gear_datums[use_name]
 
-	loadout_categories = sortAssoc(loadout_categories)
+	loadout_categories = sortTim(loadout_categories, /proc/cmp_text_asc)
 	for(var/loadout_category in loadout_categories)
 		var/datum/loadout_category/LC = loadout_categories[loadout_category]
-		LC.gear = sortAssoc(LC.gear)
+		LC.gear = sortTim(LC.gear, /proc/cmp_text_asc)
 	return 1
 
 /datum/category_item/player_setup_item/loadout
@@ -47,13 +47,13 @@ var/list/gear_datums = list()
 	var/current_tab = "General"
 	var/hide_unavailable_gear = 0
 
-/datum/category_item/player_setup_item/loadout/load_character(var/savefile/S)
-	from_file(S["gear_list"], pref.gear_list)
-	from_file(S["gear_slot"], pref.gear_slot)
+/datum/category_item/player_setup_item/loadout/load_character(datum/pref_record_reader/R)
+	pref.gear_list = R.read("gear_list")
+	pref.gear_slot = R.read("gear_slot")
 
-/datum/category_item/player_setup_item/loadout/save_character(var/savefile/S)
-	to_file(S["gear_list"], pref.gear_list)
-	to_file(S["gear_slot"], pref.gear_slot)
+/datum/category_item/player_setup_item/loadout/save_character(datum/pref_record_writer/W)
+	W.write("gear_list", pref.gear_list)
+	W.write("gear_slot", pref.gear_slot)
 
 /datum/category_item/player_setup_item/loadout/proc/valid_gear_choices(var/max_cost)
 	. = list()
@@ -218,7 +218,7 @@ var/list/gear_datums = list()
 		if(allowed && G.allowed_skills)
 			var/list/skills_required = list()//make it into instances? instead of path
 			for(var/skill in G.allowed_skills)
-				var/decl/hierarchy/skill/instance = decls_repository.get_decl(skill)
+				var/decl/hierarchy/skill/instance = GET_DECL(skill)
 				skills_required[instance] = G.allowed_skills[skill]
 
 			allowed = skill_check(jobs, skills_required)//Checks if a single job has all the skills required
@@ -316,29 +316,6 @@ var/list/gear_datums = list()
 		return TOPIC_REFRESH
 	return ..()
 
-/datum/category_item/player_setup_item/loadout/update_setup(var/savefile/preferences, var/savefile/character)
-	if(preferences["version"] < 14)
-		var/list/old_gear = character["gear"]
-		if(istype(old_gear)) // During updates data isn't sanitized yet, we have to do manual checks
-			if(!istype(pref.gear_list)) pref.gear_list = list()
-			if(!pref.gear_list.len) pref.gear_list.len++
-			pref.gear_list[1] = old_gear
-		return 1
-
-	if(preferences["version"] < 15)
-		if(istype(pref.gear_list))
-			// Checks if the key of the pref.gear_list is a list.
-			// If not the key is replaced with the corresponding value.
-			// This will convert the loadout slot data to a reasonable and (more importantly) compatible format.
-			// I.e. list("1" = loadout_data1, "2" = loadout_data2, "3" = loadout_data3) becomes list(loadout_data1, loadout_data2, loadaout_data3)
-			for(var/index = 1 to pref.gear_list.len)
-				var/key = pref.gear_list[index]
-				if(islist(key))
-					continue
-				var/value = pref.gear_list[key]
-				pref.gear_list[index] = value
-		return 1
-
 /datum/gear
 	var/display_name       //Name/index. Must be unique.
 	var/description        //Description of this gear. If left blank will default to the description of the pathed item.
@@ -351,7 +328,8 @@ var/list/gear_datums = list()
 	var/whitelisted        //Term to check the whitelist for..
 	var/sort_category = "General"
 	var/flags              //Special tweaks in new
-	var/custom_setup_proc  //Special tweak in New
+	var/custom_setup_proc                 //Special tweak in New
+	var/list/custom_setup_proc_arguments  //Special tweak in New
 	var/category
 	var/list/gear_tweaks = list() //List of datums which will alter the item after it has been spawned.
 
@@ -371,7 +349,7 @@ var/list/gear_datums = list()
 		gear_tweaks += gear_tweak_free_name
 		gear_tweaks += gear_tweak_free_desc
 	if(custom_setup_proc)
-		gear_tweaks += new/datum/gear_tweak/custom_setup(custom_setup_proc)
+		gear_tweaks += new/datum/gear_tweak/custom_setup(custom_setup_proc, custom_setup_proc_arguments)
 	var/options = get_gear_tweak_options()
 	for(var/tweak in options)
 		var/optargs = options[tweak]
@@ -399,20 +377,26 @@ var/list/gear_datums = list()
 /datum/gear/proc/spawn_item(user, location, metadata)
 	var/datum/gear_data/gd = new(path, location)
 	for(var/datum/gear_tweak/gt in gear_tweaks)
-		gt.tweak_gear_data(metadata && metadata["[gt]"], gd)
+		gt.tweak_gear_data(islist(metadata) && metadata["[gt]"], gd)
 	var/item = new gd.path(gd.location)
 	for(var/datum/gear_tweak/gt in gear_tweaks)
-		gt.tweak_item(user, item, metadata && metadata["[gt]"])
-	return item
+		gt.tweak_item(user, item, islist(metadata) && metadata["[gt]"])
+	. = item
+	if(metadata && !islist(metadata))
+		PRINT_STACK_TRACE("Loadout spawn_item() proc received non-null non-list metadata: '[json_encode(metadata)]'")
 
 /datum/gear/proc/spawn_on_mob(var/mob/living/carbon/human/H, var/metadata)
-	var/obj/item/item = spawn_item(H, H, metadata)
+	var/obj/item/item = spawn_and_validate_item(H, metadata)
+	if(!item)
+		return
+
 	if(H.equip_to_slot_if_possible(item, slot, del_on_fail = 1, force = 1))
 		. = item
 
 /datum/gear/proc/spawn_in_storage_or_drop(var/mob/living/carbon/human/H, var/metadata)
-	var/obj/item/item = spawn_item(H, H, metadata)
-	item.add_fingerprint(H)
+	var/obj/item/item = spawn_and_validate_item(H, metadata)
+	if(!item)
+		return
 
 	var/atom/placed_in = H.equip_to_storage(item)
 	if(placed_in)
@@ -423,3 +407,17 @@ var/list/gear_datums = list()
 		to_chat(H, "<span class='notice'>Placing \the [item] in your hands!</span>")
 	else
 		to_chat(H, "<span class='danger'>Dropping \the [item] on the ground!</span>")
+/datum/gear/proc/spawn_and_validate_item(mob/living/carbon/human/H, metadata)
+	PRIVATE_PROC(TRUE)
+
+	var/obj/item/item = spawn_item(H, H, metadata)
+	if(QDELETED(item))
+		return
+
+	if(!(flags & GEAR_NO_FINGERPRINTS))
+		item.add_fingerprint(H)
+
+	if(flags & GEAR_NO_EQUIP)
+		return
+	
+	return item

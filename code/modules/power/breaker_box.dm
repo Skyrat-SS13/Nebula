@@ -29,6 +29,10 @@
 
 	// Enabled on server startup. Used in substations to keep them in bypass mode.
 /obj/machinery/power/breakerbox/activated/Initialize()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/power/breakerbox/activated/LateInitialize()
 	set_state(1)
 	. = ..()
 
@@ -40,7 +44,7 @@
 	else
 		to_chat(user, "<span class='warning'>It seems to be offline.</span>")
 
-/obj/machinery/power/breakerbox/attack_ai(mob/user)
+/obj/machinery/power/breakerbox/attack_ai(mob/living/silicon/ai/user)
 	if(update_locked)
 		to_chat(user, "<span class='warning'>System locked. Please try again later.</span>")
 		return

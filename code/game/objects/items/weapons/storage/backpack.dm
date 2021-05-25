@@ -339,11 +339,11 @@
 		/obj/item/crowbar
 	)
 
-/obj/item/storage/backpack/satchel/flat/MouseDrop(var/obj/over_object)
+/obj/item/storage/backpack/satchel/flat/handle_mouse_drop(var/atom/over, var/mob/user)
 	var/turf/T = get_turf(src)
 	if(hides_under_flooring() && isturf(T) && !T.is_plating())
-		return
-	..()
+		return TRUE
+	. = ..()
 
 /obj/item/storage/backpack/satchel/flat/hide(var/i)
 	set_invisibility(i ? 101 : 0)
@@ -374,13 +374,13 @@
 		add_overlay(I)
 
 /obj/item/storage/backpack/ert/get_mob_overlay(mob/user_mob, slot, bodypart)
-	. = ..()
-	if(slot == slot_back_str && marking_state)
-		var/image/ret = .
+	var/image/ret = ..()
+	if(ret && slot == slot_back_str && marking_state)
 		var/image/I = image(icon, "[ret.icon_state]-[marking_state]")
 		I.color = marking_colour
 		I.appearance_flags |= RESET_COLOR
 		ret.add_overlay(I)	
+	return ret
 
 /obj/item/storage/backpack/ert/commander
 	name = "emergency response team commander backpack"

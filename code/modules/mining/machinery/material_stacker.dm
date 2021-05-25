@@ -13,7 +13,7 @@
 	if(href_list["release_sheets"] && output_turf)
 		var/decl/material/mat = locate(href_list["release_sheets"])
 		if(istype(mat) && stacked[mat.type] > 0)
-			mat.place_sheet(output_turf, stacked[mat.type])
+			mat.create_object(output_turf, stacked[mat.type])
 			stacked -= mat.type
 			. = TOPIC_REFRESH
 
@@ -23,7 +23,7 @@
 	var/list/stacks = list()
 	for(var/stack in stacked)
 		if(stacked[stack] > 0)
-			var/decl/material/mat = decls_repository.get_decl(stack)
+			var/decl/material/mat = GET_DECL(stack)
 			stacks += list(list("name" = "[capitalize(mat.solid_name)] x [stacked[stack]]", "key" = "\ref[mat]"))
 	data["stacks"] = stacks
 	return data
@@ -52,6 +52,5 @@
 	if(output_turf)
 		for(var/sheet in stacked)
 			if(stacked[sheet] >= stack_max)
-				var/decl/material/stackmat = decls_repository.get_decl(sheet)
-				stackmat.place_sheet(output_turf, stack_max)
+				SSmaterials.create_object(sheet, output_turf, stack_max)
 				stacked[sheet] -= stack_max

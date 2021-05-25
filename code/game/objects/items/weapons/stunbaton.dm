@@ -3,8 +3,7 @@
 	name = "stunbaton"
 	desc = "A stun baton for incapacitating people with."
 	icon = 'icons/obj/items/weapon/stunbaton.dmi'
-	icon_state = "stunbaton"
-	item_state = "baton"
+	icon_state = ICON_STATE_WORLD
 	slot_flags = SLOT_LOWER_BODY
 	force = 15
 	sharp = 0
@@ -55,16 +54,13 @@
 	return null
 
 /obj/item/baton/on_update_icon()
+	cut_overlays()
 	if(status)
-		icon_state = "[initial(name)]_active"
-	else if(!bcell)
-		icon_state = "[initial(name)]_nocell"
+		add_overlay("[icon_state]-active")
+		set_light(1.5, 2, "#ff6a00")
 	else
-		icon_state = "[initial(name)]"
-
-	if(icon_state == "[initial(name)]_active")
-		set_light(0.4, 0.1, 1, 2, "#ff6a00")
-	else
+		if(!bcell)
+			add_overlay("[icon_state]-nocell")
 		set_light(0)
 
 /obj/item/baton/examine(mob/user, distance)
@@ -127,7 +123,7 @@
 /obj/item/baton/attack(mob/M, mob/user)
 	if(status && (MUTATION_CLUMSY in user.mutations) && prob(50))
 		to_chat(user, "<span class='danger'>You accidentally hit yourself with the [src]!</span>")
-		user.Weaken(30)
+		SET_STATUS_MAX(user, STAT_WEAK, 30)
 		deductcharge(hitcost)
 		return
 	return ..()
@@ -175,7 +171,7 @@
 
 		if(ishuman(target))
 			var/mob/living/carbon/human/H = target
-			H.forcesay(GLOB.hit_appends)
+			H.forcesay(global.hit_appends)
 
 	return 1
 
@@ -232,7 +228,7 @@
 /obj/item/baton/robot/electrified_arm/on_update_icon()
 	if(status)
 		icon_state = "electrified_arm_active"
-		set_light(0.4, 0.1, 1, 2, "#006aff")
+		set_light(1.5, 2, "#006aff")
 	else
 		icon_state = "electrified_arm"
 		set_light(0)

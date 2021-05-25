@@ -1,6 +1,7 @@
 //This is the proc for gibbing a mob. Cannot gib ghosts.
 //added different sort of gibs and animations. N
 /mob/proc/gib(anim="gibbed-m",do_gibs)
+	set waitfor = FALSE
 	death(1)
 	ADD_TRANSFORMATION_MOVEMENT_HANDLER(src)
 	icon = null
@@ -57,9 +58,7 @@
 	adjust_stamina(-100)
 	reset_plane_and_layer()
 	UpdateLyingBuckledAndVerbStatus()
-
-	dizziness = 0
-	jitteriness = 0
+	clear_status_effects()
 
 	set_sight(sight|SEE_TURFS|SEE_MOBS|SEE_OBJS)
 	set_see_in_dark(8)

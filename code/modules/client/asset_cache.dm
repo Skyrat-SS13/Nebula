@@ -41,7 +41,7 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 	if(check_cache && (client.cache.Find(asset_name) || client.sending.Find(asset_name)))
 		return 0
 
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
+	var/decl/asset_cache/asset_cache = GET_DECL(/decl/asset_cache)
 	send_rsc(client, asset_cache.cache[asset_name], asset_name)
 	if(!verify || !winexists(client, "asset_cache_browser")) // Can't access the asset cache browser, rip.
 		if (client)
@@ -91,7 +91,7 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		return 0
 	if (unreceived.len >= ASSET_CACHE_TELL_CLIENT_AMOUNT)
 		to_chat(client, "Sending resources...")
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
+	var/decl/asset_cache/asset_cache = GET_DECL(/decl/asset_cache)
 	for(var/asset in unreceived)
 		if (asset in asset_cache.cache)
 			send_rsc(client, asset_cache.cache[asset], asset)
@@ -138,13 +138,13 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 //This proc "registers" an asset, it adds it to the cache for further use, you cannot touch it from this point on or you'll fuck things up.
 //if it's an icon or something be careful, you'll have to copy it before further use.
 /proc/register_asset(var/asset_name, var/asset)
-	var/decl/asset_cache/asset_cache = decls_repository.get_decl(/decl/asset_cache)
+	var/decl/asset_cache/asset_cache = GET_DECL(/decl/asset_cache)
 	asset_cache.cache[asset_name] = asset
 
 //These datums are used to populate the asset cache, the proc "register()" does this.
 
 //all of our asset datums, used for referring to these later
-/var/global/list/asset_datums = list()
+var/global/list/asset_datums = list()
 
 //get a assetdatum or make a new one
 /proc/get_asset_datum(var/type)
@@ -174,6 +174,8 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 
 
 //DEFINITIONS FOR ASSET DATUMS START HERE.
+var/global/template_file_name = "all_templates.json"
+
 /datum/asset/nanoui
 	var/list/common = list()
 
@@ -185,9 +187,10 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		"nano/js/"
 	)
 	var/list/uncommon_dirs = list(
-		"nano/templates/",
 		"news_articles/images/"
 	)
+	var/template_dir = "nano/templates/"
+	var/template_temp_dir = "data/"
 
 /datum/asset/nanoui/register()
 	// Crawl the directories to find files.
@@ -205,8 +208,21 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 				if(fexists(path + filename))
 					register_asset(filename, fcopy_rsc(path + filename))
 
+	var/list/templates = flist(template_dir)
+	for(var/filename in templates)
+		if(copytext(filename, length(filename)) != "/")
+			templates[filename] = replacetext(replacetext(file2text(template_dir + filename), "\n", ""), "\t", "")
+		else
+			templates -= filename
+	var/full_file_name = template_temp_dir + global.template_file_name
+	if(fexists(full_file_name))
+		fdel(file(full_file_name))
+	var/template_file = file(full_file_name)
+	to_file(template_file, json_encode(templates))
+	register_asset(global.template_file_name, fcopy_rsc(template_file))
+
 	var/list/mapnames = list()
-	for(var/z in GLOB.using_map.map_levels)
+	for(var/z in global.using_map.map_levels)
 		mapnames += map_image_file_name(z)
 
 	var/list/filenames = flist(MAP_IMAGE_PATH)
@@ -235,7 +251,7 @@ You can set verify to TRUE if you want send() to sleep until the client has the 
 		var/datum/asset/A = new type()
 		A.register()
 
-	for(var/client/C in GLOB.clients) // This is also called in client/New, but as we haven't initialized the cache until now, and it's possible the client is already connected, we risk doing it twice.
+	for(var/client/C in global.clients) // This is also called in client/New, but as we haven't initialized the cache until now, and it's possible the client is already connected, we risk doing it twice.
 		// Doing this to a client too soon after they've connected can cause issues, also the proc we call sleeps.
 		spawn(10)
 			getFilesSlow(C, cache, FALSE)

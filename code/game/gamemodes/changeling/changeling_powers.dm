@@ -277,7 +277,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	changeling.geneticdamage = 30
 
 	var/S_name = chosen_dna.speciesName
-	var/datum/species/S_dat = get_species_by_key(S_name)
+	var/decl/species/S_dat = get_species_by_key(S_name)
 	var/changeTime = 2 SECONDS
 	if(mob_size != S_dat.mob_size)
 		src.visible_message("<span class='warning'>[src]'s body begins to twist, their mass changing rapidly!</span>")
@@ -388,11 +388,11 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	for(var/obj/item/W in src)
 		C.drop_from_inventory(W)
 
-	var/mob/living/carbon/human/O = new /mob/living/carbon/human( src )
+	var/mob/living/carbon/human/O = new(src)
 	if (C.dna.GetUIState(DNA_UI_GENDER))
-		O.gender = FEMALE
+		O.set_gender(FEMALE)
 	else
-		O.gender = MALE
+		O.set_gender(MALE)
 	O.dna = C.dna.Clone()
 	C.dna = null
 	O.real_name = chosen_dna.real_name
@@ -498,9 +498,9 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	var/mob/living/carbon/human/C = src
 	C.set_stat(CONSCIOUS)
-	C.SetParalysis(0)
-	C.SetStunned(0)
-	C.SetWeakened(0)
+	C.set_status(STAT_PARA, 0)
+	C.set_status(STAT_STUN, 0)
+	C.set_status(STAT_WEAK, 0)
 	C.lying = 0
 	C.UpdateLyingBuckledAndVerbStatus()
 
@@ -573,7 +573,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 // HIVE MIND UPLOAD/DOWNLOAD DNA
 
-var/list/datum/absorbed_dna/hivemind_bank = list()
+var/global/list/datum/absorbed_dna/hivemind_bank = list()
 
 /mob/proc/changeling_hiveupload()
 	set category = "Changeling"
@@ -604,7 +604,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	if(!chosen_dna)
 		return
 
-	var/datum/species/spec = get_species_by_key(chosen_dna.speciesName)
+	var/decl/species/spec = get_species_by_key(chosen_dna.speciesName)
 
 	if(spec && spec.species_flags & SPECIES_FLAG_NEED_DIRECT_ABSORB)
 		to_chat(src, "<span class='notice'>That species must be absorbed directly.</span>")
@@ -739,7 +739,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	var/mob/living/carbon/human/T = changeling_sting(15,/mob/proc/changeling_lsdsting)
 	if(!T)	return 0
 	spawn(rand(300,600))
-		if(T)	T.hallucination(400, 80)
+		if(T)	T.set_hallucination(400, 80)
 	SSstatistics.add_field_details("changeling_powers","HS")
 	return 1
 
@@ -750,7 +750,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 
 	var/mob/living/carbon/human/T = changeling_sting(10,/mob/proc/changeling_silence_sting)
 	if(!T)	return 0
-	T.silent += 30
+	SET_STATUS_MAX(T, STAT_SILENCE, 30)
 	SSstatistics.add_field_details("changeling_powers","SS")
 	return 1
 
@@ -764,8 +764,8 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	to_chat(T, "<span class='danger'>Your eyes burn horrificly!</span>")
 	T.disabilities |= NEARSIGHTED
 	spawn(300)	T.disabilities &= ~NEARSIGHTED
-	T.eye_blind = 10
-	T.eye_blurry = 20
+	T.set_status(STAT_BLIND, 10)
+	T.set_status(STAT_BLURRY, 20)
 	SSstatistics.add_field_details("changeling_powers","BS")
 	return 1
 
@@ -777,7 +777,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	var/mob/living/carbon/human/T = changeling_sting(5,/mob/proc/changeling_deaf_sting)
 	if(!T)	return 0
 	to_chat(T, "<span class='danger'>Your ears pop and begin ringing loudly!</span>")
-	T.ear_deaf += 15
+	SET_STATUS_MAX(T, STAT_DEAF, 15)
 	SSstatistics.add_field_details("changeling_powers","DS")
 	return 1
 
@@ -790,7 +790,7 @@ var/list/datum/absorbed_dna/hivemind_bank = list()
 	var/mob/living/carbon/human/T = changeling_sting(40,/mob/proc/changeling_DEATHsting,loud)
 	if(!T)	return 0
 	to_chat(T, "<span class='danger'>You feel a small prick and your chest becomes tight.</span>")
-	T.make_jittery(400)
+	ADJ_STATUS(T, STAT_JITTER, 400)
 	if(T.reagents)	T.reagents.add_reagent(/decl/material/gas/carbon_monoxide, 40)
 	SSstatistics.add_field_details("changeling_powers","DTHS")
 	return 1

@@ -33,7 +33,7 @@
 /datum/fabricator_recipe/robotics/prosthetic/model_##MODEL_ID/groin {      \
 	path = /obj/item/organ/external/groin;                                 \
 }
-/* Readd if FBP/utility frame construction is desirable
+/* Readd if FBP construction is desirable
 /datum/fabricator_recipe/robotics/prosthetic/model_##MODEL_ID/chest {      \
 	path = /obj/item/organ/external/chest;                                 \
 }                                                                          \
@@ -57,14 +57,13 @@
 
 /datum/fabricator_recipe/robotics/prosthetic/get_product_name()
 	. = "prosthetic limb ([..()])"
-	if(model)
-		var/datum/robolimb/brand = model
-		return "[.] ([initial(brand.company)])"
+	if(ispath(model))
+		var/decl/prosthetics_manufacturer/brand = GET_DECL(model)
+		return "[.] ([brand.name])"
 
 /datum/fabricator_recipe/robotics/prosthetic/build()
 	. = ..()
 	for(var/obj/item/organ/external/E in .)
 		E.robotize(model)
 
-DEFINE_ROBOLIMB_DESIGNS(/datum/robolimb, generic, "Unbranded")
-DEFINE_ROBOLIMB_DESIGNS(/datum/robolimb/utility_frame, utility_frame, "Utility Frame")
+DEFINE_ROBOLIMB_DESIGNS(/decl/prosthetics_manufacturer, generic, "Unbranded")

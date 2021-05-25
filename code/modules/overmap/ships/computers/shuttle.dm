@@ -43,7 +43,7 @@
 		else
 			to_chat(usr, SPAN_WARNING("No valid landing sites in range."))
 		possible_d = shuttle.get_possible_destinations()
-		if(CanInteract(usr, GLOB.default_state) && (D in possible_d))
+		if(CanInteract(usr, global.default_topic_state) && (D in possible_d))
 			shuttle.set_destination(possible_d[D])
 		return TOPIC_REFRESH
 	if(href_list["manual_landing"])
@@ -67,7 +67,7 @@
 
 		var/list/available_sectors = list()
 		for(var/obj/effect/overmap/visitable/S in range(get_turf(current_sector), shuttle.range))
-			if(S.free_landing)
+			if(S.allow_free_landing(shuttle))
 				available_sectors += S
 
 		if(LAZYLEN(available_sectors))
@@ -76,7 +76,7 @@
 			to_chat(user, SPAN_WARNING("No valid landing sites in range!"))
 			return
 
-	if(target_sector && CanInteract(user, GLOB.default_state))
+	if(target_sector && CanInteract(user, global.default_topic_state))
 		var/datum/extension/eye/landing_eye = get_extension(src, /datum/extension/eye)
 		if(landing_eye)
 			if(landing_eye.current_looker) // Double checking in case someone jumped ahead of us.
@@ -84,7 +84,7 @@
 				return
 
 			var/turf/eye_turf = locate(world.maxx/2, world.maxy/2, target_sector.map_z[target_sector.map_z.len]) // Center of the top z-level of the target sector.
-			if(landing_eye.look(user, list(shuttle_tag), eye_turf)) // Placement of the eye was successful
+			if(landing_eye.look(user, list(shuttle_tag, target_sector))) // Placement of the eye was successful
 				landing_eye.extension_eye.forceMove(eye_turf)
 				return
 	
@@ -101,13 +101,13 @@
 	var/turf/lz_turf = eye_extension.get_eye_turf()
 
 	var/obj/effect/overmap/visitable/sector = map_sectors["[lz_turf.z]"]
-	if(!sector.free_landing)	// Additional safety check to ensure the sector permits landing.
+	if(!sector.allow_free_landing())	// Additional safety check to ensure the sector permits landing.
 		to_chat(user, SPAN_WARNING("Invalid landing zone!"))
 		return
 	var/datum/shuttle/autodock/overmap/shuttle = SSshuttle.shuttles[shuttle_tag]
 
 	if(landing_eye.check_landing()) // Make sure the landmark is in a valid location.
-		var/obj/effect/shuttle_landmark/temporary/lz = new(lz_turf)
+		var/obj/effect/shuttle_landmark/temporary/lz = new(lz_turf, landing_eye.check_secure_landing())
 		if(lz.is_valid(shuttle))	// Make sure the shuttle fits.
 			to_chat(user, SPAN_NOTICE("Landing zone set!"))
 			shuttle.set_destination(lz)

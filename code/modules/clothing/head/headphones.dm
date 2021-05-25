@@ -14,7 +14,7 @@
 
 /obj/item/clothing/head/headphones/Initialize()
 	. = ..()
-	sound_channel = GLOB.sound_channels.RequestChannel(type)
+	sound_channel = global.sound_channels.RequestChannel(type)
 
 /obj/item/clothing/head/headphones/on_update_icon()
 	icon_state = get_world_inventory_state()
@@ -24,7 +24,7 @@
 
 /obj/item/clothing/head/headphones/get_mob_overlay(mob/user_mob, slot, bodypart)
 	var/image/ret = ..()
-	if(headphones_on)
+	if(ret && headphones_on)
 		ret.icon_state = "[ret.icon_state]-on"
 	return ret
 
@@ -50,8 +50,9 @@
 
 	update_icon()
 
-/obj/item/clothing/head/headphones/MouseDrop(mob/user)
+/obj/item/clothing/head/headphones/handle_mouse_drop(atom/over, mob/user)
 	interact(user)
+	return TRUE
 
 /obj/item/clothing/head/headphones/attack_self(mob/user)
 	..()
@@ -72,7 +73,7 @@
 	if(!(user.get_inventory_slot(src) in list(slot_l_ear_str, slot_r_ear_str)))
 		return
 	if(current_track)
-		var/music_track/track = decls_repository.get_decl(GLOB.music_tracks[current_track])
+		var/decl/music_track/track = GET_DECL(global.music_tracks[current_track])
 		sound_to(user, sound(null, channel = sound_channel))
 		sound_to(user, sound(track.song, repeat = 1, wait = 0, volume = music_volume, channel = sound_channel))
 
@@ -88,7 +89,7 @@
 	dat += "<A href='?src=\ref[src];toggle=1;'>Switch [headphones_on ? "off" : "on"]</a>"
 	dat += "Volume: [music_volume] <A href='?src=\ref[src];vol=-10;'>-</a><A href='?src=\ref[src];vol=10;'>+</a>"
 	dat += "Tracks:"
-	for(var/track in GLOB.music_tracks)
+	for(var/track in global.music_tracks)
 		if(track == current_track)
 			dat += "<span class='linkOn'>[track]</span>"
 		else

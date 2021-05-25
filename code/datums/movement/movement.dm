@@ -1,7 +1,7 @@
-var/const/MOVEMENT_HANDLED = BITFLAG(0) // If no further movement handling should occur after this
-var/const/MOVEMENT_REMOVE  = BITFLAG(1)
-var/const/MOVEMENT_PROCEED = BITFLAG(2)
-var/const/MOVEMENT_STOP    = BITFLAG(3)
+var/global/const/MOVEMENT_HANDLED = BITFLAG(0) // If no further movement handling should occur after this
+var/global/const/MOVEMENT_REMOVE  = BITFLAG(1)
+var/global/const/MOVEMENT_PROCEED = BITFLAG(2)
+var/global/const/MOVEMENT_STOP    = BITFLAG(3)
 
 #define INIT_MOVEMENT_HANDLERS \
 if(LAZYLEN(movement_handlers) && ispath(movement_handlers[1])) { \
@@ -82,6 +82,16 @@ if(LAZYLEN(movement_handlers) && ispath(movement_handlers[1])) { \
 	INIT_MOVEMENT_HANDLERS
 	SET_MOVER(mover)
 	SET_IS_EXTERNAL(mover)
+
+	if(!length(movement_handlers) && is_external && isturf(loc))
+		var/oldloc = loc
+		var/turf/T = get_step(loc, direction)
+		if(istype(T))
+			if(direction in global.cornerdirs) // Diagonal movement with step() currently breaks
+				forceMove(T)                 // grabs, remove these lines when that is fixed.
+			else
+				step(src, direction)
+		return loc != oldloc
 
 	for(var/mh in movement_handlers)
 		var/datum/movement_handler/movement_handler = mh

@@ -30,11 +30,11 @@
 /decl/ghosttrap/proc/request_player(var/mob/target, var/request_string, var/request_timeout)
 	if(request_timeout)
 		LAZYSET(request_timeouts, target, world.time + request_timeout)
-		GLOB.destroyed_event.register(target, src, /decl/ghosttrap/proc/unregister_target)
+		events_repository.register(/decl/observ/destroyed, target, src, /decl/ghosttrap/proc/unregister_target)
 	else
 		unregister_target(target)
 
-	for(var/mob/O in GLOB.player_list)
+	for(var/mob/O in global.player_list)
 		if(!assess_candidate(O, target, FALSE))
 			return
 		if(pref_check && !O.client.wishes_to_be_role(pref_check))
@@ -44,7 +44,7 @@
 
 /decl/ghosttrap/proc/unregister_target(var/target)
 	LAZYREMOVE(request_timeouts, target)
-	GLOB.destroyed_event.unregister(target, src, /decl/ghosttrap/proc/unregister_target)
+	events_repository.unregister(/decl/observ/destroyed, target, src, /decl/ghosttrap/proc/unregister_target)
 
 // Handles a response to request_player().
 /decl/ghosttrap/Topic(href, href_list)
@@ -173,7 +173,7 @@
 	name = "wizard familiar"
 	pref_check = "ghost_wizard"
 	ghost_trap_message = "They are occupying a familiar now."
-	ban_checks = list(MODE_WIZARD)
+	ban_checks = list(/decl/special_role/wizard)
 
 /decl/ghosttrap/wizard_familiar/welcome_candidate(var/mob/target)
 	return 0
@@ -181,7 +181,7 @@
 /decl/ghosttrap/cult_shade
 	name = "shade"
 	ghost_trap_message = "They are occupying a soul stone now."
-	ban_checks = list(MODE_CULTIST, MODE_GODCULTIST)
+	ban_checks = list(/decl/special_role/cultist, /decl/special_role/godcultist)
 	pref_check = "ghost_shade"
 	can_set_own_name = FALSE
 
@@ -189,7 +189,8 @@
 	var/obj/item/soulstone/S = target.loc
 	if(istype(S))
 		if(S.is_evil)
-			GLOB.cult.add_antagonist(target.mind)
+			var/decl/special_role/cult = GET_DECL(/decl/special_role/cultist)
+			cult.add_antagonist(target.mind)
 			to_chat(target, "<b>Remember, you serve the one who summoned you first, and the cult second.</b>")
 		else
 			to_chat(target, "<b>This soultone has been purified. You do not belong to the cult.</b>")

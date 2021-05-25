@@ -74,7 +74,7 @@
 		if(tank)
 			tank.dropInto(loc)
 			tank = null
-		new /obj/item/stack/material/rods(get_turf(src))
+		SSmaterials.create_object(/decl/material/solid/metal/steel, get_turf(src), 1, /obj/item/stack/material/rods)
 		qdel(src)
 		return
 
@@ -163,7 +163,7 @@
 	if(!lit || operating)	return
 	operating = 1
 	for(var/turf/T in turflist)
-		if(T.density || istype(T, /turf/space))
+		if(T.density || isspaceturf(T))
 			break
 		if(!previousturf && length(turflist)>1)
 			previousturf = get_turf(src)

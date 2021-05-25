@@ -24,7 +24,7 @@
 	var/check_restraints               // Can this emote be used while restrained?
 	var/check_range                    // falsy, or a range outside which the emote will not work
 	var/conscious = TRUE               // Do we need to be awake to emote this?
-	var/emote_range                    // falsy, or a range outside which the emote is not shown
+	var/emote_range = 0                // If >0, restricts emote visibility to viewers within range.
 
 /decl/emote/proc/get_emote_message_1p(var/atom/user, var/atom/target, var/extra_params)
 	if(target)
@@ -60,10 +60,8 @@
 			to_chat(user, SPAN_WARNING("\The [target] is too far away."))
 			return
 
-	var/datum/gender/user_gender = gender_datums[user.get_visible_gender()]
-	var/datum/gender/target_gender
-	if(target)
-		target_gender = gender_datums[target.get_visible_gender()]
+	var/decl/pronouns/user_gender =   user.get_pronouns()
+	var/decl/pronouns/target_gender = target?.get_pronouns()
 
 	var/use_3p
 	var/use_1p
@@ -100,18 +98,22 @@
 		use_radio_message = replacetext(use_radio_message, "USER_SELF", user_gender.self)
 		use_radio_message = replacetext(use_radio_message, "USER", "<b>\the [user]</b>")
 
+	var/use_range = emote_range
+	if (!use_range)
+		use_range = world.view
+
 	if(ismob(user))
 		var/mob/M = user
 		if(message_type == AUDIBLE_MESSAGE)
 			if(isliving(user))
 				var/mob/living/L = user
-				if(L.silent)
+				if(HAS_STATUS(L, STAT_SILENCE))
 					M.visible_message(message = "[user] opens their mouth silently!", self_message = "You cannot say anything!", blind_message = emote_message_impaired, checkghosts = /datum/client_preference/ghost_sight)
 					return
 				else
-					M.audible_message(message = use_3p, self_message = use_1p, deaf_message = emote_message_impaired, checkghosts = /datum/client_preference/ghost_sight, radio_message = use_radio_message)
+					M.audible_message(message = use_3p, self_message = use_1p, deaf_message = emote_message_impaired, hearing_distance = use_range, checkghosts = /datum/client_preference/ghost_sight, radio_message = use_radio_message)
 		else
-			M.visible_message(message = use_3p, self_message = use_1p, blind_message = emote_message_impaired, checkghosts = /datum/client_preference/ghost_sight)
+			M.visible_message(message = use_3p, self_message = use_1p, blind_message = emote_message_impaired, range = use_range, checkghosts = /datum/client_preference/ghost_sight)
 
 	do_extra(user, target)
 	do_sound(user)

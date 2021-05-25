@@ -25,7 +25,8 @@
 	flash_protection = FLASH_PROTECTION_MAJOR
 	action_button_name = "Toggle Helmet Light"
 	light_overlay = "helmet_light"
-	brightness_on = 0.5
+	brightness_on = 4
+	light_wedge = LIGHT_WIDE
 	on = 0
 
 	var/obj/machinery/camera/camera
@@ -91,9 +92,9 @@
 	to_chat(usr, "You toggle [src]'s visor tint.")
 	update_tint()
 
-/obj/item/clothing/head/helmet/space/experimental_mob_overlay(var/mob/user_mob, var/slot, var/bodypart)
+/obj/item/clothing/head/helmet/space/get_mob_overlay(var/mob/user_mob, var/slot, var/bodypart)
 	var/image/ret = ..()
-	if(tint && check_state_in_icon("[ret.icon_state]_dark", ret.icon))
+	if(ret && tint && check_state_in_icon("[ret.icon_state]_dark", ret.icon))
 		ret.icon_state = "[ret.icon_state]_dark"
 	return ret
 

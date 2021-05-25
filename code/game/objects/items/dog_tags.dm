@@ -2,9 +2,10 @@
 	name = "dog tags"
 	desc = "Plain identification tags made from a durable metal. They are stamped with a variety of informational details."
 	gender = PLURAL
-	icon_state = "dog_tags"
+	icon = 'icons/clothing/accessories/jewelry/dogtags.dmi'
 	slot_flags = SLOT_FACE | SLOT_TIE
 	badge_string = null
+	hide_on_uniform_rolldown = FALSE
 
 	var/owner_rank
 	var/owner_name
@@ -30,4 +31,4 @@
 
 	badge_string = pob
 
-	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species()])[H.char_branch ? "\nBranch: [H.char_branch.name]" : ""]\nReligion: [religion]\nBlood type: [H.b_type]"
+	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species_name()])[H.char_branch ? "\nBranch: [H.char_branch.name]" : ""]\nReligion: [religion]\nBlood type: [H.b_type]"

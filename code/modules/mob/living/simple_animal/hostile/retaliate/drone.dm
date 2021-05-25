@@ -10,9 +10,6 @@
 	rapid = 0
 	speak_chance = 5
 	turns_per_move = 3
-	response_help = "pokes"
-	response_disarm = "gently pushes aside"
-	response_harm = "hits"
 	speak = list("ALERT.","Hostile-ile-ile entities dee-twhoooo-wected.","Threat parameterszzzz- szzet.","Bring sub-sub-sub-systems uuuup to combat alert alpha-a-a.")
 	emote_see = list("beeps menacingly","whirrs threateningly","scans its immediate vicinity")
 	a_intent = I_HURT
@@ -24,6 +21,7 @@
 	projectiletype = /obj/item/projectile/beam/drone
 	projectilesound = 'sound/weapons/laser3.ogg'
 	destroy_surroundings = 0
+	gene_damage = -1
 
 	meat_type =     null
 	meat_amount =   0
@@ -53,6 +51,13 @@
 
 	var/has_loot = 1
 	faction = "malf_drone"
+
+	var/static/list/debris = list(
+		/decl/material/solid/glass =          /obj/item/shard,
+		/decl/material/solid/metal/steel =    /obj/item/stack/material/rods,
+		/decl/material/solid/metal/plasteel = null
+	)
+
 
 /mob/living/simple_animal/hostile/retaliate/malf_drone/Initialize()
 	. = ..()
@@ -106,16 +111,12 @@
 	//repair a bit of damage
 	if(prob(1))
 		src.visible_message("<span class='warning'>[html_icon(src)] [src] shudders and shakes as some of it's damaged systems come back online.</span>")
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(3, 1, src)
-		s.start()
+		spark_at(src, cardinal_only = TRUE)
 		health += rand(25,100)
 
 	//spark for no reason
 	if(prob(5))
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(3, 1, src)
-		s.start()
+		spark_at(src, cardinal_only = TRUE)
 
 	//sometimes our targetting sensors malfunction, and we attack anyone nearby
 	Haywire()
@@ -149,9 +150,7 @@
 			src.visible_message("<span class='warning'>[html_icon(src)] [src] begins to spark and shake violenty!</span>")
 		else
 			src.visible_message("<span class='warning'>[html_icon(src)] [src] sparks and shakes like it's about to explode!</span>")
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(3, 1, src)
-		s.start()
+		spark_at(src, cardinal_only = TRUE)
 
 	if(!exploding && !disabled && prob(explode_chance))
 		exploding = 1
@@ -178,49 +177,16 @@
 /mob/living/simple_animal/hostile/retaliate/malf_drone/Destroy()
 	//some random debris left behind
 	if(has_loot)
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(3, 1, src)
-		s.start()
-		var/obj/O
+		spark_at(src, cardinal_only = TRUE)
 
-		//shards
-		O = new /obj/item/shard(src.loc)
-		step_to(O, get_turf(pick(view(7, src))))
-		if(prob(75))
-			O = new /obj/item/shard(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(50))
-			O = new /obj/item/shard(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(25))
-			O = new /obj/item/shard(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
-
-		//rods
-		O = new /obj/item/stack/material/rods(loc)
-		step_to(O, get_turf(pick(view(7, src))))
-		if(prob(75))
-			O = new /obj/item/stack/material/rods(loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(50))
-			O = new /obj/item/stack/material/rods(loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(25))
-			O = new /obj/item/stack/material/rods(loc)
-			step_to(O, get_turf(pick(view(7, src))))
-
-		//plasteel
-		O = new /obj/item/stack/material/plasteel(src.loc)
-		step_to(O, get_turf(pick(view(7, src))))
-		if(prob(75))
-			O = new /obj/item/stack/material/plasteel(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(50))
-			O = new /obj/item/stack/material/plasteel(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
-		if(prob(25))
-			O = new /obj/item/stack/material/plasteel(src.loc)
-			step_to(O, get_turf(pick(view(7, src))))
+		var/atom/movable/M
+		for(var/mat in debris)
+			for(var/chance in list(100, 75, 50, 25))
+				if(!prob(chance))
+					break
+				M = SSmaterials.create_object(mat, loc, 1, debris[mat])
+				if(istype(M))
+					step_to(M, get_turf(pick(view(7, src))))
 
 		//also drop dummy circuit boards deconstructable for research (loot)
 		var/obj/item/stock_parts/circuitboard/C

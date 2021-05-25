@@ -33,7 +33,7 @@
 		return
 	var/list/turfs = list()
 	for(var/turf/T in orange(origin, outer_range))
-		if(!(T.z in GLOB.using_map.sealed_levels)) // Picking a turf outside the map edge isn't recommended
+		if(!(T.z in global.using_map.sealed_levels)) // Picking a turf outside the map edge isn't recommended
 			if(T.x >= world.maxx-TRANSITIONEDGE || T.x <= TRANSITIONEDGE)	continue
 			if(T.y >= world.maxy-TRANSITIONEDGE || T.y <= TRANSITIONEDGE)	continue
 		if(!inner_range || get_dist(origin, T) >= inner_range)
@@ -58,11 +58,6 @@
 	Predicate helpers
 */
 
-/proc/is_space_turf(var/turf/T)
-	return istype(T, /turf/space)
-
-/proc/is_not_space_turf(var/turf/T)
-	return !is_space_turf(T)
 
 /proc/is_holy_turf(var/turf/T)
 	return T && T.holy
@@ -83,7 +78,7 @@
 	return !!T.return_air()
 
 /proc/IsTurfAtmosUnsafe(var/turf/T)
-	if(istype(T, /turf/space)) // Space tiles
+	if(isspaceturf(T)) // Space tiles
 		return "Spawn location is open to space."
 	var/datum/gas_mixture/air = T.return_air()
 	if(!air)
@@ -122,6 +117,7 @@
 
 
 /proc/translate_turfs(var/list/translation, var/area/base_area = null, var/turf/base_turf)
+	. = list()
 	for(var/turf/source in translation)
 
 		var/turf/target = translation[source]
@@ -129,10 +125,10 @@
 		if(target)
 			if(base_area)
 				ChangeArea(target, get_area(source))
-				transport_turf_contents(source, target)
+				. += transport_turf_contents(source, target)
 				ChangeArea(source, base_area)
 			else
-				transport_turf_contents(source, target)
+				. += transport_turf_contents(source, target)
 	//change the old turfs
 	for(var/turf/source in translation)
 		var/old_turf = source.prev_type || base_turf || get_base_turf_by_area(source)

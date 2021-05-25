@@ -66,15 +66,16 @@
 // Appearance change flags
 #define APPEARANCE_UPDATE_DNA        BITFLAG(0)
 #define APPEARANCE_RACE              (BITFLAG(1)|APPEARANCE_UPDATE_DNA)
-#define APPEARANCE_GENDER            (BITFLAG(2)|APPEARANCE_UPDATE_DNA)
-#define APPEARANCE_SKIN              BITFLAG(3)
-#define APPEARANCE_HAIR              BITFLAG(4)
-#define APPEARANCE_HAIR_COLOR        BITFLAG(5)
-#define APPEARANCE_FACIAL_HAIR       BITFLAG(6)
-#define APPEARANCE_FACIAL_HAIR_COLOR BITFLAG(7)
-#define APPEARANCE_EYE_COLOR         BITFLAG(8)
+#define APPEARANCE_GENDER            BITFLAG(2)
+#define APPEARANCE_BODY              (BITFLAG(3)|APPEARANCE_UPDATE_DNA)
+#define APPEARANCE_SKIN              BITFLAG(4)
+#define APPEARANCE_HAIR              BITFLAG(5)
+#define APPEARANCE_HAIR_COLOR        BITFLAG(6)
+#define APPEARANCE_FACIAL_HAIR       BITFLAG(7)
+#define APPEARANCE_FACIAL_HAIR_COLOR BITFLAG(8)
+#define APPEARANCE_EYE_COLOR         BITFLAG(9)
 #define APPEARANCE_ALL_HAIR          (APPEARANCE_HAIR|APPEARANCE_HAIR_COLOR|APPEARANCE_FACIAL_HAIR|APPEARANCE_FACIAL_HAIR_COLOR)
-#define APPEARANCE_ALL               (APPEARANCE_UPDATE_DNA|APPEARANCE_RACE|APPEARANCE_GENDER|APPEARANCE_SKIN|APPEARANCE_EYE_COLOR|APPEARANCE_ALL_HAIR)
+#define APPEARANCE_ALL               (APPEARANCE_UPDATE_DNA|APPEARANCE_RACE|APPEARANCE_GENDER|APPEARANCE_BODY|APPEARANCE_SKIN|APPEARANCE_EYE_COLOR|APPEARANCE_ALL_HAIR)
 
 // Click cooldown
 #define DEFAULT_ATTACK_COOLDOWN 8 //Default timeout for aggressive actions
@@ -181,29 +182,23 @@
 #define BP_ANCHOR   "anchoring ligament"
 #define BP_ACETONE  "acetone reactor"
 
-// Vox bits.
-#define BP_HINDTONGUE "hindtongue"
-
 // Robo Organs.
 #define BP_POSIBRAIN         "posibrain"
 #define BP_VOICE             "vocal synthesiser"
 #define BP_STACK             "stack"
 #define BP_OPTICS            "optics"
-#define BP_FLOAT             "floatation disc"
-#define BP_JETS              "maneuvering jets"
-#define BP_COOLING_FINS      "cooling fins"
 #define BP_SYSTEM_CONTROLLER "system controller"
 
 //Augmetations
-#define BP_AUGMENT_R_ARM         "right arm augment"
-#define BP_AUGMENT_L_ARM         "left arm augment"
-#define BP_AUGMENT_R_HAND        "right hand augment"
-#define BP_AUGMENT_L_HAND        "left hand augment"
-#define BP_AUGMENT_R_LEG         "right leg augment"
-#define BP_AUGMENT_L_LEG         "left leg augment"
-#define BP_AUGMENT_CHEST_ARMOUR   "chest armor augment"
-#define BP_AUGMENT_CHEST_ACTIVE  "active chest augment"
-#define BP_AUGMENT_HEAD           "head augment"
+#define BP_AUGMENT_R_ARM        "right arm augment"
+#define BP_AUGMENT_L_ARM        "left arm augment"
+#define BP_AUGMENT_R_HAND       "right hand augment"
+#define BP_AUGMENT_L_HAND       "left hand augment"
+#define BP_AUGMENT_R_LEG        "right leg augment"
+#define BP_AUGMENT_L_LEG        "left leg augment"
+#define BP_AUGMENT_CHEST_ARMOUR "chest armor augment"
+#define BP_AUGMENT_CHEST_ACTIVE "active chest augment"
+#define BP_AUGMENT_HEAD         "head augment"
 
 //Augment flags
 #define AUGMENTATION_MECHANIC 1
@@ -260,11 +255,10 @@
 #define SPECIES_MONKEY           "Monkey"
 #define SPECIES_ALIEN            "Humanoid"
 #define SPECIES_GOLEM            "Golem"
-#define SPECIES_FRAME            "Utility Frame"
 
-#define BODYTYPE_HUMANOID        "Humanoid Body"
-#define BODYTYPE_OTHER           "Alien Body"
-#define BODYTYPE_MONKEY          "Small Humanoid Body"
+#define BODYTYPE_HUMANOID        "humanoid body"
+#define BODYTYPE_OTHER           "alien body"
+#define BODYTYPE_MONKEY          "small humanoid body"
 
 #define SURGERY_CLOSED 0
 #define SURGERY_OPEN 1
@@ -284,7 +278,7 @@
 
 #define SPECIES_BLOOD_DEFAULT 560
 
-#define SLIME_EVOLUTION_THRESHOLD 10
+#define SLIME_EVOLUTION_THRESHOLD 15
 
 //Used in mob/proc/get_input
 #define MOB_INPUT_TEXT "text"
@@ -319,3 +313,11 @@
 #define CAN_INJECT 1
 #define INJECTION_PORT 2
 #define INJECTION_PORT_DELAY 3 SECONDS // used by injectors to apply delay due to searching for a port on the injectee's suit
+
+#define ADJUSTED_GLIDE_SIZE(DELAY) (CEILING((WORLD_ICON_SIZE / max((DELAY), world.tick_lag) * world.tick_lag) - world.tick_lag, 1) + (config.glide_size_delay))
+
+#define PREF_MEM_RECORD "memory"
+#define PREF_SEC_RECORD "sec_record"
+#define PREF_PUB_RECORD "public_record"
+#define PREF_MED_RECORD "med_record"
+#define PREF_GEN_RECORD "gen_record"

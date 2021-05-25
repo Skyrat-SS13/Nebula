@@ -9,12 +9,13 @@
 	name = "wild grass"
 	icon = 'icons/turf/exterior/wildgrass.dmi'
 	icon_edge_layer = EXT_EDGE_GRASS_WILD
+	icon_has_corners = TRUE
 	color = "#799c4b"
 	footstep_type = /decl/footsteps/grass
 
 /turf/exterior/wildgrass/Initialize()
 	. = ..()
-	if(GLOB.using_map.use_overmap)
+	if(global.using_map.use_overmap)
 		var/obj/effect/overmap/visitable/sector/exoplanet/E = map_sectors["[z]"]
 		if(istype(E) && E.grass_color)
 			color = E.grass_color

@@ -1,5 +1,5 @@
 /mob/living/carbon/human/proc/update_eyes()
-	var/obj/item/organ/internal/eyes/eyes = internal_organs_by_name[species.vision_organ ? species.vision_organ : BP_EYES]
+	var/obj/item/organ/internal/eyes/eyes = get_internal_organ(species.vision_organ || BP_EYES)
 	if(eyes)
 		eyes.update_colour()
 		regenerate_icons()
@@ -48,10 +48,10 @@
 
 			if (!lying && !buckled && world.time - l_move_time < 15)
 			//Moving around with fractured ribs won't do you any good
-				if (prob(10) && !stat && can_feel_pain() && chem_effects[CE_PAINKILLER] < 50 && E.is_broken() && E.internal_organs.len)
+				if (prob(10) && !stat && can_feel_pain() && GET_CHEMICAL_EFFECT(src, CE_PAINKILLER) < 50 && E.is_broken() && E.internal_organs.len)
 					custom_pain("Pain jolts through your broken [E.encased ? E.encased : E.name], staggering you!", 50, affecting = E)
 					drop_held_items()
-					Stun(2)
+					SET_STATUS_MAX(src, STAT_STUN, 2)
 
 				//Moving makes open wounds get infected much faster
 				for(var/datum/wound/W in E.wounds)
@@ -96,12 +96,7 @@
 			stance_damage += 2
 			if(prob(10))
 				visible_message("\The [src]'s [E.name] [pick("twitches", "shudders")] and sparks!")
-				var/datum/effect/effect/system/spark_spread/spark_system = new ()
-				spark_system.set_up(5, 0, src)
-				spark_system.attach(src)
-				spark_system.start()
-				spawn(10)
-					qdel(spark_system)
+				spark_at(src, amount = 5, holder = src)
 		else if (E.is_broken())
 			stance_damage += 1
 		else if (E.is_dislocated())
@@ -145,7 +140,7 @@
 			if(limb_pain)
 				emote("scream")
 			custom_emote(VISIBLE_MESSAGE, "collapses!")
-		Weaken(3) //can't emote while weakened, apparently.
+		SET_STATUS_MAX(src, STAT_WEAK, 3) //can't emote while weakened, apparently.
 
 /mob/living/carbon/human/proc/handle_grasp()
 	for(var/bp in held_item_slots)
@@ -172,7 +167,7 @@
 					to_chat(src, SPAN_WARNING("You lose your balance as [affected.name] [pick("malfunctions", "freezes","shudders")]!"))
 			else
 				return
-	Weaken(4)
+	SET_STATUS_MAX(src, STAT_WEAK, 4)
 
 /mob/living/carbon/human/proc/grasp_damage_disarm(var/obj/item/organ/external/affected)
 
@@ -195,13 +190,9 @@
 		if(!E)
 			continue
 		if(E.is_robotic())
-			visible_message("<B>\The [src]</B> drops what they were holding, \his [affected.name] malfunctioning!")
-			var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
-			spark_system.set_up(5, 0, src)
-			spark_system.attach(src)
-			spark_system.start()
-			spawn(10)
-				qdel(spark_system)
+			var/decl/pronouns/G = get_pronouns()
+			visible_message("<B>\The [src]</B> drops what [G.he] [G.is] holding, [G.his] [affected.name] malfunctioning!")
+			spark_at(src, 5, holder=src)
 			continue
 
 		var/grasp_name = E.name
@@ -231,12 +222,12 @@
 
 /mob/living/carbon/human/is_asystole()
 	if(isSynthetic())
-		var/obj/item/organ/internal/cell/C = internal_organs_by_name[BP_CELL]
+		var/obj/item/organ/internal/cell/C = get_internal_organ(BP_CELL)
 		if(istype(C))
 			if(!C.is_usable() || !C.percent())
 				return TRUE
 	else if(should_have_organ(BP_HEART))
-		var/obj/item/organ/internal/heart/heart = internal_organs_by_name[BP_HEART]
+		var/obj/item/organ/internal/heart/heart = get_internal_organ(BP_HEART)
 		if(!istype(heart) || !heart.is_working())
 			return TRUE
 	return FALSE

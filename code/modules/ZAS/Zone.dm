@@ -150,7 +150,6 @@ Class Procs:
 
 	// Update fires.
 	if(air.temperature >= FLAMMABLE_GAS_FLASHPOINT && !(src in SSair.active_fire_zones) && air.check_combustibility() && contents.len)
-
 		var/turf/T = pick(contents)
 		if(istype(T))
 			T.create_fire(vsc.fire_firelevel_multiplier)
@@ -159,6 +158,7 @@ Class Procs:
 	if(air.check_tile_graphic(graphic_add, graphic_remove))
 		for(var/turf/simulated/T in contents)
 			T.update_graphic(graphic_add, graphic_remove)
+			CHECK_TICK
 		graphic_add.len = 0
 		graphic_remove.len = 0
 
@@ -166,6 +166,7 @@ Class Procs:
 	for(var/connection_edge/E in edges)
 		if(E.sleeping)
 			E.recheck()
+			CHECK_TICK
 
 	// Handle condensation from the air.
 	if(!condensing)
@@ -185,7 +186,7 @@ Class Procs:
 	set waitfor = FALSE
 	condensing = TRUE
 	for(var/g in air.gas)
-		var/decl/material/mat = decls_repository.get_decl(g)
+		var/decl/material/mat = GET_DECL(g)
 		if(air.temperature <= mat.gas_condensation_point)
 			var/condensation_area = air.group_multiplier / length(air.gas)
 			while(condensation_area > 0 && length(contents))
@@ -198,13 +199,13 @@ Class Procs:
 				var/obj/effect/fluid/F = locate() in flooding
 				if(!F) F = new(flooding)
 				F.reagents.add_reagent(g, condense_amt * REAGENT_UNITS_PER_GAS_MOLE)
-				CHECK_TICK
+		CHECK_TICK
 	condensing = FALSE
 
 /zone/proc/dbg_data(mob/M)
 	to_chat(M, name)
 	for(var/g in air.gas)
-		var/decl/material/mat = decls_repository.get_decl(g)
+		var/decl/material/mat = GET_DECL(g)
 		to_chat(M, "[capitalize(mat.gas_name)]: [air.gas[g]]")
 	to_chat(M, "P: [air.return_pressure()] kPa V: [air.volume]L T: [air.temperature]°K ([air.temperature - T0C]°C)")
 	to_chat(M, "O2 per N2: [(air.gas[/decl/material/gas/nitrogen] ? air.gas[/decl/material/gas/oxygen]/air.gas[/decl/material/gas/nitrogen] : "N/A")] Moles: [air.total_moles]")

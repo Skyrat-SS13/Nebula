@@ -22,7 +22,7 @@
 	var/list/initial_matter
 	var/matter_multiplier = 1
 	var/max_amount //also see stack recipes initialisation, param "max_res_amount" must be equal to this max_amount
-	var/stacktype  //determines whether different stack types can merge
+	var/stack_merge_type  //determines whether different stack types can merge
 	var/build_type //used when directly applied to a turf
 	var/uses_charge
 	var/list/charge_costs
@@ -32,13 +32,13 @@
 /obj/item/stack/Initialize(mapload, amount, material)
 
 	if(ispath(amount, /decl/material))
-		crash_with("Stack initialized with material ([amount]) instead of amount.")
+		PRINT_STACK_TRACE("Stack initialized with material ([amount]) instead of amount.")
 		material = amount
 	if (isnum(amount) && amount >= 1)
 		src.amount = amount
 	. = ..(mapload, material)
-	if (!stacktype)
-		stacktype = type
+	if(!stack_merge_type)
+		stack_merge_type = type
 	if(!plural_name)
 		plural_name = "[singular_name]s"
 
@@ -99,7 +99,7 @@
 			title+= " ([R.req_amount] [src.singular_name]\s)"
 			var/skill_label = ""
 			if(!user.skill_check(SKILL_CONSTRUCTION, R.difficulty))
-				var/decl/hierarchy/skill/S = decls_repository.get_decl(SKILL_CONSTRUCTION)
+				var/decl/hierarchy/skill/S = GET_DECL(SKILL_CONSTRUCTION)
 				skill_label = "<font color='red'>\[[S.levels[R.difficulty]]]</font>"
 			if (can_build)
 				t1 +="[skill_label]<A href='?src=\ref[src];sublist=[recipes_sublist];make=[i];multiplier=1'>[title]</A>"
@@ -233,10 +233,10 @@
 */
 
 //attempts to transfer amount to S, and returns the amount actually transferred
-/obj/item/stack/proc/transfer_to(obj/item/stack/S, var/tamount=null, var/type_verified)
-	if (!get_amount())
+/obj/item/stack/proc/transfer_to(obj/item/stack/S, var/tamount=null)
+	if (!get_amount() || !istype(S))
 		return 0
-	if ((stacktype != S.stacktype) && !type_verified)
+	if (stack_merge_type != S.stack_merge_type)
 		return 0
 	if (isnull(tamount))
 		tamount = src.get_amount()
@@ -262,7 +262,7 @@
 
 	var/orig_amount = src.amount
 	if (transfer && src.use(transfer))
-		var/obj/item/stack/newstack = new src.type(loc, transfer)
+		var/obj/item/stack/newstack = new src.type(loc, transfer, material?.type)
 		newstack.copy_from(src)
 		if (prob(transfer/orig_amount * 100))
 			transfer_fingerprints_to(newstack)

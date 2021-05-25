@@ -29,18 +29,16 @@
 /datum/chemical_reaction/grenade_reaction/flash_powder/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
 	..()
 	var/location = get_turf(holder.my_atom)
-	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-	s.set_up(2, 1, location)
-	s.start()
+	spark_at(location, amount=2, cardinal_only = TRUE)
 	for(var/mob/living/carbon/M in viewers(world.view, location))
 		if(M.eyecheck() < FLASH_PROTECTION_MODERATE)
 			switch(get_dist(M, location))
 				if(0 to 3)
 					M.flash_eyes()
-					M.Weaken(15)
+					SET_STATUS_MAX(M, STAT_WEAK, 15)
 				if(4 to 5)
 					M.flash_eyes()
-					M.Stun(5)
+					SET_STATUS_MAX(M, STAT_STUN, 5)
 
 /datum/chemical_reaction/grenade_reaction/emp_pulse
 	name = "EMP Pulse"
@@ -74,9 +72,7 @@
 	var/turf/location = get_turf(holder.my_atom.loc)
 	if(istype(location))
 		location.assume_gas(/decl/material/gas/hydrogen, created_volume, FLAMMABLE_GAS_FLASHPOINT + 10)
-		var/datum/effect/effect/system/spark_spread/sparks = new
-		sparks.set_up(1, 1, location)
-		sparks.start()
+		spark_at(location, amount=1, cardinal_only = TRUE)
 
 /datum/chemical_reaction/grenade_reaction/chemsmoke
 	name = "Chemical Smoke"

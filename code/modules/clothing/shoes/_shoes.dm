@@ -12,7 +12,10 @@
 	permeability_coefficient = 0.50
 	force = 2
 	blood_overlay_type = "shoeblood"
-	var/overshoes = 0
+	material = /decl/material/solid/leather
+	origin_tech = "{'materials':1,'engineering':1}"
+
+	var/can_fit_under_magboots = TRUE
 	var/can_add_cuffs = TRUE
 	var/obj/item/handcuffs/attached_cuffs = null
 	var/can_add_hidden_item = TRUE
@@ -37,7 +40,7 @@
 		else if (get_dist(src, user) == 1)
 			to_chat(user, SPAN_ITALIC("Something is hidden inside."))
 
-/obj/item/clothing/shoes/attack_hand(var/mob/living/user)
+/obj/item/clothing/shoes/attack_hand(var/mob/user)
 	if (remove_hidden(user))
 		return
 	..()
@@ -163,7 +166,7 @@
 /obj/item/clothing/shoes/on_update_icon()
 	. = ..()
 	if(shine > 0 && check_state_in_icon("[icon_state]_shine", icon))
-		var/mutable_appearance/S = get_mutable_overlay(icon, "[icon_state]_shine")
+		var/mutable_appearance/S = mutable_appearance(icon, "[icon_state]_shine")
 		S.alpha = 127 * shine / 100
 		S.blend_mode = BLEND_ADD
 		overlays += S
@@ -171,7 +174,7 @@
 /obj/item/clothing/shoes/apply_overlays(var/mob/user_mob, var/bodytype, var/image/overlay, var/slot)
 	var/image/I = ..()
 	if(shine > 0 && slot == slot_shoes_str)
-		var/mutable_appearance/S = get_mutable_overlay(I.icon, "shine")
+		var/mutable_appearance/S = mutable_appearance(I.icon, "shine")
 		S.alpha = 127 * shine / 100
 		S.blend_mode = BLEND_ADD
 		I.overlays += S

@@ -91,7 +91,7 @@ var/global/photo_count = 0
 
 	var/n_name = sanitizeSafe(input(usr, "What would you like to label the photo?", "Photo Labelling", null)  as text, MAX_NAME_LEN)
 	//loc.loc check is for making possible renaming photos in clipboards
-	if(!n_name || !CanInteract(usr, GLOB.deep_inventory_state))
+	if(!n_name || !CanInteract(usr, global.deep_inventory_topic_state))
 		return
 	SetName("[(n_name ? text("[n_name]") : "photo")]")
 	add_fingerprint(usr)
@@ -110,25 +110,20 @@ var/global/photo_count = 0
 	storage_slots = DEFAULT_BOX_STORAGE //yes, that's storage_slots. Photos are w_class 1 so this has as many slots equal to the number of photos you could put in a box
 	can_hold = list(/obj/item/photo)
 
-/obj/item/storage/photo_album/MouseDrop(obj/over_object)
-
-	if((istype(usr, /mob/living/carbon/human)))
-		var/mob/M = usr
-		if(!( istype(over_object, /obj/screen/inventory) ))
-			return ..()
+/obj/item/storage/photo_album/handle_mouse_drop(atom/over, mob/user)
+	if(istype(over, /obj/screen/inventory))
+		var/obj/screen/inventory/inv = over
 		playsound(loc, "rustle", 50, 1, -5)
-		if((!( M.restrained() ) && !( M.stat ) && M.back == src))
-			var/obj/screen/inventory/inv = over_object
-			src.add_fingerprint(M)
-			if(M.unEquip(src))
-				M.equip_to_slot_if_possible(src, inv.slot_id)
-			return
-		if(over_object == usr && in_range(src, usr) || usr.contents.Find(src))
-			if(usr.s_active)
-				usr.s_active.close(usr)
-			show_to(usr)
-			return
-	return
+		if(user.back == src)
+			add_fingerprint(user)
+			if(user.unEquip(src))
+				user.equip_to_slot_if_possible(src, inv.slot_id)
+		else if(over == user && in_range(src, user) || loc == user)
+			if(user.s_active)
+				user.s_active.close(user)
+			show_to(user)
+		return TRUE
+	. = ..()
 
 /*********
 * camera *

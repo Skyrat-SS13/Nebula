@@ -17,7 +17,10 @@
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/welding/default.dmi'
 	material = /decl/material/solid/metal/steel
-	matter = list(/decl/material/solid/glass = MATTER_AMOUNT_REINFORCEMENT)
+	matter = list(
+		/decl/material/solid/glass = MATTER_AMOUNT_SECONDARY,
+		/decl/material/solid/fiberglass = MATTER_AMOUNT_REINFORCEMENT
+	)
 	armor = list(
 		melee = ARMOR_MELEE_SMALL
 	)
@@ -67,9 +70,9 @@
 		icon_state = "[icon_state]_up"
 	update_clothing_icon()	//so our mob-overlays
 
-/obj/item/clothing/head/welding/experimental_mob_overlay()
+/obj/item/clothing/head/welding/get_mob_overlay()
 	var/image/ret = ..()
-	if(up && check_state_in_icon("[ret.icon_state]_up", icon))
+	if(ret && up && check_state_in_icon("[ret.icon_state]_up", icon))
 		ret.icon_state = "[ret.icon_state]_up"
 	return ret
 
@@ -124,9 +127,9 @@
 		icon_state = "[icon_state]_up"
 	update_clothing_icon()
 
-/obj/item/clothing/head/ushanka/experimental_mob_overlay()
+/obj/item/clothing/head/ushanka/get_mob_overlay()
 	var/image/ret = ..()
-	if(up && check_state_in_icon("[ret.icon_state]_up", icon))
+	if(ret && up && check_state_in_icon("[ret.icon_state]_up", icon))
 		ret.icon_state = "[ret.icon_state]_up"
 	return ret
 
@@ -140,7 +143,7 @@
 	icon = 'icons/clothing/head/pumpkin.dmi'
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = SLOT_HEAD|SLOT_FACE|SLOT_EYES
-	brightness_on = 0.2
+	brightness_on = 2
 	light_overlay = "helmet_light"
 	w_class = ITEM_SIZE_NORMAL
 
@@ -152,7 +155,6 @@
 	desc = "A pair of kitty ears. Meow!"
 	icon_state = ICON_STATE_WORLD
 	icon = 'icons/clothing/head/cat.dmi'
-	icon_state = "kitty"
 	body_parts_covered = 0
 	siemens_coefficient = 1.5
 

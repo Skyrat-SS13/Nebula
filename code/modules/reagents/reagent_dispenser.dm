@@ -22,10 +22,13 @@
 		var/reagent_ratio = initial_reagent_types[reagent_type]
 		reagents.add_reagent(reagent_type, reagent_ratio * initial_capacity)
 
+/obj/structure/reagent_dispensers/is_pressurized_fluid_source()
+	return TRUE
+
 /obj/structure/reagent_dispensers/proc/leak()
 	var/turf/T = get_turf(src)
 	if(reagents && T)
-		reagents.trans_to_turf(T, FLUID_PUDDLE)
+		reagents.trans_to_turf(T, min(reagents.total_volume, FLUID_PUDDLE))
 
 /obj/structure/reagent_dispensers/Move()
 	. = ..()
@@ -63,7 +66,7 @@
 		to_chat(user, SPAN_NOTICE("It contains:"))
 		if(LAZYLEN(reagents?.reagent_volumes))
 			for(var/rtype in reagents.reagent_volumes)
-				var/decl/material/R = decls_repository.get_decl(rtype)
+				var/decl/material/R = GET_DECL(rtype)
 				to_chat(user, SPAN_NOTICE("[REAGENT_VOLUME(reagents, rtype)] units of [R.name]"))
 		else
 			to_chat(user, SPAN_NOTICE("Nothing."))
@@ -82,7 +85,7 @@
 	if (N)
 		amount_per_transfer_from_this = N
 
-/obj/structure/reagent_dispensers/physically_destroyed()
+/obj/structure/reagent_dispensers/physically_destroyed(var/skip_qdel)
 	if(reagents?.total_volume)
 		var/turf/T = get_turf(src)
 		if(T)

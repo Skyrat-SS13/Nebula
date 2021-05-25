@@ -29,11 +29,11 @@
 /obj/item/vampiric/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
-	GLOB.listening_objects += src
+	global.listening_objects += src
 
 /obj/item/vampiric/Destroy()
 	STOP_PROCESSING(SSobj, src)
-	GLOB.listening_objects -= src
+	global.listening_objects -= src
 	return ..()
 
 /obj/item/vampiric/Process()
@@ -181,7 +181,7 @@
 			'sound/hallucinations/turn_around1.ogg',\
 			'sound/hallucinations/turn_around2.ogg',\
 			), 50, 1, -3)
-			M.sleeping = max(M.sleeping,rand(5,10))
+			SET_STATUS_MAX(M, STAT_ASLEEP, rand(5,10))
 			qdel(src)
 	else
 		STOP_PROCESSING(SSobj, src)

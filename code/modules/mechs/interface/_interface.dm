@@ -36,20 +36,20 @@
 		var/pos = 7
 		for(var/additional_hud in additional_hud_elements)
 			var/obj/screen/exosuit/M = new additional_hud(src)
-			M.screen_loc = "LEFT+1:6,BOTTOM+[pos]:[i * -12]"
+			M.screen_loc = "LEFT+1:6,BOTTOM+[pos]:[i]"
 			hud_elements |= M
-			i++
-			if(i == 3)
-				pos--
-				i = 0
+			i -= M.height
 
 		hud_health = new /obj/screen/exosuit/health(src)
 		hud_health.screen_loc = "RIGHT-1:28,CENTER-3:11"
 		hud_elements |= hud_health
 		hud_open = locate(/obj/screen/exosuit/toggle/hatch_open) in hud_elements
 		hud_power = new /obj/screen/exosuit/power(src)
-		hud_power.screen_loc = "RIGHT-1:12,CENTER-4:25"
+		hud_power.screen_loc = "RIGHT-1:24,CENTER-4:25"
 		hud_elements |= hud_power
+		hud_heat = new /obj/screen/exosuit/heat(src)
+		hud_heat.screen_loc = "RIGHT-1:28,CENTER-4"
+		hud_elements |= hud_heat
 
 	refresh_hud()
 
@@ -72,9 +72,9 @@
 		return
 
 	if(!body.diagnostics || !body.diagnostics.is_functional() || ((emp_damage>EMP_GUI_DISRUPT) && prob(emp_damage*2)))
-		if(!GLOB.mech_damage_overlay_cache["critfail"])
-			GLOB.mech_damage_overlay_cache["critfail"] = image(icon='icons/mecha/mech_hud.dmi',icon_state="dam_error")
-		hud_health.overlays |= GLOB.mech_damage_overlay_cache["critfail"]
+		if(!global.mech_damage_overlay_cache["critfail"])
+			global.mech_damage_overlay_cache["critfail"] = image(icon='icons/mecha/mech_hud.dmi',icon_state="dam_error")
+		hud_health.overlays |= global.mech_damage_overlay_cache["critfail"]
 		return
 
 	var/list/part_to_state = list("legs" = legs,"body" = body,"head" = head,"arms" = arms)
@@ -86,7 +86,7 @@
 				state = rand(0,4)
 			else
 				state = MC.damage_state
-		if(!GLOB.mech_damage_overlay_cache["[part]-[state]"])
+		if(!global.mech_damage_overlay_cache["[part]-[state]"])
 			var/image/I = image(icon='icons/mecha/mech_hud.dmi',icon_state="dam_[part]")
 			switch(state)
 				if(1)
@@ -99,8 +99,8 @@
 					I.color = "#ff0000"
 				else
 					I.color = "#f5f5f0"
-			GLOB.mech_damage_overlay_cache["[part]-[state]"] = I
-		hud_health.overlays |= GLOB.mech_damage_overlay_cache["[part]-[state]"]
+			global.mech_damage_overlay_cache["[part]-[state]"] = I
+		hud_health.overlays |= global.mech_damage_overlay_cache["[part]-[state]"]
 
 /mob/living/exosuit/proc/reset_hardpoint_color()
 	for(var/hardpoint in hardpoint_hud_elements)

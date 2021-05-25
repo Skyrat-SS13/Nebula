@@ -7,7 +7,7 @@
 
 	layer = SIDE_WINDOW_LAYER
 	anchored = 1.0
-	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE
+	atom_flags = ATOM_FLAG_NO_TEMP_CHANGE | ATOM_FLAG_CHECKS_BORDER | ATOM_FLAG_CAN_BE_PAINTED
 	obj_flags = OBJ_FLAG_ROTATABLE
 	alpha = 180
 	material = /decl/material/solid/glass
@@ -23,9 +23,11 @@
 	var/polarized = 0
 	var/basestate = "window"
 	var/reinf_basestate = "rwindow"
+	var/paint_color
+	var/base_color // The windows initial color. Used for resetting purposes.
 	var/list/connections
 	var/list/other_connections
-	
+
 /obj/structure/window/clear_connections()
 	connections = null
 	other_connections = null
@@ -56,6 +58,9 @@
 /obj/structure/window/LateInitialize()
 	..()
 	//set_anchored(!constructed) // calls update_connections, potentially
+
+	base_color = get_color()
+
 	update_connections(1)
 	update_icon()
 	update_nearby_tiles(need_rebuild=1)
@@ -71,7 +76,7 @@
 /obj/structure/window/CanFluidPass(var/coming_from)
 	return (!is_fulltile() && coming_from != dir)
 
-/obj/structure/window/physically_destroyed()
+/obj/structure/window/physically_destroyed(var/skip_qdel)
 	SHOULD_CALL_PARENT(FALSE)
 	. = shatter()
 
@@ -88,7 +93,7 @@
 	for(var/i = 0 to debris_count)
 		material.place_shard(loc)
 		if(reinf_material)
-			new /obj/item/stack/material/rods(loc, 1, reinf_material.type)
+			reinf_material.create_object(loc, 1, /obj/item/stack/material/rods)
 	qdel(src)
 
 /obj/structure/window/bullet_act(var/obj/item/projectile/Proj)
@@ -208,16 +213,11 @@
 		playsound(loc, 'sound/items/Crowbar.ogg', 75, 1)
 		to_chat(user, (construction_state ? SPAN_NOTICE("You have pried the window into the frame.") : SPAN_NOTICE("You have pried the window out of the frame.")))
 	else if(isWrench(W) && !anchored && (!construction_state || !reinf_material))
-		if(!material.stack_type)
+		if(!material)
 			to_chat(user, SPAN_NOTICE("You're not sure how to dismantle \the [src] properly."))
 		else
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 			visible_message(SPAN_NOTICE("[user] dismantles \the [src]."))
-			var/obj/item/stack/material/S = material.place_sheet(loc, is_fulltile() ? 4 : 1)
-			if(S && reinf_material)
-				S.reinf_material = reinf_material
-				S.update_strings()
-				S.update_icon()
 			dismantle()
 	else if(isCoil(W) && !polarized && is_fulltile())
 		var/obj/item/stack/cable_coil/C = W
@@ -245,7 +245,7 @@
 			playsound(src, 'sound/items/Welder.ogg', 80, 1)
 			construction_state = 0
 			set_anchored(0)
-	else
+	else if (!istype(W, /obj/item/paint_sprayer))
 		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 		if(W.damtype == BRUTE || W.damtype == BURN)
 			user.do_attack_animation(src)
@@ -258,26 +258,33 @@
 		..()
 	return
 
+/obj/structure/window/create_dismantled_products(turf/T)
+	var/obj/item/stack/material/S = material.create_object(loc, is_fulltile() ? 4 : 2)
+	if(istype(S) && reinf_material)
+		S.reinf_material = reinf_material
+		S.update_strings()
+		S.update_icon()
+
 /obj/structure/window/grab_attack(var/obj/item/grab/G)
 	if (G.assailant.a_intent != I_HURT)
 		return TRUE
 	if (!G.force_danger())
 		to_chat(G.assailant, SPAN_DANGER("You need a better grip to do that!"))
 		return TRUE
-	var/mob/affecting_mob = G.get_affecting_mob()
-	var/def_zone = ran_zone(BP_HEAD, 20, affecting_mob)
-	if(!affecting_mob)
+	var/mob/living/affecting_mob = G.get_affecting_mob()
+	if(!istype(affecting_mob))
 		attackby(G.affecting, G.assailant)
 		return TRUE
+	var/def_zone = ran_zone(BP_HEAD, 20, affecting_mob)
 	if(G.damage_stage() < 2)
 		G.affecting.visible_message(SPAN_DANGER("[G.assailant] bashes [G.affecting] against \the [src]!"))
 		if(prob(50))
-			affecting_mob.Weaken(1)
+			SET_STATUS_MAX(affecting_mob, STAT_WEAK, 1)
 		affecting_mob.apply_damage(10, BRUTE, def_zone, used_weapon = src)
 		hit(25)
 	else
 		G.affecting.visible_message(SPAN_DANGER("[G.assailant] crushes [G.affecting] against \the [src]!"))
-		affecting_mob.Weaken(5)
+		SET_STATUS_MAX(affecting_mob, STAT_WEAK, 5)
 		affecting_mob.apply_damage(20, BRUTE, def_zone, used_weapon = src)
 		hit(50)
 	return TRUE
@@ -317,6 +324,23 @@
 	if(reinf_material)
 		to_chat(user, SPAN_NOTICE("It is reinforced with the [reinf_material.solid_name] lattice."))
 
+	if (paint_color)
+		to_chat(user, SPAN_NOTICE("The glass is stained with paint."))
+
+/obj/structure/window/get_color()
+	if (paint_color)
+		return paint_color
+	else if (material)
+		var/decl/material/window = get_material()
+		return window.color
+	else if (base_color)
+		return base_color
+	return ..()
+
+/obj/structure/window/set_color()
+	paint_color = color
+	queue_icon_update()
+
 /obj/structure/window/proc/set_anchored(var/new_anchored)
 	if(anchored == new_anchored)
 		return
@@ -341,12 +365,20 @@
 /obj/structure/window/on_update_icon()
 	//A little cludge here, since I don't know how it will work with slim windows. Most likely VERY wrong.
 	//this way it will only update full-tile ones
-	color =  material.color
 	if(reinf_material)
 		basestate = reinf_basestate
 	else
 		basestate = initial(basestate)
 	overlays.Cut()
+
+	if (paint_color)
+		color = paint_color
+	else if (material)
+		var/decl/material/window = get_material()
+		color = window.color
+	else
+		color = GLASS_COLOR
+
 	layer = FULL_WINDOW_LAYER
 	if(!is_fulltile())
 		layer = SIDE_WINDOW_LAYER
@@ -362,6 +394,7 @@
 				I = image(icon, "[basestate]_other_onframe[conn]", dir = 1<<(i-1))
 			else
 				I = image(icon, "[basestate]_onframe[conn]", dir = 1<<(i-1))
+			I.color = paint_color
 			overlays += I
 	else
 		for(var/i = 1 to 4)
@@ -370,6 +403,7 @@
 				I = image(icon, "[basestate]_other[conn]", dir = 1<<(i-1))
 			else
 				I = image(icon, "[basestate][conn]", dir = 1<<(i-1))
+			I.color = paint_color
 			overlays += I
 
 /obj/structure/window/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
@@ -452,11 +486,11 @@
 	if(!polarized)
 		return
 	if(opacity)
-		animate(src, color=material.color, time=5)
-		set_opacity(0)
+		animate(src, color=get_color(), time=5)
+		set_opacity(FALSE)
 	else
 		animate(src, color=GLASS_COLOR_TINTED, time=5)
-		set_opacity(1)
+		set_opacity(TRUE)
 
 /obj/structure/window/proc/is_on_frame()
 	if(locate(/obj/structure/wall_frame) in loc)

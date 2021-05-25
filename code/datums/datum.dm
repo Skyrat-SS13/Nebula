@@ -20,13 +20,14 @@
 	tag = null
 	weakref = null // Clear this reference to ensure it's kept for as brief duration as possible.
 
-	SSnano && SSnano.close_uis(src)
+	if(istype(SSnano))
+		SSnano.close_uis(src)
 
 	var/list/timers = active_timers
 	active_timers = null
 	for(var/thing in timers)
 		var/datum/timedevent/timer = thing
-		if (timer.spent)
+		if (timer.spent && !(timer.flags & TIMER_LOOP))
 			continue
 		qdel(timer)
 
@@ -39,7 +40,8 @@
 				qdel(extension)
 		extensions = null
 
-	GLOB.destroyed_event && GLOB.destroyed_event.raise_event(src)
+	if(istype(events_repository)) // Typecheck is needed (rather than nullchecking) due to oddness with new() ordering during world creation.
+		events_repository.raise_event(/decl/observ/destroyed, src)
 
 	if (!isturf(src))	// Not great, but the 'correct' way to do it would add overhead for little benefit.
 		cleanup_events(src)

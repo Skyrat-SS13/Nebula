@@ -62,7 +62,7 @@
 		return
 
 	for(var/obj/item/grab/G in grabbed_by)
-		if(G.assailant)
+		if(isliving(G.assailant))
 			check_triggers(/datum/artifact_trigger/proc/on_touch, G.assailant)
 			touched(G.assailant)
 
@@ -73,20 +73,20 @@
 	for(var/datum/artifact_effect/effect in list(my_effect, secondary_effect))
 		effect.process()
 
-/obj/structure/artifact/attack_robot(mob/living/user)
+/obj/structure/artifact/attack_robot(mob/user)
 	if(!CanPhysicallyInteract(user))
 		return
 	visible_message(SPAN_NOTICE("[user] touches \the [src]."))
 	check_triggers(/datum/artifact_trigger/proc/on_touch, user)
 	touched(user)
 
-/obj/structure/artifact/attack_hand(mob/living/user)
+/obj/structure/artifact/attack_hand(mob/user)
 	. = ..()
 	visible_message(SPAN_NOTICE("[user] touches \the [src]."))
 	check_triggers(/datum/artifact_trigger/proc/on_touch, user)
 	touched(user)
 
-/obj/structure/artifact/attackby(obj/item/W, mob/living/user)
+/obj/structure/artifact/attackby(obj/item/W, mob/user)
 	. = ..()
 	visible_message(SPAN_WARNING("[user] hits \the [src] with \the [W]."))
 	check_triggers(/datum/artifact_trigger/proc/on_hit, W, user)
@@ -94,7 +94,8 @@
 /obj/structure/artifact/Bumped(M)
 	..()
 	check_triggers(/datum/artifact_trigger/proc/on_bump, M)
-	touched(M)
+	if(isliving(M))
+		touched(M)
 
 /obj/structure/artifact/bullet_act(var/obj/item/projectile/P)
 	visible_message(SPAN_WARNING("\The [P] hits \the [src]!"))

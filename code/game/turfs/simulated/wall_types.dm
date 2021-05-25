@@ -25,7 +25,7 @@
 	color = null //color is just for mapping
 	if(prob(40))
 		var/spacefacing = FALSE
-		for(var/direction in GLOB.cardinal)
+		for(var/direction in global.cardinal)
 			var/turf/T = get_step(src, direction)
 			var/area/A = get_area(T)
 			if(A && (A.area_flags & AREA_FLAG_EXTERNAL))
@@ -38,12 +38,12 @@
 
 /turf/simulated/wall/titanium
 	color = COLOR_SILVER
-	material = /decl/material/solid/metal/plasteel/titanium
+	material = /decl/material/solid/metal/titanium
 
 /turf/simulated/wall/r_titanium
 	icon_state = "reinforced_solid"
-	material = /decl/material/solid/metal/plasteel/titanium
-	reinf_material = /decl/material/solid/metal/plasteel/titanium
+	material = /decl/material/solid/metal/titanium
+	reinf_material = /decl/material/solid/metal/titanium
 
 /turf/simulated/wall/ocp_wall
 	color = COLOR_GUNMETAL
@@ -69,12 +69,12 @@
 	icon_state = "wood"
 	material = /decl/material/solid/wood/walnut
 
-/turf/simulated/wall/voxshuttle
+/turf/simulated/wall/raidershuttle
 	color = COLOR_GREEN_GRAY
 	icon_state = "metal"
-	material = /decl/material/solid/metal/voxalloy
+	material = /decl/material/solid/metal/alienalloy
 
-/turf/simulated/wall/voxshuttle/attackby()
+/turf/simulated/wall/raidershuttle/attackby()
 	return
 
 //Alien metal walls
@@ -99,7 +99,8 @@
 	reinf_material = /decl/material/solid/stone/cult/reinforced
 
 /turf/simulated/wall/cult/dismantle_wall()
-	GLOB.cult.remove_cultiness(CULTINESS_PER_TURF)
+	var/decl/special_role/cultist/cult = GET_DECL(/decl/special_role/cultist)
+	cult.remove_cultiness(CULTINESS_PER_TURF)
 	. = ..()
 
 /turf/simulated/wall/cult/can_join_with(var/turf/simulated/wall/W)

@@ -2,7 +2,6 @@
 	name = "gun"
 	desc = "A gun that fires bullets."
 	icon = 'icons/obj/guns/pistol.dmi'
-	icon_state = "pistol"
 	origin_tech = "{'combat':2,'materials':2}"
 	w_class = ITEM_SIZE_NORMAL
 	material = /decl/material/solid/metal/steel
@@ -268,11 +267,11 @@
 /obj/item/gun/projectile/proc/get_ammo_indicator()
 	var/base_state = get_world_inventory_state()
 	if(!ammo_magazine || !LAZYLEN(ammo_magazine.stored_ammo))
-		return get_mutable_overlay(icon, "[base_state]_ammo_bad")
+		return mutable_appearance(icon, "[base_state]_ammo_bad")
 	else if(LAZYLEN(ammo_magazine.stored_ammo) <= 0.5 * ammo_magazine.max_ammo)
-		return get_mutable_overlay(icon, "[base_state]_ammo_warn") 
+		return mutable_appearance(icon, "[base_state]_ammo_warn") 
 	else
-		return get_mutable_overlay(icon, "[base_state]_ammo_ok") 
+		return mutable_appearance(icon, "[base_state]_ammo_ok") 
 
 /* Unneeded -- so far.
 //in case the weapon has firemodes and can't unload using attack_hand()

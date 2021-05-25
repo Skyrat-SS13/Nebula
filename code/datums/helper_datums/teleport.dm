@@ -10,7 +10,7 @@
 
 /decl/teleport/proc/teleport_target(var/atom/movable/target, var/atom/destination, var/precision)
 	var/list/possible_turfs = circlerangeturfs(destination, precision)
-	destination = safepick(possible_turfs)
+	destination = SAFEPICK(possible_turfs)
 
 	target.forceMove(destination)
 	if(isliving(target))
@@ -28,20 +28,14 @@
 		return 0
 
 	for(var/type in teleport_blacklist)
-		if(!isemptylist(target.search_contents_for(type)))
+		if(!length(target.search_contents_for(type)))
 			return 0
 	return 1
-
-/decl/teleport/sparks
-	var/datum/effect/effect/system/spark_spread/spark = new
 
 /decl/teleport/sparks/proc/do_spark(var/atom/target)
 	if(!target.simulated)
 		return
-	var/turf/T = get_turf(target)
-	spark.set_up(5,1,target)
-	spark.attach(T)
-	spark.start()
+	spark_at(get_turf(target), amount=5, cardinal_only = TRUE, holder=target)
 
 /decl/teleport/sparks/teleport_target(var/atom/target, var/atom/destination, var/precision)
 	do_spark(target)
@@ -49,5 +43,5 @@
 	do_spark(target)
 
 /proc/do_teleport(var/atom/movable/target, var/atom/destination, var/precision = 0, var/type = /decl/teleport/sparks)
-	var/decl/teleport/tele = decls_repository.get_decl(type)
+	var/decl/teleport/tele = GET_DECL(type)
 	tele.teleport(target, destination, precision)

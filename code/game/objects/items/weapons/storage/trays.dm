@@ -44,7 +44,7 @@
 	set waitfor = 0
 	for(var/obj/item/I in contents)
 		if(remove_from_storage(I, target_loc) && !neatly)
-			I.throw_at(get_edge_target_turf(I.loc, pick(GLOB.alldirs)), rand(1,3), round(10/I.w_class))
+			I.throw_at(get_edge_target_turf(I.loc, pick(global.alldirs)), rand(1,3), round(10/I.w_class))
 	update_icon()
 
 /obj/item/storage/tray/shatter(consumed)
@@ -54,7 +54,7 @@
 /obj/item/storage/tray/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if((MUTATION_CLUMSY in user.mutations) && prob(50)) // There is a better way to do this but I'll be damned if I'm the one to fix it.
 		to_chat(user, SPAN_DANGER("You accidentally slam yourself with the [src]!"))
-		user.Weaken(1)
+		SET_STATUS_MAX(user, STAT_WEAK, 1)
 		user.take_organ_damage(2)
 		if(prob(50))
 			playsound(M, hitsound, 50, 1)

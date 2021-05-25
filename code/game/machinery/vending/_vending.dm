@@ -72,9 +72,9 @@
 /obj/machinery/vending/Initialize(mapload, d=0, populate_parts = TRUE)
 	. = ..()
 	if(isnull(markup))
-		markup = 1 + (rand() * 2)
+		markup = 1.1 + (rand() * 0.4)
 	if(!ispath(vendor_currency, /decl/currency))
-		vendor_currency = GLOB.using_map.default_currency
+		vendor_currency = global.using_map.default_currency
 	if(product_slogans)
 		slogan_list += splittext(product_slogans, ";")
 
@@ -112,6 +112,12 @@
 			product.category = category
 			if(product && populate_parts)
 				product.amount = (current_list[1][entry]) ? current_list[1][entry] : 1
+			if(ispath(product.item_path, /obj/item/stack/material))
+				var/obj/item/stack/material/M = product.item_path
+				var/decl/material/mat = GET_DECL(initial(M.material))
+				if(mat)
+					var/mat_amt = initial(M.amount)
+					product.item_name = "[mat.solid_name] [mat_amt == 1 ? initial(M.singular_name) : initial(M.plural_name)] ([mat_amt]x)"
 			product_records.Add(product)
 
 /obj/machinery/vending/Destroy()
@@ -185,10 +191,10 @@
 	. = ..()
 	SSnano.update_uis(src)
 
-/obj/machinery/vending/MouseDrop_T(var/obj/item/I, var/mob/user)
-	if(!CanMouseDrop(I, user) || (I.loc != user))
-		return
-	return attempt_to_stock(I, user)
+/obj/machinery/vending/receive_mouse_drop(atom/dropping, var/mob/user)
+	. = ..()
+	if(!. && dropping.loc == user && attempt_to_stock(dropping, user))
+		return TRUE
 
 /obj/machinery/vending/proc/attempt_to_stock(var/obj/item/I, var/mob/user)
 	for(var/datum/stored_items/vending_products/R in product_records)
@@ -258,7 +264,7 @@
  */
 /obj/machinery/vending/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	user.set_machine(src)
-	var/decl/currency/cur = decls_repository.get_decl(vendor_currency)
+	var/decl/currency/cur = GET_DECL(vendor_currency)
 	var/list/data = list()
 	if(currently_vending)
 		data["mode"] = 1
@@ -463,9 +469,9 @@
 
 	for(var/datum/stored_items/vending_products/R in shuffle(product_records))
 		throw_item = R.get_product(loc)
-		if (throw_item)
+		if(!QDELETED(throw_item))
 			break
-	if (!throw_item)
+	if(QDELETED(throw_item))
 		return 0
 	spawn(0)
 		throw_item.throw_at(target, rand(1,2), 3)

@@ -12,8 +12,9 @@
 #define AIRLOCK_PAINTABLE 1
 #define AIRLOCK_STRIPABLE 2
 #define AIRLOCK_DETAILABLE 4
+#define AIRLOCK_WINDOW_PAINTABLE 8
 
-var/list/airlock_overlays = list()
+var/global/list/airlock_overlays = list()
 
 /obj/machinery/door/airlock
 	name = "airlock"
@@ -68,11 +69,13 @@ var/list/airlock_overlays = list()
 	//Airlock 2.0 Aesthetics Properties
 	//The variables below determine what color the airlock and decorative stripes will be -Cakey
 	var/airlock_type = "Standard"
-	var/global/list/airlock_icon_cache = list()
-	var/paintable = AIRLOCK_PAINTABLE|AIRLOCK_STRIPABLE //0 = Not paintable, 1 = Paintable, 3 = Paintable and Stripable, 7 for Paintable, Stripable and Detailable.
+	var/static/list/airlock_icon_cache = list()
+	var/paintable = AIRLOCK_PAINTABLE|AIRLOCK_STRIPABLE|AIRLOCK_WINDOW_PAINTABLE
 	var/door_color = null
 	var/stripe_color = null
 	var/symbol_color = null
+	var/window_color = null
+	var/window_material = /decl/material/solid/glass
 
 	var/fill_file = 'icons/obj/doors/station/fill_steel.dmi'
 	var/color_file = 'icons/obj/doors/station/color.dmi'
@@ -90,7 +93,10 @@ var/list/airlock_overlays = list()
 	var/emag_file = 'icons/obj/doors/station/emag.dmi'
 
 /obj/machinery/door/airlock/get_material()
-	return decls_repository.get_decl(mineral ? mineral : /decl/material/solid/metal/steel)
+	return GET_DECL(mineral ? mineral : /decl/material/solid/metal/steel)
+
+/obj/machinery/door/airlock/proc/get_window_material()
+	return GET_DECL(window_material)
 
 /obj/machinery/door/airlock/get_codex_value()
 	return "airlock"
@@ -137,7 +143,7 @@ About the new airlock wires panel:
 			if(istype(C) && C.hallucination_power > 25)
 				to_chat(user, SPAN_DANGER("You feel a powerful shock course through your body!"))
 				user.adjustHalLoss(10)
-				user.Stun(10)
+				SET_STATUS_MAX(user, STAT_STUN, 10)
 				return
 	..(user)
 
@@ -166,6 +172,11 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/requiresID()
 	return !(src.isWireCut(AIRLOCK_WIRE_IDSCAN) || aiDisabledIdScanner)
+
+/obj/machinery/door/airlock/check_access(atom/movable/A)
+	if (isWireCut(AIRLOCK_WIRE_IDSCAN) || aiDisabledIdScanner)
+		return !secured_wires
+	return ..()
 
 /obj/machinery/door/airlock/proc/isAllPowerLoss()
 	if(stat & (NOPOWER|BROKEN))
@@ -289,11 +300,8 @@ About the new airlock wires panel:
 		return 0
 
 /obj/machinery/door/airlock/on_update_icon(state=0, override=0)
-	if(connections in list(NORTH, SOUTH, NORTH|SOUTH))
-		if(connections in list(WEST, EAST, EAST|WEST))
-			set_dir(SOUTH)
-		else
-			set_dir(EAST)
+	if(connections & (NORTH|SOUTH))
+		set_dir(EAST)
 	else
 		set_dir(SOUTH)
 
@@ -336,7 +344,15 @@ About the new airlock wires panel:
 			color_overlay.Blend(door_color, ICON_MULTIPLY)
 			airlock_icon_cache["[ikey]"] = color_overlay
 	if(glass)
-		filling_overlay = glass_file
+		if (window_color && window_color != "none")
+			var/ikey = "[airlock_type]-[window_color]-windowcolor"
+			filling_overlay = airlock_icon_cache["[ikey]"]
+			if (!filling_overlay)
+				filling_overlay = new(glass_file)
+				filling_overlay.Blend(window_color, ICON_MULTIPLY)
+				airlock_icon_cache["[ikey]"] = filling_overlay
+		else
+			filling_overlay = glass_file
 	else
 		if(door_color && !(door_color == "none"))
 			var/ikey = "[airlock_type]-[door_color]-fillcolor"
@@ -367,12 +383,12 @@ About the new airlock wires panel:
 			if(AIRLOCK_CLOSED)
 				if(lights && locked)
 					lights_overlay = bolts_file
-					set_light(0.25, 0.1, 1, 2, COLOR_RED_LIGHT)
+					set_light(2, 0.75, COLOR_RED_LIGHT)
 
 			if(AIRLOCK_DENY)
 				if(lights)
 					lights_overlay = deny_file
-					set_light(0.25, 0.1, 1, 2, COLOR_RED_LIGHT)
+					set_light(2, 0.75, COLOR_RED_LIGHT)
 
 			if(AIRLOCK_EMAG)
 				sparks_overlay = emag_file
@@ -380,12 +396,12 @@ About the new airlock wires panel:
 			if(AIRLOCK_CLOSING)
 				if(lights)
 					lights_overlay = lights_file
-					set_light(0.25, 0.1, 1, 2, COLOR_LIME)
+					set_light(2, 0.75, COLOR_LIME)
 
 			if(AIRLOCK_OPENING)
 				if(lights)
 					lights_overlay = lights_file
-					set_light(0.25, 0.1, 1, 2, COLOR_LIME)
+					set_light(2, 0.75, COLOR_LIME)
 
 		if(stat & BROKEN)
 			damage_overlay = sparks_broken_file
@@ -395,7 +411,7 @@ About the new airlock wires panel:
 	if(welded)
 		weld_overlay = welded_file
 
-	if(panel_open)
+	if(panel_open || istype(construct_state, /decl/machine_construction/default/panel_closed/door/hacking))
 		panel_overlay = panel_file
 
 	if(brace)
@@ -446,13 +462,13 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/attack_robot(mob/user)
 	ui_interact(user)
 
-/obj/machinery/door/airlock/attack_ai(mob/user)
+/obj/machinery/door/airlock/attack_ai(mob/living/silicon/ai/user)
 	ui_interact(user)
 
 /obj/machinery/door/airlock/attack_ghost(mob/user)
 	ui_interact(user)
 
-/obj/machinery/door/airlock/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = GLOB.default_state)
+/obj/machinery/door/airlock/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1, var/datum/topic_state/state = global.default_topic_state)
 	var/data[0]
 
 	data["main_power_loss"]		= round(main_power_lost_until 	> 0 ? max(main_power_lost_until - world.time,	0) / 10 : main_power_lost_until,	1)
@@ -530,9 +546,7 @@ About the new airlock wires panel:
 		if (istype(mover, /obj/item))
 			var/obj/item/i = mover
 			if(i.material && i.material.conductive)
-				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-				s.set_up(5, 1, src)
-				s.start()
+				spark_at(src, amount=5, cardinal_only = TRUE)
 	return ..()
 
 /obj/machinery/door/airlock/physical_attack_hand(mob/user)
@@ -543,7 +557,7 @@ About the new airlock wires panel:
 	. = ..()
 
 /obj/machinery/door/airlock/CanUseTopic(var/mob/user)
-	if(operating < 0) //emagged
+	if(emagged) //emagged
 		to_chat(user, SPAN_WARNING("Unable to interface: Internal error."))
 		return STATUS_CLOSE
 	if(issilicon(user) && !src.canAIControl())
@@ -725,7 +739,7 @@ About the new airlock wires panel:
 			. = ..()
 		return
 
-	if(!repairing && isWelder(C) && !( operating > 0 ) && density)
+	if(!repairing && isWelder(C) && !operating && density)
 		var/obj/item/weldingtool/W = C
 		if(!W.remove_fuel(0,user))
 			to_chat(user, SPAN_NOTICE("Your [W.name] doesn't have enough fuel."))
@@ -734,7 +748,7 @@ About the new airlock wires panel:
 		user.visible_message(SPAN_WARNING("\The [user] begins welding \the [src] [welded ? "open" : "closed"]!"),
 							SPAN_NOTICE("You begin welding \the [src] [welded ? "open" : "closed"]."))
 		if(do_after(user, (rand(3,5)) SECONDS, src))
-			if(density && !(operating > 0) && !repairing)
+			if(density && !operating && !repairing)
 				playsound(src, 'sound/items/Welder2.ogg', 50, 1)
 				welded = !welded
 				update_icon()
@@ -746,19 +760,25 @@ About the new airlock wires panel:
 	else if(isWirecutter(C) || isMultitool(C) || istype(C, /obj/item/assembly/signaler))
 		return wires.Interact(user)
 
-	else if(isCrowbar(C) && !welded && !repairing)
-		if(arePowerSystemsOn())
-			to_chat(user, SPAN_WARNING("The airlock's motors resist your efforts to force it."))
-		else if(locked)
-			to_chat(user, SPAN_WARNING("The airlock's bolts prevent it from being forced."))
-		else if(brace)
-			to_chat(user, SPAN_WARNING("The airlock's brace holds it firmly in place."))
-		else
-			if(density)
-				open(1)
+	else if(isCrowbar(C))
+		if(density && !can_open(TRUE) && component_attackby(C, user))
+			return TRUE
+		else if(!repairing)
+			// Add some minor damage as evidence of forcing.
+			if(health >= maxhealth)
+				take_damage(1)
+			if(arePowerSystemsOn())
+				to_chat(user, SPAN_WARNING("The airlock's motors resist your efforts to force it."))
+			else if(locked)
+				to_chat(user, SPAN_WARNING("The airlock's bolts prevent it from being forced."))
+			else if(brace)
+				to_chat(user, SPAN_WARNING("The airlock's brace holds it firmly in place."))
 			else
-				close(1)
-		return TRUE
+				if(density)
+					open(1)
+				else
+					close(1)
+			return TRUE
 
 	if(istype(C, /obj/item/twohanded/fireaxe) && !arePowerSystemsOn() && !(user.a_intent == I_HURT))
 		var/obj/item/twohanded/fireaxe/F = C
@@ -812,12 +832,10 @@ About the new airlock wires panel:
 	return ..()
 
 /obj/machinery/door/airlock/cannot_transition_to(state_path, mob/user)
-	if(reason_broken & MACHINE_BROKEN_GENERIC)
-		return SPAN_WARNING("\The [src] looks broken; try repairing it first.")
 	if(ispath(state_path, /decl/machine_construction/default/deconstructed))
 		if(brace)
 			return SPAN_NOTICE("Remove \the [brace] first!")
-		if(operating >= 0) // if emagged, apparently bypass all this crap; that's what < 0 would mean.
+		if(!emagged) // if emagged, apparently bypass all this crap;
 			if(operating)
 				return SPAN_NOTICE("\The [src] is in use.")
 			if(!welded)
@@ -846,9 +864,7 @@ About the new airlock wires panel:
 	da.symbol_color = symbol_color
 
 	if(moved)
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(5, 1, da)
-		s.start()
+		spark_at(da, amount=5, cardinal_only = TRUE)
 	else
 		da.anchored = 1
 	da.state = 1
@@ -866,9 +882,7 @@ About the new airlock wires panel:
 		if (secured_wires)
 			lock()
 		visible_message("\The [src]'s control panel bursts open, sparks spewing out!")
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
-		s.set_up(5, 1, src)
-		s.start()
+		spark_at(src, amount=5, cardinal_only = TRUE)
 
 /obj/machinery/door/airlock/open(var/forced=0)
 	if(!can_open(forced))
@@ -877,9 +891,9 @@ About the new airlock wires panel:
 
 	//if the door is unpowered then it doesn't make sense to hear the woosh of a pneumatic actuator
 	if(arePowerSystemsOn())
-		playsound(src.loc, open_sound_powered, 100, 1)
+		playsound(src.loc, pick(open_sound_powered), 100, 1)
 	else
-		playsound(src.loc, open_sound_unpowered, 100, 1)
+		playsound(src.loc, pick(open_sound_unpowered), 100, 1)
 
 	return ..()
 
@@ -888,7 +902,7 @@ About the new airlock wires panel:
 		return 0
 
 	if(!forced)
-		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
+		if(emagged || !arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 			return 0
 
 	if(locked || welded)
@@ -901,7 +915,7 @@ About the new airlock wires panel:
 
 	if(!forced)
 		//despite the name, this wire is for general door control.
-		if(!arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
+		if(emagged || !arePowerSystemsOn() || isWireCut(AIRLOCK_WIRE_OPEN_DOOR))
 			return	0
 
 	return ..()
@@ -928,9 +942,9 @@ About the new airlock wires panel:
 
 	use_power_oneoff(360)	//360 W seems much more appropriate for an actuator moving an industrial door capable of crushing people
 	if(arePowerSystemsOn())
-		playsound(src.loc, close_sound_powered, 100, 1)
+		playsound(src.loc, pick(close_sound_powered), 100, 1)
 	else
-		playsound(src.loc, close_sound_unpowered, 100, 1)
+		playsound(src.loc, pick(close_sound_unpowered), 100, 1)
 
 	..()
 
@@ -976,7 +990,7 @@ About the new airlock wires panel:
 
 	//wires
 	var/turf/T = get_turf(loc)
-	if(T && (T.z in GLOB.using_map.admin_levels))
+	if(T && (T.z in global.using_map.admin_levels))
 		secured_wires = TRUE
 	if (secured_wires)
 		wires = new/datum/wires/airlock/secure(src)
@@ -989,9 +1003,15 @@ About the new airlock wires panel:
 		brace.airlock = src
 		brace.forceMove(src)
 		if(brace.electronics)
-			brace.electronics.set_access(src)
-			brace.update_access()
+			brace.req_access = get_req_access()
 		queue_icon_update()
+
+	if (glass)
+		paintable |= AIRLOCK_WINDOW_PAINTABLE
+		if (!window_color)
+			var/decl/material/window = get_window_material()
+			window_color = window.color
+
 	. = ..()
 
 /obj/machinery/door/airlock/proc/inherit_from_assembly(obj/structure/door_assembly/assembly)
@@ -1002,7 +1022,7 @@ About the new airlock wires panel:
 		var/obj/item/stock_parts/circuitboard/electronics = assembly.electronics
 		install_component(electronics, FALSE) // will be refreshed in parent call; unsafe to refresh prior to calling ..() in Initialize
 		electronics.construct(src)
-		var/decl/material/mat = decls_repository.get_decl(assembly.glass_material)
+		var/decl/material/mat = GET_DECL(assembly.glass_material)
 
 		if(assembly.glass == 1) // supposed to use material in this case
 			mineral = assembly.glass_material
@@ -1057,11 +1077,11 @@ About the new airlock wires panel:
 	return
 
 // Braces can act as an extra layer of armor - they will take damage first.
-/obj/machinery/door/airlock/take_damage(var/amount)
+/obj/machinery/door/airlock/take_damage(var/amount, damtype=BRUTE)
 	if(brace)
 		brace.take_damage(amount)
 	else
-		..(amount)
+		..()
 	update_icon()
 
 /obj/machinery/door/airlock/examine(mob/user)
@@ -1088,3 +1108,13 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/stripe_airlock(var/paint_color)
 	stripe_color = paint_color
 	update_icon()
+
+/obj/machinery/door/airlock/proc/paint_window(paint_color)
+	if (paint_color)
+		window_color = paint_color
+	else if (window_material)
+		var/decl/material/window = get_window_material()
+		window_color = window.color
+	else
+		window_color = GLASS_COLOR
+	queue_icon_update()

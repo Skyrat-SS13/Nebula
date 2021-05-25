@@ -11,16 +11,15 @@
 	surface_color = "#3e3960"
 	water_color = "#2b2840"
 	flora_diversity = 3
-	fauna_types = list(/mob/living/simple_animal/hostile/retaliate/royalcrab,
-					   /mob/living/simple_animal/hostile/retaliate/jelly/alt,
-					   /mob/living/simple_animal/hostile/retaliate/beast/shantak/alt,
-					   /mob/living/simple_animal/hostile/leech)
+	fauna_types = list(
+		/mob/living/simple_animal/hostile/retaliate/royalcrab,
+		/mob/living/simple_animal/hostile/retaliate/jelly/alt,
+		/mob/living/simple_animal/hostile/retaliate/beast/shantak/alt,
+		/mob/living/simple_animal/hostile/leech
+	)
 
-/obj/effect/overmap/visitable/sector/exoplanet/shrouded/generate_atmosphere()
-	..()
-	if(atmosphere)
-		atmosphere.temperature = T20C - rand(10, 20)
-		atmosphere.update_values()
+/obj/effect/overmap/visitable/sector/exoplanet/shrouded/get_target_temperature()
+	return T20C - rand(10, 20)
 
 /obj/effect/overmap/visitable/sector/exoplanet/shrouded/get_atmosphere_color()
 	return COLOR_BLACK

@@ -24,9 +24,9 @@
 	var/const/light_power_high =  0.8
 	var/const/light_power_mid =   0.6
 	var/const/light_power_low =   0.4
-	var/const/light_colour_high = "#ffdd55"
-	var/const/light_colour_mid =  "#ff9900"
-	var/const/light_colour_low =  "#ff0000"
+	var/const/light_color_high = "#ffdd55"
+	var/const/light_color_mid =  "#ff9900"
+	var/const/light_color_low =  "#ff0000"
 
 	var/list/affected_exterior_turfs
 	var/list/exterior_temperature = 30 // Celcius, but it is added directly to a Kelvin value so don't do any conversion.
@@ -120,7 +120,7 @@
 /obj/structure/fire_source/proc/check_atmos()
 	var/datum/gas_mixture/GM = loc?.return_air()
 	for(var/g in GM?.gas)
-		var/decl/material/oxidizer = decls_repository.get_decl(g)
+		var/decl/material/oxidizer = GET_DECL(g)
 		if(oxidizer.gas_flags & XGM_GAS_OXIDIZER)
 			return TRUE
 
@@ -150,7 +150,7 @@
 		else
 			visible_message(SPAN_NOTICE("\The [user] removes \the [removing] from \the [src]."))
 		return TRUE
-	
+
 	if(lit != FIRE_LIT && user.a_intent == I_HURT)
 		to_chat(user, SPAN_DANGER("You start stomping on \the [src], trying to destroy it."))
 		if(do_after(user, 5 SECONDS, src))
@@ -161,8 +161,8 @@
 	. = ..()
 
 /obj/structure/fire_source/grab_attack(var/obj/item/grab/G)
-	var/mob/affecting_mob = G.get_affecting_mob()
-	if(!affecting_mob)
+	var/mob/living/affecting_mob = G.get_affecting_mob()
+	if(!istype(affecting_mob))
 		return FALSE
 	if (G.assailant.a_intent != I_HURT)
 		return TRUE
@@ -170,7 +170,7 @@
 		to_chat(G.assailant, SPAN_WARNING("You need a better grip!"))
 		return TRUE
 	affecting_mob.forceMove(get_turf(src))
-	affecting_mob.Weaken(5)
+	SET_STATUS_MAX(affecting_mob, STAT_WEAK, 5)
 	visible_message(SPAN_DANGER("\The [G.assailant] hurls \the [affecting_mob] onto \the [src]!"))
 	burn(affecting_mob)
 	return TRUE
@@ -244,7 +244,7 @@
 
 		var/modified_fuel = FALSE
 		for(var/mat in thing.matter)
-			var/decl/material/material = decls_repository.get_decl(mat)
+			var/decl/material/material = GET_DECL(mat)
 			if(material.fuel_value > 0)
 				modified_fuel = TRUE
 				var/add_fuel = round(thing.matter[mat] / SHEET_MATERIAL_AMOUNT) * material.fuel_value
@@ -273,7 +273,7 @@
 /obj/structure/fire_source/proc/take_reagents(datum/reagents/RG)
 	var/do_steam = FALSE
 	for(var/rtype in RG.reagent_volumes)
-		var/decl/material/R = decls_repository.get_decl(rtype)
+		var/decl/material/R = GET_DECL(rtype)
 		if(R.fuel_value <= 0)
 			do_steam = TRUE
 		fuel += REAGENT_VOLUME(RG, rtype) * R.fuel_value
@@ -330,13 +330,13 @@
 		if(FIRE_LIT)
 			if(fuel >= HIGH_FUEL)
 				add_overlay("[icon_state]_lit")
-				set_light(l_max_bright = light_power_high, l_outer_range = light_range_high, l_color = light_colour_high)
+				set_light(light_range_high, light_power_high, light_color_high)
 			else if(fuel <= LOW_FUEL)
 				add_overlay("[icon_state]_lit_dying")
-				set_light(l_max_bright = light_power_low,  l_outer_range = light_range_mid,  l_color = light_colour_low)
+				set_light(light_range_mid, light_power_mid, light_color_mid)
 			else
 				add_overlay("[icon_state]_lit_low")
-				set_light(l_max_bright = light_power_mid,  l_outer_range = light_range_low,  l_color = light_colour_mid)
+				set_light(light_range_low, light_power_low, light_color_low)
 
 		if(FIRE_DEAD)
 			add_overlay("[icon_state]_burnt")

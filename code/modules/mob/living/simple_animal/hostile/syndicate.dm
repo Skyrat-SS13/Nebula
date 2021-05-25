@@ -7,9 +7,6 @@
 	icon_gib = "syndicate_gib"
 	speak_chance = 0
 	turns_per_move = 5
-	response_help = "pokes"
-	response_disarm = "shoves"
-	response_harm = "hits"
 	speed = 4
 	stop_automated_movement_when_pulled = 0
 	maxHealth = 100
@@ -114,6 +111,8 @@
 	min_gas = null
 	max_gas = null
 	minbodytemp = 0
+
+	bleed_colour = SYNTH_BLOOD_COLOUR
 
 	meat_type =     null
 	meat_amount =   0

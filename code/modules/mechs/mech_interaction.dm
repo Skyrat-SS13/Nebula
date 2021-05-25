@@ -1,26 +1,13 @@
-/mob/living/MouseDrop(atom/over)
-	if(usr == src && usr != over)
-		if(istype(over, /mob/living/exosuit))
-			var/mob/living/exosuit/exosuit = over
-			if(exosuit.body)
-				if(usr.mob_size >= exosuit.body.min_pilot_size && usr.mob_size <= exosuit.body.max_pilot_size)
-					if(exosuit.enter(src))
-						return
-				else
-					to_chat(usr, SPAN_WARNING("You cannot pilot a exosuit of this size."))
-					return
-	return ..()
+/mob/living/exosuit/receive_mouse_drop(atom/dropping, mob/user)
+	. = ..()
+	if(!. && istype(dropping, /obj/machinery/portable_atmospherics/canister))
+		body.receive_mouse_drop(dropping, user)
+		return TRUE
 
-/mob/living/exosuit/MouseDrop_T(atom/dropping, mob/user)
-	var/obj/machinery/portable_atmospherics/canister/C = dropping
-	if(istype(C))
-		body.MouseDrop_T(dropping, user)
-	else . = ..()
-
-/mob/living/exosuit/MouseDrop(mob/living/carbon/human/over_object) //going from assumption none of previous options are relevant to exosuit
-	if(body)
-		if(!body.MouseDrop(over_object))
-			return ..()
+/mob/living/exosuit/handle_mouse_drop(atom/over, mob/user)
+	if(body?.handle_mouse_drop(over, user))
+		return TRUE
+	. = ..()
 
 /mob/living/exosuit/RelayMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params, var/mob/user)
 	if(user && (user in pilots) && user.loc == src)
@@ -171,7 +158,7 @@
 					ruser = user
 				temp_system.afterattack(A,ruser,adj,params)
 			if(system_moved) //We are using a proxy system that may not have logging like mech equipment does
-				log_and_message_admins("used [temp_system] targetting [A]", user, src.loc)
+				admin_attack_log(user, A, "Attacked using \a [temp_system] (MECH)", "Was attacked with \a [temp_system] (MECH)", "used \a [temp_system] (MECH) to attack")
 			//Mech equipment subtypes can add further click delays
 			var/extra_delay = 0
 			if(ME != null)
@@ -309,13 +296,19 @@
 
 	else if(istype(thing, /obj/item/kit/paint))
 		user.visible_message(SPAN_NOTICE("\The [user] opens \the [thing] and spends some quality time customising \the [src]."))
+
 		var/obj/item/kit/paint/P = thing
 		SetName(P.new_name)
 		desc = P.new_desc
-		for(var/obj/item/mech_component/comp in list(arms, legs, head, body))
-			comp.decal = P.new_icon
-		if(P.new_icon_file)
-			icon = P.new_icon_file
+
+		if(P.new_state)
+			for(var/obj/item/mech_component/comp in list(arms, legs, head, body))
+				comp.decal = P.new_state
+
+		if(P.new_icon)
+			for(var/obj/item/mech_component/comp in list(arms, legs, head, body))
+				comp.icon = P.new_icon
+
 		queue_icon_update()
 		P.use(1, user)
 		return 1

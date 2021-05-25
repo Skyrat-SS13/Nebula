@@ -47,7 +47,7 @@
 	return store
 
 //The list of slots by priority. equip_to_appropriate_slot() uses this list. Doesn't matter if a mob type doesn't have a slot.
-var/list/slot_equipment_priority = list( \
+var/global/list/slot_equipment_priority = list( \
 		slot_back_str,\
 		slot_wear_id_str,\
 		slot_w_uniform_str,\
@@ -139,7 +139,7 @@ var/list/slot_equipment_priority = list( \
 	return
 
 /mob/proc/put_in_active_hand(var/obj/item/W)
-	. = equip_to_slot_if_possible(W, get_active_held_item_slot())
+	. = equip_to_slot_if_possible(W, get_active_held_item_slot(), disable_warning = TRUE)
 
 //Puts the item into (one of) our inactive hand(s) if possible. returns 1 on success.
 /mob/proc/put_in_inactive_hand(var/obj/item/W)
@@ -147,7 +147,7 @@ var/list/slot_equipment_priority = list( \
 	for(var/slot in get_empty_hand_slots())
 		if(slot == active_slot)
 			continue
-		. = equip_to_slot_if_possible(W, slot)
+		. = equip_to_slot_if_possible(W, slot, disable_warning = TRUE)
 		if(.)
 			break
 //Puts the item our active hand if possible. Failing that it tries our inactive hand. Returns 1 on success.
@@ -196,11 +196,6 @@ var/list/slot_equipment_priority = list( \
 		if(hattable?.drop_hat(src))
 			return TRUE
 	. = drop_from_inventory(get_active_hand(), Target)
-
-	if(istype(Target, /obj/item) && !QDELETED(Target))
-		var/obj/item/I = Target
-		if(I.drop_sound)
-			playsound(I, I.drop_sound, 25, 0)
 
 /*
 	Removes the object from any slots the mob might have, calling the appropriate icon update proc.
@@ -325,4 +320,7 @@ var/list/slot_equipment_priority = list( \
 	return TRUE
 
 /mob/proc/is_holding_offhand(var/thing)
+	return FALSE
+
+/mob/proc/ui_toggle_internals()
 	return FALSE

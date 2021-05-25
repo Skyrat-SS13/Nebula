@@ -8,9 +8,10 @@
 	desc = "A coruscating, barely visible field of energy. It is shaped like a slightly flattened torus."
 	icon = 'icons/obj/machines/power/fusion.dmi'
 	icon_state = "emfield_s1"
-	alpha = 50
+	alpha = 30
 	layer = 4
-	light_color = COLOR_BLUE
+	light_color = COLOR_RED
+	color = COLOR_RED
 
 	var/size = 1
 	var/energy = 0
@@ -32,9 +33,9 @@
 		)
 
 	var/light_min_range = 2
-	var/light_min_power = 0.2
+	var/light_min_power = 3
 	var/light_max_range = 12
-	var/light_max_power = 1
+	var/light_max_power = 12
 
 	var/last_range
 	var/last_power
@@ -42,7 +43,9 @@
 /obj/effect/fusion_em_field/Initialize(mapload, var/obj/machinery/power/fusion_core/new_owned_core)
 	. = ..()
 
-	set_light(light_min_power, light_min_range / 10, light_min_range)
+	addtimer(CALLBACK(src, .proc/update_light_colors), 10 SECONDS, TIMER_LOOP)
+
+	set_light(light_min_range, light_min_power)
 	last_range = light_min_range
 	last_power = light_min_power
 
@@ -79,11 +82,9 @@
 		catcher.SetSize((iter*2)+1)
 		particle_catchers.Add(catcher)
 
-	START_PROCESSING(SSobj, src)
-
-/obj/effect/fusion_em_field/Process()
+/obj/effect/fusion_em_field/proc/handle_tick()
 	//make sure the field generator is still intact
-	if(!owned_core || QDELETED(owned_core))
+	if(QDELETED(owned_core))
 		qdel(src)
 		return
 
@@ -123,29 +124,52 @@
 			reactants[reactant] -= radiate
 			radiation += radiate
 
-	var/use_range
-	var/use_power
-	if(plasma_temperature <= 6000)
-		use_range = light_min_range
-		use_power = light_min_power
-	else if(plasma_temperature >= 25000)
-		use_range = light_max_range
-		use_power = light_max_power
-	else
-		var/temp_mod = ((plasma_temperature-5000)/20000)
-		use_range = light_min_range + ceil((light_max_range-light_min_range)*temp_mod)
-		use_power = light_min_power + ceil((light_max_power-light_min_power)*temp_mod)
-
-	if(last_range != use_range || last_power != use_power)
-		set_light(min(use_power, 1), use_range / 6, use_range) //cap first arg at 1 to avoid breaking lighting stuff.
-		last_range = use_range
-		last_power = use_power
-
 	check_instability()
 	Radiate()
 	if(radiation)
 		SSradiation.radiate(src, round(radiation*0.001))
 	return 1
+
+/obj/effect/fusion_em_field/proc/update_light_colors()
+	var/use_range
+	var/use_power
+	switch (plasma_temperature)
+		if (-INFINITY to 1000)
+			light_color = COLOR_RED
+			use_range = light_min_range
+			use_power = light_min_power
+			alpha = 30
+		if (100000 to INFINITY)
+			light_color = COLOR_VIOLET
+			use_range = light_max_range
+			use_power = light_max_power
+			alpha = 230
+		else
+			var/temp_mod = ((plasma_temperature-5000)/20000)
+			use_range = light_min_range + ceil((light_max_range-light_min_range)*temp_mod)
+			use_power = light_min_power + ceil((light_max_power-light_min_power)*temp_mod)
+			switch (plasma_temperature)
+				if (1000 to 6000)
+					light_color = COLOR_ORANGE
+					alpha = 50
+				if (6000 to 20000)
+					light_color = COLOR_YELLOW
+					alpha = 80
+				if (20000 to 50000)
+					light_color = COLOR_GREEN
+					alpha = 120
+				if (50000 to 70000)
+					light_color = COLOR_CYAN
+					alpha = 160
+				if (70000 to 100000)
+					light_color = COLOR_BLUE
+					alpha = 200
+
+	if (last_range != use_range || last_power != use_power || color != light_color)
+		color = light_color
+		set_light(use_range, use_power) //cap first arg at 1 to avoid breaking lighting stuff.
+		last_range = use_range
+		last_power = use_power
 
 /obj/effect/fusion_em_field/proc/check_instability()
 	if(tick_instability > 0)
@@ -209,7 +233,7 @@
 /obj/effect/fusion_em_field/proc/Rupture()
 	set waitfor = FALSE
 	visible_message("<span class='danger'>\The [src] shudders like a dying animal before flaring to eye-searing brightness and rupturing!</span>")
-	set_light(1, 0.1, 15, 2, "#ccccff")
+	set_light(15, 15, "#ccccff")
 	empulse(get_turf(src), ceil(plasma_temperature/1000), ceil(plasma_temperature/300))
 	sleep(5)
 	RadiateAll()
@@ -310,11 +334,11 @@
 /obj/effect/fusion_em_field/proc/change_size(var/newsize = 1)
 	var/changed = 0
 	var/static/list/size_to_icon = list(
-			"3" = 'icons/effects/96x96.dmi', 
-			"5" = 'icons/effects/160x160.dmi', 
-			"7" = 'icons/effects/224x224.dmi', 
-			"9" = 'icons/effects/288x288.dmi', 
-			"11" = 'icons/effects/352x352.dmi', 
+			"3" = 'icons/effects/96x96.dmi',
+			"5" = 'icons/effects/160x160.dmi',
+			"7" = 'icons/effects/224x224.dmi',
+			"9" = 'icons/effects/288x288.dmi',
+			"11" = 'icons/effects/352x352.dmi',
 			"13" = 'icons/effects/416x416.dmi'
 			)
 
@@ -334,6 +358,7 @@
 
 //the !!fun!! part
 /obj/effect/fusion_em_field/proc/React()
+	set waitfor = FALSE
 	//loop through the reactants in random order
 	var/list/react_pool = reactants.Copy()
 
@@ -450,12 +475,10 @@
 /obj/effect/fusion_em_field/Destroy()
 	set_light(0)
 	RadiateAll()
-	for(var/obj/effect/fusion_particle_catcher/catcher in particle_catchers)
-		qdel(catcher)
+	QDEL_NULL_LIST(particle_catchers)
 	if(owned_core)
 		owned_core.owned_field = null
 		owned_core = null
-	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
 /obj/effect/fusion_em_field/bullet_act(var/obj/item/projectile/Proj)

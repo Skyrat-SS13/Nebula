@@ -62,7 +62,7 @@
 /obj/item/storage/pill_bottle/afterattack(mob/living/target, mob/living/user, proximity_flag)
 	. = (proximity_flag && user == target && pop_pill(user)) || ..()
 
-/obj/item/storage/pill_bottle/attack_self(mob/living/user)
+/obj/item/storage/pill_bottle/attack_self(mob/user)
 	. = pop_pill(user) || ..()
 
 /obj/item/storage/pill_bottle/Initialize()
@@ -70,8 +70,9 @@
 	update_icon()
 
 /obj/item/storage/pill_bottle/on_update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(wrapper_color)
 		var/image/I = image(icon, "pillbottle_wrap")
 		I.color = wrapper_color
-		overlays += I
+		I.appearance_flags |= RESET_COLOR
+		add_overlay(I)

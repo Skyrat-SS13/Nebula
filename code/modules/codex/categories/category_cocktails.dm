@@ -21,7 +21,7 @@
 			// If anyone can think of a good way to find the lowest common
 			// divisor of these part values and make it a bit neater, please
 			// feel free to change this block to use it.
-			var/decl/material/mixer = decls_repository.get_decl(rtype) 
+			var/decl/material/mixer = GET_DECL(rtype) 
 			var/ingredient = "[cocktail.ratios[rtype] >= 0.1 ? "[ceil(cocktail.ratios[rtype] * 10)] part\s" : "a dash of"] [mixer.name]"
 			ingredients += ingredient
 		
@@ -37,6 +37,6 @@
 
 	for(var/datum/codex_entry/entry in entries_to_register)
 		SScodex.add_entry_by_string(entry.display_name, entry)
-		items += entry.display_name
+		items |= entry.display_name
 
 	. = ..()

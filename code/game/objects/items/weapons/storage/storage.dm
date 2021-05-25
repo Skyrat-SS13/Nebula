@@ -33,26 +33,21 @@
 	QDEL_NULL(storage_ui)
 	. = ..()
 
-/obj/item/storage/MouseDrop(obj/over_object)
-	if(!canremove)
-		return
+/obj/item/storage/check_mousedrop_adjacency(var/atom/over, var/mob/user)
+	. = (loc == user && istype(over, /obj/screen)) || ..()
 
-	if ((ishuman(usr) || isrobot(usr) || issmall(usr)) && !usr.incapacitated())
-		if(over_object == usr && Adjacent(usr)) // this must come before the screen objects only block
-			src.open(usr)
+/obj/item/storage/handle_mouse_drop(var/atom/over, var/mob/user)
+	if(canremove && (ishuman(user) || isrobot(user)))
+		if(over == user)
+			open(user)
 			return TRUE
-
-		if (!( istype(over_object, /obj/screen/inventory) ))
-			return ..()
-
-		//makes sure that the storage is equipped, so that we can't drag it into our hand from miles away.
-		if (!usr.contains(src))
-			return
-
-		var/obj/screen/inventory/inv = over_object
-		src.add_fingerprint(usr)
-		if(usr.unEquip(src))
-			usr.equip_to_slot_if_possible(src, inv.slot_id)
+		if(istype(over, /obj/screen/inventory) && loc == user)
+			var/obj/screen/inventory/inv = over
+			add_fingerprint(usr)
+			if(user.unEquip(src))
+				user.equip_to_slot_if_possible(src, inv.slot_id)
+				return TRUE
+	. = ..()
 
 /obj/item/storage/proc/return_inv()
 
@@ -335,6 +330,35 @@
 	for(var/obj/item/I in contents)
 		remove_from_storage(I, T, 1)
 	finish_bulk_removal()
+
+/obj/item/storage/receive_mouse_drop(atom/dropping, mob/living/user)
+	. = ..()
+	if(!. && scoop_inside(dropping, user))
+		return TRUE
+
+/obj/item/storage/proc/scoop_inside(mob/living/scooped, mob/living/user)
+	if(!istype(scooped))
+		return FALSE
+
+	if(!scooped.holder_type || scooped.buckled || scooped.pinned.len || scooped.mob_size > MOB_SIZE_SMALL || scooped != user || src.loc == scooped)
+		return FALSE
+
+	if(!do_after(user, 1 SECOND, src))
+		return FALSE
+
+	if(!Adjacent(scooped) || scooped.incapacitated())
+		return
+
+	var/obj/item/holder/H = new scooped.holder_type(get_turf(scooped))
+	if(H)
+		if(can_be_inserted(H))
+			scooped.forceMove(H)
+			H.sync(scooped)
+			handle_item_insertion(H)
+			return TRUE
+		qdel(H)
+
+	return FALSE
 
 /obj/item/storage/Initialize()
 	. = ..()

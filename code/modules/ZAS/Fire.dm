@@ -11,7 +11,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 /turf/var/obj/fire/fire = null
 
 //Some legacy definitions so fires can be started.
-atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+/atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	return null
 
 /atom/movable/proc/is_burnable()
@@ -82,7 +82,7 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 			fuel_objs -= fuel
 			if(remove_fire)
 				var/turf/T = fuel.loc
-				if(istype(T) && T.fire) 
+				if(istype(T) && T.fire)
 					qdel(T.fire)
 
 /turf/proc/create_fire(fl)
@@ -105,7 +105,7 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 
 	zone.fire_tiles |= src
 	var/obj/effect/fluid/fuel = return_fluid()
-	if(fuel?.get_fuel_amount()) 
+	if(fuel?.get_fuel_amount())
 		zone.fuel_objs += fuel
 
 	return 0
@@ -139,13 +139,13 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 
 	if(firelevel > 6)
 		icon_state = "3"
-		set_light(1, 2, 7)
+		set_light(7, 3, no_update = TRUE)
 	else if(firelevel > 2.5)
 		icon_state = "2"
-		set_light(0.7, 2, 5)
+		set_light(5, 2, no_update = TRUE)
 	else
 		icon_state = "1"
-		set_light(0.5, 1, 3)
+		set_light(3, 1, no_update = TRUE)
 
 	for(var/mob/living/L in loc)
 		L.FireBurn(firelevel, air_contents.temperature, air_contents.return_pressure())  //Burn the mobs!
@@ -155,7 +155,7 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 		A.fire_act(air_contents, air_contents.temperature, air_contents.volume)
 
 	//spread
-	for(var/direction in GLOB.cardinal)
+	for(var/direction in global.cardinal)
 		var/turf/simulated/enemy_tile = get_step(my_tile, direction)
 
 		if(istype(enemy_tile))
@@ -190,11 +190,11 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 	if(!istype(loc, /turf))
 		return INITIALIZE_HINT_QDEL
 
-	set_dir(pick(GLOB.cardinal))
+	set_dir(pick(global.cardinal))
 
 	var/datum/gas_mixture/air_contents = loc.return_air()
 	color = fire_color(air_contents.temperature)
-	set_light(0.5, 1, 3, l_color = color)
+	set_light(3, 0.5, color)
 
 	firelevel = fl
 	SSair.active_hotspots.Add(src)
@@ -233,7 +233,7 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 
 		//*** Get the fuel and oxidizer amounts
 		for(var/g in gas)
-			var/decl/material/mat = decls_repository.get_decl(g)
+			var/decl/material/mat = GET_DECL(g)
 			if(mat.gas_flags & XGM_GAS_FUEL)
 				gas_fuel += gas[g]
 			if(mat.gas_flags & XGM_GAS_OXIDIZER)
@@ -306,7 +306,7 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 		remove_by_flag(XGM_GAS_OXIDIZER, used_oxidizers)
 		var/datum/gas_mixture/burned_fuel = remove_by_flag(XGM_GAS_FUEL, used_gas_fuel)
 		for(var/g in burned_fuel.gas)
-			var/decl/material/mat = decls_repository.get_decl(g)
+			var/decl/material/mat = GET_DECL(g)
 			if(mat.burn_product)
 				adjust_gas(mat.burn_product, burned_fuel.gas[g])
 
@@ -324,11 +324,11 @@ atom/proc/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed
 
 		return firelevel
 
-datum/gas_mixture/proc/check_recombustibility(list/fuel_objs)
+/datum/gas_mixture/proc/check_recombustibility(list/fuel_objs)
 	. = 0
 	for(var/g in gas)
 		if(gas[g] >= 0.1)
-			var/decl/material/gas = decls_repository.get_decl(g)
+			var/decl/material/gas = GET_DECL(g)
 			if(gas.gas_flags & XGM_GAS_OXIDIZER)
 				. = 1
 				break
@@ -342,7 +342,7 @@ datum/gas_mixture/proc/check_recombustibility(list/fuel_objs)
 	. = 0
 	for(var/g in gas)
 		if(gas[g] >= 0.1)
-			var/decl/material/gas = decls_repository.get_decl(g)
+			var/decl/material/gas = GET_DECL(g)
 			if(gas.gas_flags & XGM_GAS_OXIDIZER)
 				. = 1
 				break
@@ -351,7 +351,7 @@ datum/gas_mixture/proc/check_recombustibility(list/fuel_objs)
 	. = 0
 	for(var/g in gas)
 		if(QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.1)
-			var/decl/material/gas = decls_repository.get_decl(g)
+			var/decl/material/gas = GET_DECL(g)
 			if(gas.gas_flags & XGM_GAS_OXIDIZER)
 				. = 1
 				break
@@ -365,7 +365,7 @@ datum/gas_mixture/proc/check_recombustibility(list/fuel_objs)
 	. = 0
 	for(var/g in gas)
 		if(QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.1)
-			var/decl/material/gas = decls_repository.get_decl(g)
+			var/decl/material/gas = GET_DECL(g)
 			if(gas.gas_flags & XGM_GAS_FUEL)
 				. = 1
 				break

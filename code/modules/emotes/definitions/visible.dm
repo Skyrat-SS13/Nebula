@@ -55,7 +55,7 @@
 
 /decl/emote/visible/collapse/do_extra(var/mob/user)
 	if(istype(user))
-		user.Paralyse(2)
+		SET_STATUS_MAX(user, STAT_PARA, 2)
 
 /decl/emote/visible/flash
 	key = "flash"
@@ -114,8 +114,8 @@
 	emote_message_3p = "USER faints."
 
 /decl/emote/visible/faint/do_extra(var/mob/user)
-	if(istype(user) && user.sleeping <= 0)
-		user.sleeping += 10
+	if(istype(user) && !HAS_STATUS(user, STAT_ASLEEP))
+		SET_STATUS_MAX(user, STAT_ASLEEP, 10)
 
 /decl/emote/visible/frown
 	key = "frown"
@@ -332,3 +332,37 @@
 /decl/emote/visible/tilt
 	key = "tilt"
 	emote_message_3p = "USER tilts USER_THEIR head."
+
+/decl/emote/visible/spin
+	key = "spin"
+	check_restraints = TRUE
+	emote_message_3p = "USER spins!"
+
+/decl/emote/visible/spin/do_extra(mob/user)
+	if(istype(user))
+		user.spin(20, 1)
+
+/decl/emote/visible/sidestep
+	key = "sidestep"
+	check_restraints = TRUE
+	emote_message_3p = "USER steps rhythmically and moves side to side."
+
+/decl/emote/visible/sidestep/do_extra(mob/user)
+	if(istype(user))
+		animate(user, pixel_x = 5, time = 5)
+		sleep(3)
+		animate(user, pixel_x = -5, time = 5)
+		animate(pixel_x = user.default_pixel_x, pixel_y = user.default_pixel_x, time = 2)
+
+/decl/emote/visible/vomit
+	key = "vomit"
+
+/decl/emote/visible/vomit/check_user(var/mob/living/carbon/human/user)
+	. = ..() && user.check_has_mouth() && !user.isSynthetic()
+
+/decl/emote/visible/vomit/do_emote(var/atom/user, var/extra_params)
+	var/mob/living/carbon/human/H = user
+	if(istype(H))
+		H.vomit(deliberate = TRUE)
+	else
+		to_chat(src, SPAN_WARNING("You are unable to vomit."))

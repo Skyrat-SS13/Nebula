@@ -3,7 +3,7 @@
 	desc = "A pulsating mass of interwoven tendrils."
 	icon = 'icons/mob/blob.dmi'
 	icon_state = "blob"
-	light_outer_range = 2
+	light_range = 2
 	light_color = BLOB_COLOR_PULS
 	density = 1
 	opacity = 1
@@ -51,7 +51,7 @@
 	regen()
 	if(times_fired % attack_freq)
 		return
-	attempt_attack(GLOB.alldirs)
+	attempt_attack(global.alldirs)
 
 /obj/effect/blob/proc/take_damage(var/damage)
 	health -= damage
@@ -66,7 +66,7 @@
 	update_icon()
 
 /obj/effect/blob/proc/expand(var/turf/T)
-	if(istype(T, /turf/unsimulated/) || istype(T, /turf/space))
+	if(istype(T, /turf/unsimulated/) || isspaceturf(T))
 		return
 	if(istype(T, /turf/simulated/wall))
 		var/turf/simulated/wall/SW = T
@@ -131,7 +131,7 @@
 	if(forceLeft)
 		B.pulse(forceLeft - 1, dirs)
 
-/obj/effect/blob/proc/attack_living(var/mob/living/L)
+/obj/effect/blob/proc/attack_living(var/mob/L)
 	if(!L)
 		return
 	var/blob_damage = pick(BRUTE, BURN)
@@ -214,7 +214,7 @@ the master core becomes more vulnereable to damage as it weakens,
 but it also becomes more aggressive, and channels more of its energy into regenerating rather than spreading
 regen() will cover update_icon() for this proc
 */
-/obj/effect/blob/core/proc/process_core_health() 
+/obj/effect/blob/core/proc/process_core_health()
 	switch(get_health_percent())
 		if(75 to INFINITY)
 			brute_resist = 3.5
@@ -269,9 +269,9 @@ regen() will cover update_icon() for this proc
 	process_core_health()
 	regen()
 	for(var/I in 1 to times_to_pulse)
-		pulse(20, GLOB.alldirs)
-	attempt_attack(GLOB.alldirs)
-	attempt_attack(GLOB.alldirs)
+		pulse(20, global.alldirs)
+	attempt_attack(global.alldirs)
+	attempt_attack(global.alldirs)
 	blob_may_process = 1
 
 // Blob has a very small probability of growing these when spreading. These will spread the blob further.

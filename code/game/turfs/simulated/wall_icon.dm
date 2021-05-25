@@ -1,11 +1,11 @@
-/turf/simulated/wall/proc/update_material()
+/turf/simulated/wall/proc/update_material(var/update_neighbors)
 	if(construction_stage != -1)
 		if(reinf_material)
 			construction_stage = 6
 		else
 			construction_stage = null
 	if(!material)
-		material = decls_repository.get_decl(get_default_material())
+		material = GET_DECL(get_default_material())
 	if(material)
 		explosion_resistance = material.explosion_resistance
 	if(reinf_material && reinf_material.explosion_resistance > explosion_resistance)
@@ -13,10 +13,18 @@
 	update_strings()
 	set_opacity(material.opacity >= 0.5)
 	SSradiation.resistance_cache.Remove(src)
-	for(var/turf/simulated/wall/W in RANGE_TURFS(src, 1))
-		W.wall_connections = null
-		W.other_connections = null
-		W.queue_icon_update()
+	if(update_neighbors)
+		var/iterate_turfs = list()
+		for(var/turf/simulated/wall/W in RANGE_TURFS(src, 1))
+			W.wall_connections = null
+			W.other_connections = null
+			iterate_turfs += W
+		for(var/turf/simulated/wall/W as anything in iterate_turfs)
+			W.update_icon()
+	else
+		wall_connections = null
+		other_connections = null
+		update_icon()
 
 /turf/simulated/wall/proc/update_strings()
 	if(reinf_material)
@@ -33,20 +41,20 @@
 
 	material = newmaterial
 	if(ispath(material, /decl/material))
-		material = decls_repository.get_decl(material)
+		material = GET_DECL(material)
 	else if(!istype(material))
-		crash_with("Wall has been supplied non-material '[newmaterial]'.")
-		material = decls_repository.get_decl(get_default_material())
+		PRINT_STACK_TRACE("Wall has been supplied non-material '[newmaterial]'.")
+		material = GET_DECL(get_default_material())
 
 	reinf_material = newrmaterial
 	if(ispath(reinf_material, /decl/material))
-		reinf_material = decls_repository.get_decl(reinf_material)
+		reinf_material = GET_DECL(reinf_material)
 	else if(!istype(reinf_material))
 		reinf_material = null
 
 	girder_material = newgmaterial
 	if(ispath(girder_material, /decl/material))
-		girder_material = decls_repository.get_decl(girder_material)
+		girder_material = GET_DECL(girder_material)
 	else if(!istype(girder_material))
 		girder_material = null
 
@@ -70,7 +78,7 @@
 
 		var/list/wall_dirs =  list()
 		var/list/other_dirs = list()
-		for(var/stepdir in GLOB.alldirs)
+		for(var/stepdir in global.alldirs)
 			var/turf/T = get_step(src, stepdir)
 			if(!T)
 				continue
@@ -96,7 +104,7 @@
 							break
 					if(success)
 						wall_dirs += get_dir(src, T)
-						if(get_dir(src, T) in GLOB.cardinal)
+						if(get_dir(src, T) in global.cardinal)
 							other_dirs += get_dir(src, T)
 						break
 		wall_connections = dirs_to_corner_states(wall_dirs)
@@ -106,21 +114,17 @@
 	var/image/I
 	var/base_color = paint_color ? paint_color : material.color
 	if(!density)
-		if(check_state_in_icon(material_icon_base, "fwall_open"))
-			I = image(material_icon_base, "fwall_open")
-			I.color = base_color
-			add_overlay(I)
+		I = image(material_icon_base, "fwall_open")
+		I.color = base_color
+		add_overlay(I)
 		return
 
 	for(var/i = 1 to 4)
-		var/apply_state = "[wall_connections[i]]"
-		if(check_state_in_icon(apply_state, material_icon_base))
-			I = image(material_icon_base, apply_state, dir = 1<<(i-1))
-			I.color = base_color
-			add_overlay(I)
-		if(other_connections[i] != "0" && check_state_in_icon(apply_state, material_icon_base))
-			apply_state = "other[wall_connections[i]]"
-			I = image(material_icon_base, apply_state, dir = 1<<(i-1))
+		I = image(material_icon_base, "[wall_connections[i]]", dir = 1<<(i-1))
+		I.color = base_color
+		add_overlay(I)
+		if(other_connections[i] != "0")
+			I = image(material_icon_base, "other[wall_connections[i]]", dir = 1<<(i-1))
 			I.color = base_color
 			add_overlay(I)
 
@@ -131,18 +135,16 @@
 			I.color = reinf_color
 			add_overlay(I)
 		else
-			if(check_state_in_icon("0", reinf_material.icon_reinf))
-				// Directional icon
-				for(var/i = 1 to 4)
-					var/apply_state = "[wall_connections[i]]"
-					if(check_state_in_icon(apply_state, reinf_material.icon_reinf))
-						I = image(reinf_material.icon_reinf, apply_state, dir = 1<<(i-1))
-						I.color = reinf_color
-						add_overlay(I)
-			else if(check_state_in_icon("full", reinf_material.icon_reinf))
-				I = image(reinf_material.icon_reinf, "full")
+			if(reinf_material.use_reinf_state)
+				I = image(reinf_material.icon_reinf, reinf_material.use_reinf_state)
 				I.color = reinf_color
 				add_overlay(I)
+			else
+				// Directional icon
+				for(var/i = 1 to 4)
+					I = image(reinf_material.icon_reinf, "[wall_connections[i]]", dir = 1<<(i-1))
+					I.color = reinf_color
+					add_overlay(I)
 
 	var/image/texture = material.get_wall_texture()
 	if(texture)
@@ -154,7 +156,7 @@
 				apply_icon = "other[wall_connections[i]]"
 			else
 				apply_icon = "[wall_connections[i]]"
-			if(apply_icon && check_state_in_icon(apply_icon, material.icon_stripe))
+			if(apply_icon)
 				I = image(material.icon_stripe, apply_icon, dir = 1<<(i-1))
 				I.color = stripe_color
 				add_overlay(I)

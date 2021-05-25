@@ -3,9 +3,13 @@
 	desc = "A handy little spring-loaded trap for catching pesty rodents."
 	icon_state = "mousetrap"
 	origin_tech = "{'combat':1}"
-	material = /decl/material/solid/metal/steel
-	matter = list(/decl/material/solid/slag = MATTER_AMOUNT_REINFORCEMENT)
+	material = /decl/material/solid/wood
+	matter = list(/decl/material/solid/metal/steel = MATTER_AMOUNT_REINFORCEMENT)
 	var/armed = 0
+
+/obj/item/assembly/mousetrap/Initialize()
+	. = ..()
+	set_extension(src, /datum/extension/tool, list(TOOL_HEMOSTAT = TOOL_QUALITY_WORST))
 
 /obj/item/assembly/mousetrap/examine(mob/user)
 	. = ..()
@@ -30,11 +34,11 @@
 			if("feet")
 				if(!H.shoes)
 					affecting = H.get_organ(pick(BP_L_LEG, BP_R_LEG))
-					H.Weaken(3)
+					SET_STATUS_MAX(H, STAT_WEAK, 3)
 			if(BP_L_HAND, BP_R_HAND)
 				if(!H.gloves)
 					affecting = H.get_organ(type)
-					H.Stun(3)
+					SET_STATUS_MAX(H, STAT_STUN, 3)
 		if(affecting)
 			affecting.take_external_damage(1, 0)
 			H.updatehealth()
@@ -66,10 +70,10 @@
 	playsound(user.loc, 'sound/weapons/handcuffs.ogg', 30, 1, -3)
 	return TRUE
 
-/obj/item/assembly/mousetrap/attack_self(mob/living/user)
+/obj/item/assembly/mousetrap/attack_self(mob/user)
 	. = toggle_arming(user) || ..()
 
-/obj/item/assembly/mousetrap/attack_hand(mob/living/user)
+/obj/item/assembly/mousetrap/attack_hand(mob/user)
 	. = toggle_arming(user) || ..()
 
 /obj/item/assembly/mousetrap/Crossed(atom/movable/AM)
